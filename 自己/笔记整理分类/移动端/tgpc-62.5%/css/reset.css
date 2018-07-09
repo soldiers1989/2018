@@ -1,0 +1,43 @@
+*{padding:0;margin:0}
+abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;font:14px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;font-family:"Microsoft YaHei",Arial,Helvetica}
+.fl{float:left}
+.fr{float:right}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+a{color:#000;-webkit-tap-highlight-color:transparent}
+nav ul{list-style:none}
+li{list-style:none}
+blockquote,q{quotes:none}
+blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}
+.outline[type=checkbox]:focus,.outline[type=password]:focus,.outline[type=radio]:focus,.outline[type=submit]:focus,.outline[type=text]:focus{outline:0}
+input[type=checkbox]:focus,input[type=password]:focus,input[type=radio]:focus,input[type=submit]:focus,input[type=text]:focus{outline:0}
+button:focus,input,input:focus{outline:0}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:0 0;text-decoration:none;outline:0}
+a:hover{cursor:pointer}
+i{font-style:normal}
+em{font-style:normal}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:700}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+button,input,select,textarea{margin:0;font-size:100%;vertical-align:middle}
+button,input{line-height:normal}
+button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}
+button,html input[type=button],input[type=reset],input[type=submit]{cursor:pointer;-webkit-appearance:button}
+button,input[type=button],input[type=reset],input[type=submit],input[type=radio],input[type=checkbox],label,select{cursor:pointer}
+input[type=search]{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;-webkit-appearance:textfield}
+input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}
+textarea{overflow:auto;vertical-align:top;resize:none}
+u{display:block;background:no-repeat;background-position:50% 50%}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{display:inline-block}
+* html .clearfix{height:1%}
+.clearfix{display:block}
+.clear{clear:both;height:0;font:0/0 Arial;visibility:hidden}
+.hide{visibility:hidden}
+
+/* 跑马灯字体颜色 */
+.yellows{
+	color: #ffc000
+}

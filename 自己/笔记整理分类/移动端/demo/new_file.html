@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title>
+<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+<style> 
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s, height 2s, transform 2s;
+}
+
+/*div:hover {
+    width: 200px;
+    height: 200px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}*/
+.ac{
+	width: 200px;
+    height: 200px;
+    -webkit-transform: rotate(180deg); 
+    transform: rotate(180deg);
+}
+</style>
+</head>
+<body>
+<p><b>注意：</b>该实例无法在 Internet Explorer 9 及更早 IE 版本上工作。</p>
+
+<div id="box">鼠标移动到 div 元素上，查看过渡效果。</div>
+
+
+<script type="text/javascript">
+	$("#box").click(function(){
+		$("#box").addClass("ac");
+	})
+</script>
+
+</body>
+</html>

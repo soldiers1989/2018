@@ -1,0 +1,139 @@
+
+有无需jq依赖的版本
+
+1，引用插件
+<script src="js/snowfall.jquery.min.js"></script>
+
+2，开启花瓣飘落效果
+	$(document).snowfall();
+
+
+
+该插件的参数有：
+
+	flakeCount|number 雪花数量
+	flakeColor|#RGB 雪花颜色
+	flakeIndex|??? 不清楚
+	minSize|number 雪花最小体积
+	maxSize|number 雪花最大体积
+	minSpeed|number 雪花最小速度
+	maxSpeed|number 雪花最大速度
+	round|boolean true雪花圆形|false方形(笑哭)
+	shadow|boolean true雪花有阴影|false无阴影
+	image|url 雪花图片
+
+
+	
+	
+示例用法：
+$(document).snowfall({flakeCount : 100, maxSpeed : 10});
+
+
+或者：
+$('#element').snowfall({flakeCount : 800, maxSpeed : 5, maxSize : 5});
+
+
+清除雪花：
+$('#element').snowfall('clear');
+
+
+使用图片作为雪花元素：
+$(element).snowfall({image :"images/flake.png", minSize: 10, maxSize:32});
+
+
+自定义雪花翻转效果以及多种雪花同时飘落
+//css部分
+<style>
+	.snowfall-flakes{animation:sakura 1s linear 0s infinite;}
+	@keyframes sakura{
+	0% {transform:rotate3d(0, 0, 0, 0deg);}
+	25%{transform:rotate3d(1, 1, 0, 60deg);}
+	50%{transform:rotate3d(1, 1, 0, 0deg);}
+	75%{transform:rotate3d(1, 0, 0, 60deg);}
+	100% {transform:rotate3d(1, 0, 0, 0deg);}
+	}
+</style>
+
+//js部分,开启雪花飘落并不会覆盖，会叠加。
+<script>
+	$("#banner").snowfall('clear');
+	$("#banner").snowfall({  flakeCount: 11, minSize: 1, maxSize: 32, maxSpeed: 5, image: "images/flake1.png" });
+	$("#banner").snowfall({  flakeCount: 11, minSize: 1, maxSize: 32, maxSpeed: 5, image: "images/flake2.png" });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

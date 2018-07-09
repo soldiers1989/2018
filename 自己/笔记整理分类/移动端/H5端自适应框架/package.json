@@ -1,0 +1,23 @@
+{
+  "name": "adaptive.js",
+  "version": "0.0.2",
+  "description": "web self-adaption",
+  "main": "js/adaptive.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/finance-sh/adaptive.git"
+  },
+  "keywords": [
+    "web",
+    "adaptive"
+  ],
+  "author": "zhoushengmufc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/finance-sh/adaptive/issues"
+  },
+  "homepage": "https://github.com/finance-sh/adaptive#readme"
+}

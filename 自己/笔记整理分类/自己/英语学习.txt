@@ -1,0 +1,67 @@
+﻿
+syntax		语法
+check		检查
+manual		手册
+correspond		对应，符合
+near		附近
+
+
+character	字符
+set			集合，设置
+empty		空的
+drop		丢弃
+exists		n存在
+exist		v存在
+exit		出口
+varchar		可变长字符串，字符串
+score		分数
+decimal		小数
+create		创造
+insert		插入
+form		表单
+from		从...
+select		查询
+delete		删除
+
+英雄不问出处
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

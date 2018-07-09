@@ -1,0 +1,47 @@
+/*内容开始*/
+.grid{ position: relative; margin:0 auto; width:991px;}
+
+.xuetang h2{ font-size:20px; color:#440000; margin-bottom:30px;}
+.xuetang .biaoti_gy h3{ padding-left:10px; margin-bottom:15px; background: #f3d8a5; height: 34px; line-height: 34px; font-size:14px; color:#51390d;}
+.xuetang .biaoti_gy h3 span a{ text-decoration:none; color:#51390d; font-weight:bold;}
+
+.xuetang .box_div_1{ float:left; width:991px; height:290px;background:url(../images/hjxt/hjxt_img_01.png) no-repeat; border:0px;}
+
+.xuetang .box_div_2{ float:left; width:991px; margin-bottom:25px; }
+.xuetang .box_div_2 .stylesgoleft{float:left;width:21px;height:28px;background:url(../images/hjxt/arrowhead.png) no-repeat left top;margin:70px 5px 0px 0px;cursor:pointer;}
+.xuetang .box_div_2 .stylesgoright{float:right;width:21px;height:28px;background:url(../images/hjxt/arrowhead.png) no-repeat left -56px;margin:70px 0px 0px 0;cursor:pointer;}
+.xuetang .box_div_2 .maindiv1{float:left; width:935px; height:168px; overflow:hidden;position:relative;}
+.xuetang .box_div_2 .video{ position: absolute; z-index:99;}
+
+.xuetang .box_div_2 ul{ margin:0 auto; width:991px;position:absolute;left:0;top:0;}
+.xuetang .box_div_2 ul li{ float:left; position:relative; width:220px; height:168px; border:1px solid #6f4e10; margin-right:15px; display:inline;}
+.xuetang .box_div_2 ul li img{ border:0px; width: 220px; height: 168px;}
+.xuetang .box_div_2 ul li .desc{ position:absolute; left:0; bottom:0; width:100%; height:36px; line-height:36px; font-size:16px; background:#c38000; text-align:center;filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80); -moz-opacity:0.8; -khtml-opacity: 0.8; opacity: 0.8; color:#FFFFFF;}
+
+.xuetang .box_div_3{ float:left; width:991px; font-size:14px; margin-bottom:25px;}
+.xuetang .box_div_3 ul{ float:left;}
+.xuetang .box_div_3 ul li{ float:left; padding-right:15px; border-right:#ad9e89 dashed 1px;}
+.xuetang .box_div_3 ul li:nth-child(3n){border-right:0;}
+.xuetang .box_div_3 ul li a{ color:#000;}
+.xuetang .box_div_3 ul .li_left_x{ padding-left:15px; width:299px; }
+
+.xuetang .box_div_4{ float:left; width:991px; margin-bottom:25px;}
+.xuetang .box_div_4 ul{ float:left;}
+.xuetang .box_div_4 ul li{ float:left; margin-left:20px; margin-bottom:15px;}
+.xuetang .box_div_4 ul li a{ display:inline-block; width:223px; background:url(../images/hjxt/hjxt_img_07.png) no-repeat; font-size:15px; text-align:center; line-height:65px; height:65px; float:left; color:#000; text-decoration:none;}
+
+.xuetang .box_div_5{ float:left; width:991px; margin-bottom:25px;}
+.xuetang .box_div_5 ul{ float:left;}
+.xuetang .box_div_5 ul li{ float:left; margin-left:20px;}
+
+
+.touzhibaike{ float:left; position: relative; width:991px; margin-bottom:25px; padding-bottom:10px; border-bottom: 1px dotted #cdc4b9;}
+.touzhibaike .prev,
+.touzhibaike .next{ display:block; width:21px; height:28px; position: absolute; top:110px; overflow:hidden; cursor:pointer; background:url(../images/hjxt/arrowhead.png) no-repeat 0 0;}
+.touzhibaike .prev{ left:0;}
+.touzhibaike .next{ background-position: 0 -56px;; right:0;  }
+
+.touzhibaike .bd{ padding:12px 0 12px 30px; }
+.touzhibaike .bd ul{ overflow:hidden; zoom:1; }
+.touzhibaike .bd ul li{ margin-right:10px; width:225px; height:170px;  float:left; _display:inline; overflow: hidden; font-size:14px; text-align: center; }
+.touzhibaike .bd ul li img{ width:225px; height:140px;}

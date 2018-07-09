@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    <title></title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+	    <meta name="keywords" content="" />
+	    <meta name="description" content="" />
+		<link rel="stylesheet" type="text/css" href="./css/index.css"/>			
+	</head>
+	<body>
+		<div class="gongsi">重庆麦厨餐馆</div>
+		<div class="head-nav">
+			<div class="nav" id="id-nav">
+				<a href="./index.html" class="d1">首页</a><a href="./about.html" class="d1">公司介绍</a><a href="./product_list.html" class="d1">产品展示</a><a href="./news_list.html" class="d1">企业资讯</a>
+				<a href="./qa.html" class="d1">企业问答</a><a href="./contact.html" class="d1 ac">联系我们</a><a href="./merchants.html" class="d1">渠道代理</a><a href="./album_list.html" class="d1">企业相册</a>
+				<a href="./cases_list.html" class="d1">服务案例</a><a href="./job.html" class="d1">企业招聘</a>
+			</div>
+			<div id="id-switch"><img src="images/switch.png"/></div>
+		</div>
+
+		<div class="column-title">
+			<div class="title">联系我们</div>
+		</div>
+		<div class="ct">
+			<p>广州XXXX美食餐厅</p>
+			<div class="d1">
+				<div class="d11">地址：</div>
+				<div class="d12">广州市海珠区艺苑路20号某某商务大厦</div>
+			</div>
+			<div class="d1">
+				<div class="d11">电话：</div>
+				<div class="d12">020-88888888</div>
+			</div>
+			<div class="d1">
+				<div class="d11">传真：</div>
+				<div class="d12">020-88888888</div>
+			</div>
+			<div class="d1">
+				<div class="d11">邮箱：</div>
+				<div class="d12">123456789@qq.com</div>
+			</div>			
+		</div>	
+		<!--地图-->
+		<div class="ditu" id="dituContent"></div>			
+		<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://wwwcdn.qyzx.3158.com/public/static/pc/product/js/bmapapi.js" type="text/javascript"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+		<script type="text/javascript">
+		$(function(){
+				var lng = "113.307375";
+				var lat = "23.294647";
+				var address = "花园北路14号";
+				if(!lng){
+					// 百度地图API功能
+					var map = new BMap.Map("dituContent");
+		
+					// 创建地址解析器实例
+					var myGeo = new BMap.Geocoder();
+					// 将地址解析结果显示在地图上,并调整地图视野
+				
+					myGeo.getPoint(address, function(point){
+						console.log(point);
+						if (point) {
+							initMap(point.lng,point.lat,"联系电话：18101060792<br/>地址：花园北路14号","陈海珍资本管理有限公司002", false);
+						}else{
+							alert("您选择地址没有解析到结果!");
+						}
+					}, address);
+				}else{
+					initMap(lng,lat,"联系电话：18101060792<br/>地址：花园北路14号","陈海珍资本管理有限公司002", false);
+				}
+				
+			});		
+		</script>
+			
+		<div class="back-top" id="back-top">Top</div>
+				
+		<div class="footer">
+			<p class="p1">南京旭兆智能科技有限公司 版权所有</p>
+			<p><a href="">管理员入口</a> | <a href="">免责声明</a> | 技术支持：<a href="">企业在线</a></p>
+		</div>
+		<div class="bottom">
+			<a href="" class="d1">电话咨询</a>
+			<a href="" class="d2">信息咨询</a>
+			<a href="" class="d3">在线地图</a>
+			<a href="" class="d4">QQ客服</a>
+		</div>
+	</body>
+</html>
+
+<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>

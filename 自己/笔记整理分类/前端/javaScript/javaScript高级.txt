@@ -1,0 +1,205 @@
+﻿  
+                                         正则表达式
+  
+  1.正则表达式基本语法
+参考地址： https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434499503920bb7b42ff6627420da2ceae4babf6c4f2000
+
+  创建一个正则表达式：
+  var re1 = /ABC\-001/;
+  var re2 = new RegExp('ABC\\-001');
+  注意，如果使用第二种写法，因为字符串的转义问题，字符串的两个\\实际上是一个\。
+  
+  测试判断的方法
+    var re = /^\d{3}\-\d{3,8}$/;
+	re.test('010-12345'); // true
+	RegExp对象的test()方法用于测试给定的字符串是否符合条件。
+  
+  规则
+  \d   digit 		 数字
+  \s    spacing    空格
+  \w   word    	单词，字母
+  *      任意个字符（包括0个）
+  +     至少一个字符
+  ？    0个或者1个字符
+  {n}   n个字符或者{n,m}n到m个字符
+  
+  更精准的匹配，用[  ]表示范围
+  [a-zA-Z\_\$][0-9a-zA-Z\_\$]{0, 19}更精确地限制了变量的长度是1-20个字符（前面1个字符+后面最多19个字符）。
+  A|B可以匹配A或B，所以(J|j)ava(S|s)cript可以匹配'JavaScript'、'Javascript'、'javaScript'或者'javascript'。
+  
+  ^表示行的开头，^\d表示必须以数字开头。
+  $表示行的结束，\d$表示必须以数字结束。
+  
+  
+  
+  //定义规则
+	var  re=/\d+/g;     //\d：data 数字   0~9     +： 最少一个        g:global 全局
+	//  正则表达 的格式为：  /条件字符串/方式。
+	
+	提取子串的强大功能。用()表示的就是要提取的分组（Group）。
+	^(\d{3})-(\d{3,8})$分别定义了两个组，可以直接从匹配的字符串中提取出区号和本地号码：
+	var re = /^(\d{3})-(\d{3,8})$/;
+	re.exec('010-12345'); // ['010-12345', '010', '12345']
+	re.exec('010 12345'); // null
+	
+	个人解释：在正则表达式中添加() 然后使用exec方法就可以把符合条件的字符串分组变成数组，然后数组的成员为，1，整个字符串，2之后都是，每一个括号里符合匹配的字符串，
+	
+	需要特别指出的是，正则匹配默认是贪婪匹配，也就是匹配尽可能多的字符。
+	必须让\d+采用非贪婪匹配（也就是尽可能少匹配），才能把后面的0匹配出来，加个?就可以让\d+采用非贪婪匹配：
+	var re = /^(\d+?)(0*)$/;
+	re.exec('102300'); // ['102300', '1023', '00']
+	
+  
+  match() 方法	
+	var  arr=str.match(re);//match() 方法可在字符串内检索指定的值，或找到一个或多个正则表达式的匹配。
+	alert(arr);//该方法类似 indexOf() 和 lastIndexOf()，但是它返回指定的值，而不是字符串的位置。
+
+  
+  
+  
+  判断浏览器
+             
+	 var  str=window.navigator.userAgent;
+	 
+	 if(str.search(/Firefox/g)!=-1)
+	 {
+		alert('Firefox');
+	 }
+	 
+	 if(str.search(/Chrome/g)!=-1)
+	 {
+		alert('Chrome');
+	 }
+
+	 if(str.search(/MSIE 10/g)!=-1)
+	 {
+		alert('IE 10');
+	 }			
+  
+  
+  替换
+  var str='abckkabpabc';			
+  var  a=str.replace(/abc/g,'999');
+  
+  
+  方法创建正则表达式
+  var  re= new RegExp('e','gi');  //i :ignore  忽略大小写
+  
+  
+  量词
+  var  re=/\d/g;                       一个一个数字
+  var  re=/\d\d/g;                     2个连续的数字
+  var  re=/\d+/g;                      1个以上连续的字
+  
+  
+  var  re=/<[^<>]+>/gi;                [^<>]表示除了<>都符合，<[^<>]>即<123>里面除了<>都符合
+				                       正则表达式有很严谨的逻辑性，多一个或少一个都不行。
+  
+  
+  
+  转义字符
+    \d:数字 
+    w:26个字母 +0~9
+    \s:空格 
+			
+			
+  大写
+    \S :非空格
+    \D：非数字
+    \W:除了26个字母+0~9
+  var  flg=re.test(str);   //判断 str是否符合正则表达式       true    false	
+  
+  
+  找中文字符
+    var str ='dfs硒鼓fsf 莽左左s';
+	var  re=/[\u4e00-\u9fa5]+/gi;			 
+	var arr=str.match(re);			 
+	console.log(arr);
+  
+  正则表达式匹配任意字符
+		最开始以为.* 可以匹配任意字符，后来发现有问题，匹配不了换行符\n
+
+		查了下资料，用[\s\S]*匹配可以 
+
+		解释：\s空白符，\S非空白符，所以[\s\S]是任意字符
+  
+  
+  
+  
+  
+  
+  
+  
+  
+                                           面向对象
+  
+  构造方法，函数。
+    定义一个类,并且是一个构造函数：
+			 function  Person(name,sex)
+			 {
+			 	//1、创建对象
+//				var  obj= new Object();
+				
+				//2、设置对象属性
+				this.name=name;
+				this.sex=sex;
+												
+				//3、设置功能方法
+				this.eat=function(){
+					console.log('eat');
+				}
+				
+				this.sleep=function(){
+					console.log('睡觉');
+				}
+				
+				this.showName=function(){
+					console.log(this.name);
+				}
+				this.showSex=function(){
+					console.log(this.sex);
+				}
+				
+				//return this;
+			 }
+						
+			var  li4=new Person('li4','男');    //构造函数的方式			
+			li4.showName();
+  
+  
+  
+  
+  
+  类名.prototype.属性                     给类追加属性成员  所有该类的对象都拥有新增的属性
+  类名.prototype.属性方法                 给类追加属性方法 ，所有该类的对象都拥有新增的方法
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,596 @@
+﻿
+
+								定时器
+
+	setInterval(function(){
+		$('#failShare').hide();
+	},2000);
+
+
+
+								点击区域外隐藏该元素
+
+
+$(".dialog").click(function(e){
+        var _target = $(e.target);
+        if (_target.closest(".dg_lick").length == 0) {
+            $(".dg_lick").hide();
+        }
+    })
+
+
+
+								按钮
+	    <div class="btn">	
+			<a style="color:#fff; text-decoration:none;" href="/options/uploads/soft/171127/2-1G12F95R6.pdf">开始下载</a>			  
+		</div>
+		background: rgb(23,144,241);
+		color: #fff;
+		width: 400px;
+		height: 90px;
+		border-radius: 10px;
+		margin: 0 auto;
+		line-height: 90px;
+		letter-spacing: 5px;
+
+
+完整jquery ajax请求例子
+
+$.ajax({
+    url:'/comm/test1.php',
+    type:'POST', //GET
+    async:true,    //或false,是否异步
+    data:{
+        name:'yang',age:25
+    },
+    timeout:5000,    //超时时间
+    dataType:'json',    //返回的数据格式：json/xml/html/script/jsonp/text
+    beforeSend:function(xhr){
+        console.log(xhr)
+        console.log('发送前')
+    },
+    success:function(data,textStatus,jqXHR){
+        console.log(data)
+        console.log(textStatus)
+        console.log(jqXHR)
+    },
+    error:function(xhr,textStatus){
+        console.log('错误')
+        console.log(xhr)
+        console.log(textStatus)
+    },
+    complete:function(){
+        console.log('结束')
+    }
+})
+
+
+layui表单验证姓名和密码6到12位字母加数字
+
+layui.use('form',function(){
+	var form = layui.form;
+	form.verify({
+		card_name:[/^[\u4E00-\u9FA5]{2,4}$/,'姓名必须是2到4位中文'],
+		card_number:[/^[A-Za-z0-9]{6,12}$/,'密码必须6到12位字母和数字']
+	});
+	form.on('submit(bind_bank_card)',function(data){
+		layer.msg(JSON.stringify(data.field));
+		return false;
+	});
+});
+
+
+jquery实现的监听文本框输入事件
+	$(function(){
+		$('#text').bind(' input propertychange ',function(){
+			$('#res').val(200);
+		} );
+	})
+
+
+银行卡格式和正则表达
+	<input type="tel" value="" size="25" onkeyup="formatBankNo(this)" onkeydown="formatBankNo(this)" name="account" id="account">
+	 
+	<script language="javascript" type="text/javascript">
+		function formatBankNo (BankNo){
+			if (BankNo.value == "") return;
+			  var account = new String (BankNo.value);
+			  account = account.substring(0,22); /*帐号的总数, 包括空格在内 */
+			  if (account.match (".[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{7}") == null){
+				/* 对照格式 */
+				if (account.match (".[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{7}|" + ".[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{7}|" +
+				".[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{7}|" + ".[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{7}") == null){
+				  var accountNumeric = accountChar = "", i;
+				  for (i=0;i<account.length;i++){
+					accountChar = account.substr (i,1);
+					if (!isNaN (accountChar) && (accountChar != " ")) accountNumeric = accountNumeric + accountChar;
+				  }
+				  account = "";
+				  for (i=0;i<accountNumeric.length;i++){  /* 可将以下空格改为-,效果也不错 */
+					if (i == 4) account = account + " "; /* 帐号第四位数后加空格 */
+					if (i == 8) account = account + " "; /* 帐号第八位数后加空格 */
+					if (i == 12) account = account + " ";/* 帐号第十二位后数后加空格 */
+					account = account + accountNumeric.substr (i,1)
+				  }
+				}
+			}
+			else{
+				account = " " + account.substring (1,5) + " " + account.substring (6,10) + " " + account.substring (14,18) + "-" + account.substring(18,25);
+			}
+			if (account != BankNo.value) BankNo.value = account;
+			console.log(account);
+		}
+	</script>
+
+
+判断input输入框的内容可直接用this 
+数值输入删除0，-开头和限制12位数
+	$('.subscribe input').keyup(function(){
+		if ( this.value.slice(0,1) == 0 ) {
+			this.value = null;
+		}else if( this.value.slice(0,1) == '-' ){
+			this.value = null;
+		}else if(this.value.length > 12){
+			this.value = this.value.slice(0,12); 
+		};
+		Principal();
+	});
+
+
+身份证号码
+	function isCardNo(card) 
+	{ 
+		// 身份证号码为15位或者18位，15位时全为数字，18位前17位为数字，最后一位是校验位，可能为数字或字符X 
+		var reg = /^[1-9]\d{5}\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{2}[0-9Xx]$|^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/; 
+			if(reg.test(card) === false) 
+		{ 
+		alert("身份证输入不合法"); 
+			return false; 
+		} 
+	}
+
+
+JOSN数据数组															
+	res = [
+		{ "name" : "茅台酒","people" : "zhang","time" : "1天14小时15分钟","show" : "显示" },
+		{ "name" : "茅台酒1","people" : "zhang1","time" : "1天14小时16分钟","show" : "显示1" },
+		{ "name" : "茅台酒2","people" : "zhang2","time" : "1天14小时17分钟","show" : "显示2" },
+		{ "name" : "茅台酒3","people" : "zhang3","time" : "1天14小时18分钟","show" : "显示3" },
+	];															
+			
+			
+AJAX请求模拟数据例子
+	$.ajax({
+		url: "",
+		type: "post",
+		data: "",
+		dataType: "JSON",
+		success: function(){
+			
+		},
+		error: function(){
+			res = [
+				{ "name" : "茅台酒","people" : "zhang","time" : "1天14小时15分钟","show" : "显示" },
+				{ "name" : "茅台酒1","people" : "zhang1","time" : "1天14小时16分钟","show" : "显示1" },
+				{ "name" : "茅台酒2","people" : "zhang2","time" : "1天14小时17分钟","show" : "显示2" },
+				{ "name" : "茅台酒3","people" : "zhang3","time" : "1天14小时18分钟","show" : "显示3" },
+				{ "name" : "茅台酒","people" : "zhang","time" : "1天14小时15分钟","show" : "显示" },
+				{ "name" : "茅台酒1","people" : "zhang1","time" : "1天14小时16分钟","show" : "显示1" },
+				{ "name" : "茅台酒2","people" : "zhang2","time" : "1天14小时17分钟","show" : "显示2" },
+				{ "name" : "茅台酒3","people" : "zhang3","time" : "1天14小时18分钟","show" : "显示3" },
+				{ "name" : "茅台酒","people" : "zhang","time" : "1天14小时15分钟","show" : "显示" },
+				{ "name" : "茅台酒1","people" : "zhang1","time" : "1天14小时16分钟","show" : "显示1" },
+				{ "name" : "茅台酒2","people" : "zhang2","time" : "1天14小时17分钟","show" : "显示2" },
+				{ "name" : "茅台酒3","people" : "zhang3","time" : "1天14小时18分钟","show" : "显示3" }
+			];
+			$(function(){
+				s = '';
+				for ( i=0;i<res.length;i++ ){
+					s += '<div class="d1"><div class="l"><img src="images/jiu.jpg"/></div><div class="r"><p class="r_name">'+ res[i].name +'</p><p class="people">敬献人：'+ res[i].people +'</p><p class="r_time">剩余：'+ res[i].time +'</p><p class="sh">状态：'+ res[i].show +'</p></div></div>';
+					$("#jpTupian2").append(s);
+				}
+			})
+		}
+		
+	})	
+
+
+jquery倒计时
+	var starttime = new Date(2018,1,2,21,30,0);			//月份是从0开始算的，也就是说0 是 1月。
+	setInterval(function () {
+	    var nowtime = new Date();
+	    var time = starttime - nowtime;
+	    var day = parseInt(time / 1000 / 60 / 60 / 24);
+	    var hour = parseInt(time / 1000 / 60 / 60 % 24);
+	    var minute = parseInt(time / 1000 / 60 % 60);
+	    var seconds = parseInt(time / 1000 % 60);
+	    
+	    $('.timespan').html(day + "天" + hour + "小时" + minute + "分钟" + seconds + "秒");
+	}, 1000);
+
+
+
+文字左右横线条
+	.hx{
+		display: inline-block;
+		width: 0.8125rem;height: 2px;
+		margin: 0 0.234375rem;
+		background-color: #a02e34;
+		border-top: 1px solid #bc7b7e;
+		border-bottom: 1px solid #bc7b7e;
+		vertical-align: middle;
+	}
+
+
+字符串去空格函数
+	function Trim(str,is_global)
+    {
+	    var result;
+	    result = str.replace(/(^\s+)|(\s+$)/g,"");
+	    if(is_global.toLowerCase()=="g")
+	    {
+	    	result = result.replace(/\s/g,"");
+	    }
+   	 	return result;
+	}
+
+
+
+判断是否移动还是PC
+	var system = {
+        win: false,
+        mac: false,
+        xll: false,
+        ipad:false
+    };
+
+    //检测平台
+    var p = navigator.platform;
+
+    system.win = p.indexOf("Win") == 0;
+    system.mac = p.indexOf("Mac") == 0;
+    system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+    system.ipad = (navigator.userAgent.match(/iPad/i) != null)?true:false;
+
+    if (system.win || system.mac || system.xll ||system.ipad) {
+      window.location.href="http://www.baidu.com";
+    } else {
+
+      window.location.href="http://www.jygold.net/m/huodong/m-lp-zml-v1/";
+    }
+
+ //pc或移动判断
+        function uaredirect(){
+            var c = window.location.hash;
+            if(!c.match("fromapp")) {
+                if( navigator.userAgent.match(/(iPhone|iPod|iPad|Android|ios)/i) ){
+                    window.location.href = 'http://www.jygold.net/m/';
+                }
+            }
+        }
+        uaredirect();
+
+
+
+		
+	创盈金银表单   昵称和手机号码   验证	以及发送填写资料ajax请求
+		
+	//表单验证
+function yanzheng(){
+	var uname = $("#uname").val();
+	var phone = $("#phone").val();
+    if( uname.trim() == '' ){
+        alert("昵称不能为空");
+        $("#uname").focus();
+        return false;
+    };
+    if( !(/^1[3|4|5|7|8]\d{9}$/.test( phone ))  ){
+        alert("请正确填写手机号码！");
+        $("#phone").focus();
+        return false;
+    };
+    //发送请求
+    $.ajax({
+	   url:"http://www.jygold.net/index.php?m=dailikaihu&c=index&a=send",
+	   data:{uname:uname,phone:phone,dosubmit:1,email:1},
+	   type:"post",
+	   success:function(data){
+		 $(".submitSucceed").fadeIn(500);
+	   },
+	   error:function(){
+		 alert("网络故障，请检查");
+	   }
+   });
+}	
+		
+		
+		
+		创盈金银非农早晚行情分析数据ajax请求获取
+		$(function(){
+    var $analysisCon = $("#m-analysisCon");
+    var urlList = [116,214,175,176];
+    for(var i=0; i<urlList.length; i++)
+    {
+    	$.ajax({
+    		url: "http://www.hj9999.hk/api.php?op=get_lists_json&catid="+urlList[i]+"&num=2",
+    		type: "post",
+    		dataType: "json",
+    		success: function(data){
+    			var html = 
+						'<div class="analyst-info">' +
+							'<div class="lt-title">' +data.catname+ '</div>' +
+							'<img class="trend-chart" src="images/trend_chart.jpg"/>' +
+							'<div class="con">' +
+								'<div class="title">' +
+									'<a href="' +data.list[0].url+ '" target="_blank">' +data.list[0].title+ '</a><span class="t-date">' +data.list[0].date+ '</span>' +
+								'</div>' +
+								'<a class="text" href="' +data.list[0].url+ '" target="_blank">' +data.list[0].desc.slice(0,65)+ '...</a>' +
+							'</div>' +
+							'<div style="clear: both;"></div>' +
+							'<div class="title-btm">' +
+								'<a href="' +data.list[0].url+ '">' +data.list[0].title+ '</a>' +
+								'<a style="float: right;" href="' +data.list[1].url+ '" target="_blank">' +data.list[1].title+ '</a>' +
+							'</div>' +
+						'</div>' ;
+				$analysisCon.append(html);
+    		},
+    		error:function(){
+    			console.log('请求数据失败！');
+    		}
+    	})
+    }
+})
+		
+		
+		
+		
+		弹窗
+html
+<!--活动规则-->
+	<div class="rulesbox" id="rulesBox">
+		<div class="rulesbox_cont">
+			<a href="javascript:;" class="rulesbox_close" id="rulesBoxClose">X</a>
+	        <div class="rulesbox_details">
+	        	<p class="rulesbox_details_title">「活动介绍」</p>
+	        	1.新客开户入金3000美金，点差优惠返23美金/手，入金3000美金以下点差优惠统一返10美金/手；<br />
+				2.在2014年8月之前开户的，在8月起当月净入金2000美金报名升级账户，返点优惠返23美金/手；<br />
+				3.参加返点优惠或升级的客户，该账户在入金之日起30天内不可出金，盈利部分可出。30天后本金可出；<br />
+				4.所有参加返点优惠的资金，都需在3个工作日内到位；<br />
+				5.以上手数客户平仓后，返点将月结返还到客户账户中；<br />
+				6.金裕黄金拥有最终解释权。
+				
+	        	<div class="rulesbox_hx"></div>
+	        	
+	        	<p class="rulesbox_details_title">「活动细则」</p>
+	        	1.此优惠只适用于贵金属交易<br />
+				2.交易手数是平仓手数计算<br />
+				3.参加了返点优惠活动的资金，需要在账户保留一个月<br />
+				4.优惠金额将显示于客户日结单<br />
+				5.客户平仓后，返点将月结返还到客户账户中<br />
+				6.申请优惠的客户需要保留申请活动的本金一个月，如活动期间出金，金裕将收回活动的返点优惠<br />
+				7.金裕黄金拥有最终解释权
+	        	
+	        	<div class="hx"></div>
+	        	
+	        	<p class="rulesbox_details_title">「用户须知」</p>
+	        	关于账户升级提醒，初级账户升级到高级账户要符合高级账户的要求，提交资料申请需3个工作日审核。
+	        	
+	        </div>
+		</div>
+    </div>
+
+	
+css
+.rulesbox{
+	display: none;
+	position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+	width: 100%;
+    height: 100%;
+    font-family: "敺株蔓��暺�","microsoft yahei";
+}
+.rulesbox_cont{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 833px;
+	box-sizing: border-box;
+    padding: 24px 52px;
+    margin: -300px 0 0 -416px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    color: #565656;
+    height: 0px;
+}
+.rulesbox_close{
+	position: absolute;
+    right: 13px;
+    top: 13px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.rulesbox_details{
+    overflow: auto;
+    height: 538px;
+    font-size: 16px;
+}
+.rulesbox_details_title{
+	margin: 0 0 5px -10px;
+	font-size: 18px;
+	font-weight: bold;
+}
+.rulesbox_hx{
+	height: 2px;
+	margin: 17px auto 14px;
+	background-color: #d2d2d2;
+}
+
+
+
+js
+$("#activityRule").on("click",function(){
+	$("#rulesBox").show();
+	$(".rulesbox_cont").animate({
+		height: 584
+	},300);
+});
+$("#rulesBoxClose").on("click",function(){
+	$(".rulesbox_cont").animate({
+		height: 0
+	},300,function(){
+		$("#rulesBox").hide();
+	});
+});
+		
+		
+
+		
+		
+右边客服悬浮窗//四边形果冻窗
+	<!--右侧悬浮窗-->
+	<a href="https://v1.live800.com/live800/chatClient/chatbox.jsp?companyID=515221&amp;configID=41928&amp;jid=6934404885&amp;s=1&amp;returnbt=1" target="_blank">
+		<div class="server" id="server" style="display: block; top: 1500px;">
+			<img src="images/server_info.png">
+			<p>咨询客服</p>
+		</div>
+	</a>
+		/*右边悬浮客服*/
+.server{
+	display: none;
+	position: absolute;
+	top: 165px;
+	right: 20px;
+	width: 80px;
+	height: 80px;
+	background-image: url(../images/server_bg.jpg);
+	cursor: pointer;
+}
+.server img{
+	position: absolute;
+	top: 14px;
+	left: 22px;
+}
+.server p{
+	margin-top: 55px;
+	font-size: 12px;
+	line-height: 1em;
+	color: #FFFFFF;
+	text-align: center;
+}
+@-webkit-keyframes serverAni{
+	0% {
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1)
+	}
+	30% {
+		-webkit-transform: scale3d(1.25, .75, 1);
+		transform: scale3d(1.25, .75, 1)
+	}
+	40% {
+		-webkit-transform: scale3d(.75, 1.25, 1);
+		transform: scale3d(.75, 1.25, 1)
+	}
+	50% {
+		-webkit-transform: scale3d(1.15, .85, 1);
+		transform: scale3d(1.15, .85, 1)
+	}
+	65% {
+		-webkit-transform: scale3d(.95, 1.05, 1);
+		transform: scale3d(.95, 1.05, 1)
+	}
+	75% {
+		-webkit-transform: scale3d(1.05, .95, 1);
+		transform: scale3d(1.05, .95, 1)
+	}
+	to {
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1)
+	}
+}
+@keyframes serverAni{
+	0% {
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1)
+	}
+	30% {
+		-webkit-transform: scale3d(1.25, .75, 1);
+		transform: scale3d(1.25, .75, 1)
+	}
+	40% {
+		-webkit-transform: scale3d(.75, 1.25, 1);
+		transform: scale3d(.75, 1.25, 1)
+	}
+	50% {
+		-webkit-transform: scale3d(1.15, .85, 1);
+		transform: scale3d(1.15, .85, 1)
+	}
+	65% {
+		-webkit-transform: scale3d(.95, 1.05, 1);
+		transform: scale3d(.95, 1.05, 1)
+	}
+	75% {
+		-webkit-transform: scale3d(1.05, .95, 1);
+		transform: scale3d(1.05, .95, 1)
+	}
+	to {
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1)
+	}
+}
+.server:hover img{
+	animation: serverAni 1s;
+}
+	//右侧客服悬浮窗
+$(document).scroll(function(){
+	var serverH = $(document).scrollTop()+200;
+	if( $(document).scrollTop() > 650 ){
+		$("#server").slideDown(100);
+		$("#server").animate({
+			top: serverH
+		},30);
+	}else{
+		$("#server").slideUp(100);
+	}
+});	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

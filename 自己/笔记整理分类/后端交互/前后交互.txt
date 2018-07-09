@@ -1,0 +1,19 @@
+表单的提交样式
+		<form class="form1" id="form1" action="http://www.hj9999.hk/index.php?m=zhuoluye&c=index&a=send" method="post">
+				<div class="name">
+						<span>姓名：</span><input id="name" name="uname" type="text" />
+				</div>
+				<div class="phone">
+						<span>手机号码：</span><input id="phone" name="phone" type="text" />
+				</div>
+				<p style="padding-left: 79px;margin: 37px 0 80px 0;">·请填写正确的资料，方便客服联系阁下·</p>
+				<input type="hidden" name="dosubmit" value="submit" />
+				<a class="btn ie-btn-center tijiao" onclick="yanzheng();_czc.push(['_trackEvent', '新投资客户页面', '提交申请']);" href="javascript:;">提交申请</a>
+		</form>
+
+		
+		表单提交到这里吧
+		post http://www.hj9999.hk/index.php?m=zhuoluye&c=index&a=send
+		dosubmit submit
+		uname 姓名
+		phone 手机号

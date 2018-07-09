@@ -1,0 +1,389 @@
+  
+  while语句
+  条件成立执行，不成立跳出(感觉和if差不多)
+  while(条件){功能语句}
+  
+  
+  形参列表
+  function fn(){
+	   console.log(arguments.length);
+  }
+  fn(1,2);         //输出形参长度
+  
+  
+  闭包函数
+	function show()
+	{
+		var  a=6;		
+		function aaa()
+		{
+			console.log(a);
+			a++;
+		}
+	   aaa();
+	   aaa();
+	   aaa();	   
+	}
+			
+    show();    
+    show(); 
+  
+  
+              递归
+  阶乘
+	N的阶乘等于  N-1的阶乘    乘以  N    	
+	func(N)=func(N-1)*N; 
+  
+  function func(n)
+	{
+		if(n==1)return 1;
+		if(n==2)return 2;
+		return  func(n-1)*n;
+	}
+  
+   1、1、2、3、5、8、13、21
+   func(N)=func(n-1)+func(n-2);
+  
+  
+  子节点
+  childNodes:
+     在标准浏览器下：获取到文本节点与元素节点之和，并且换行被解决为null的文本节点   
+     在IE6~7：只会获取到文件节点和元素节点，换行不被解释
+  
+  children
+  只获取到元素节点 
+  
+  
+  1、上一个兄弟节点、下一个兄弟节点、首个子节点、最后一个子节点的方法中存在element的只会获取元素节点，
+  2、不带element的方法会获取 到元素节点和文本节点，其中文本节点包括换行被解释的空白节点
+  
+  
+  var a = firstNode(元素);                      第一个子节点  
+  var a = lastNode(元素);                       最后一个子节点
+  var a = previousNode(元素);                   上一个子节点
+  var a = nextNode(元素);                       下一个子节点
+    
+  
+  兼容函数
+    function  firstNode(obj)
+    {
+	
+	   if(!obj.firstChild) return false;  //第一个不存在，则返还为null
+	   return  obj.firstElementChild || (obj.firstChild.nodeType==1?obj.firstChild:nextNode(obj.firstChild)); //第一个存在 带Element为真，则为标准浏览器且获取的只是元素，带Element为为假，则是              
+    }            // IE6或7，实用不带Element方式，获取的是元素节点和文本节点，文本节点包括换行被解释的空白节点
+               // 所以使用nextNode(obj.firstChild)，获取的是文本节点的前一个内容标签节点。
+
+
+	//最后一个子节点
+	function  lastNode(obj)
+	{
+		if(!obj.lastChild) return false;
+		return obj.lastElementChild || (obj.lastChild.nodeType==1?obj.lastChild:previousNode(obj.lastChild));
+	}
+
+	//上一个兄弟节点
+	function  previousNode(obj)
+	{
+		if(!obj.previousSibling) return false;
+		return  obj.previousElementSibling || (obj.previousSibling.nodeType==1?obj.previousSibling:previousNode(obj.previousSibling));
+	}
+	//下一个兄弟节点
+	function  nextNode(obj)
+	{
+
+		if(!obj.nextSibling) return false;
+		return  obj.nextElementSibling ||  (obj.nextSibling.nodeType==1?obj.nextSibling:nextNode(obj.nextSibling));
+	}
+  
+  
+  父节点
+  var a = b.parentNode;
+  
+  创建节点
+  var a = document.createElement('li(节点名)');
+  添加节点
+  父节点.appendChild(a);                          添加到子节点最后
+  
+  var a = firstNode(父节点);
+  父节点.insertBefore(创建的节点,a);              在---之前插入元素
+  父节点.removeChild(lastNode(父节点));           删除子元素
+  
+  替换
+  父节点.replaceChild(a元素,b元素)                a替换b，如果a,b都存在，则b消失
+  
+  交换位置
+  父元素.insertBefore(a,b);                       
+  
+    
+  描述：offsetParent
+	
+	一、标准浏览下
+	1、父级元素没有定位时，默认的offsetparent是body
+	2、父级元素有定位，元素对应的offsetParent是最接近元素的定位祖先元素
+		
+	二、IE6、7下
+	1、当前元素无定位，默认情况下，offsetparent是html
+	2、当前元素无定位，如果触发haslayout的时候，那么offsetParent就是触发haslayout节点
+	3、当前元素有定位时，offsetparent是body,haslayout,触发无影响;
+	4、当前元素有定位，父级元素宽高时、offsetParent就是有宽高的节点（就近原则）
+		
+	解决兼容性的方法：
+	1、html\body样式相同
+	2、当前元素定位
+  
+  
+         offsetParent
+	
+	一、标准浏览下
+	1、如果offsetparent是body，那么offsetLeft到body的距离 
+	2、如果offsetParent是最接近元素的定位祖先元素，那么offsetLeft到定位元素的左距离
+		
+	二、IE6、7下
+	1、当前元素无定位，offsetLeft到body距离
+	2、当前元素无定位，祖先节点相对定位，offsetLeft到body距离
+	3、当前元素无定位，祖先节点绝对定位，offsetLeft到定位节点距离
+	4、当前元素无定位，祖先节点触发haslayout，offsetLeft到触发haslayout节点距离
+	
+	5、当前元素有定位，offsetLeft到html距离
+	6、当前元素有定位,offsetLeft到body距离，haslayout不影响
+	
+	解决兼容性的方法：
+	1、html和body样式必须 保持相同，清空类似于边框、内边距样式
+	2、低版本IE必须 给当前元素添加 相对定位
+  
+  
+  滚动条
+    1、只读，不可以设置，而且IE6~IE8不可使用
+	window.pageXOffset
+	window.pageXOffset
+	
+	
+	2、document.documentElement.scrollTop   chrome不支持（其他浏览器支持），可读可写
+	
+	3、document.body.scrollTop         chrome支持（其他浏览器不支持），可读可写 
+  
+  滚动条事件
+  document.onscroll = function(){}
+  
+  兼容处理
+  function  getScrollY()
+  {
+	  return  window.pageYOffset || document.documentElement.scrollTop;	
+  }
+
+   function  setScrollY(num)
+   {
+	  document.documentElement.scrollTop=document.body.scrollTop=num;
+   }
+  
+  
+  
+  a.offsetWidth                 //width+左右padding+左右border
+  a.clientLeft                  //左border的大小
+  
+  
+  属性操作
+  a.setAttribute('属性名','属性值');                     设置                       
+  a.getAttribute('属性名');                              获取
+  
+   
+  绝对地址：本地存储地址                                  C:\
+  相对地址：相对于引用的html的地址                        ./
+  
+  
+  表格操作
+  var  td10=table.tBodies[0].rows[2].cells[1];
+  tBodies身体   table.tBodies表格的身体/主体  rows行   cells列   
+  
+  
+  复数数组
+  var array = [[1,2,3],[4,5,6],[7,8,9]];
+  console.log(array[2][1]);
+  
+  
+  可视区的大小
+  window.innerWidth                             //当前浏览器所看到的内容区域大小   BOM   包含滚动条
+  window.innerHeight                            
+  document.documentElement.clientWidth          //DOM  clientWidth: 获取对象可见内容的宽度，不包括滚动条，不包括边框
+  document.documentElement.clientHeight
+    
+  a.clientHeight                        可视窗口高度  
+  a.scrollWidth                         内容大小 不带边框 
+  a.offsetWidth                         页面宽度 带边框
+  a.offsetHeight                        页面高度
+  
+  crollWidth                            获取对象的滚动宽度 。
+  scrollHeight                          获取对象的滚动高度。
+  scrollLeft                            设置或获取位于对象左边界和对象中目前可见内容的最左端之间的距离(width+padding为一体)
+  scrollTop                             设置或获取位于对象最顶端和对象中可见内容的最顶端之间的距离；(height+padding为一体)
+  
+  
+  打开窗口
+  window.open('网址','_blank');
+  
+  写入代码
+  view=window.open("");                    一般不允许自动打开，写一个点击事件即可。
+  view.document.write('<input type="button" value="提交" />dadada');
+  
+  
+  哈希值       #
+  哈希对应图片操作
+  
+  
+  刷新页面
+  window.location.reload();
+  
+  
+  窗口事件
+  window.onresize = function(){}               浏览器窗口大小发生改变时调用
+  
+  
+  
+  
+  
+  获取光标事件
+  input.onfocus = function(){}
+  失去光标事件
+  input.onblur = function(){}
+  自动获取光标
+  input.focus();
+  
+  
+  鼠标移动事件
+  document.onmousemove = function(ev){
+  
+      ev = ev || window.event;
+	  
+	  鼠标坐标，以可视窗口为基础
+	  ev.clientX
+	  ev.clientY
+	  鼠标坐标，以页面大小为基础
+	  ev.pageX
+	  ev.pageY
+  }
+  
+  
+  事件流：冒泡事件+捕获事件
+  冒泡事件:传递过程为由上到下;
+  捕获事件: 传递过程为由下到上;
+  adiv[i].onclick=function(ev){
+		 	 		
+		ev=ev||window.event;
+		ev.cancelBubble=true;            //取消事件传递			
+  }
+  
+  
+ 
+                                            绑定事件
+  普通事件上多个函数，最后一个赋值有效;
+				
+  兼容绑定
+		bindEvent(btn,'click',a);
+		bindEvent(btn,'click',b);	
+  
+  
+  解决事件绑定兼容
+		function bindEvent(obj,events,fn)
+		{
+			if(obj.addEventListener)
+			{
+				//标准浏览器       false：冒泡事件
+				obj.addEventListener(events,fn,false);
+			}
+			else
+			{
+				//IE6~IE7
+				obj.attachEvent('on'+events,fn);
+			}
+		}
+  
+  
+  取消绑定事件
+  btn.attachEvent('onclick',aaa);
+  btn.attachEvent('onclick',bbb);
+ 
+  btn.detachEvent('onclick',aaa);
+  
+  
+  
+  
+  
+  
+                                                         this指向问题
+  修改this指向
+          btn.attachEvent('onclick',function(){
+          	   aaa.call(btn);    //aaa.call(参数1,参数2，....) :参数1:aaa函数中的this指向对象 ，后面的参数对应aaa函数的形参列表 
+          });
+
+
+          btn.attachEvent('onclick',function(){
+            	
+               aaa.apply(btn);   //aaa.apply(参数1,[成员0，成员1，....]) :参数1:aaa函数中的this指向对象 ，参数2：是一个数组，数组中的成员对应aaa函数的形参列表 
+          });
+  
+  
+  
+  
+  
+  键盘事件
+  window.onkeydown = function(ev){
+  
+        ev || window.event;
+		
+		console.log(ev.keyCode);        //按键时得到对应的编码
+		if(ev.ctrlKey)
+			{
+				console.log('ctrl');
+			}
+  }
+  
+  控制元素
+  window.onkeydown=function (ev){
+		ev=ev||window.event;
+		
+		switch(ev.keyCode)
+		{
+			case 37: left1(); break;
+			case 38: top1(); break;
+			case 39: right1(); break;
+			case 40: bottom1(); break;
+		}
+
+	}
+  
+  
+  
+  
+  默认事件
+  ev.preventDefault();                取消默认事件
+  
+  
+  
+  放大镜    苹果菜单    照片墙     委托事件
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

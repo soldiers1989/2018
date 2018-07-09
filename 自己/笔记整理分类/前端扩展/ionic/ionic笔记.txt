@@ -1,0 +1,97 @@
+	
+	
+		ionic图标大小问题
+  ionic的icon是用字体的形式储存的，也就是说它们本身就是字体，用font-size和color就可以控制它们的大小和颜色了
+
+  
+		ionic图标必须要用i标签
+  <i class="icon ion-planet"></i> 图标测试
+  
+		
+		
+		ionic路径问题
+  子文件html都是以默认/入口文件index.html为基准。
+  css背景图片则是以本身或目标html文件为基准。  
+  
+		ionic实用插件swiper插件获取数据ng-repeat无法滚动问题       
+		注：原网址http://www.tuicool.com/articles/IJRvYr  ！！！！！
+  在API参数那里加入下面代码
+  observer:true,//修改swiper自己或子元素时，自动初始化swiper
+  observeParents:true,//修改swiper的父元素时，自动初始化swiper
+  
+	
+		ionic测试页面   错误地址跳转页面
+								 文件夹名字  文件名
+  $urlRouterProvider.otherwise('/goodsList/goodsList.html');	在主 路由 里
+	
+		
+		ionic文本标签问题
+  span与p标签对调，文本要用h1-h6
+	
+	
+	
+	
+	
+	
+	
+		带图片的卡片，卡片+栅格  图片布局响应式。
+		微博 标题 + 图片+文章+ 点赞 评论。实用！
+    <div class="list card">
+		<p class="right-red">主题街</p>
+		
+		<div class="item item-body">	
+			<div class="row">
+				<div class="col">
+					<img class="full-image" src="./img/home/home-theme-3.jpg"/>
+				</div>
+				<div class="col">
+					<img class="full-image" src="./img/home/home-theme-1.jpg"/>	
+					<img class="full-image" src="./img/home/home-theme-2.jpg"/>
+				</div>
+			</div>																				
+		</div>
+	</div>	
+	
+	
+	
+		商品排版，一行3张图片，下面对应商品信息，文字居中，实用！
+	<ul class="list">
+		<li class="row">
+			<div class="col">
+				<img src="./img/category/nz1.jpg" class="full-image" />
+				<span>毛呢大衣</span>
+			</div>
+			<div class="col">
+				<img src="./img/category/nz2.jpg" class="full-image"/>
+				<span>羽绒服</span>
+			</div>
+			<div class="col">
+				<img src="./img/category/nz3.jpg" class="full-image"/>
+				<span>针织衫</span>
+			</div>
+			
+		</li>
+	</ul>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

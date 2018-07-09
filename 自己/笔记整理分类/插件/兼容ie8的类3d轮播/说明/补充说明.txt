@@ -1,0 +1,5 @@
+
+
+这个类的宽决定两边图片的露出多少
+
+.roundabout-holder{list-style:none;width:680px;height:300px;margin:0px auto;}

@@ -1,0 +1,32 @@
+Ajax准备工作：
+搭建Apache服务器
+
+1.安装Xampp
+2.进入安装路径xampp---->打开htdocs-->在htdocs下面新建一个以www命名的文件夹
+3.将文件放到www文件夹下
+4.访问服务器
+	三种方式：localhost/www/      192.168.1.X/www/       127.0.0.1/www/
+
+ajax:用js异步操作XML/HTML  （前后端数据交互）
+
+ajax好处：
+	1.提升用户体验
+	2.减少服务器压力（减少数据请求次数）
+	3.无须刷新页面更新数据
+
+ajax核心对象：XMLHttprequest
+
+	document.write()
+	cosole.log()
+
+ajax请求数据：
+
+1.创建ajax核心对象
+2.open方法
+	请求方式 get/post
+	请求地址 {get：url?参数}    {post:url}
+	同步异步 ture/false
+
+3.send发送数据{get:send不需要带参数}  {post:前端url参数作为send方法中的参数 （在发送之前设置请求头）}
+
+4.监控请求状态（拿到后台数据）

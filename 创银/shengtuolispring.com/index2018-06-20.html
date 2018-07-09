@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$SEO['site_title']}</title>
+    <meta name="viewport" content="width=1080">
+    <link href="{APP_PATH}statics/version01/css/reset.css" rel="stylesheet"/>
+    <link href="{APP_PATH}statics/version01/css/home/home.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+    <link href="{APP_PATH}statics/theme6/css/foundation-datepicker.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="fs">
+    <div class="slideBox" id="slideBox">
+        <div class="bd">
+            <ul class="bg-group">
+                <li class="bg-group-item"><img class="fs-bg" src="{APP_PATH}statics/version01/images/banners/banner1.jpg?v=1"></li>
+                <li class="bg-group-item"><img class="fs-bg" src="{APP_PATH}statics/version01/images/banners/banner2.jpg?v=1"></li>
+                <li class="bg-group-item"><img class="fs-bg" src="{APP_PATH}statics/version01/images/banners/banner3.jpg?v=1"></li>
+                <li class="bg-group-item"><img class="fs-bg" src="{APP_PATH}statics/version01/images/banners/banner4.jpg?v=1"></li>
+                <li class="bg-group-item"><img class="fs-bg" src="{APP_PATH}statics/version01/images/banners/banner5.jpg?v=1"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="fs-inner">
+            <div class="nav">
+               <img class="logo" src="{APP_PATH}statics/version01/images/home/logo.png"/>
+                <ul class="book">
+                    <li class="bookRoom active">
+                        <div class="bookRoom-inner book-tip">
+                            <div class="square"></div>预定客房
+                        </div>
+                        <div class="Triangle"></div>
+                    </li>
+                    <li class="bookSpa">
+                        <div class="bookSpa-inner  book-tip"><div class="square"></div>预订温泉</div><div class="Triangle"></div>
+                    </li>
+                </ul>
+                <ul class="main-nav">
+                    <li class="main-nav-item main-menu">
+                        主菜单
+                    </li>
+                    <li class="main-nav-item">
+                        <a class="main-nav-item-link" href="{$CATEGORYS[2][url]}" target="_blank">
+                            <div class="square"></div>酒店概况
+                        </a>
+                    </li>
+                    <li class="main-nav-item">
+                        <a class="main-nav-item-link" href="{$CATEGORYS[8][url]}" target="_blank">
+                            <div class="square"></div>客房信息
+                        </a>
+                    </li>
+                    <li class="main-nav-item">
+                        <a class="main-nav-item-link" href="{$CATEGORYS[19][url]}" target="_blank">
+                            <div class="square"></div>露天温泉
+                        </a>
+                    </li>
+                    <li class="main-nav-item">
+                        <a class="main-nav-item-link" href="{$CATEGORYS[20][url]}" target="_blank">
+                            <div class="square"></div>婚庆宴会
+                        </a>
+                    </li>
+                    <li class="main-nav-item">
+                        <a class="main-nav-item-link" href="{$CATEGORYS[22][url]}" target="_blank">
+                            <div class="square"></div>精致餐饮
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bookRoomForm">
+                <form id="bookingRoom" method="post" class="form-group" action="{APP_PATH}index.php?m=booking">
+                    <div class="form-group-inner">
+                        <div class="form-group-item">
+                            <label for="js-booking-check-in">入住日期：</label>
+                            <input type="text" id="js-booking-check-in" data-relate-stamp="#js-query-start-stamp" value="{date('Y-m-d')}" name="start_time">
+                        </div>
+                        <div class="form-group-item" style="float: right">
+                            <label for="js-booking-check-out">离店日期：</label>
+                            <input type="text" id="js-booking-check-out" data-relate-stamp="#js-query-end-stamp" value="{date('Y-m-d', strtotime('+1 day'))}" name="end_time">
+                        </div>
+                    </div>
+                    <div style="cursor: pointer" id="bookingSubmit" class="submit">获取最优房价</div>
+                </form>
+            </div>
+            <div class="bookSpaForm">
+                <form class="form-group">
+                    <div class="form-group-item">
+                        <label>选择1：预订号码</label>
+                        <input type="text" name="bookingNum" placeholder="预定号码">
+                        <input type="text" name="bookingName" placeholder="姓名">
+                    </div>
+                    <button class="submit">继续</button>
+                </form>
+                <form class="form-group form2">
+                    <div class="form-group-item">
+                        <label>选择2：贵宾会籍号码</label>
+                        <input type="text" name="vipMemberNum" placeholder="贵宾会籍号码">
+                        <input type="text" name="vipName" placeholder="姓名">
+                    </div>
+                    <button class="submit">继续</button>
+                </form>
+            </div>
+    </div>
+    <img class="footline" src="{APP_PATH}statics/version01/images/home/footline.jpg"/>
+    <div class="foot">
+        <div class="foot-inner">
+            <ul class="contact">
+                <li>中国广州从化温泉镇温泉东路112号</li>
+                <li><span style="margin-right: 20px;">电话：（8620）87882388</span>             传真：（8620）8788 2229</li>
+            </ul>
+            <div class="company"><span style="margin-right: 5px;">禧缘（广州）温泉婚庆度假庄园有限公司</span>    保留所有权利</div>
+        </div>
+    </div>
+</div>
+<!-- <div class="weather-group">
+    <ul>
+        <li><a>联络我们</a></li>
+        <li><a>查找酒店</a></li>
+    </ul>
+    <div class="line">|</div>
+    <div class="language">选择语言</div>
+    <div class="weather">最高气温 77°F / 25°C 最低气温 68°F / 20°C</div>
+</div> -->
+</body>
+<script src="{APP_PATH}statics/version01/js/jquery.min.js"></script>
+<script src="{APP_PATH}statics/version01/js/jquery.SuperSlide.2.1.1.source.js"></script>
+<script>
+    $(".slideBox").slide({
+        mainCell:".bd ul",
+        autoPlay:true,
+        delayTime:'500',
+        interTime:'3000'
+        easy:'swing'
+    });
+</script>
+<script src="{APP_PATH}statics/version01/js/home/index.js"></script>
+<script src="{APP_PATH}statics/theme6/js/jquery-1.11.3.min.js"></script>
+<script src="{APP_PATH}statics/theme6/js/foundation-datepicker.js"></script>
+<script src="{APP_PATH}statics/theme6/js/locales/foundation-datepicker.zh-CN.js"></script>
+<script src="{APP_PATH}statics/theme6/js/roombooking.js"></script>
+</html>

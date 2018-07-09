@@ -1,0 +1,89 @@
+
+
+
+
+
+
+解决微信无法识别二维码的问题
+
+
+
+var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) 
+
+在这个函数的里面加
+		var options = {
+			isClickableElement : function(el){
+				return true;
+			}
+		};
+
+
+位置如下
+
+
+var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+        var pswpElement = document.querySelectorAll('.pswp')[0],
+            gallery,
+            options,
+            items;
+
+        items = parseThumbnailElements(galleryElement);
+
+        options = {
+
+            galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+            getThumbBoundsFn: function(index) {
+                var thumbnail = items[index].el.getElementsByTagName('img')[0], 
+                    pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                    rect = thumbnail.getBoundingClientRect(); 
+
+                return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};              
+                
+            }
+            
+        };
+        
+        var options = {
+			isClickableElement : function(el){
+				return true;
+			}
+		};
+
+
+
+关于photoswipe的展示时图片自适应问题
+用过photoswipe做移动端图片预览的小伙伴都知道，这个插件存在一个data-size，必须要填写，但是如果你的图片尺寸比例不是固定的，那这个属性就会带来无尽的烦恼，我个人在使用jQuery时，发现一种解决办法
+
+window.onload=function(){
+auto_data_size();
+};
+function auto_data_size(){
+var imgss= $("figure img");
+$("figure img").each(function() {
+var imgs = new Image();
+imgs.src=$(this).attr("src");
+var w = imgs.width,
+h =imgs.height;
+$(this).parent("a").attr("data-size","").attr("data-size",w+"x"+h);
+})
+};		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+

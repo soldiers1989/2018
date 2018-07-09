@@ -1,0 +1,187 @@
+.banner{width:100%;height:550px;position:relative;overflow:hidden}
+.banner .bannerBox{position:absolute;margin-left:-970px;left:50%;width:1920px;height:550px}
+.banner .bannerBox .hd{height:16px;overflow:hidden;position:absolute;left:50%;bottom:65px;z-index:1}
+.banner .bannerBox .hd ul{overflow:hidden;zoom:1;float:left}
+.banner .bannerBox .hd ul li{float:left;margin-right:5px;width:14px;height:14px;line-height:14px;text-align:center;background:#aaa;cursor:pointer;font-size:0;border-radius:7px}
+.banner .bannerBox .hd ul li.on{background:#fff}
+.banner .bannerBox .bd{position:relative;height:100%;z-index:0}
+.banner .bannerBox .bd li{width:1920px;height:550px;zoom:1;vertical-align:middle}
+.banner .bannerBox .bd img{width:1920px;height:550px;display:block}
+.mainpart{width:1150px;margin:auto}
+.dataCount{width:1148px;height:98px;border:1px solid #bfbfbf;position:relative;top:-30px;background:#fff;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px}
+.dataCount .dataCount-main{width:635px;height:98px;float:left}
+.dataCount .dataCount-main li{float:left;width:155px;text-align:center;font-size:12px;color:#8a8a8a;padding-top:20px}
+.dataCount .dataCount-main li .min_num{font-size:12px}
+.dataCount .dataCount-main li .sec_num{font-size:12px}
+.dataCount .dataCount-main li:first-child{width:170px}
+.dataCount .dataCount-main li span{font-size:20px;color:#c93}
+.dataCount .dataCount-btn-group{width:513px;height:81px;float:left;margin-top:17px}
+.dataCount .dataCount-btn-group a{display:block;width:238px;height:58px;float:left}
+.dataCount .dataCount-btn-group a:first-child{margin-right:19px}
+.dataCount .dataCount-btn-demoAccount{background:url(../images/btn3.jpg) top center no-repeat}
+.dataCount .dataCount-btn-demoAccount:hover{background:url(../images/btn1.jpg) top center no-repeat}
+.dataCount .dataCount-btn-realAccount{background:url(../images/btn4.jpg) top center no-repeat}
+.dataCount .dataCount-btn-realAccount:hover{background:url(../images/btn2.jpg) top center no-repeat}
+.quotesData-group{width:1148px;height:157px;border:1px solid #bfbfbf}
+.quotesData-group .quotesData-title{width:1148px;height:42px;line-height:42px;border-bottom:1px solid #bfbfbf;font-size:18px;color:#737373}
+.quotesData-group .quotesData-title span{margin-left:12px;margin-right:5px;position:relative;top:3px;display:inline-block;height:19px;width:23px;background:url(../images/sprite.png) -171px 0 no-repeat}
+.quotesData-group #mainPrice ul li{overflow:hidden;list-style:none;width:191px;height:94px;padding-top:20px;float:left;text-align:center}
+.quotesData-group #mainPrice i{display:inline-block;border-width:8px 6px 0;border-style:solid;border-color:#B6B6B6 transparent transparent;width:0;height:0;vertical-align:middle}
+.quotesData-group #mainPrice .up{color:#4dba56}
+.quotesData-group #mainPrice .up i{border-color:transparent transparent #4dba56;border-width:0 6px 8px}
+.quotesData-group #mainPrice .down{color:#f05455}
+.quotesData-group #mainPrice .down i{border-color:#f05455 transparent transparent}
+.quotesData-group #mainPrice .dataTitle{font-size:14px;text-align:center;height:46px;line-height:46px;color:#737373;outline:1px solid red}
+.quotesData-group #mainPrice span{display:inline-block;margin-right:10px;font-size:21px}
+.info{width:1150px;height:312px;margin-top:22px}
+.info .info-left{width:756px;height:310px;border:1px solid #bfbfbf;float:left}
+.info .info-left .info-tab-btn-group{width:754px;height:42px;border-bottom:1px solid #bfbfbf}
+.info .info-left .info-tab-btn-group ul li{width:156px;height:42px;line-height:42px;text-align:center;border-right:1px solid #bfbfbf;float:left;font-size:17px;color:#737373;cursor:pointer}
+.info .info-left .info-tab-btn-group ul .active{color:#daad53}
+.info .info-left .info-tab-btn-group a{display:block;float:right;width:76px;height:42px;line-height:42px;text-align:center;font-size:12px;color:#737373}
+.info .info-left .info-list .info-list-item{width:754px;height:267px;overflow:hidden;display:none}
+.info .info-left .info-list .info-list-item a:hover{color:#daad53}
+.info .info-left .info-list .active{display:block}
+.info .info-left .info-list-item .hqpic{display:block;float:left;width:186px;height:115px;margin-top:25px;margin-left:17px}
+.info .info-left .info-intro{font-size:12px;color:#737373;margin-top:25px;margin-left:22px;width:510px;height:115px;float:left}
+.info .info-left .info-intro h4{font-size:17px;margin-bottom:10px}
+.info .info-left .infotip-list{clear:both;width:720px;margin:auto;margin-top:150px}
+.info .info-left .infotip-list li{width:540px;height:30px;float:left;color:#737373}
+.info .info-right{width: 375px;height: 310px;border: 1px solid #bfbfbf;float: right;position: relative}
+.info .info-right .info-right-item{width: 375px;height: 310px;float: left;display: none}
+.info .info-right .active{display: block}
+.info .info-right .info-right-item dl{width: 358px;height: 134px;margin: 17px;}
+.info .info-right .info-right-item dl dt{width: 165px;height: 134px;float: left}
+.info .info-right .info-right-item dl dd{font-size: 12px;color: #737373}
+.info .info-right .info-right-item dl dd h4{font-size: 18px;line-height: 40px;}
+.info .info-right .analyst-rate{width:358px;height:60px;margin-left:17px}
+.info .info-right .analyst-rate li{width:113px;height:60px;float:left;font-size:14px;padding-left:6px;color:#737373;line-height:80px}
+.info .info-right .analyst-rate li span{display:inline-block;position:relative}
+.info .info-right .analyst-rate .win-rate span{height:33px;width:44px;background:url(../images/sprite.png) -64px 0 no-repeat}
+.info .info-right .analyst-rate .hqzx span{height:35px;width:39px;background:url(../images/sprite.png) 0 0 no-repeat}
+.info .info-right .analyst-rate .hqzx a{display: inline-block}
+.info .info-right .analyst-rate .hqzx a:hover{color:#daad53 ;}
+.info .info-right .analyst-rate .thumb span{height:33px;width:25px;background:url(../images/sprite.png) -39px 0 no-repeat;display:block;float:left;margin-top:13px}
+.info .info-right .thumbCount{width:20px;height:28px;display:block;float:left;line-height:14px;margin-left:5px;margin-top:19px}
+.info .info-right .thumbCount-info{width:20px;height:14px;background:0 0;color:#daad53}
+.info .info-right .straregy{width:330px;margin:auto;font-size:13px;color:#737373}
+.info .info-right .straregy span{font-size:15px;color:#daad53}
+.download-part{width:1150px;height:505px;background:url(../images/bg1.jpg) top center no-repeat;margin-top:29px;overflow:hidden;color:#fff;text-align:center}
+.download-part .mt4-download{display:block;width:301px;height:28px;margin:auto;line-height:28px;margin:auto;font-size:17px;color:#daad53;border:1px solid #daad53;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;margin-top:30px}
+.download-part h1{text-align:center;font-size:30px;height:50px;line-height:70px}
+.download-part h4{height:36px;line-height:36px;font-size:14px}
+.download-part p{color:#fff;height:57px;line-height:45px;font-size:14px}
+.download-part .dot{font-size:25px;display:inline-block;position:relative;top:2px}
+.download-part dl{width:106px;height:154px;float:left;margin-top:40px}
+.download-part dl dd{line-height:50px}
+.download-part .ml92{margin-left:92px}
+.download-part .ml27{margin-left:27px}
+.download-part .pcpic{display:block;float:left;margin-left:56px}
+.download-part .download-group{width:171px;height:135px;float:left;margin:40px 0 0 65px}
+.download-part .download-group li{width:171px;height:39px;margin-top:9px;font-size:0;transition:all .5s;}
+.download-part .download-group li:hover{
+transform: translate(5px,-3px);
+-ms-transform: translate(5px,-3px);
+-webkit-transform: translate(5px,-3px);}
+.download-part .download-group li:first-child{margin-top:0}
+.download-part .download-group li .download-icon{width:42px;height:39px;float:left;margin-right:1px;overflow:hidden}
+.download-part .download-group li .download-item{display:block;width:128px;height:39px;line-height:39px;float:left;font-size:14px;color:#fff}
+.download-part .download-group li .s-bgcolor1{background:#d34647}
+.download-part .download-group li .s-bgcolor2{background:#fcfcfc}
+.download-part .download-group li .s-bgcolor3{background:#5bb85b}
+.download-part .download-group li .s-color{color:#a6a6a6}
+.download-part .download-group li .windows{display:block;height:22px;width:23px;margin:8px 0 0 10px;overflow:hidden;background:url(../images/sprite.png) -148px 0 no-repeat}
+.download-part .download-group li .apple{display:block;height:24px;width:19px;margin:7px 0 0 12px;overflow:hidden;background:url(../images/sprite.png) -129px 0 no-repeat}
+.download-part .download-group li .android{display:block;height:27px;width:21px;margin:6px 0 0 10px;overflow:hidden;background:url(../images/sprite.png) -108px 0 no-repeat}
+.calendar{width:1150px;height:546px;margin-top:28px;overflow:hidden}
+.calendar .financial{width:674px;height:544px;float:left;border:1px solid #bfbfbf}
+.calendar .financial-title{width:674px;height:118px;border-bottom:1px solid #bfbfbf;background:url(../images/bg2.jpg) top center no-repeat}
+.calendar h1{width:100%;height:61px;line-height:61px;text-indent:28px;color:#fff;font-size:25px}
+.calendar .daily{margin-left:21px}
+.calendar .daily li{width:89px;height:46px;padding-top:8px;float:left;font-size:14px;text-align:center;color:#fff;line-height:21px;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;cursor:pointer}
+.calendar .daily .active{background:#fff;color:#daad53;text-align:center}
+.calendar .financial-info{width:638px;height:407px;margin:auto;margin-top:5px;overflow:scroll}
+.financial-info #figure{color:#666}
+.rise,.txt-bullish,.txt-lightblue,.txt-rise{color:#32A5E6}
+.drop,.txt-bearish,.txt-drop,.txt-pink{color:#FF4666}
+.list-table{border-collapse:collapse}
+.list-table>tbody>tr>td,.list-table>thead>tr>td,.list-table>tr>td{border-bottom:1px solid #E1E6E9;padding:.4em 0;vertical-align:top}
+.list-table.narrow>tbody>tr>td,.list-table.narrow>thead>tr>td,.list-table.narrow>tr>td{padding:.3em 0}
+.list-table.wide>tbody>tr>td,.list-table.wide>thead>tr>td,.list-table.wide>tr>td{padding:.55em 0}
+.row-on-hover>tbody>tr:hover{background-color:#fffeed}
+.label{display:inline-block;border-radius:2px;font-size:.8em;padding:.25em .5em;text-transform:capitalize;text-align:center;min-width:50%}
+.label-bullish{background-color:#56b4eb;color:#FFF}
+.label-bearish{background-color:#fe6981;color:#FFF}
+.label-mixed{background-color:#ffc066;color:#FFF}
+.label-neutral{background-color:#a0a0a0;color:#FFF}
+.label-medium{background-color:#ffb953;color:#FFF}
+.label-high{background-color:#d9534f;color:#FFF}
+.label-low{background-color:#5bc0de;color:#FFF}
+.figure-calendar-table .btn-close{display:none}
+.figure-calendar-table .toggle-next-tr.open .btn-close{display:inline-block}
+.figure-calendar-table .toggle-next-tr.open .btn-open{display:none}
+.figure-calendar-table tr.open{display:table-row}
+.figure-calendar-table tr.open td{border-bottom-width:2px!important}
+.list-table .loading{padding-left:15px;background:url(http://www.winfuns.com/statics/theme3/images/loading.gif) no-repeat}
+.flag-20-aed{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -5978px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-aud{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6002px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-bhd{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6026px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-cad{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6050px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-chf{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6074px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-cnh,.flag-20-cny,.flag-20-rmb{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6098px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-czk{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6122px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-dkk{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6146px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-eur{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6170px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-gbp{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6194px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-hkd{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6218px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-huf{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6242px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-ils{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6266px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-itl{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6290px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-jpy{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6314px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-mxn{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6338px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-nok{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6362px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-nzd{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6386px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-pln{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6410px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-rub{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6434px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-sek{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6458px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-sgd{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6482px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-try{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6506px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-usd{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6530px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-zar{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6554px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-silver{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6579px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-gold,.flag-20-xau{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6602px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-gas{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6626px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.flag-20-oil{background:url(http://www.winfuns.com/statics/theme3/images/flag-all.png) no-repeat -1px -6650px;width:20px;height:20px;display:inline-block;vertical-align:middle}
+.calendar .jy-opinion{width:463px;height:544px;border:1px solid #bfbfbf;float:left;margin-left:9px}
+.calendar .jy-opinion-title{width:463px;height:118px;background:url(../images/bg3.jpg) top center no-repeat}
+.calendar .jy-opinion ul{width:434px;margin:auto}
+.calendar .jy-opinion ul li{width:434px;border-bottom:1px solid #bfbfbf}
+.calendar .jy-opinion ul li a:hover{color:#daad53}
+.calendar .jy-opinion ul li:last-child{border:none}
+.calendar .jy-opinion ul li .daily-title{display:inline-block;color:#737373}
+.daily-dot{display:inline-block;font-size:20px;color:#737373}
+.daily-date{display:block;float:right;line-height:30px;color:#737373}
+.act-group{width:1150px;height:333px;margin:32px 0 41px 0}
+.act-group .act-group-item{width:373px;height:331px;border:1px solid #bfbfbf;float:left;margin-left:12px}
+.act-group .act-group-item:first-child{margin-left:0}
+.act-group .act-title{width:373px;height:42px;border-bottom:1px solid #bfbfbf;line-height:42px;font-size:18px;color:#737373;background:#eee;text-indent:26px}
+.act-group .act-group-item .pic{display:block;width:360px;height:121px;margin:8px 0 0 6px}
+.act-group .act-group-item-info{width:360px;height:57px;margin:auto;margin-top:9px;line-height:19px;font-size:12px;color:#737373}
+.act-group .act-group-item-info .s-color{color:#daad53}
+.act-group .act-group-item .more{display:block;width:79px;height:28px;line-height:28px;font-size:15px;text-align:center;margin:auto;margin-top:42px;color:#daad53;border:1px solid #daad53;transition:all .5s;}
+.act-group .act-group-item .more:hover{
+	transform: translate(0px,-3px);
+-ms-transform: translate(0px,-3px);
+-webkit-transform: translate(0px,-3px);
+background: #daad53;
+color:white;
+}
+.co-media{width:100%;height:115px;background:#5f5f5f}
+.co-media-inner{width:1150px;height:115px;margin:auto}
+.co-media p{height:57px;line-height:60px;font-size:20px;color:#daad53}
+.co-media ul li{float:left;width:125px;height:38px;margin-left:74px}
+.co-media ul li:first-child{margin-left:0}
+
+
+
+

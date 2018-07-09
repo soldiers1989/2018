@@ -1,0 +1,1044 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<title>{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+
+
+
+<!-- <link rel="stylesheet" type="text/css" href="css/index.css"></link>
+  <link rel="stylesheet" type="text/css" href="css/flash.css">
+<link rel="stylesheet" type="text/css" href="css/header.css">
+<link type='text/css' href='css/basic.css' rel='stylesheet' media='screen'/>
+<script type="text/javascript" src="js/slideshow.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/totop.js"></script>
+<script type="text/javascript" src="js/jQuery.blockUI.js"></script>
+<script type='text/javascript' src='js/basic.js'></script>--><!--点击弹出窗口脚本-->
+<!--<script type='text/javascript' src='js/jquery.simplemodal.js'></script>-->
+
+
+
+<link rel="stylesheet" type="text/css" href="{NEW_PATH}css/index.css"></link>
+<link rel="stylesheet" type="text/css" href="{NEW_PATH}css/flash.css">
+<link rel="stylesheet" type="text/css" href="{NEW_PATH}css/header.css">
+<link type='text/css' href='{NEW_PATH}css/basic.css' rel='stylesheet' media='screen' />
+
+
+<script type="text/javascript" src="{NEW_PATH}js/slideshow.js"></script>
+<script type="text/javascript" src="{NEW_PATH}js/jquery-1.8.3.min.js"></script>
+<script src="{NEW_PATH}js/jquery.superslide.2.1.1.js" type="text/javascript"></script>
+<script type="text/javascript" src="{NEW_PATH}js/common.js"></script>
+<script type="text/javascript" src="{NEW_PATH}js/totop.js"></script>
+<script type="text/javascript" src="{NEW_PATH}js/jQuery.blockUI.js"></script>
+<script type='text/javascript' src='{NEW_PATH}js/basic.js'></script><!--点击弹出窗口脚本-->
+<script type='text/javascript' src='{NEW_PATH}js/jquery.simplemodal.js'></script>
+
+<script type="text/javascript">
+function uaredirect(){
+    var c = window.location.hash;
+    if(!c.match("fromapp")) {
+        if( navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i) ){
+            window.location.href = 'http://i.hj9999.hk';
+        }
+    }  
+}
+uaredirect();
+</script>
+<script>
+$(document).ready(function(e) {
+/*$(".nav_box ul li").hover(function(){
+		$(this).addClass('hover');
+		$(this).find("ul:first").show();//鼠标滑过查找li下面的第一个ul然后显示；
+	},function(){
+		$(this).removeClass('hover');
+		$(this).find("ul:first").hide();//鼠标离开隐藏li下面的ul；
+	})*/ 
+	 $(function(){	
+		$('.tab li').click(function(){
+		$(this).addClass('select').siblings().removeClass('select');
+		$('.tab_box>div:eq('+$(this).index()+')').show().siblings().hide();	
+		})
+	})
+	
+});
+</script>
+<script>
+$(function (){
+	  $(".left_nav dd").hover(function(){
+	  	$(".nav_right",this).show();
+	  });
+	  $(".left_nav dd").mouseleave(function(){
+	  	$(".nav_right",this).hide();
+	  });
+});
+</script>
+
+</head>
+<body>
+
+{template "content","header"}
+
+<div class="flash"><!--幻灯片-->
+<link href="{NEW_PATH}js/viedo/shadowbox.css" rel="stylesheet" type="text/css" >
+<script  src="{NEW_PATH}js/viedo/shadowbox.js" type="text/javascript"></script>
+<script type="text/javascript" src="{NEW_PATH}js/viedo/jquery.switchable[all].min.js"></script>
+<script>
+		$(document).ready(function(){
+		
+			Shadowbox.init();
+			 window.api = $("#trigger1").switchable("#panel1 > div > a", {
+					triggerType: "click",
+				effect: "scroll",
+					steps: 3,
+					visible: 3,
+					circular: true
+			}).autoplay({ api: true });
+				 
+				$("#next1").click(function(){
+					api.next();
+				});
+				$("#prev1").click(function(){
+					api.prev();
+				});
+				   
+				}); 
+		</script>
+	<div class="flash_box" style="position: relative;">
+   		<ul class="rslides">
+        	<!--
+            <li>
+                <a href="http://www.hj9999.hk/huodong/dcyh" title="金裕FSP资质" target="_blank">
+                <img alt="金裕FSP资质" src="{NEW_PATH}images/home/flash/slider_six.jpg" /></a>
+              </li>
+             -->
+             <!--
+            <li>
+           	 	<a href="http://www.hj9999.hk/huodong/10zengjin/" title="金裕年终盛惠_金裕黄金" target="_blank">
+            	<img alt="金裕年终盛惠_金裕黄金" src="{NEW_PATH}images/home/flash/10zengjinbanner.jpg" /></a>
+            </li>
+             <li>
+           	 	<a href="http://www.hj9999.hk/huodong/6zhounian/" title="炒黄金从模拟开始，比炒股更赚钱的投资_金裕黄金" target="_blank">
+            	<img alt="炒黄金从模拟开始，比炒股更赚钱的投资_金裕黄金" src="{NEW_PATH}images/home/flash/slider_my_byte.jpg" /></a>
+            </li>
+             <li>
+           	 	<a href="http://www.hj9999.hk/2014/fenxishijiangzuoyugao_0919/6430.html" title="金裕和你盈在今夜" target="_blank">
+            	<img alt="金裕和你盈在今夜" src="{NEW_PATH}images/home/flash/slider_fein.jpg" /></a>
+            </li>   
+            -->     
+             <li>
+           	 	<a href="http://www.hj9999.hk/huodong/10zengjin/" title="金裕年终盛惠_金裕黄金" target="_blank">
+            	<img alt="金裕年终盛惠_金裕黄金" src="{NEW_PATH}images/home/flash/10zengjinbanner.jpg" /></a>
+            </li>
+			<li>
+           	 	<a href="http://www.hj9999.hk/mnjq/" title="炒黄金从模拟开始，比炒股更赚钱的投资_金裕黄金" target="_blank">
+            	<img alt="炒黄金从模拟开始，比炒股更赚钱的投资_金裕黄金" src="{NEW_PATH}images/home/flash/jiaqun.jpg" /></a>
+            </li>
+                       	<li>
+            	<a href="http://www.hj9999.hk/2013/hdym_0605/3834.html" title="客户推荐" target="_blank">
+            	<img alt="客户推荐" src="{NEW_PATH}images/home/flash/bannerhongbao.jpg" /></a>
+            </li>
+
+			<li>
+           	 	<a href="{NEW_PATH}viedo/viedo1.flv" rel="shadowbox">
+            	<img src="{NEW_PATH}images/home/flash/slider15.jpg" /></a>
+            </li>
+			<li>
+            	<a href="http://www.hj9999.hk/fsp/" title="金裕FSP资质" target="_blank">
+            	<img alt="金裕FSP资质" src="{NEW_PATH}images/home/flash/slider3.jpg" /></a>
+            </li>
+            
+            <!--
+            <li>
+            	<a href="http://www.hj9999.hk/2014/fenxishijiangzuoyugao_0919/6430.html" title="金裕FSP资质" target="_blank">
+            	<img alt="金裕FSP资质" src="{NEW_PATH}images/home/flash/slider_my_3.jpg" /></a>
+            </li>
+            -->
+            <!--
+           <li>
+            	<a href="http://www.hj9999.hk/2014/fenxishijiangzuoyugao_0919/6430.html" title="金裕FSP资质" target="_blank">
+            	<img alt="金裕FSP资质" src="{NEW_PATH}images/home/flash/slider_my_2.jpg" /></a>
+            </li>
+            -->
+            <!--
+            <li>
+            	<a href=" http://www.hj9999.hk/2014/fenxishijiangzuoyugao_0919/6430.html" title="金裕FSP资质" target="_blank">
+            	<img alt="金裕FSP资质" src="{NEW_PATH}images/home/flash/slider_my.jpg" /></a>
+            </li>
+            -->
+            <!-- <li>
+            	<a href="http://www.hj9999.hk/gyjy/jyry/" title="金裕黄金的荣誉" target="_blank">
+            	<img alt="金裕黄金连续两年获最具网络影响力，最具知名度黄金投资企业。" src="{NEW_PATH}images/home/flash/slider4.jpg" /></a>
+            </li> -->
+            <!-- <li>
+           	 	<a href="http://www.hj9999.hk/huodong/201306053834.html" title="TA开户，一起致富" target="_blank">
+            	<img alt="TA开户，一起致富" src="{NEW_PATH}images/home/flash/slider12.jpg" /></a>
+            </li> -->
+            
+            <!--
+			<li>
+           	 	<a href="http://www.hj9999.hk/youhui/" title="点差优惠震撼来袭，优惠最高54%" target="_blank">
+            	<img alt="点差优惠震撼来袭，优惠最高54%" src="{NEW_PATH}images/home/flash/slider5.jpg" /></a>
+            </li>
+            -->
+			<!-- <li>
+            	<a href="javascript:;">
+            	<img alt="" src="{NEW_PATH}images/home/flash/slider27.jpg" /></a>
+            </li> -->
+        </ul>
+        
+        
+        <a class="prev" href="javascript:void(0)"></a>
+    	<a class="next" href="javascript:void(0)"></a>
+       <div style="position: absolute; z-index: 99999; top: 40px; right:40px">
+       		<!--
+        	<iframe id="iframe-baojia" width="300" height="265" frameborder="no" scrolling="no" src="http://bb.fe062.com/openaccount/registerpage.aspx"></iframe>
+            -->
+       </div>  
+        
+    </div>
+    <div class="num">
+    	<ul></ul>
+    </div>
+    <script>
+		/*鼠标移过，左右按钮显示*/
+		$(".flash").hover(function(){
+			$(this).find(".prev,.next").fadeTo("show",0.1);
+		},function(){
+			$(this).find(".prev,.next").hide();
+		})
+		/*鼠标移过某个按钮 高亮显示*/
+		$(".prev,.next").hover(function(){
+			$(this).fadeTo("show",0.7);
+		},function(){
+			$(this).fadeTo("show",0.1);
+		})
+		$(".flash").slide({ titCell:".num ul" , mainCell:".rslides" , effect:"fold", autoPlay:true, delayTime:700 , autoPage:true });
+		</script>
+</div>
+<div class="content fn-clear">
+	<div class="content_box_1" id="gonggao">
+    	<div class="left">
+        	<a href="http://vipwebchat.tq.cn/sendmain.jsp?admiuin=9146666&action=acd&tag=&ltype=1&rand=82036436519073049&iscallback=0&agentid=0&type_code=1&comtimes=17&preuin=9382483&RQF=5&RQC=-1&page_templete_id=26317&is_message_sms=0&is_send_mail=0&logoLink=http://mdb.tq.cn/mj/services/logofile/logo/9146666&isAgent=0&sort=2&style=2&tq_right_infocard_url=http://www.hj9999.hk/tq/youlan.jpg&page=&localurl=http://www.hj9999.hk/&spage=&nocache=0.6784230869337289" target="_blank" title="点击联系">
+            <img src="{NEW_PATH}images/home/qq.png" width="19" height="22" alt="点击联系">
+            </a>
+        	<a href="http://www.hj9999.hk/huodong/hongbaoxin/gzwx.html" target="_blank" title="点击关注">
+            <img src="{NEW_PATH}images/home/weixin.png" width="24" height="22" alt="点击关注">
+            </a>
+        	<a href="http://weibo.com/jyhj9999" target="_blank" title="点击关注">
+            <img src="{NEW_PATH}images/home/xinlang.png" width="29" height="22" alt="点击关注"></a>
+        	
+        </div>
+        <div style="float:left; display:inline; margin-left:130px; height:48px; line-height:48px; font-size:14px;color:#51390D; font-weight:bold;">实时经济数据</div>
+        <div class="right">
+        	<b style="display:inline-block; margin-top:12px; float:left;color:#51390d;"><img src="{NEW_PATH}images/home/index_img_01.png" />最新公告：</b>
+            <div style=" float:right; margin-top:15px;"><a href="http://www.hj9999.hk/zuixingonggao/"><img src="{NEW_PATH}images/home/index_img_02_13.png"></a></div>
+        	<ul>
+            	{pc:content action="lists" catid="40" order="inputtime desc" num="4"}
+                {loop $data $r}
+                	<li class="li_02"><span class="span_2">{$n}</span><span>&nbsp;<a href="{$r[url]}" title="{$r[title]}" {if $r[posids ] == 1}style="color:red"{/if}>{str_cut($r[title],30,'...')}</a></span></li>
+                {/loop}
+                {/pc}
+            </ul>
+            
+        </div>
+        <script type="text/javascript">jQuery("#gonggao").slide({ mainCell:".right ul",effect:"leftMarquee",vis:2,interTime:40,autoPlay:true });</script>
+       
+    </div>
+    <div class="content_box_2">
+    	<div class="box_1">
+        	<div class="box_1_top">
+            	
+                <iframe id="iframe-baojia" width="306" height="200" frameborder="no" src="http://gegdm.iexchange.bz/iexchange/QuotationReceiver/GEGNewPrice.aspx?Language=CHS" scrolling="no"></iframe>
+            </div>
+            <div class="box_1_bottom">
+				<?php
+					$jinjia_db = pc_base::load_model('jinjia_model');
+					$jinjia = $jinjia_db->get_one('`id`= 1');
+                ?>
+            	<ul class="box_1_bottom_left">
+                	<li class="lundun">
+                    	<span class="span_1"></span>
+                        <span class="span_2">伦敦:</span>
+                        <span id="ldtime"></span>
+                    </li>
+                    <li class="jinjia">
+                    	<span class="span_2">上周最高金价:</span>
+                        <span class="green">{$jinjia['whprice']}</span>
+                        <span>美元</span>
+                    </li>
+                    <li class="niuyue">
+                    	<span class="span_1"></span>
+                        <span class="span_2">纽约:</span>
+                        <span id="nytime"></span>
+                    </li>
+                    <li class="niuyue_01">
+                    	<span class="span_2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最低金价:</span>
+                        <span class="red">{$jinjia['wlprice']}</span>
+                        <span>美元</span>
+                    </li>
+                    <li class="lundun hk_bg">
+                    	<span class="span_1"></span>
+                        <span class="span_2">香港:</span>
+                        <span id="hktime"></span>
+                    </li>
+                    <li class="jinjia">
+                    	<span class="span_2">本月最高金价:</span>
+                        <span class="green">{$jinjia['mhprice']}</span>
+                        <span>美元</span>
+                    </li>
+                    <li class="niuyue riben">
+                    	<span class="span_1"></span>
+                        <span class="span_2">东京:</span>
+                        <span id="djtime"></span>
+                    </li>
+                    <li class="niuyue_01">
+                    	<span class="span_2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最低金价:</span>
+                        <span class="red">{$jinjia['mlprice']}</span>
+                        <span>美元</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="box_2">
+			
+			<script type="text/javascript"> 
+				function setTab(name,m,n){ 
+					for( var i=1;i<=n;i++){ 
+					var menu = document.getElementById(name+i); 
+					var showDiv = document.getElementById("cont_"+name+"_"+i); 
+					menu.className = i==m ?"selectt":""; 
+					showDiv.style.display = i==m?"block":"none"; 
+					} 
+				} 
+			</script> 
+        	<div class="biaoti-1">
+            	<ul class="tab1">
+                	<li id="one1" class="selectt" onmouseover='setTab("one",1,2)'><a href="http://www.hj9999.hk/huangjinjiagefenxi/" target="_blank">现货黄金价格分析</a></li>
+               	 	<li id="one2" onmouseover='setTab("one",2,2)'><a href="http://www.hj9999.hk/huangjinzoushifenxi/" target="_blank">黄金走势分析</a></li>
+                </ul>
+            </div>
+			<div class="tabList">
+				<ul id="cont_one_1" class="block">
+					{pc:content action="lists" catid="116" order="inputtime desc" num="6"}
+					{loop $data $r}
+						
+						<li><span>></span>&nbsp;&nbsp;<a href="{$r[url]}" title="{$r[title]}" target="_blank">{str_cut($r[title],80,'...')}</a></li>
+						
+					{/loop}
+					{/pc}
+				</ul>
+				<ul id="cont_one_2" class="one">
+					{pc:content action="lists" catid="117" order="inputtime desc" num="6"}
+					{loop $data $r}
+						
+						<li><span>></span>&nbsp;&nbsp;<a href="{$r[url]}" title="{$r[title]}" target="_blank">{str_cut($r[title],80,'...')}</a></li>
+						
+					{/loop}
+					{/pc}
+				</ul>
+			</div>
+            <ul class="ul_02">
+            	<li><a href="http://www.hj9999.hk/gyjy/jyjk/" target="_blank"><img src="{NEW_PATH}images/home/index_img_12.png" /></a></li>
+                <li><a href="http://www.hj9999.hk/gyjy/jyjd/" target="_blank"><img src="{NEW_PATH}images/home/index_img_13.png" /></a></li>
+                <li><a href="http://www.hj9999.hk/gyjy/qqbj/" target="_blank"><img src="{NEW_PATH}images/home/index_img_14.png" /></a></li>
+            </ul>
+        </div>
+        
+        <div class="box_3">
+        	<ul class="tab">
+            	<li class="select"><span><a href="javascript:viod(0)">真实账户登录</a></span></li>
+                <li><span><a href="javascript:viod(0)">模拟账户登录</a></span></li>
+                <li><span><a href="javascript:viod(0)">手机登录</a></span></li>
+            </ul>
+            <div class="tab_box">
+            	<div class="pane" style="display:block;">
+            		<ul class="box_3_ul_2 gy" id="nav">
+            			<li class="nanfang"><a href="http://www.hj9999.hk/login/geg3CHS.htm" target="_blank">南方地区</a></li>
+                		<li class="gy-left beifang"><a href="http://www.hj9999.hk/login/geg1CHS.htm" target="_blank">北方地区</a></li>
+                		<li class="gy-left gangao"><a href="http://www.hj9999.hk/login/geg2CHS.htm" target="_blank">港澳台地区</a></li>
+            		</ul>
+                </div>
+                <div class="pane">
+                	<ul class="box_3_ul_3 gy">
+            			<li class="nanfang"><a href="http://www.hj9999.hk/login/dem3CHS.htm" target="_blank">南方地区</a></li>
+                		<li class="beifang"><a href="http://www.hj9999.hk/login/dem1CHS.htm" target="_blank">北方地区</a></li>
+                		<li class="gangao"><a href="http://www.hj9999.hk/login/dem2CHS.htm" target="_blank">港澳台地区</a></li>
+            		</ul>
+                </div>
+                <div class="pane">
+                	<ul class="box_3_ul_3 gy">
+            			<li class="shouji"><a href="http://www.hj9999.hk/mobile/" target="_blank">手机登录</a></li>
+                	</ul>
+                </div>
+        	</div>
+            <div class="jinyu_zh">
+            	<ul>
+                	<li><a href="http://www.hj9999.hk/account/zszh" target="_blank">开立真实账户</a></li>
+                    <li><a href="http://www.hj9999.hk/account/mnzh" target="_blank">开立模拟账户</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--
+        <script language="javascript" src="{NEW_PATH}js/UserAccount.js"></script>
+      <style>
+		
+		.box_3{
+			width:306px;height:296px;border:1px solid #ccc;background:#EEEDED;color:#525251;overflow:hidden;
+		}
+		
+		.box_3 p.qu_text a.qu_text1{ display:block;width:92px;height:30px;line-height:30px;float:left;border:1px solid #ccc;text-align:center;margin-left:38px;margin-top:10px;margin-bottom:5px;font-size:16px;letter-spacing:1px;text-decoration:none; color:#525251;}
+		.box_3 p.qu_text a.qu_text2{ display:block;width:92px;height:30px;float:left;text-align:center;border:1px solid #ccc;margin-left:46px;margin-top:10px;margin-bottom:5px;line-height:30px;font-size:16px;letter-spacing:1px;text-decoration:none; color:#525251;}
+		.box_3 p.qu_text a:hover{text-decoration:underline;}
+		.box_3 p.first{
+			width:276px;height:26px;margin-left:35px;clear:both;margin-top:2px;background:url(http://www.hj9999.hk/statics/version01/images/xuan_title.png) no-repeat;
+			overflow:hidden;
+		}
+		.box_3 p.first a{
+			display:block;width:276px;
+			height:26px;
+		}
+		.box_3 p.second{
+			width:217px;height:53px;background:url(http://www.hj9999.hk/statics/version01/images/index_num_bg.png) no-repeat 0 4px;margin-left:50px;	margin-top:2px;color:#fff;	font-weight:bold;
+			font-family:"微软雅黑";	font-size:40px;	letter-spacing:11px;text-indent:6px;
+		}
+		.box_3 h3{
+			width:220px;font-style:normal;font-weight:normal;font-size:14px;margin-left:48px;margin-top:10px;color:#525251;
+		}
+		.box_3 h3 a{
+			text-decoration:none;color:#525251;font-weight:600;
+		}
+		.box_3 h3 a:hover{
+			text-decoration:underline;	
+		}
+		.box_3 p.line{
+			width:290px;height:1px;	border-bottom:1px solid #ccc;margin-left:auto;margin-right:auto;margin-top:22px;
+		}
+		.box_3 h2{
+			width:100px;font-weight:normal;	font-style:normal;font-size:12px;margin-left:20px;letter-spacing:1px;margin-top:15px;
+		}
+		.box_3 .index_gcb{
+			width:100px;height:60px;overflow:hidden;float:left;	border-right:1px solid #ccc;margin-top:20px;
+		}
+		.index_gcb h2{
+			width:100px;height:auto;color:#442E04;font-size:20px;letter-spacing:0px;text-align:center;margin-left:0px;margin-top:0px;border:none;font-family:"微软雅黑";
+		}
+		.index_gcb h2 b{
+			font-style:normal;font-weight:normal;font-size:12px;
+		}
+		.index_gcb h3{
+			width:100px;height:auto;margin-left:0px;margin-top:0px;font-weight:normal;	font-size:12px;	color:#999;	letter-spacing:0px;	text-align:center;
+		}
+		</style>
+		<div class="box_3">
+        	<p class="qu_text">
+            <a href="http://www.hj9999.hk/login/geg3CHS.htm" target="_blank" class="qu_text1">GEG登录</a>
+            <a href="http://www.hj9999.hk/mobile/" target="_blank" class="qu_text2">手机登录</a>
+            </p>
+			<p class="first"><a href="http://www.hj9999.hk/huodong/6zhounian/" target="_blank"></a></p>
+			<p class="second"></p>    
+			<h3> <a href="http://www.hj9999.hk/kailimt4/" target="_blank">注册MT4账户</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://www.hj9999.hk/account/" target="_blank">注册GEG账户</a></h3>
+			<p class="line"></p>
+			<h2>一周数据</h2>
+			<div class="index_gcb">				
+				<h3>新注册</h3>
+                <h2>18241<b>位</b></h2>
+			</div>
+			<div class="index_gcb">				
+				<h3>盈利账户</h3>
+                <h2>81%</h2>
+			</div>
+			<div class="index_gcb" style="border-right:none;">				
+				<h3>平均盈利</h3>
+                <h2>2868$</h2>
+			</div>
+		</div>
+		-->
+        
+        
+        
+        
+    </div>
+    <div class="content_box_3">
+    	<div class="box_1">
+        	<ul>
+            	<li>|&nbsp;<a href="http://www.hj9999.hk/huodong/" target="_blank">活动专区</a>|</li>
+                <li><a href="http://www.hj9999.hk/gyjy/jyry/" target="_blank">金裕资质荣誉</a>|</li>
+                <li><a href="http://www.hj9999.hk/xianhuohuangjinxuetang" target="_blank">现货黄金学堂</a>|</li>
+                <li><a href="http://www.hj9999.hk/chanpinduibi/" target="_blank">现货黄金VS其它金融产品</a>|</li>
+                <li><a href="http://www.hj9999.hk/account/cqklc/" target="_blank">存取款流程</a>|</li>
+                <li><a href="http://www.hj9999.hk/mt4churujin/" target="_blank">MT4出入金中心</a>|</li>
+                <li><a href="http://www.hj9999.hk/zijinanquanzhiyin/" target="_blank">资金安全指引</a>|</li>
+                <li><a href="http://www.hj9999.hk/account/zhsj/" target="_blank">账户升级</a>|</li>
+                <li><a href="http://www.hj9999.hk/2015/fenxishijiangzuoyugao_0814/8183.html" target="_blank">VIP通道</a>|</li>
+                <li><a href="http://www.hj9999.hk/yingkuijisuan/" target="_blank">计算器</a>|</li>
+            </ul>
+        </div>
+    </div>
+    <div class="content_box_4">
+    	<div class="left box_4_gy">
+        	<div>
+                <ul>
+                    <li><a href="http://www.hj9999.hk/xianhuohuangjinxuetang/jichu/201401285253.html" target="_blank">如何计算利息</a>|</li>
+                    <li><a href="http://www.hj9999.hk/xianhuohuangjinxuetang/jichu/201401285250.html" target="_blank">美联储会议如何影响金价</a></li>
+                </ul>
+                <ul>
+                    <li><a href="http://www.hj9999.hk/xianhuohuangjinxuetang/jichu/201401285252.html" target="_blank">技术面分析如何得当</a>|</li>
+                    <li><a href="http://www.hj9999.hk/xianhuohuangjinxuetang/jichu/201401285254.html" target="_blank">和内盘、纸黄金的区别</a></li>	
+                </ul>
+                <ul>
+                    <li><a href="http://www.hj9999.hk/xianhuohuangjinxuetang/jichu/201401285241.html" target="_blank">怎么炒黄金</a>|</li>
+                    <li><a href="http://www.hj9999.hk/xianhuohuangjinxuetang/jichu/201401285244.html" target="_blank">主要黄金市场交易时间</a></li>
+                </ul>
+             </div>
+        </div>
+        <div class="right box_4_gy">
+        	<div>
+                <ul>
+                    <li><a href="http://www.hj9999.hk/xianhuohuangjinxuetang/jichu/201401285255.html" target="_blank">现货黄金交易常见问题汇总</a>|</li>
+                    <li><a href="http://www.hj9999.hk/xianhuohuangjinxuetang/jichu/201401285243.html" target="_blank">如何开户操作</a></li>
+                </ul>
+                <ul>
+                    <li><a href="http://www.hj9999.hk/xianhuohuangjinxuetang/jichu/201401285248.html" target="_blank">保证金是什么</a>|</li>
+                    <li><a href="http://www.hj9999.hk/xianhuohuangjinxuetang/jichu/201401285251.html" target="_blank">非农数据如何影响金价</a></li>	
+                </ul>
+                <ul>
+                    <li><a href="http://www.hj9999.hk/xianhuohuangjinxuetang/jichu/201401285249.html" target="_blank">什么是点差</a>|</li>
+                    <li><a href="http://www.hj9999.hk/xianhuohuangjinxuetang/jichu/201401285242.html" target="_blank">现货黄金买跌为什么能赚钱</a></li>
+                </ul>
+             </div>
+        </div>
+    </div>
+    <div class="content_box_5">
+    	<div class="box_5_div">
+        	<ul>
+            	<li><a href="http://www.hj9999.hk/account/gegpt/" target="_blank" class="az">安卓客户端</a></li>
+                <li class="box_5_gy"><a href="http://www.hj9999.hk/account/gegpt/" target="_blank" class="pg">苹果客户端</a></li>
+                <li class="box_5_gy"><a href="http://www.hj9999.hk/account/gegpt/" target="_blank" class="web">GEG版客户端</a></li>
+                <li class="box_5_gy"><a href="http://www.hj9999.hk/account/mt4pt/" target="_blank" class="dow">MT4版客户端</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content_box_6">
+    	<div class="box_1 box_6_gy">
+        	<h3><a href="http://www.hj9999.hk/jingjishuju/" target="_blank">重要经济数据</a></h3>
+            <ul>
+            	{pc:content action="lists" catid="160" order="inputtime desc" num="6"}
+                {loop $data $r}
+                
+                    <li><span>></span><a href="{$r[url]}" title="{$r[title]}" target="_blank">{str_cut($r[title],36,'...')}</a></li>
+                
+                {/loop}
+                {/pc}
+            </ul>
+        </div>
+        <div class="box_1 box_6_gy box_6_margin">
+        	<h3><a href="http://www.hj9999.hk/hangqinghuigu/" target="_blank">行情回顾</a></h3>
+            <ul>
+            	{pc:content action="lists" catid="159" order="inputtime desc" num="6"}
+                {loop $data $r}
+                
+                    <li><span>></span><a href="{$r[url]}" title="{$r[title]}" target="_blank">{str_cut($r[title],36,'...')}</a></li>
+                
+                {/loop}
+                {/pc}
+            </ul>
+        </div>
+        <div class="box_1 box_6_gy box_6_margin">
+        	<h3><a href="http://www.hj9999.hk/shiwuhuangjinjiage/" target="_blank">实物黄金价格</a></h3>
+            <ul>
+            	{pc:content action="lists" catid="118" order="inputtime desc" num="6"}
+                {loop $data $r}
+                    <li><span>></span><a href="{$r[url]}" title="{$r[title]}" target="_blank">{str_cut($r[title],80,'...')}</a></li>
+                {/loop}
+                {/pc}
+            </ul>
+        </div>
+        <div class="box_1 box_6_gy box_6_margin">
+        	<h3><a href="http://www.hj9999.hk/touzi/" target="_blank">投资杂谈</a></h3>
+            <ul>
+            	{pc:content action="lists" catid="166" order="updatetime DESC"  num="6" }
+				{loop $data $n $r}
+                <li><span>></span><a href="{$r[url]}" title="{$r[title]}" target="_blank">{str_cut($r[title],30,'...')}</a></li>
+                {/loop}
+                {/pc}
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="jinyu_ys">
+	<div class="content_box_7 fn-clear">
+    	<div class="box_7_div_1">
+        	<ul class="jinyu_ys">
+            	<li class="li_1">
+                	<span class="span_1">平台优势</span><br>
+                    <span>盛誉平台 安全稳定</span>
+                </li>
+                <li class="li_2">
+                	<span class="span_1">技术优势</span><br>
+                    <span>GEG/MT4两大平台选择</span>
+                </li>
+                <li class="li_3">
+                	<span class="span_1">优惠模式</span><br>
+                    <span>0佣金 100美元开户</span>
+                </li>
+                <li class="li_4">
+                	<span class="span_1">操作优势</span><br>
+                    <span>交易便捷 可控风险</span>
+                </li>
+                <li class="li_5">
+                	<span class="span_1">存取优势</span><br>
+                    <span>存款即时 取款24小时</span>
+                </li>
+                <li class="li_6">
+                	<span class="span_1">专业客服 </span><br>
+                    <span>7*24小时客户服务</span>
+                </li>
+            </ul>
+        </div>	
+	</div>
+</div>
+
+<!-- <div id="share">
+	<a id="totop" title="返回顶部">返回顶部</a>
+	<a href="" target="_blank" class="sina" title="关注金裕黄金新浪微博">关注金裕黄金新浪微博</a>
+	<a href=""  target="_blank" class="tencent" title="关注金裕黄金腾讯微博微博">关注金裕黄金腾讯微博微博</a>
+</div> -->
+
+
+<div class="money"><a target="_blank"  href="http://www.hj9999.hk/huodong/hongbaoxin"><img src="{NEW_PATH}images/money.png"/></a></div>
+
+<div class="center" id="center" >
+            <div class="inside">
+              <span class="join"><a target="_blank" href="http://www.hj9999.hk/huodong/10zengjin"><img src="{NEW_PATH}images/float/jion.png"/></a></span>
+              <span class="ask"><a target="_blank" href="https://v1.live800.com/live800/chatClient/chatbox.jsp?companyID=515221&configID=41928&jid=6934404885&s=1"><img src="{NEW_PATH}images/float/ask.png"/></a></span>
+              <label class="close"><img src="{NEW_PATH}images/float/flaot_close.png"/></label>
+            </div>  
+</div>
+
+
+<script>
+
+
+
+window.onload=function(){
+		
+		setTimeout(move,5000);
+	 
+  $(".close").click(function(){
+		 
+   $("#center").toggle();
+	 
+	
+  
+  });	
+		
+	}
+	function move(){
+			document.getElementById('center').style.display="none";
+		}
+
+
+
+	 
+	 
+
+
+	
+	
+
+
+
+</script>
+
+<div class="footer">
+
+	<div class="footer_div fn-clear">
+    	<div class="footer_box_1">
+        	<div class="footer_gyjy">
+            	<ul>
+            		<h3><a href="http://www.hj9999.hk/gyjy/" target="_blank">关于金裕</a></h3>
+                    <li><a href="http://www.hj9999.hk/gyjy/" target="_blank" class="baise">关于我们</a></li>
+                    <li><a href="http://www.hj9999.hk/gyjy/jyry/" target="_blank">金裕荣誉</a></li>
+                    <li><a href="http://www.hj9999.hk/gyjy/jyys/" target="_blank">金裕优势</a></li>
+                    <li><a href="http://www.hj9999.hk/gyjy/jytzbz/" target="_blank">投资保障</a></li>
+                    <li><a href="" target="_blank">金裕黄金</a></li>
+                    <li class="li_gy"><a href="http://www.hj9999.hk/gyjy/jtbj/" class="baise" target="_blank">集团介绍</a></li>
+                    <li><a href="http://www.hj9999.hk/gyjy/jtbj/" target="_blank">集团背景</a></li>
+                    <li><a href="http://www.hj9999.hk/gyjy/qqbj/" target="_blank">全球布局</a></li>
+                    <li class="li_gy"><a href="http://www.hj9999.hk/gyjy/jymtbd/" target="_blank" class="baise">报道金裕</a></li>
+                    <li><a href="http://www.hj9999.hk/zuixingonggao/" target="_blank">金裕公告</a></li>
+                    <li><a href="http://www.hj9999.hk/gyjy/jymtbd/" target="_blank">媒体报道</a></li>
+                    <li><a href="http://www.hj9999.hk/huodong/" target="_blank">活动专栏</a></li>
+                    <li><a href="http://www.hj9999.hk/hangyehezuo/" target="_blank">合作伙伴</a></li>
+            	</ul>
+            </div>
+            <div class="footer_gyjy">
+            	<ul>
+            		<h3><a href="http://www.hj9999.hk/account/" target="_blank">开户交易</a></h3>
+                    <li><a href="http://www.hj9999.hk/account/mnzh/" target="_blank">开立模拟账户</a></li>
+                    <li><a href="http://www.hj9999.hk/account/zszh/" target="_blank">开立真实账户</a></li>
+                    <li><a href="http://www.hj9999.hk/account/cqklc/" target="_blank">存取款流程</a></li>
+                    <li><a href="http://www.hj9999.hk/jyzn/sygj/dhl/" target="_blank">兑换率</a></li>
+                    <li><a href="http://www.hj9999.hk/account/gegpt/" target="_blank">GEG平台</a></li>
+                    <li><a href="http://www.hj9999.hk/account/mt4pt/" target="_blank">MT4平台</a></li>
+                    <li><a href="http://www.hj9999.hk/xianhuohuangjinxuetang/" target="_blank" class="y_gy">黄金学堂</a></li>
+                    <h3 style=" color:#fec454">黄金宝盒</h3>
+                    <li><a href="http://www.hj9999.hk/huodong/" target="_blank">金裕活动专区</a></li>
+                    <li><a href="http://www.hj9999.hk/Contact/" target="_blank">联系我们</a></li>
+                    <li><a href="http://www.hj9999.hk/2013/hdym_0605/3834.html" target="_blank">客户推荐</a></li>
+					<li><a href="http://www.hj9999.hk/huodong/daili/" target="_blank" style="display:none;">代理活动</a></li>
+            	</ul>
+            </div>
+            <div class="footer_gyjy">
+            	<ul>
+            		<h3><a href="http://www.hj9999.hk/zxkc/" target="_blank">黄金资讯</a></h3>
+                    <li><a href="http://www.hj9999.hk/huangjinjiagefenxi/" target="_blank">黄金价格分析</a></li>
+                    <li><a href="http://www.hj9999.hk/huangjinzoushifenxi/" target="_blank">黄金走势分析</a></li>
+                    <li><a href="http://www.hj9999.hk/huangjintouzizatan/" target="_blank">黄金投资杂谈</a></li>
+                    <li><a href="http://www.hj9999.hk/shiwuhuangjinjiage/" target="_blank">实物黄金价格</a></li>
+                    <li><a href="http://www.hj9999.hk/jingjishuju/" target="_blank">重要经济数据</a></li>
+                    <li><a href="" class="y_gy">交易指南</a></li>
+                    <li><a href="http://www.hj9999.hk/chanpinduibi/" target="_blank">现货黄金VS其它金融产品</a></li>
+                    <li><a href="http://www.hj9999.hk/account/cqzn/hkyhxx/" target="_blank">汇款银行信息</a></li>
+                    <li><a href="http://www.hj9999.hk/zijinanquanzhiyin/" target="_blank">资金安全指引</a></li>
+                    <li><a href="http://www.hj9999.hk/account/zhsj/" target="_blank">账户升级</a></li>
+                    <li><a href="http://www.hj9999.hk/yingkuijisuan/" target="_blank">计算器</a></li>
+					<li><a href="http://www.hj9999.hk/jyzn/jpmpt/fxrj/" target="_blank">分析软件</a></li>
+					<li><a  class="y_gy" target="__blank" rel="nofollow" href="http://gegst.iexchange.bz/iExchange/ResetPassword/Default.aspx?Language=CHS">JAVA平台密码重置</a></li>
+            	</ul>
+            </div>
+            <div class="footer_gyjy">
+            	<ul style="height:300px;">
+                	<h3><a href="http://www.hj9999.hk/gyjy/jyry/" target="__blank">金裕资质荣誉</a></h3>
+            		<li><a href="http://www.hj9999.hk/fsp/" target="__blank">新西兰FSP牌照</a></li>
+                    <li><a href="http://www.hkma.gov.hk/eng/index.shtml" target="__blank">香港金融管理</a></li>
+                    
+                    
+                    <li style="color:#d7d6d4;">2015黄金投资之星</li>
+                    <li style="color:#d7d6d4;">2014互联网投资平台大奖</li>
+                    
+                    <li style=" color:#d7d6d4">2013投资力量之星</li>
+                    <li style=" color:#d7d6d4">最具知名香港黄金投资公司</li>
+                    <li style=" color:#d7d6d4">2012最佳交易平台奖</li>
+                    <li style=" color:#d7d6d4">最具网络影响力黄金投资企业</li>
+                    <li style=" color:#d7d6d4">2009年-2010年荣获<br>《财富经理》颁发殊荣</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_box_3">
+        	<ul class="box_3_ul_1">
+            	<li class="box_3_gy">香港（GEGDL Hong kong）</li>
+                <li>地址：香港中环德辅道中19号环球大厦2404室</li>
+                <li>电话：(852) 3962-5200<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;00852-3962-5111 <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;00852-3962-5158
+</li>
+                <li>传真：(852) 3962 2655</li>
+                <li>电邮：cs.jyg@outlook.com</li>
+                <li><span style="color:#FEC454">紧急平仓电话：</span>00852-67005281（香港）<br />  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18420155031（大陆）
+</li>
+            </ul>
+            <ul class="box_3_ul_2 box_3_ul_1">
+            	<li class="box_3_gy">美国(U.S.)</li>
+                <li>Tel：(1) 626 5132983</li>
+                <li>Fax：(1) 626 3338885</li>
+            </ul>
+            <ul class="box_3_ul_2 box_3_ul_1">
+            	<li class="box_3_gy">新西兰(New Zealand)</li>
+                <li>Tel：(64)48303353</li>
+            </ul>
+            <ul class="box_3_ul_2 box_3_ul_1">
+            	<li class="box_3_gy">伦敦（GEGDL London）</li>
+                <li>电话：44-020--83683658</li>
+            </ul>
+            <ul class="box_3_ul_2 box_3_ul_1">
+            	<li class="box_3_gy">越南(Vietnam)：</li>
+                <li>电话：(84)0444583209</li>
+            </ul>
+            <ul class="box_3_ul_2 box_3_ul_1">
+            	<li class="box_3_gy">中国大陆：</li>
+                <li>电话：400-609-1288</li>
+            </ul>
+            <ul class="box_3_ul_2 box_3_ul_1">
+            	<p>金裕提示</p>
+            	<li>现货贵金属以及其他金融系杠杆产品，均涉及高风险。此类产品并不适合于每一个人，您应当确保并理解所涉及的风险。在接受专业分析指导之外，必要时请寻求独立的意见。</li>
+            </ul>
+            
+        </div>
+        <div class="footer_box_2">
+        	<div class="div_1">
+            	<h3><a href="http://www.hj9999.hk/hangyehezuo/" target="_blank">合作伙伴</a></h3>
+                <ul>
+                	<!-- {pc:link  action="type_list" siteid="1" linktype="1" order="listorder DESC" num="100" return="pic_link"}
+					{loop $pic_link $v}
+						<li>
+						<a class="logo_list_content_a" href="{$v['url']}" target="_blank">
+						<img border="0" width="57" height="35" src="{$v[logo]}" alt="{$v['name']}" /></a></li>
+					{/loop}
+					{/pc} -->
+					<li>
+						<a target="_blank" href="http://www.hjlm.hk" class="logo_list_content_a">
+						<img height="35" width="57" border="0" alt="黄金联盟" src="http://www.hj9999.hk/uploadfile/2014/0715/20140715101442715.png"></a>
+					</li>
+					<li>
+						<a href="" class="logo_list_content_a">
+						<img height="35" width="57" border="0" alt="香港金融管理局" src="http://www.hj9999.hk/uploadfile/2014/0715/20140715101513162.png"></a>
+					</li>
+					<li>
+						<a href="" class="logo_list_content_a">
+						<img height="35" width="57" border="0" alt="香港政府一站通" src="http://www.hj9999.hk/uploadfile/2014/0715/20140715101551725.png"></a>
+					</li>
+					<li>
+						<a href="" class="logo_list_content_a">
+						<img height="35" width="57" border="0" alt="香港公司查?蕴?" src="http://www.hj9999.hk/uploadfile/2014/0715/20140715101607717.png"></a>
+					</li>
+					<li>
+						<a href="" class="logo_list_content_a">
+						<img height="35" width="57" border="0" alt="香港汇丰银行" src="http://www.hj9999.hk/uploadfile/2014/0715/20140715101627614.png"></a>
+					</li>
+					<li>
+						<a href="" class="logo_list_content_a">
+						<img height="35" width="57" border="0" alt="工商银行亚洲" src="http://www.hj9999.hk/uploadfile/2014/0715/20140715101639679.png"></a>
+					</li>
+                </ul>
+            </div>
+            <div class="div_2">
+            	<ul class="div_2_ul_1">
+                	{pc:link action="type_list" siteid="1" linktype="0" order="listorder DESC" num="100" return="a_link"}
+					{loop $a_link $v}
+					{if $v['elite']}
+					<li>|&nbsp;<a href="{$v['url']}" target="_blank">{$v['name']}</a></li>
+					{/if}
+					{/loop}
+					{/pc}
+                </ul>
+                <ul class="div_2_ul div_2_ul_1">
+                	<li>|&nbsp;<a href="http://www.hj9999.hk/gyjy/">金裕集团</a>|</li>
+                    <li><a href="http://www.hj9999.hk/mzsm/">免责声明</a>|</li>
+                    <li><a href="http://www.hj9999.hk/ystk/">隐私条款</a>|</li>
+                    <li><a href="http://www.hj9999.hk/Contact/">企业邮箱</a>|</li>
+                    <li>金裕黄金有限公司 |</li>
+					<li><a href="http://www.hj9999.hk/sitemap/index.html" target="_blank">网站地图</a>|</li>
+					<li style="display:none"><a href="http://www.hj9999.hk/sitemap.html" target="_blank">网站地图</a>|</li>
+                </ul>
+                <ul class="div_3_ul div_2_ul_1">
+                	<!-- <li>Copyright 金裕环球发展有限公司版权所有 不得转载，违者必究</li> -->
+                    <li>Copyright Gold Effortlessly Global Development Limited</li>
+                    <li>
+                    	<a href="http://www.info.gov.hk/hkma/chi/index.htm" rel="nofollow" target="__blank"><img src="{NEW_PATH}images/home/index_img_42.png">香港金融管理局</a>
+                        <script src="http://s15.cnzz.com/stat.php?id=5179490&web_id=5179490&show=pic" language="JavaScript"></script>
+						<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe79e77254e2b5a7b12e20d1e1de0ad91' type='text/javascript'%3E%3C/script%3E"));
+</script>
+					<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1254748450'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1254748450' type='text/javascript'%3E%3C/script%3E"));</script>
+					<SCRIPT id='qclient_js' type=text/javascript src='http://www.81c.cn:8888/tj.js?8dca9166ec57f6963d0b89f41f879c2b'></SCRIPT>
+                    <div style="display:none"><script type="text/javascript" src="http://115.29.242.148/qqonweb/hj9999hk.js" charset="utf-8"></script></div>
+					</li>
+                </ul>
+            </div>
+        </div>
+        <div style="float:left; _display:inline; width:133px; height:133px; background:url(http://www.hj9999.hk/statics/version01/images/home/258x258.jpg) no-repeat;position:absolute;right:-140px; top:0px;">
+            
+        </div>
+        <div class="footer_box_4">
+        	
+        </div>
+    </div>
+</div>
+
+
+<link href="http://www.hj9999.hk/statics/images/v3/homebanner/nav_footer.css" rel="stylesheet" type="text/css" />
+<!-- <SCRIPT LANGUAGE="JavaScript" src=http://float2006.tq.cn/floatcard?adminid=9146666&sort=3 ></SCRIPT> -->
+<div id="toolbar"> <!--底部悬浮-->
+    <div class="leftside">
+		  <ul id="social">
+			
+			 <li class="moni_li"><a class="nav_footer_01" href="http://float2006.tq.cn/static.jsp?version=vip&admiuin=9146666&ltype=0&iscallback=1&page_templete_id=26317&is_message_sms=0&is_send_mail=0&uin=9234779" target="_blank">
+			 <img class="nav_footer_01_img" src="http://www.hj9999.hk/statics/images/homebanner/footer_02.png"></a><span>
+			 <img class="footer_02" src="http://www.hj9999.hk/statics/images/homebanner/footer_02.gif" />
+			 </li>
+			<li class="moni_li">
+			<a class="moni" href="http://v1.live800.com/live800/chatClient/chatbox.jsp?companyID=515221&configID=41928&jid=6934404885" target="_blank">
+			<img class="nav_footer_04_img" src="http://www.hj9999.hk/statics/images/homebanner/footer_04.png">
+			</a>
+			<span><img class="footer_02" src="http://www.hj9999.hk/statics/images/homebanner/footer_02.gif"  /></span>
+			</li>
+			<li style="margin-left:5px;">
+			<a class="nav_footer_09" href="http://www.hj9999.hk/huangjinzoushifenxi/" target="_blank">
+			<img class="nav_footer_09_img" src="http://www.hj9999.hk/statics/images/homebanner/footer_09.gif"></a>
+			<span><img class="footer_02" style="padding-left:10px" src="http://www.hj9999.hk/statics/images/homebanner/footer_02.gif" /></span>
+			</li>
+			<li><a class="nav_footer_05" href="javascript:viod(0)">
+			<img class="nav_footer_09_img" src="http://www.hj9999.hk/statics/images/homebanner/footer_010.gif"></a>
+			</a>&nbsp;&nbsp;<img class="footer_02" src="http://www.hj9999.hk/statics/images/homebanner/footer_02.gif" /></li>
+			<li>
+			<a class="nav_footer_06" href="http://wpa.qq.com/msgrd?v=3&uin=4006091288&site=qq&menu=yes" target="_blank"><img src="http://www.hj9999.hk/statics/images/homebanner/footer_qq.gif" style="border:0px;"><IMG id="tq_kefu_main" version="20100823" style="background:transparent none repeat scroll 0%  0%;cursor:pointer" onclick="TQKF.kefuimg.Distrabute()" /></a>
+			</li>
+		  </ul>
+    </div>
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="{NEW_PATH}css/tq.css"/><!--TQ开始-->
+
+<!--
+微信送红包
+<style>
+.xn-xuanfu{ float:left;height: 198px;  left: 0;  position: fixed;  top: 35%;  width: 100px;  z-index: 9999;}
+.xn-xuanfu a{}
+.xn-xuanfu img{ border: 0px; }
+</style>
+<div class="xn-xuanfu">
+	
+	<a style="margin-top: 5px;margin-left:5px;display: inline-block; width: 150px; height: 198px;" target="_blank" href="http://www.hj9999.hk/huodong/hongbaoxin/" title="微信领红包，再送500000美元-金裕黄金">
+    	<img src="http://www.hj9999.hk/statics/version01/images/home/img3.png" alt="微信领红包，再送500000美元-金裕黄金">
+    </a>
+</div>
+-->
+
+<!-- <div style=" float: left;height: 323px;left: 0;position: fixed;top: 50%;width: 220px;z-index: 9999;">
+    <iframe allowFullScreen allowTransparency="true" class="video player" frameborder="0" height="310" id="vzpl-8630" mozallowfullscreen name="vzpl-8630" src="http://view.vzaar.com/playlists/8630" title="video player" type="text/html" webkitAllowFullScreen width="220"></iframe>
+</div> -->
+<!-- <div class="right_nav" id="show_div">
+	
+	<a href="http://vipwebchat.tq.cn/sendmain.jsp?admiuin=9146666&action=acd&tag=&ltype=0&rand=&iscallback=1&agentid=&type_code=1" target="_blank"><img src="statics/version01/images/home/shizi.png" /></a><a href="javascript:;" title="点击关闭" class="close" style="position:absolute; width:20px; height:20px; font-size:16px; color:#FF0004">×</a>
+</div> -->
+<div id="rightButton" class="left_nav">
+	<dl>
+        <dd class="livedd">
+            <a class="qqkefu" target="_blank" href="http://v1.live800.com/live800/chatClient/chatbox.jsp?companyID=515221&amp;configID=41928&amp;jid=6934404885"><img id="live_xx" src="{NEW_PATH}images/home/live_xx.gif" alt="" />
+            </a>
+        </dd>
+		<dd>
+        	<!-- <a href="http://wpa.qq.com/msgrd?v=3&uin=4006091288&site=qq&menu=yes" target="_blank" class="a_img zxkf"></a> -->
+			<a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzkzODAzMTE5Ml8yODMwOTNfNDAwNjA5MTI4OF8yXw" target="_blank" class="a_img zxkf"></a>
+        </dd>
+       	
+        
+        <dd class="mfhd">
+        	<a href="javascript:" class="nav_left a_img mfhd"></a>
+            <div class="nav_right">
+            	<span>点击加群</span>
+            	<div class="jiaqun">
+                <h3 style="height:12px;"></h3>
+            	<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=d798959426809b64f63eb071c580c76032ce0253ede7ccadaf6a4168aa1edcdd"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="金裕领航交流群" title="金裕领航交流群"></a>
+                <!--
+                <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=e5beea41f0f50e4f000ec7f4afedea23fb269da9ad336a454a41a415e042910d"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="金裕领航交流群" title="金裕领航交流群"></a>
+                -->
+                </div>
+            </div>
+        </dd>
+        <dd class="weixin">
+        	<a href="javascript:" class="nav_left a_img weixin"></a>
+            <div class="nav_right">
+            	<a href="http://www.hj9999.hk/huodong/hongbaoxin/" target="_blank" style="border:none;">
+            	<img src="{NEW_PATH}images/home/img_xf_09.png" />
+                </a>
+            </div>
+        </dd>
+        <dd class="huodong">
+        	<a href="http://www.hj9999.hk/huodong/" target="_blank" class="nav_left a_img huodong"></a>
+            <div class="nav_right">
+				{pc:content action="lists" catid="110" num="1" order="id DESC" page="$page"}
+				{loop $data $r}
+					<div class="img-nav">
+						<a href="{$r[url]}" target="_blank">
+							<img width="286" height="201" src="{$r[thumb]}" target="_blank" />
+						</a>
+					</div>
+					<div class="biaoti-nav">
+						<a href="{$r[url]}" target="_blank">{$r[title]}<span>>>{date('Y-m-d',$r[inputtime])}</span></a>
+					</div>
+				{/loop}
+				{/pc}
+            </div> 
+        </dd>
+        <dd class="mfrx">
+        	<a href="javascript:;" class="nav_left a_img mfrx feedback"></a>
+            <div class="nav_right"><img src="{NEW_PATH}images/home/img_xf_07.png" /></div>
+        </dd>
+        <!-- <dd class="fhdb">
+        	<a href="javascript:" id="totop" title="返回顶部" class="nav_left a_img fhdb"></a>
+        </dd> -->
+     </dl>
+</div><!--TQj结束-->
+
+<div id="basic-modal-content"><!--意见反馈-->
+	<form action="http://www.hj9999.hk/index.php?m=yjfk&c=index&a=send" method="post" onsubmit="return oYjfk(this);">
+    	<ul class="yjfk-ul">
+        	<li><label>联系人:</label><input type="text" name="uname" id="uname" /></li>
+            <li><label>电话:</label><input type="text" name="phone" id="phone" /></li>
+            <li><label>QQ:</label><input type="text" name="qq" id="qq" /></li>
+           	<li><span class="yjnr">意见反馈:</span><textarea name="context" id="context"></textarea></li>
+        </ul>
+        <div class="yjfk-div">
+        	<div class="yjfk-button"><input type='submit' value="" name="dosubmit" /></div>
+        </div>
+	</form>
+<script type="text/javascript">
+
+function oYjfk(form) {	
+	if(form.uname.value == '')
+	{
+		alert("姓名不能为空");
+		form.uname.focus();
+		return false;
+	}
+
+	if(form.phone.value.match(/^(1)[3|4|5|8][0-9]{9}$/) == null)
+	{
+		alert("手机号码格式错误！");
+		form.phone.focus();
+		return false;
+	}
+	
+	if(form.qq.value=='')
+	{
+		alert("请填写您的QQ");
+		form.qq.focus();
+		return false;
+	}
+	if(form.context.value== '')
+	{
+		alert("请认真填写内容");
+		form.context.focus();
+		return false;
+	}
+	
+	return true;
+}
+</script>
+</div>
+<!-- <script type="text/javascript" src="{APP_PATH}live800/live800.js"></script> -->
+<script language="javascript" src="https://v1.live800.com/live800/chatClient/monitor.js?jid=6934404885&companyID=515221&configID=41927&codeType=custom"></script>
+
+<!--QQ截取start-->
+<script type="text/javascript" src="http://115.29.242.148/qqonweb/hj9999hk.js" charset="utf-8"></script>
+<!--QQ截取end-->
+
+<!-- 品友统计start -->
+<script type="text/javascript">
+var _py = _py || [];
+_py.push(['a', 'MI..crYxCssJG7vAMGSAa3oiZ0']);
+_py.push(['domain','stats.ipinyou.com']);
+_py.push(['e','']);
+-function(d) {
+	var s = d.createElement('script'),
+	e = d.body.getElementsByTagName('script')[0]; e.parentNode.insertBefore(s, e),
+	f = 'https:' == location.protocol;
+	s.src = (f ? 'https' : 'http') + '://'+(f?'fm.ipinyou.com':'fm.p0y.cn')+'/j/adv.js';
+}(document);
+</script>
+<noscript><img src="//stats.ipinyou.com/adv.gif?a=MI..crYxCssJG7vAMGSAa3oiZ0&e=" style="display:none;"/></noscript>
+<!-- 品友统计end -->
+
+</body>
+</html>

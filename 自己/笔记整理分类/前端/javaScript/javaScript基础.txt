@@ -1,0 +1,666 @@
+  
+  		  typeof 操作符
+	你可以使用 typeof 操作符来检测变量的数据类型。
+	typeof "John"                // 返回 string 
+	typeof 3.14                  // 返回 number
+	typeof false                 // 返回 boolean
+	typeof [1,2,3,4]             // 返回 object
+	typeof {name:'John', age:34} // 返回 object
+
+			null
+	在 JavaScript 中 null 表示 "什么都没有"。
+
+	null是一个只有一个值的特殊类型。表示一个空对象引用。
+	用 typeof 检测 null 返回是object。
+	你可以设置为 null 来清空对象:
+	var person = null;           // 值为 null(空), 但类型为对象
+
+			undefined
+	在 JavaScript 中, undefined 是一个没有设置值的变量。
+
+	typeof 一个没有值的变量会返回 undefined。
+	任何变量都可以通过设置值为 undefined 来清空。 类型为 undefined.
+	实例
+	person = undefined;          // 值为 undefined, 类型是undefined
+
+
+			undefined 和 null 的区别
+	实例
+	null 和 undefined 的值相等，但类型不等：
+
+	typeof undefined             // undefined
+	typeof null                  // object
+	null === undefined           // false
+	null == undefined            // true  
+  
+  
+  
+  
+  alert(123);
+  console.log(123);
+  
+  运算符
+  + - * / % 求余是以右边为基准
+  += -=  是a=a-1 			是一次算数
+  ++ --	 是每次a=a-1		是一种运算
+  a +=b  a=a+b
+  a++    a=a+1    ++a   在运算中++在前面就先自加
+  
+  获取元素
+  var V = document.getElementById(box);   
+  var C = document.getElementsByTagName(box);         复数，使用时要加下标
+  var Z = document.getElementsByClassName('qqq');     复数，使用时要加下标
+  V.style.width= '100px';
+  
+  字符串运算
+  123 + '123' = 123123;
+  123 + 123 = 246;
+  123 + '' = 123;  字符串
+  
+  字符串
+  如果'本身也是一个字符，那就可以用""括起来，比如"I'm OK"包含的字符是I，'，m，空格，O，K这6个字符。
+  
+  多行字符串   \n  ES6  用 `.........` 反引号表示
+  `这是一个
+   多行
+   字符串`;
+  
+  需要特别注意的是，字符串是不可变的，如果对字符串的某个索引赋值，不会有任何错误，但是，也没有任何效果：
+  JavaScript为字符串提供了一些常用方法，注意，调用这些方法本身不会改变原有字符串的内容，而是返回一个新字符串：
+  
+  
+  
+  转义字符
+  如果字符串内部既包含'又包含"怎么办？可以用转义字符\来标识，比如：
+  'I\'m \"OK\"!';
+  表示的字符串内容是：I'm "OK"!
+  转义字符\可以转义很多字符，比如\n表示换行，\t表示制表符，字符\本身也要转义，所以\\表示的字符就是\。
+  
+  ASCII字符可以以\x##形式的十六进制表示，例如：
+  '\x41'; // 完全等同于 'A'
+  
+  还可以用\u####表示一个Unicode字符：
+  '\u4e2d\u6587'; // 完全等同于 '中文'
+  
+  
+  事件
+  V.onclick = function(){}
+  V.onmouseover = function(){}
+  V.onmouseout = function(){}
+  
+  函数
+  function show(){}          声明式
+  var show = function(){}    赋值式
+  
+  show();                    调用
+  
+  判断语句
+  if(){}                     条件 <  <=   ==  ===  !=  !
+  else if(){}
+  ...
+  else{}
+  
+  循环语句
+  for( var i=0; i<100; i++ ){}  i++  是一个运算  i+=2    i=i+1  i=i+2
+  
+  for循环最常用的地方是利用索引来遍历数组：
+
+	var arr = ['Apple', 'Google', 'Microsoft'];
+	var i, x;
+	for (i=0; i<arr.length; i++) {
+		x = arr[i];
+		console.log(x);
+	}
+  
+  for循环的3个条件都是可以省略的，如果没有退出循环的判断条件，就必须使用break语句退出循环，否则就是死循环：
+
+	var x = 0;
+	for (;;) { // 将无限循环下去
+		if (x > 100) {
+			break; // 通过if判断来退出循环
+		}
+		x ++;
+	}
+  
+  for ... in
+	for循环的一个变体是for ... in循环，它可以把一个对象的所有属性依次循环出来：
+
+	var o = {
+		name: 'Jack',
+		age: 20,
+		city: 'Beijing'
+	};
+	for (var key in o) {
+		console.log(key); // 'name', 'age', 'city'
+	}
+	
+	要过滤掉对象继承的属性，用hasOwnProperty()来实现：
+
+	var o = {
+		name: 'Jack',
+		age: 20,
+		city: 'Beijing'
+	};
+	for (var key in o) {
+		if (o.hasOwnProperty(key)) {
+			console.log(key); // 'name', 'age', 'city'
+		}
+}
+由于Array也是对象，而它的每个元素的索引被视为对象的属性，因此，for ... in循环可以直接循环出Array的索引：
+
+	var a = ['A', 'B', 'C'];
+	for (var i in a) {
+		console.log(i); // '0', '1', '2'
+		console.log(a[i]); // 'A', 'B', 'C'
+	}
+	请注意，for ... in对Array的循环得到的是String而不是Number。
+  
+  
+  
+  元素内容
+  N.innerHTML
+  N.value                  表单
+  
+  N.innerHTML = '';        修改内容
+  N.value += '';           追加内容
+  
+  单双引号在字符串中起作用要转移    \     '  "
+  \'      \"
+  
+  switch语句
+  switch(a)
+  {
+     case 1：console.log(1); break;
+     case 2: console.log(2); break;
+     ...
+     default: console.log('错啦错啦你错啦~~~'); break;
+  }
+  
+  嵌套循环
+  for(){
+     for(){}
+  }
+  
+  转义字符
+  \n  换行     \r  回车
+  console.log('abc\'"\n"2\r3%');
+
+  math函数与概率
+  a = Math.floor(5.9);                  向下取整    5
+  a = Math.ceil(5.9);					向上取整    6
+  a = Math.round(5.9);					四舍五入    6
+  a = Math.max(数组);					数组中筛选出最大值
+  a = Math.min(数组);					数组中筛选出最小值
+  
+  随机数
+  a = Math.random();                    0~1之间
+  a = Math.random()*5;                  1~5之间
+  a = Math.random()*5+5;                5~10之间
+  a = Math.random(Math.random());
+  
+  最后调用函数
+  window.onload = function(){}
+  
+  隐藏函数调用
+  <div onclick = "alert(123)"> 点击 </div>
+  
+  this
+  
+  return
+  1.可以返回函数结果
+  2.函数只要执行return，函数运行结束。
+  
+  变量作用域   全局 局部  相对全局  相对局部
+  
+  数据类型
+  字符串 string、数字 number、布尔、数组、对象、Null、Undefined
+  typeof A              判断数据类型
+
+  字符串转换数值
+  a = parseInt(string);                    取整
+  a = parseFloat(string);                  转换为带小数  浮点数
+
+  
+  数值转指定小数位的字符串
+  a = b.toFixed(几位小数);                 保留小数
+  
+  
+  
+  逻辑运算
+  &&    逻辑与    
+  a&&b                  同为真，取右，有假，为0。
+  ||    逻辑或
+  a||b||c               取第一个真的值，全为假，取0.
+  a||b&&c||d            优先级：逻辑与 > 逻辑或
+  
+  
+  
+  三目运算
+  （条件）？表达式1：表达式2                如果条件成立（为真），取表达式1的结果，否则取表达式2的结果
+  参考地址： http://www.runoob.com/js/js-comparisons.html
+  
+  其实很简单，寻找到多元运算符的头 ? 和尾 : 就好办多了，就成了这样:
+
+	p>1?p<b?p>b:p=6:p=3
+
+	p>1? 整体 :p=3
+	1、当 p>1 时返回 p<b?p>b:p=6
+
+	1.1、当 p<b 时返回 p>b
+	1.2、当 p>=b 时返回 p=6
+	2、当 p<=1 是返回 p=3 所以先执行 1
+	3、实例中当 p＝9 的时候，返回 p<b?p>b:p=6 接着执行 1.1，当 p＝9<12 时，返回 p>b，即 9>12，条件不成立所以最终结果为 false。
+  
+实例:根据学生成绩判定ABCD四个等级
+
+var result = (sc<0 || sc>100) ?("分数无效"):  
+                                 sc>=90?("A"):  
+                                 sc>=80?("B"):      
+                                 sc>=60?("C"):("D");  
+注意: 计算时需考虑优先级问题，加"()'避免结果出错！   
+
+3、三目运算的优势: 简洁，明了，在Vue中有很大的作用
+  
+  
+  
+  
+  最终样式
+  获取 最终样式：
+  currentStyle(ie8以下版本)   
+  getComputedStyle（标准版本）
+  
+  function  getStyle()
+	  {
+	  	var   value;
+	  	if(window.getComputedStyle)   //如果能使用getComputedStyle,那说明是标准浏览器
+	  	{
+	  		value=getComputedStyle(oDiv).height;
+	  	}
+	  	else
+	  	{
+	  		value=oDiv.currentStyle.height;
+	  	}
+	  	
+	  	return  value;
+	  }
+  
+  function CSS(obj,attr,value)    //obj:元素    attr:属性    value：值        都 属于形参（形式参数）
+	  {
+	    //是否为获取 
+	    if(value==undefined)
+	    {
+	    	if(window.getComputedStyle)
+	    	{
+	    		return  getComputedStyle(obj)[attr];
+	    	}
+	    	else
+	    	{
+	    		return  obj.currentStyle[attr];
+	    	}
+	    }
+      //设置
+       obj.style[attr]=value;
+	
+	  }
+	   var kk=CSS(oDiv,'width');
+	   console.log(kk);
+	  
+	  
+	  CSS(oDiv,'backgroundColor','green');
+  
+  
+  
+  
+  
+  
+  
+  定时器
+  a = setTimeout(function(){},1000);         
+  clearTimeout(a);                              取消定时器
+  
+  重复调用定时器
+  a = setInterval(function(){
+     if(){  clearTimeout(a);取消  }
+  },1000);
+  
+  break   与   continue
+  for(){
+     if(){  break;结束循环         continue;结束当前条件成立的循环，继续下次循环。         }
+  }
+  
+  
+  
+  
+  数组
+  var a = [];
+  var a = new Array();
+  a.length
+  快速清空数组
+  a.length = 0;
+  
+  请注意，直接给Array的length赋一个新的值会导致Array大小的变化：
+	var arr = [1, 2, 3];
+	arr.length; // 3
+	arr.length = 6;
+	arr; // arr变为[1, 2, 3, undefined, undefined, undefined]
+	arr.length = 2;
+	arr; // arr变为[1, 2]
+  
+  Array可以通过索引把对应的元素修改为新的值，因此，对Array的索引进行赋值会直接修改这个Array：
+
+	var arr = ['A', 'B', 'C'];
+	arr[1] = 99;
+	arr; // arr现在变为['A', 99, 'C']
+	请注意，如果通过索引赋值时，索引超过了范围，同样会引起Array大小的变化：
+
+	var arr = [1, 2, 3];
+	arr[5] = 'x';
+	arr; // arr变为[1, 2, 3, undefined, undefined, 'x']
+  
+  
+  
+  求和函数&数组求和IE+
+  function sum(...rest){
+			    var result = 0;
+			    rest.forEach(function(v){
+			         result += v;
+			    })
+			    return result;
+			}
+  
+  
+  
+  
+  增  删   改
+  a.push();                     从数组的最后增加数据
+  a.unshift();                  从数组的最前增加数据 
+  a.shift();                    删除数组中第一位数据
+  a.pop();                      删除数组中最后一位数据 
+  
+  
+  splice
+  splice()方法是修改Array的“万能方法”，它可以从指定的索引开始删除若干元素，然后再从该位置添加若干元素：
+    var arr = ['Microsoft', 'Apple', 'Yahoo', 'AOL', 'Excite', 'Oracle'];
+	// 从索引2开始删除3个元素,然后再添加两个元素:
+	arr.splice(2, 3, 'Google', 'Facebook'); // 返回删除的元素 ['Yahoo', 'AOL', 'Excite']
+	arr; // ['Microsoft', 'Apple', 'Google', 'Facebook', 'Oracle']
+	// 只删除,不添加:
+	arr.splice(2, 2); // ['Google', 'Facebook']
+	arr; // ['Microsoft', 'Apple', 'Oracle']
+	// 只添加,不删除:
+	arr.splice(2, 0, 'Google', 'Facebook'); // 返回[],因为没有删除任何元素
+	arr; // ['Microsoft', 'Apple', 'Google', 'Facebook', 'Oracle']
+  
+  
+  
+  
+  解决低版本通过类CLASS获取元素不兼容
+  var  oDiv=document.getElementsByClassName('box')[0];              低版本IE不兼容             
+  var  objs=getAllObjectForClass(document,'box');                   正解
+  
+  
+  
+  数据拼接与拆分
+  var a = 数组.join(格式);             以某种格式拼接为字符串
+  var a = 字符串.split(格式)；         以某种格式拆分为字符串
+  
+  截取    
+  slice()就是对应String的substring()版本，它截取Array的部分元素，然后返回一个新的Array：
+  
+  var a = 字符串.slice(a,b);           截取从第a个开始到第b个之间
+  var a = 字符串.slice(b);             从b开始截取，截取到最后      =>有问题！
+  
+  如果不给slice()传递任何参数，它就会从头到尾截取所有元素。利用这一点，我们可以很容易地复制一个Array：
+	var arr = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+	var aCopy = arr.slice();
+	aCopy; // ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+	aCopy === arr; // false
+  
+  substring
+	substring()返回指定索引区间的子串：
+	var s = 'hello, world'
+	s.substring(0, 5); // 从索引0开始到5（不包括5），返回'hello'
+	s.substring(7); // 从索引7开始到结束，返回'world'
+  
+  
+  
+  查询
+  var a = 字符串.charAt(下标);         获取下标的单个字符串
+  var a = 字符串.indexOf('b');         获取b在字符串中的下标
+  var a = 字符串.indexOf('b',5);       从第5个开始找b在字符串中的下标
+  var a = findStringCount('b','c');    找字符串在另一字符串中出现的次数
+  var a = 字符串.lastIndexOf('b');     最后出现的下标
+  
+  与String类似，Array也可以通过indexOf()来搜索一个指定的元素的位置：
+	var arr = [10, 20, '30', 'xyz'];
+	arr.indexOf(10); // 元素10的索引为0
+	arr.indexOf(20); // 元素20的索引为1
+	arr.indexOf(30); // 元素30没有找到，返回-1
+	arr.indexOf('30'); // 元素'30'的索引为2
+	注意了，数字30和字符串'30'是不同的元素。
+  
+  
+  
+  字符串函数
+  var a = a.trim();                    去掉两边空格字符串
+  var a = 字符串.toUpperCase();        转换大写
+  var a = 字符串.toLowerCase();        转换小写
+  
+  var a = array.sort();                排序
+  a.reverse();                         反序
+  a.sort(function(num1,num2){
+  
+        return num1-num2;              由小到大
+  });
+  
+  
+  
+  原例子
+  var array=[99,23,1,77,34,14,123];
+			array.sort(function(num1,num2){   //带参的sort函数和不带参sort功能语句是两个不一样的东西
+				if(num1>num2) return 1;       //带参的sort函数是一个真正按大小排序的函数
+				if(num1<num2) return -1;      //而不带参的sort功能语句是按开头字母排序的
+				if(num1==num2) return 0;      //return返回的如果为正，则输出的结果为前一个
+                                              //return返回的如果为负，则输出的结果为后一个
+                                              //return返回的如果为0，则输出的结果为都行
+
+              return  num1-num2;  //由小到大
+                 
+				return   num2-num1;  //由大到小
+			});
+			console.log(array);   //  [1, 14, 23, 34, 77, 99, 123]	
+			array.reverse();
+			console.log(array);   // [123, 99, 77, 34, 23, 14, 1]
+  
+  
+  var a = 数字;
+  var b = 数字；
+  var c = a.concat(b);                        数字拼接
+  
+  
+  
+  
+  
+  对象
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+                                       时间data
+  var  date= new Date();
+			
+	console.log(date);   // Date {Thu Oct 13 2016 15:42:25 GMT+0800}
+
+	//年
+	var  year=date.getYear();
+	console.log(year);          //116    从1900年开始算
+	console.log(typeof year);   //number
+			
+	year=date.getFullYear();   
+	console.log(year);          //2016	
+	//月
+	var  month=date.getMonth();
+	console.log(month);          //9       是从0 开始的， 记得加1
+	//日
+	var dat=date.getDate();
+	//星期
+	var  day=date.getDay();      
+	//时
+	var  hour=date.getHours();      	
+	//分
+	var  min=date.getMinutes();      		
+	//毫秒
+	var  sec=date.getSeconds();      	
+	
+			
+	
+  
+  
+  
+  
+                                                Json数据
+  参考地址：https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434499490767fe5a0e31e17e44b69dcd1196f7ec6fc6000
+  
+  为了统一解析，JSON的字符串规定必须用双引号""，Object的键也必须用双引号""。
+  JavaScript内置了JSON的解析。
+  把任何JavaScript对象变成JSON，就是把这个对象序列化成一个JSON格式的字符串。
+  JSON格式的字符串，只需要把它反序列化成一个JavaScript对象，就可以在JavaScript中直接使用这个对象了。
+  
+  序列化成JSON格式的字符串：
+  var s = JSON.stringify(xiaoming);
+  要输出得好看一些，可以加上参数，按缩进输出：
+  JSON.stringify(xiaoming, null, '  ');
+  第二个参数用于控制如何筛选对象的键值，如果我们只想输出指定的属性，可以传入Array：
+  还可以传入一个函数，这样对象的每个键值对都会被函数先处理：
+  JSON.stringify(xiaoming, convert, '  ');				//convert  函数
+  
+  function convert(key, value) {
+		if (typeof value === 'string') {
+			return value.toUpperCase();
+		}
+		return value;
+	}
+	上面的代码把所有属性值都变成大写：
+	
+	反序列化
+拿到一个JSON格式的字符串，我们直接用JSON.parse()把它变成一个JavaScript对象：
+
+JSON.parse()还可以接收一个函数，用来转换解析出的属性：
+var obj = JSON.parse('{"name":"小明","age":14}', function (key, value) {
+    if (key === 'name') {
+        return value + '同学';
+    }
+    return value;
+});
+console.log(JSON.stringify(obj)); // {name: '小明同学', age: 14}
+  
+  
+
+  
+  
+  
+  
+  var json={a:1,'b':2,4:5};
+  //键为数字
+  console.log(json['a']);       //5
+  
+  JSON 值可以是：
+  
+    数字（整数或浮点数）
+    字符串（在双引号中）
+    逻辑值（true 或 false）
+    数组（在方括号中）
+    对象（在花括号中）
+    null
+
+  JSON 对象
+  { "name":"菜鸟教程" , "url":"www.runoob.com" }
+
+  JSON 数组 
+  {
+	"sites": [
+	  { "name":"菜鸟教程" , "url":"www.runoob.com" }, 
+	  { "name":"google" , "url":"www.google.com" }, 
+	  { "name":"微博" , "url":"www.weibo.com" }
+	]
+  }
+
+  实例
+	var sites = [
+		{ "name":"runoob" , "url":"www.runoob.com" }, 
+		{ "name":"google" , "url":"www.google.com" }, 
+		{ "name":"微博" , "url":"www.weibo.com" }
+	];
+
+  访问 JavaScript 对象数组中的第一项
+  sites[0].name;                    //runoob
+  修改数据：
+  sites[0].name="菜鸟教程";
+
+  
+  
+  json遍历
+  var  json={a:77,b:99,e:3,d:33};
+			
+			for(var i in json)
+			{
+				console.log(json[i]);
+	            //77   99  3  33
+			}
+  
+  json设置属性
+  var json={width:'100px',height:'100px',backgroundColor:'red'};
+  or(var i in json)
+			{
+				
+			  div.style[i]=	json[i];
+			}
+  
+  
+  字符串与json相互转换
+  var a = JSON.stringify(json);
+  var a = JSON.parse(字符串);
+  
+  
+  
+  
+  
+  
+  JavaScript eval() 函数
+  eval() 函数计算 JavaScript 字符串，并把它作为脚本代码来执行。
+  如果参数是一个表达式，eval() 函数将执行表达式。如果参数是Javascript语句，eval()将执行 Javascript 语句。
+  
+  eval("字符串");
+  eval(`html+javascript`);
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  
+  
+    
+  
+  
+  
+  
+  
+  

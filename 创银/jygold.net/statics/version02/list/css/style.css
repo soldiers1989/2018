@@ -1,0 +1,34 @@
+.banner{width:100%;height:300px;background:url(../images/pic1.jpg) top center no-repeat}
+.banner .banner-inner{width:1150px;height:300px;margin:auto;overflow:hidden}
+.banner .btn-group{width:573px;height:67px;float:right;margin-top:208px}
+.banner .btn-group a{display:block;width:238px;height:58px;float:left}
+.banner .btn-group a:first-child{margin-right:19px}
+.banner .btn-group .dataCount-btn-demoAccount{background:url(../images/btn1.png) top center no-repeat}
+.banner .btn-group .dataCount-btn-demoAccount:hover{background:url(../images/btn3.png) top center no-repeat}
+.banner .btn-group .dataCount-btn-realAccount{background:url(../images/btn2.png) top center no-repeat}
+.banner .btn-group .dataCount-btn-realAccount:hover{background:url(../images/btn4.png) top center no-repeat}
+.main{width:1150px;margin:auto}
+/*主体左侧*/
+.Breadcrumbs{width:1148px;height:42px;line-height:42px;border:1px solid #c9c9c9;background:#FFF;font-size:18px;text-indent:15px;color:#262626;margin-top: 19px;}
+.Breadcrumbs a{color:#262626}
+.info-list{width:638px;float:left;margin:16px 0 0 13px;margin-bottom: 30px;}
+.info-list li{width:588px;height:122px;border-bottom:1px dashed #737373;padding-right:50px;overflow:hidden;padding-top:28px;color:#858585}
+.info-list li a{color:#262626}
+.info-list li .title{display:block;font-size:18px;margin-bottom:15px}
+.info-list li .clock{display:inline-block;position:relative;top:2px}
+/*主体右侧*/
+.right-part{width:478px;float:left;margin-left:21px}
+.intro-group{width:476px;height:196px;margin:auto;border:1px solid #c9c9c9;margin-top:16px}
+.intro-group .intro-group-title{width:476px;height:42px;line-height:42px;border-bottom:1px solid #c9c9c9;background:#eee;font-size:17px;text-indent:15px;color:#262626}
+.intro-group .intro-group-content img{display:block;float:left;margin:10px 0 0 18px}
+.intro-group .intro-group-content ul{float:left;width:255px;margin-top:16px}
+.intro-group .intro-group-content ul li{float:left;width:115px;padding:2px 0 2px 10px}
+.intro-group .intro-group-content .more{clear:both;display:block;float:right;margin-right:20px}
+.intro-group .intro-group-content .knowledge{width:245px}
+.intro-group .intro-group-content .knowledge li{width:230px}
+.number-group{width:476px;margin-top:16px;border:1px solid #c9c9c9}
+.number-group .number-group-inner{width:476px;height:178px;background:url(../images/pic5.png) 300px 62px no-repeat;padding:20px 0 0 30px;color:#696969;font-size:17px}
+.number-group .s-color1{color:#daad53}
+.number-group .number-group-inner h1{font-size:26px}
+
+

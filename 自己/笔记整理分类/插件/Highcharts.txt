@@ -1,0 +1,135 @@
+
+
+legend		//  在图的上方     图或线条的说明提示，例如 （蓝色） 数据  （红色）值
+title		//是必须的	不需要则为空
+
+
+设置数据图的统一颜色
+	series: [{
+		color: '#add1f8'
+	}
+
+	
+图表类型
+	column		//条形图
+	line		//折线图
+	spline		//曲线图
+
+	
+背景颜色	在全局设置中
+	chart: {
+		backgroundColor: 'red'
+	},
+
+	
+取消图标右边数据刻度和标题
+	{
+		title: {
+			text: false
+		},
+		labels: {
+			format: ' '
+	}
+
+	
+隐藏图例	//即点击显示隐藏数据图的提示文字
+	showInLegend: false
+	series: [{
+		data: [],
+		name: "",
+		showInLegend: false // 设置为 false 即为不显示在图例中
+	}, 
+
+
+去掉版权信息
+	credits:{
+		 enabled: false // 禁用版权信息
+	}
+
+
+提示框文字内容
+	series: [{
+		name: 'ADP数据',
+	}
+
+
+数据点点击事件
+	plotOptions: {
+		series: {
+			cursor: 'pointer',
+			point: {
+				events: {
+					// 数据点点击事件
+					// 其中 e 变量为事件对象，this 为当前数据点对象
+					click: function(event) {
+						toggleData(this.x,this.y,data,this.category);		//this.x			数据下标
+					}														//this.y			y轴的值
+				}															//data				完整数据传参
+			},																//this.category		对应x轴的值
+			marker: {
+				lineWidth: 1
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

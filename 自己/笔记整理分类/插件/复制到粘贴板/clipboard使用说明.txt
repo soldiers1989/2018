@@ -1,0 +1,83 @@
+
+1.页面引用js文件
+	<script src="js/clipboard.min.js"></script>
+
+2.点击的元素绑定属性
+	 data-clipboard-action="copy"     							//copy是复制的意思
+	 data-clipboard-target="#recommend-link"				//#+ID是需要复制的内容的元素的ID
+	 
+3.js代码初始化
+	 var clipboard = new ClipboardJS('.button2');			//.button2是监控点击的元素的类，可以在所有需要监控绑定的添加类btn ，然后填  .btn
+
+
+
+// 复制成功回调
+clipboard.on('success', function(e) {
+	var v = $("#recommend-link").val();
+	if( v.trim() == '' ){
+		alert('内容为空');
+	}else{
+		alert('复制成功');
+	}
+});
+//复制失败回调
+clipboard.on('error', function(e) {
+    alert('网络原因，复制失败，请手动复制。');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

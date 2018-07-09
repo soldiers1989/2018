@@ -1,0 +1,165 @@
+
+移动端媒体查询（css文件）
+	在之前的rem手机端自适应里的css加入这个，修复大屏手机字体过大.
+	@media only screen and (min-width: 414px) and (max-width: 1920px)  {
+	  html {
+		font-size: 54px !important;
+	  }
+	}
+
+
+
+只要求判断根据屏幕宽度选择不同的CSS样式表。
+	<script language=javascript>
+		<!--
+		if (screen.width == 800)
+		{
+		document.write('<link rel=stylesheet type="text/css" href="css800.css">')
+		}
+		else {document.write('<link rel=stylesheet type="text/css" href="css1024.css">')}
+		//-->
+	</script>
+
+
+判断是否为微信浏览器
+	function isWeiXin(){ 
+		var ua = window.navigator.userAgent.toLowerCase(); 
+		if(ua.match(/MicroMessenger/i) == 'micromessenger'){ 
+			return true; 
+		}else{ 
+			return false; 
+		} 
+	} 
+	if( isWeiXin() ){
+		是
+	}
+
+判断客户端是手机还是PC					
+	function IsPC() {
+		var userAgentInfo = navigator.userAgent;
+		var Agents = ["Android", "iPhone",
+					"SymbianOS", "Windows Phone",
+					"iPad", "iPod"];
+		var flag = true;
+		for (var v = 0; v < Agents.length; v++) {
+			if (userAgentInfo.indexOf(Agents[v]) > 0) {
+				flag = false;
+				break;
+			}
+		}
+		return flag;
+	}
+
+
+-webkit-user-select: none; /*禁止长按选择内容*/
+-webkit-touch-callout: none; /*ios禁止长按弹出菜单*/
+
+ //pc或移动判断
+        function uaredirect(){
+            var c = window.location.hash;
+            if(!c.match("fromapp")) {
+                if( navigator.userAgent.match(/(iPhone|iPod|iPad|Android|ios)/i) ){
+                    window.location.href = 'http://www.jygold.net/m/';
+                }
+            }
+        }
+        uaredirect();
+
+
+解决移动端元素滚动穿透问题
+css
+	body.modal-open {
+		position: fixed;
+		width: 100%;
+	}
+
+js
+	var ModalHelper = (function(bodyCls) {
+	var scrollTop;
+	  return {
+		afterOpen: function() {
+		  scrollTop = document.scrollingElement.scrollTop;
+		  document.body.classList.add(bodyCls);
+		  document.body.style.top = -scrollTop + 'px';
+		},
+		beforeClose: function() {
+		  document.body.classList.remove(bodyCls);
+		  // scrollTop lost after set position:fixed, restore it back.
+		  document.scrollingElement.scrollTop = scrollTop;
+		}
+	  };
+	})('modal-open');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

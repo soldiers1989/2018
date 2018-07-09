@@ -1,0 +1,79 @@
+
+   从右向左匀速轮播展示。
+
+   <div class="swiper-container20170814">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"><img class="img1" src="images/md1.jpg"/></div>
+			<div class="swiper-slide"><img class="img1" src="images/md2.jpg"/></div>
+			<div class="swiper-slide"><img class="img1" src="images/md3.jpg"/></div>
+		</div>
+	</div>
+	
+    .swiper-container20170814{overflow: hidden;width: 100%;}
+	.swiper-container20170814 .swiper-wrapper{transition-timing-function: linear;}
+	.swiper-container20170814 .img1{display: block;width: 2.29rem;height: 1.72rem;}
+
+	var swiper = new Swiper('.swiper-container20170814', {
+		loop: true,
+		autoplay:1,
+		speed:2000,
+        slidesPerView: 3,
+        spaceBetween: 30
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

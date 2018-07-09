@@ -1,0 +1,374 @@
+  
+  
+  通过$()选择元素
+	  var $a = $("#id");
+	  var $a = $(".class");
+	  var $a = $("div");
+	  $('div[style*=red]').css('background','');          通过属性获取
+ 
+
+   
+  属性选择
+	$('input[value=2345]').css('background','deeppink');          通过属性值等于
+	$('input[value^=2]').css('background','blue');                属性以2开头的
+	$('input[value$=5]').css('background','yellow');              属性以5结尾
+	$('input[value*=4]').css('background','orange');              属性包含4
+    原写法
+	$('div[class="box"]').css('background','cyan');				  jQuery会自动加上双引号
+ 
+ 
+ 
+ 设置属性 - attr()
+	$a.attr();
+ 
+ 
+ 
+ jquery中添加属性和删除属性：
+
+ $("#2args").attr("disabled",'disabled');
+ $("#2args").removeAttr("disabled");
+
+问题背景：
+
+选择“选项1”是，“两个参数”这个单选按钮有效。
+
+选择“选项2”时，让“两个参数”的这个单选按钮无效。
+
+
+ 
+  修改样式 CSS(修改属性名，属性值)
+	a.css('background','red');
+  
+  
+  循环(可以使用集合操作，所以不需要for)
+    $('li').css('background','red');
+    $('li') ==> jQuery('li')
+  
+  
+  方法函数化
+	a.onclick = function(){}  ==>  $a.click(function(){})
+  
+  
+  函数中返回的this对象都是原生js对象
+	$(this)
+  
+  
+  取值赋值
+	jq通过参数决定取值还是赋值：带参是赋值，不带参是取值
+	集合获取值时是是获取第一个值，设置是设置全部
+	${'input'}.val();
+	${'input'}.val(999);
+	
+  
+  加载
+	window.onload = $(function(){
+		${'.box'}.css('background','red');
+	})
+    完整写法
+		$(window).load(function(){
+			$('.box').css('background','blue');
+		})	
+	
+
+	
+  
+  命名规范
+	js和jQ能共存但不能混写
+	var $odiv = $('.box');
+	
+  
+  链式操作:只针对同一样对象   只针对设置
+	$('.box').html('123').css('background','darkgreen').click(function(){
+		alert('跑啊跑啊~~~~~~~');
+	})
+  
+  
+  容错处理
+	js运行时会报错并停止往下运行
+	jQ运行时不会报错，跳过错误，继续运行
+	
+  
+  lenght
+	通过$方法获取的是集合
+	可以通过lenght属性判断元素是否存在
+  
+  
+  class操作
+	$a.addClass('box3');                          添加类
+	$a.removeClass('box3');                       删除类
+	$a.toggleClass();							  添加删除类
+	$a.toggle();                                  显示与隐藏
+	$a.hide();                          	      隐藏
+	$a.show();                          		  显示
+  
+  
+  节点选择
+	参数起筛选作用
+	
+  同级上一个元素
+	$a.prev().css('background','red');
+	$a.prev('h1').css('background','red');
+	
+  同级下一个元素
+	$a.next().css('background','blue');
+  
+  选择前面所有的元素，参数起筛选作用
+	$a.prevAll().css('color','red');
+  
+  选择后面所有的元素，参数起筛选作用
+	$a.nextAll().css('color','red');
+  
+  
+  选择除了本身的其他元素，参数起筛选作用
+	$a.siblings().css('color','red');
+  
+  
+  下标
+	eq();
+	$a.eq(0).html(123);
+  
+  
+  
+  子节点选择
+    $a.first().css('color','red');                      第一个子节点
+	
+	//选取第一个 <div> 元素内的第一个 <p> 元素：
+    $("div p").first()
+	
+    $a.last().css('color','red');						最后一个子节点
+  
+    $a.slice(1,3).css('color'.'red');					下标1~3,不包括3
+  
+    $a.children('span').css('color','red');				直接子类，可以带参，相当于子类选择器
+  
+    $a.find('span').css('color','red');					必须带参 所有子类 相当与后代选择器
+  
+  
+  
+  父元素选择
+	$a.parent().css('color','red');  					直接父级元素
+	
+	$a.parents('div').css('color','red');				祖先元素 参数作为筛选作用
+  
+	$a.closest('body').css('color','red');				从所有的祖先元素中找离当前元素最近的一个元素，如果本身是指定的类型，就是本身
+  
+	
+  
+  get  转换   jQ转原生js
+	获取内容的高度    	元素之间的比较
+	$a.get(0) == $b.first().get(0) 						一般用于判断
+  
+  
+  节点操作  
+  创造节点
+	var $li = $('<li>');
+	var $li = $('<li id="liid">节点内容</li>');
+  
+  
+  添加节点
+    //子节点
+	$a.append($b);										添加为后面的子节点
+	$a.prepend($b);										添加为前面的子节点
+	
+	//兄弟节点
+	$a.after($b);										添加$a在$b的前面
+	$a.before($b);										添加$a在$b的后面
+	
+  
+  
+  remove与clone
+	$a.remove('#box');删除								参数作为筛选作用
+    
+  事件复制
+	$a.click(function(){})
+	$a.clone(true).after($b);							clone 复制元素    true:表示复制事件
+  
+  
+  index  	兄弟节点中的排行,从0开始
+	$a.index();
+	$a.index('div');									筛选后的排行
+  
+  
+  
+  each遍历
+	$a.each(function(i,elem){
+		//下标值
+		console.log(i);
+		//下标i对应元素  ==  this
+		console.log(elem);
+		
+		$(elem).html(i);
+		//跳出each遍历
+		if(i==2){ return false; }
+		
+		$(this).html(i);
+	})
+  
+  
+  
+  包装
+	//单个包装
+		$('span').wrap('<p>');
+	//整体包装
+		$('span').wrapAll('<p>');
+	//内包装
+		$('span').wrapInner('<strong>');
+			
+	//拆包装
+		$('span').unwrap();
+
+		
+		
+		
+		
+		
+  
+  元素尺寸获取
+  jq可以获取隐藏元素尺寸
+    width() - 设置或返回元素的宽度
+    height() - 设置或返回元素的高度
+    innerHeight() - 返回元素的高度（包含 padding）
+    outerWidth() - 返回元素的宽度（包含 padding 和 border）
+    outerHeight() - 返回元素的高度（包含 padding 和 border）
+
+  
+  
+  获取滚动距离	
+	$(document).scrollTop();
+  设置滚动距离
+	$(document).scrollTop(500);
+  
+  滚动条事件
+	$(document).scroll(function(){});
+
+不要直接复制！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+
+  获取可视区的宽高
+	$(window).width();
+	$(window).height();
+  
+  获取页面的宽高
+	$(document).width();
+	$(document).height();
+  
+  
+  
+  获取当前元素距离页面上边缘的距离
+	$a.offset().top;
+  获取当前元素距离页面左边缘的距离
+	$a.offset().left;
+	
+  
+  获取定位距离 不识别margin值
+	获取的是css样式设置里的   position: absolute;top: 20px;left: 30px;
+	$a.position().top;
+	$a.position().left;
+      
+  offsetParent() 方法返回第一个定位的祖先元素。
+  
+  
+  
+  
+  
+  
+  
+  on方法
+	jq事件是绑定事件
+  
+  on方法参数说明
+	//第一个参数：指定事件类型
+	//第二个参数：事件响应函数
+  
+  //多事件写法   ：不同事件有相同的响应行为
+	$a.on('click mouseout',function(){})
+  
+  
+  off方法
+	取消事件
+  $a.off('click');
+  //不带参数取消所有事件
+  //off可以取消非on指定的方法
+  
+  
+  
+  事件对象
+	//jq不需要事件兼容
+  
+  鼠标位置
+	$a.click(function(ev){
+	//鼠标相对与页面的位置
+		ev.pageX;
+		ev.pageY;
+	//鼠标相对与可视区的位置
+		ev.clientX;
+		ev.clientY;
+		
+	})
+  
+  键盘键值
+	$(document).keydown(function(ev){
+		ev.which;
+	})
+  
+  
+  ev.target 属性返回哪个 DOM 元素触发了事件。以便判断事件是否因事件冒泡被处理。
+	  $a.click(function(ev){	
+		alert(ev.target);
+	  })
+  
+  
+  
+  事件阻止
+	//阻止冒泡事件
+		ev.stopPropagation();
+    //阻止默认事件
+		ev.preventDefault();
+    //可以阻止冒泡也可以阻止默认事件
+		return false;
+  
+  
+  拖拽实例
+	//解决文字拖拽bug
+		return false;
+  
+  
+  
+  
+  事件委托   (五星)
+	//事件委托好处：1.提高性能  2.后续添加的元素能够直接拥有事件
+	//原理：事件冒泡
+	//delegate参数说明
+	//参数1：要做委托的对象
+	//参数2：事件类型
+	//参数3：事件响应函数
+  
+  
+  
+  $('ul').delegate('li','click',function(ev){
+	console.log(ev.delegateTarget);//原生的ul
+	//取消代理
+	$(ev.delegateTarget).undelegate();
+  })
+  
+  
+  $('#button').trigger('click');绑定两个不同主体的事件。
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,684 @@
+
+
+
+                                                         示例
+
+<{my->方法名
+   tpl=''  // 模板html，里面包含支持的模板变量。必须指定该值。
+   xx='aaa' // 其它参数
+}>
+
+
+<{my->方法名
+   tpl='' 
+}>
+
+
+
+                                                      企业的关于我们
+
+
+获取企业信息-getCompanyInfo
+
+
+
+
+
+
+                                         页面的新闻、产品...都是推荐新闻、推荐产品
+
+
+
+
+                                                       分页器
+<{my->getPages}>
+说是只写这一行代码就可以了其他都不用写。
+
+
+
+
+
+
+
+                                              首页的产品、新闻、关于我们
+					              都是推荐XX
+
+
+                                                       获取轮播图
+<{my->getsLunBo
+   tpl='' 
+}>
+tpl支持的参数：
+img,// 图片
+link,// 链接
+k,// 关键词
+ 
+----
+其它参数:
+无
+
+
+                                               获取推荐产品-getsHotProducts
+<{my->getsHotProducts
+   tpl='' 
+}>
+tpl支持的参数：
+url,// 产品链接
+img,// 产品图片
+name,// 产品名
+ 
+----
+其它参数:
+num,// 取多少个产品，默认4个。
+
+
+
+						最新新闻
+
+<{my->getsNewNews
+	            	tpl='<img src="#thumbImg#"/>
+			</div>
+			<div class="pro_connent2">
+				<h1>人气推荐</h1>
+				<h3>Popular Products</h3>
+				
+	            	<p>#title#</p>
+					<a class="more_botton_white" href="#url#">了解更多</a>
+	            	'
+	            	len='0'
+	            	num=1
+	            }>
+
+
+
+
+
+
+
+
+
+                                               获取推荐新闻-getsRecommendNews
+<{my->getsRecommendNews
+   tpl='' 
+}>
+tpl支持的参数：
+url,// 产品链接
+thumbImg,// 产品图片
+title,// 产品名
+intro，//简介
+create_time,// 发布时间
+ 
+----
+其它参数:
+num,// 取多少个产品，默认4个。
+len,// 简介截取长度
+create_time_format,// 时间格式。Y表示年，m表示月，d表示日，H表示小时, i表示分钟，s表示秒。
+
+
+
+
+
+
+
+                                               获取企业信息-getCompanyInfo
+                                                     联系我们
+<{my->getCompanyInfo
+   tpl='' 
+}>
+tpl支持的参数：
+id,// 企业id
+name,// 企业名
+address,// 企业地址
+contact_person, //联系人
+contact_mobile,// 联系手机
+contact_phone,// 联系电话
+contact_email,// 联系邮件
+logo,// 企业Logo
+image,// 企业形象图片
+contact_qq,// 联系qq
+h5_qr_img,// 企业的h5站点二维码
+company_domain,// 企业的域名
+ 
+aboutus, // 简介
+aboutus_more_url, // 更多简介的链接。只有简介的长度大于aboutus_len时，才有该值。
+ 
+apk_url, // android包下载地址
+app_code, // android包二维码地址
+ios_url,// ios下载地址
+ 
+----
+其它参数:
+aboutus_len, // 简介的截取长度
+
+
+
+
+							分页的产品、新闻、关于我们等
+
+
+
+                                                                产品
+
+<{my->getsInfo
+   tpl='' 
+}>
+tpl支持的参数：
+title, //标题
+img,//缩略图地址
+url，//详情页地址
+
+
+                                                    获取产品封面图-getFirstImg
+<{my->getFirstImg
+   tpl='' 
+}>
+tpl支持的参数：
+img,//缩略图地址
+
+                                                  获取产品详情-getInfo
+
+<{my->getInfo
+   tpl='' 
+}>
+tpl支持的参数：
+name,//产品名
+intro，//产品简介
+
+
+
+                                                   关于我们
+<{my->getCompanyInfo
+     tpl='<p>#aboutus#</p>' 
+}>
+
+
+
+
+                                            企业新闻列表及详情页方法  获取列表数据-getsInfo
+
+<{my->getsInfo
+   tpl='' 
+}>
+tpl支持的参数：
+title, //标题
+img,//缩略图地址
+url，//详情页地址
+show_intro，//简介
+create_time_format1，//创建时间
+create_time_format2，//创建时间
+ 
+其他参数
+create_time_format1，//创建时间1，的时间格式
+create_time_format2， //创建时间2，的时间格式
+len,//每页的个数
+
+
+
+
+                                                     获取新闻详情数据-getInfo
+
+
+
+获取列表数据-getsInfo
+
+tpl支持的参数：
+title, //标题
+img,//缩略图地址
+url，//详情页地址
+show_intro，//简介
+create_time_format1，//创建时间
+create_time_format2，//创建时间
+ 
+其他参数
+create_time_format1，//创建时间1，的时间格式
+create_time_format2， //创建时间2，的时间格式
+len,//每页的个数
+
+
+						新闻详细页面
+
+<{my->getInfo
+   tpl='' 
+}>
+tpl支持的参数：
+title, //新闻标题
+intro,//新闻内容
+create_time_formate,//创建时间
+ 
+其他参数：
+create_time_formate,//时间的展示格式
+
+
+
+
+
+
+                                                  企业问答方法
+
+                                              获取列表数据-getsInfo
+
+
+<{my->getsInfo
+   tpl='' 
+}>
+
+tpl支持的参数：
+id, //当前记录的id
+name,//提问者姓名
+answers，//回复数
+show_time，//提问时间
+content，//提问内容
+son，//子模版即回复的数据
+ 
+son_tpl参数
+answers，//回复数
+grandson，当前模版的子模板，即循环的回复数据
+ 
+grandson_tpl参数
+show_time，//回复时间
+content，//回复内容
+demo
+
+<{my->getsInfo
+	tpl='<div class="liuyan_items">
+		<div class="lytitle" data="#id#">
+			<dl>
+				<dt>#name#</dt>
+				<dd><span class="wdhd" >#answers#回答</span><em>|</em>#show_time#</dd>
+			</dl>
+			<div class="lycon">
+				<p>#content#</p>
+			</div>
+		</div>
+		#son#
+	</div>'
+	son_tpl='<div class="lyhd">
+			<h5>#answers#条回答</h5>
+			#grandson#
+		</div>'
+ 
+	grandson_tpl = '<dl>
+				<dt>官方客服<i class="fktime">#show_time#</i></dt>
+				<dd>#content#</dd>
+			</dl>'
+}>
+
+
+获取页面tdk信息
+<{my->getTDK
+    tpl='<title>#t#</title>
+    <meta name="Keywords" content="#k#" />
+    <meta name="Description" content="#d#" />'
+}>
+
+
+                                                         
+
+
+                                                      头部
+
+
+
+
+                                                  头部文件一定要写的
+						     TDK的下面
+<base href="<{my->getCJIBasePath}>">
+
+
+
+
+                                        获取企业域名-getCompanyDomainInfo
+
+
+<{my->getCompanyDomainInfo
+   tpl='<a href="#pc#" tppabs="#pc#">'
+}>
+tpl支持的参数：
+h5,// 企业h5站点链接
+pc,// 企业pc站点链接
+
+
+                                                  企业logo
+
+<{my->getTalkInfo
+     tpl='<img src="#logo#" tppabs="#logo#"/></a>'
+}>
+
+
+
+
+                                           获取顶部导航-getsNav
+
+
+<{my->getsNav
+	tpl=''
+	curclass='ac'
+}>
+
+<{my->getsNav
+	tpl='<li><a href="#url#" tppabs="#url#" class="ho_nav_a BGHOVER #ifclass# #class# #endclass#">
+	<i class="ho_nav_icon">
+	 <img src="images/icon_home.png" tppabs="images/icon/icon_home.png"/>
+	 </i>
+	 #name#
+	 </a>
+	 </li>'
+	 curclass='ac'
+}>
+
+
+tpl支持的参数：
+url, // 导航链接
+name, //导航名
+ 
+----
+其它参数:
+curclass ,// 当前页面对应导航的class名称   当前页面对应导航文字改变的类
+
+
+
+                                               以下参考
+
+获取产品所有图片-getPictures
+
+tpl支持的参数：
+url,//图片地址
+ 
+其他参数：
+curclass，//被选中图片的类名
+demo
+
+ <{my->getPictures
+  tpl='<li class="#ifclass##class##endclass#"><img src="#url#" height="83" width="83"></li>'
+  curclass='active'
+ }>
+
+
+						以上参考
+								
+					
+
+
+
+
+
+
+                                                        尾部
+						手机版底部点击跳转
+
+
+
+                                             获取企业域名-getCompanyDomainInfo
+
+<{my->getCompanyDomainInfo
+	tpl=''
+	curclass='ac'
+}>
+tpl支持的参数：
+h5,// 企业h5站点链接
+pc,// 企业pc站点链接
+
+例子
+<a href="#h5#/about/" tppabs="#h5#/about/">
+
+
+
+
+
+                                                      头尾必写的
+                  路径
+<{include file="./green01/pc/common/header.html"}>
+<{include file="./green01/pc/common/footer.html"}>
+
+
+
+
+
+											
+ 			        			     文件命名
+相册列表        album_list 
+相册详细	album_detail
+		
+
+产品列表	product_list
+产品详细	product_detail
+
+新闻列表	news_list	
+新闻详细	news_detail
+
+关于我们	about
+
+联系我们        contact    
+
+企业问答	qa
+
+服务案例        cases_list
+服务案例        cases_detail
+
+渠道代理        merchants
+     
+企业招聘	job
+
+
+					                      文件路径
+
+
+
+F:\MuBan\main\templates\green-01\pc
+
+
+
+						       分页
+
+<aside class="co_pro_class_link SYS_PC">
+            <{my->getsCateInfo
+                tpl='<a href="#all_url#" tppabs="#all_url#" class="co_pro_class_link_a BGHOVER #ifallactive# #curclass# #endallactive#">全部</a>'
+                curclass='ac'
+            }>
+            <{my->getsCateInfo
+                tpl='<a href="#url#" tppabs="#url#" class="co_pro_class_link_a BGHOVER #curclass#">#name#</a>'
+                type='show'
+                curclass='ac'
+            }>
+            <{my->getsCateInfo
+                tpl='<a href="#url#" tppabs="#url#" class="co_pro_class_link_a BGHOVER #curclass#">#name#</a>'
+                type='more'
+                curclass='ac'
+            }>
+        </aside>
+
+
+
+							分页器	
+
+
+     例子
+<aside class="lo_page_aside">          
+     <ul class="SYSpage">
+	    <{my->getPages}>	    		
+     </ul>        
+</aside>
+
+      css
+/***************分页样式**************/
+.lo_page_aside{padding:.5em;position: relative;margin:2em auto 0px auto;text-align: center;}
+/*.lo_page_aside a{display:block;padding:0em .8em;border: solid 1px #666;color:#666;}*/
+.lo_page_aside a{padding:0em .8em;color:#666;}
+.lo_page_aside .lo_page_span{border: solid 1px #DDD;color:#DDD;display:block;padding:0em .8em;}
+.lo_page_aside .lo_page_left{position: absolute;left:0px;top:.5em;}
+.lo_page_aside .lo_page_right{position: absolute;right:0px;top:.5em;}
+.lo_page_aside .lo_page_con{text-align: center;}
+
+
+
+
+
+
+
+
+
+                                                           二维码
+
+
+<div class="fixedbox">
+        <{my->getCompanyInfo
+            tpl='
+      #ifweixin_open#       
+    <div class="items first">
+        <dl>
+            <dt><i class="fixedweixin"></i></dt>
+            <dd>
+                关<br/>注<br/>微<br/>信
+            </dd>
+        </dl>
+        <div class="animateshow"><img src="#weixin_code#" height="107" width="107"></div>
+    </div>
+     #endweixin_open# 
+       #ifapp_code#
+    <div class="items last">
+        <dl>
+            <dt><i class="fixedweixin02"></i></dt>
+            <dd>客<br/>服<br/>端<br/>下<br/>载</dd>
+        </dl>
+        <div class="animateshow"><img src="#app_code#" height="107" width="107"></div>
+    </div>
+     #endapp_code#
+    '
+    }>
+</div>
+
+
+
+
+ /* 右侧固定 */
+.fixedbox { width: 42px; position: fixed; right: 34%; margin-right: -650px; top: 200px; z-index: 99; }
+.fixedbox .items { background: #C40000; color: #fff; text-align: center; cursor: pointer; height: 148px;position: relative; }
+.fixedbox .first { padding-top: 10px; border-bottom: #fff solid 1px; }
+.fixedbox .last { padding-top: 10px; }
+.fixedbox .items dl dt .fixedweixin { display: inline-block; width: 27px; height: 27px; background: url(../images/icon_fixed.png) no-repeat 0px 0px; margin-top: 10px; }
+.fixedbox .items dl dt .fixedweixin02 { display: inline-block; width: 27px; height: 27px; background: url(../images/icon_fixed.png) no-repeat 0px -27px; }
+.fixedbox .items dl dd { font-size: 16px; }
+.fixedbox .items .animateshow { position: absolute; display: none; height: 132px; width: 150px; background: #fff; left: -152px; top: 0px; padding-top: 26px; border: #d6d6d6 solid 1px; }
+.fixedbox .items:hover .animateshow { display: block; }
+
+
+
+
+
+                                                         百度地图
+
+
+
+<div class="bot">
+        <div class='gp_map' id="dituContent" style="width:100%;height:450px;"></div>
+    </div>
+    <script src="http://wwwcdn.qyzx.3158.com/public/static/pc/product/js/bmapapi.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+<script type="text/javascript">
+$(function(){
+		var lng = "113.307375";
+		var lat = "23.294647";
+		var address = "花园北路14号";
+		if(!lng){
+			// 百度地图API功能
+			var map = new BMap.Map("dituContent");
+
+			// 创建地址解析器实例
+			var myGeo = new BMap.Geocoder();
+			// 将地址解析结果显示在地图上,并调整地图视野
+		
+			myGeo.getPoint(address, function(point){
+				console.log(point);
+				if (point) {
+					initMap(point.lng,point.lat,"联系电话：18101060792<br/>地址：花园北路14号","陈海珍资本管理有限公司002", false);
+				}else{
+					alert("您选择地址没有解析到结果!");
+				}
+			}, address);
+		}else{
+			initMap(lng,lat,"联系电话：18101060792<br/>地址：花园北路14号","陈海珍资本管理有限公司002", false);
+		}
+		
+	});
+
+</script>
+
+
+
+
+
+
+
+
+                                                      模板标签跳转链接
+
+
+
+<a href="#pc#/products/" tppabs="#pc#/products/" class="ao_blue SYS_PC BGCOLOR">了解更多</a>
+
+
+
+
+
+							在线洽谈
+
+自定义主体色调
+.zxqt-main .zxqt-min-panel{background:#C40000;right:50px !important;}
+例子
+<!--自定义主体色调-->
+    <style>
+    	.zxqt-main .zxqt-min-panel{background:#C40000;right:50px !important;}
+        .FONTCOLOR{color:#6AAF08;}
+        .FONTHOVER:hover,.FONTHOVER.ac{color:#6AAF08;}
+        .BGCOLOR{background-color:#6AAF08;color:#FFF;}
+        .BGHOVER:hover,.BGHOVER.ac{background-color:#6AAF08;color:#FFF;}
+    </style>
+    <!--自定义主体色调-->
+    <!--[if lte IE 8]><script src="html5.js" tppabs="scripts/html5.js"></script><![endif]-->
+    <!--[if lte IE 8]><link href="pc.css" tppabs="css/pc.css" rel="stylesheet"><![endif]-->
+    <!--[if lte IE 7]><link href="old.css" tppabs="css/old.css" rel="stylesheet"><![endif]-->
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="http://cdn.zxqt.3158.com/jshttp://www.3158.17kb.com/qy/427778/zhaoshang//zxqt.simple.min.js"></script>
+<script>
+
+    //在线洽谈
+    <{my->getTalkInfo
+        tpl="
+    var _init_args={
+        type:'#type#',
+        pid :'#pid#',
+        name:'#pname#',
+        cid:'#cid#',
+        cname:'#cname#',
+        desc:'#desc#',
+        logo:'#logo#',
+        pic:'#pic#',
+        talk_phone:'#talk_phone#',
+        min_price:'#min_price#',
+        max_price:'#max_price#',
+        dw:'#dw#',
+        isSave:'#is_save#',
+    };
+        "
+        aboutus_len=290
+    }>
+    Core.init(_init_args);
+</script>
+
+
+
+
+
+
+
+
+
+
+

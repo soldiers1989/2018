@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<style type="text/css">
+			.fl_s{
+	            width:960px;
+	            height:416px;
+	            float:left;
+	            position:absolute;
+	            top:1px;
+	            left:237px;
+	        }
+	        .tu{
+	            width: 960px;
+	            height: 416px;
+	        }
+	        .tu img{
+	            width:960px;
+	            height:416px;
+	            display:none;
+	            position:absolute;
+	            top:0;
+	            left:0;
+	        }
+	        .ups{
+	            display: none;
+	        }
+	        .btn_left{
+	            width: 34px;
+	            height: 44px;
+	            background: url(img/chevron-left.png) no-repeat;
+	            position: absolute;
+	            left: 0;
+	            top: 200px;
+	            cursor: pointer;
+	        }
+	        .btn_right{
+	            width: 34px;
+	            height: 44px;
+	            background: url(img/chevron-right.png) no-repeat;
+	            position: absolute;
+	            right: 0;
+	            top: 200px;
+	            cursor: pointer;
+	        }
+	        .dos{
+	            width: 440px;
+	            height: 17px;
+	            line-height: 17px;
+	            text-align: center;
+	            position: absolute;
+	            right: 225px;
+	            bottom: 35px;
+	        }
+	        .dor{
+	            width: 440px;
+	            height: 17px;
+	            line-height: 17px;
+	            text-align: center;
+	        }
+	        .dor .doro{
+	            height: 10px;
+	            width: 10px;
+	            background: #FFFFFF;
+	            border-radius: 10px;
+	            margin-right: 22px;
+	            display: inline-block;
+	            cursor: pointer;
+	            list-style: none;
+	        }
+	        .dor .dors{
+	            width: 12px;
+	            height: 12px;
+	            border-radius: 10px;
+	            margin-bottom: -4px;
+	            line-height: 17px;
+	            border: 3px solid #fff;
+	            background: 0;
+	        }
+		</style>
+	</head>
+
+	<body>
+		<div class="fl_s">
+            <div class="tu">
+                <img src="img/timg1.jpg" alt="" style="display:block;" />
+                <img src="img/timg2.jpg" alt="" />
+                <img src="img/timg5.jpg" alt="" />
+                <img src="img/timg4.jpg" alt="" />
+            </div>
+            <div class="ups">
+                <a href="javascript:void(0)" class="btn_left"></a>
+                <a href="javascript:void(0)" class="btn_right"></a>
+            </div>
+
+            <div class="dos">
+                <div class="dor">
+                    <a class="doro"></a>
+                    <a class="doro"></a>
+                    <a class="doro"></a>
+                    <a class="doro"></a>
+                </div>
+            </div>
+        </div>
+
+
+
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+		        var c = 0
+		       function timer(){
+		        c++;
+		        c=(c==4)?0:c;
+		        //获得序号
+		        $('.fl_s .tu img').eq(c).stop().show().siblings().hide();
+		        $('.fl_s .dos .dor a').eq(c).stop().addClass('dors').siblings().removeClass('dors');
+		          }
+		
+		        time = setInterval(timer,1000);
+		        $('.fl_s').hover(function(){
+		            //清除定时器//显示图片
+		             clearInterval(time);
+		             $('.ups').css({'display':'block'});
+		            },function(){
+		            //回调函数//恢复定时器//隐藏图片
+		            $('.fl_s .ups').css({'display':'none'});
+		            time = setInterval(timer,1000);
+		            })
+		    //右单击
+		        $('.fl_s .btn_right').click(function(){
+		            c++;
+		            c=(c==4)?0:c;
+		        //获得的序号
+		             $('.fl_s .tu img').eq(c).stop().show().siblings().hide();
+		            $('.fl_s .dos .dor a').eq(c).stop().addClass('dors').siblings().removeClass('dors');
+		        })
+		    //左单击
+		        $('.fl_s .btn_left').click(function(){
+		            c--;
+		            c=(c==0)?0:c;
+		        //获得序号
+		            $('.fl_s .tu img').eq(c).stop().show().siblings().hide();
+		             $('.fl_s .dos .dor a').eq(c).stop().addClass('dors').siblings().removeClass('dors');
+		        })
+		            //点击圆点变换
+		                $('.fl_s .dos .dor a').click(function(){
+		            //获得序号
+		                    var n = $(this).index();
+		
+		                    $('.fl_s .tu img').eq(n).stop().show().siblings().hide();
+		
+		                $('.fl_s .dos .dor a').eq(n).stop().addClass('dors').siblings().removeClass('dors');
+		                })  
+		            })
+		</script>
+	</body>
+
+</html>

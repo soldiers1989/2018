@@ -1,0 +1,90 @@
+body{background:#f6f6f6}
+html,body{font-size:62.5%}
+/*跑马灯*/
+.announce{position: fixed;top:0;left:0;width:100%;background-color:#000000;background:rgba(223,48,49,0.8);;height:3rem;z-index:1000;display:-moz-box;display:-webkit-box;}
+.swiper-container02 .swiper-slide span{color:#fff;font-size:1.2rem;height:3rem;line-height: 3rem;}
+.announce .lb{display:block;background:url(../images/b_gonggao.png) no-repeat;background-size:100% 100%;width:1.25rem;height:1.1rem;margin:1rem .8rem}
+.swiper-container02{-moz-box-flex: 1;-webkit-box-flex: 1;overflow: hidden;}
+.swiper-slide img{width:100%;display:block}
+.comtt{background:#f6f6f6;height:4rem;line-height: 4rem;border-bottom:1px solid #d9d9d9;position: relative;}
+.comtt a{width:93.75%;height:4rem;display:block;margin: 0 auto;}
+.comtt span{font-size:1.5rem;color:#333}
+.GetList{width:100%;display:box;display: -moz-box;display:-webkit-box;background:#fff;border-bottom:1px solid #d9d9d9;height:3.5rem;line-height: 0.6rem;}
+.GetList li{-webkit-box-flex:1;-moz-box-flex:1;-o-box-flex:1;-ms-box-flex:1;width:1px;text-align: center;height:3.5rem;}
+.GetList li a{width:60%;display:inline-block;height:3.3rem;line-height:3.3rem;font-size:1.4rem;color:#666;}
+.GetList li.on a{color:#333;border-bottom:3px solid #df3031;font-weight:bold}
+.showContent{margin-top:1rem;border:1px solid #d9d9d9}
+.changeCon{display:none;/*height:22.5rem;*/background:#fff;}
+/*.profitTxt{padding-left:1rem}*/
+.arow{display:block;position:absolute;right:1rem;top:50%;background:url(../images/l_acions.png) no-repeat center center;background-size:13.85rem 24.85rem;background-position:0 -10.9rem;width:0.7rem;height:1.6rem;
+margin-top:-0.5575rem}
+.comtt span.noticeTxt{display: block;height:4rem;line-height: 4rem;margin-right:2.2rem;font-size:1.4rem;color:#999}
+.wrapInforBox{background:#fff;padding:0 1.9rem 1.9rem;border-bottom: 1px solid #D9D9D9;margin-bottom:6.1rem}
+.headCon{padding:1.5rem 0 1rem 0;position: relative;}
+.personer{padding-left:2.6rem}
+.personer span{display:inline-block;height:3.4rem;line-height: 3.4rem;margin-left:0.5rem;font-size:1.6rem;color:#666}
+.personer img{border-radius:50%;width:3.4rem;height:3.4rem;vertical-align: middle;display:inline-block}
+.rank{background:url(../images/l_acions.png) no-repeat;background-size:13.85rem 24.85rem;position:absolute;display:block;width:2.2rem;height:3.3rem;background-position: 0 -13.1rem;left:-10px;top:1.7rem}
+.rankTxt{position:absolute;display:block;width:2.2rem;height:3.3rem;text-align: center;line-height:3.3rem;left:-10px;color:#df3031;font-size:1.8rem}
+.dataCon{background:#fafafa;padding: 1rem 0;border:1px solid #ececec}
+.dataCon ul{width:100%;display:box;display: -moz-box;display:-webkit-box;}
+.dataCon ul li{-webkit-box-flex:1;-moz-box-flex:1;-o-box-flex:1;-ms-box-flex:1;text-align: center;}
+.dataCon ul li span{color:#666;font-size:1.4rem}
+.dataCon ul li p{color:#333;font-size:1.5rem;margin-top:1.2rem}
+.dataCon ul li p.red{color:#df3031}
+.dataCon ul li p.green{color:green}
+.numtwo{background-position: 0 -16.7rem;}
+.numthree{background-position: 0 -20rem;}
+.floatgame{position: fixed;top:18.5%;right:-23.2rem;z-index:999}
+.floatgame img{width:8rem;height:5.6rem;float:left;}
+.tg_pop1,.tg_pop2,.c_pop{width:23rem;height:5.8rem;background:#fff;border:1px solid #d9d9d9;z-index:999;border-radius: 10px;position: relative;display:inline-block;float:left;padding:.4rem 0;}
+.asrr{cursor:pointer;position: absolute;background:url(../images/l_acions.png) no-repeat;background-size:13.85rem 24.85rem;width:0.7rem;height:1.25rem;display:block;top:50%;margin-top:-0.625rem}
+.wenan{font-size:0.28rem;left:0;padding:10px 10px 0}
+.riseAndDown a{text-align:center;background:url(../images/l_acions.png) no-repeat;background-size:13.85rem 24.85rem;width:6rem;height:2rem;line-height:2rem;display:inline-block;color:#fff;font-size:1.4rem}
+.riseAndDown a.k_rise{background-position: 0 -5.4rem;margin-right:0.3rem}
+.riseAndDown a.k_down{background-position: 0 -8.3rem;}
+.wenan{padding:0.5rem 2rem;color:#333;font-size:1.5rem}
+.riseAndDown{margin-left:2rem}
+.rewardbg{background:url(../images/l_phonecost.png) no-repeat;width:7.25rem;height:5.4rem;background-size:7.25rem 5.4rem;position: absolute;right:0;top:0;
+color:#ff7400;font-size:1.5rem;line-height:8.1rem;text-indent: 1.95rem;}
+.rewardbg em{font-size:0.8rem}
+.wenan02{padding:0.5rem 0 0.5rem 4rem;color:#333;font-size:1.5rem}
+.chooseStock{margin-left:3.35rem;}
+.chooseBtn{background:url(../images/l_acions.png) no-repeat;background-size:13.85rem 24.85rem;background-position: 0 -2.4rem;width:11.5rem;height:2rem;text-align: center;line-height: 2rem;color:#fff;
+font-size:1.3rem;display: block;}
+
+.compilationBox{width: 100%;background:#f6f6f6;}
+.compilationStock{position:relative;width:100%;height: 4rem;margin: 0 auto;border-bottom:1px solid #d9d9d9;;}
+.compilationStock a{display: block;width: 93.75%;margin:0 auto;height:4rem;display: -webkit-box; display: -moz-box;display: -o-box;display: -ms-box;}
+.highStock{-webkit-box-flex:1; -moz-box-flex:1;-o-box-flex:1;-ms-box-flex:1;width: 1px;font-size: 1.5rem;color: #333;line-height: 4rem}
+.highStock span{display: inline-block;color: #df3031;font-size: 1.5rem;font-weight: bold;}
+.arrowBox{width: 6.9rem;font-size:1.5rem;color: #999;line-height:4.2rem;text-align:right;margin-right:2.2rem}
+.arrowBox span{display: inline-block;width: 0.7rem;height:1.15rem;background: url("../images/arrow.png") no-repeat center center;background-size: 100% 100%;margin-left:.1rem }
+.stockBox{width: 100%;background:#fff;border-bottom: 1px solid #d9d9d9;}
+.tableBox{width: 93.75%;margin: 0 auto;}
+.tableBox tr{width: 25%;height: 5.26rem;border-bottom: 1px solid #d9d9d9;}
+.tableBox tr td:nth-child(1) span{text-align: left;}
+.tableBox tr span{display: block;}
+.tableBox tr td{vertical-align: middle;text-align: center;font-weight: bold;}
+.tableBox tr td.gren{color:green}
+.tableBox tr:last-child{border-bottom:none}
+.stockname{font-size:1.5rem;color: #1b1b1b;font-weight: bold;}
+.stockcode{font-size:1.2rem;color: #666;}
+.stockprice{font-size:2rem;color: #df3031;}
+.raise{font-size:2rem;color: #df3031;}
+.name{font-size:1.4rem;color: #666;font-weight: bold;text-align: right;}
+footer{height:4.9rem;background:#fff;border:1px solid #D9D9D9;position: fixed;bottom:0;width:100%}
+.leftck{width:2.2rem;height:5.8rem;line-height:5.8rem;.rankdisplay:block;position:absolute;}
+#container{margin:6rem auto 0;}
+.changeCon{position: relative;overflow:hidden}
+.changeCon .pointOne,.changeCon .pointTwo,.changeCon .pointerThree{position: absolute;color:#666}
+.changeCon .pointOne,.changeCon .pointTwo{font-size:1.4rem;left:1rem;}
+.changeCon .pointOne{top:1.5rem;}
+.changeCon .pointTwo{top:4.5rem}
+.changeCon .pointOne .circle,.changeCon .pointTwo .circle{width:1.7rem;height:1.7rem;border-radius: 50%;display:inline-block;vertical-align: middle;margin-right:1rem}
+.changeCon .pointOne .circle{background:#df3031;}
+.changeCon .pointTwo .circle{background:#2e5bdb;}
+.changeCon .pointerThree{right:1rem;top:3rem;font-size:1.6rem}
+.changeCon .pointOne em.red,.changeCon .pointTwo em.red,.changeCon .pointerThree em.red{color:#df3031;font-weight: bold;}
+.changeCon .pointOne em.green,.changeCon .pointTwo em.green,.changeCon .pointerThree em.green{color:green;font-weight: bold;}
+.changeCon .pointOne em,.changeCon .pointTwo em{float:right;margin-left: 1rem;}

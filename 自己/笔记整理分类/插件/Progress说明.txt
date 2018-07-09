@@ -1,0 +1,152 @@
+
+//  倒计时
+	var endTime = new Date(2018,6,6,20,30,0);		//这个月非农结束时间
+	setInterval(function () {
+	    var nowtime = new Date();
+	    var time = endTime - nowtime;
+	    if( time <= 0 ){
+	    	$("#countdownDay").text('00');
+		    $("#countdownHour").text('00');
+		    $("#countdownMinute").text('00');
+		    $("#countdownSecond").text('00');
+	    }else{
+	    	var day = parseInt(time / 1000 / 60 / 60 / 24);
+		    var hour = parseInt(time / 1000 / 60 / 60 % 24);
+		    var minute = parseInt(time / 1000 / 60 % 60);
+		    var seconds = parseInt(time / 1000 % 60);
+		    if( day<10 ){
+		    	day = '0' + day;
+		    }
+		    if( hour<10 ){
+		    	hour = '0' + hour;
+		    }
+		    if( minute<10 ){
+		    	minute = '0' + minute;
+		    }
+		    if( seconds<10 ){
+		    	seconds = '0' + seconds;
+		    }
+		    
+		    $("#countdownDay").text(day);
+		    $("#countdownHour").text(hour);
+		    $("#countdownMinute").text(minute);
+		    $("#countdownSecond").text(seconds);
+	    }
+	}, 1000);
+//非农月份时间轮播图
+jQuery(".fndate").slide({mainCell:".fndate_box",effect:"left",vis:3,defaultIndex: 4});
+//距离下次剖析剩余时间百分比
+var Progress = function() {
+	var progress = {
+		textheight: null,
+		renderOne: function(id, length, r, percent) {
+			var canvas = document.getElementById(id);
+			var context = canvas.getContext("2d");
+			canvas.width = length;
+			canvas.height = length;
+			var i = 0;
+			var interval = setInterval(function() {
+				i++;
+				progress.render(context, length, r, i, percent);
+				if(i >= percent) {
+					clearInterval(interval)
+				}
+			}, 5)				
+		},
+		render: function(context, length, r, i, percent) {
+			context.clearRect(0, 0, length, length);
+			context.beginPath();
+			var gradient = context.createLinearGradient(length, 0, 0, 0);
+			gradient.addColorStop("0", "#ccb1e5");
+			gradient.addColorStop("1.0", "#813499");
+			context.strokeStyle = gradient;
+			context.lineWidth = r;
+			context.arc(length / 2, length / 2, length / 2 - r, -0.5 * Math.PI, -0.5 * Math.PI + i * 0.02 * Math.PI, false);
+			context.stroke();
+			context.closePath();
+		}
+	};
+	return progress
+};
+var now = new Date();
+var lastMonth = new Date("2018/06/01 20:30:00");				//上个月非农结束时间，因为要计算非农上个月距离这个月的时间差计算剩余时间进度。
+if(lastMonth!=null){
+	var intDiff = endTime.getTime() - now.getTime();
+    var day = parseInt(intDiff / 1000 / 60 / 60 / 24);
+    var zhouqi = (endTime.getTime()-lastMonth.getTime())/1000/3600/24;
+    var percent =((zhouqi-day)/zhouqi).toFixed(2)*100;
+    $(".fndate_box .on").append('<canvas id="canvas"></canvas>');
+    new Progress().renderOne('canvas',100,6,percent);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

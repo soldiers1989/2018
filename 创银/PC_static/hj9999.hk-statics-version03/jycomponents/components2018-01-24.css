@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* reset*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}  /* 初始化标签在所有浏览器中的margin、padding值 */
+fieldset,img {border:0 none}  /* 重置fieldset（表单分组）、图片的边框为0*/
+dl,ul,ol,menu,li {list-style:none}   /* 重置类表前导符号为onne,menu在HTML5中有效 */
+blockquote, q {quotes: none}   /* 重置嵌套引用的引号类型 */
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}  /* 重置嵌套引用*/
+input,select,textarea,button {vertical-align:middle}  /* 重置表单控件垂直居中*/
+button {border:0 none;background-color:transparent;cursor:pointer}  /* 重置表单button按钮效果 */
+body {background:#fff}   /* 重置body 页面背景为白色 */
+body,th,td,input,select,textarea,button {font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;} /* 重置页面文字属性 */
+a {color:#666;text-decoration:none}  /* 重置链接a标签 */
+a:active, a:hover {text-decoration:none}   /* 重置链接a标签的鼠标滑动效果 */
+address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}  /* 重置样式标签的样式 */
+caption {display:none;}    /* 重置表格标题为隐藏 */
+table {width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed;}
+a {outline: none;}
+a:active {star:expression(this.onFocus=this.blur());}
+.clear{clear: both;}
+.clearfix:before,.clearfix:after{content: '';display: table;}
+.clearfix:after{clear: both;}
+/*pc 360竞价底部*/
+.g-360foot{float:left; background:#172c3c; width:100%; height:135px;}
+.g-360foot .footer{width:1200px;margin: 0px auto;display: block;font-size: 14px}
+.g-360foot .foottishi{float:left; width:320px; margin-top:8px;color:#fff}
+.g-360foot .foottishi span{float:left;width:320px;color:#f6f902; font-weight:bold}
+.g-360foot .footcopy{ float:right; width:350px; text-align:right; margin-top:20px;color:#FFF}
+/*360竞价底部移动端*/
+.g-360footMobile{ background-color:black; border-top:1px solid #eb444e;padding:5%; font-size:1em; text-align: center;  color:#fff;}
+.g-360footMobile a{color:#fff;}
+/*pc 金裕官网头部移动端*/
+.header{ height:30px; padding:5px 0; background:#fff;}
+.header .logo{display:block ; float: left; width:90px; height:30px; margin-left:5px;}
+.header .logo img{display:block ;width:100%;}
+.header .rightnav{ float: right;}
+.header .rightnav li{ float: left; width:30px; height: 30px; margin-left:5px; list-style: none}
+.header .rightnav li a{ display: block; width: 30px; height:30px; }
+.header .rightnav li a.telbtn{ background: url(http://i.hj9999.hk//statics/m/images/morenav.png) 0 -32px no-repeat; }
+.header .rightnav li a.navbtn{ background: url(http://i.hj9999.hk//statics/m/images/morenav.png) -35px -32px no-repeat; }
+/*pc 金裕官网底部移动端*/
+.jymobile_footer{ background-color:black; padding:5%; font-size:10px; text-align: center;  color:#fff;}
+.jymobile_footer a{color:#fff;}
+/*pc 金裕官网底部*/
+.jy-footer{ width:100%; height:130px; background:#172c3c;}
+.jy-footer .footer_div{  width:970px;  margin:0 auto;  overflow: hidden;  background:#172c3c; height:121px;  }
+.jy-footer .footer_div  p{  padding-top: 40px;  color:#fff;  font-size:12px;  text-align: center  }
+.jy-footer .footer_div  p a{  color:#fff;}
+/*pc 金裕官网头部*/
+.jy-top{width: 100%;height:115px;background-color:#172c3c;}
+.logo_mid{  margin:0 auto; width:1080px; height:115px; background-color:#172c3c;overflow: hidden}
+.logo_mid .logo{ float:left;margin-top: 28px; width:450px; height:58px;background: url("http://www.hj9999.hk/statics/version03/images/logo.png") top center no-repeat}
+.logo_mid .logo a{display: block;float: left}
+.logo_mid .logo .home{width: 164px;height: 58px;}
+.logo_mid .logo .nfa{width: 286px;height: 58px;}
+.logo_mid .logo_mid_right {  float:right; width:240px; margin-right:40px; margin-top:5px}
+/*右侧悬浮客服*/
+.kefu-group{display:block;width: 170px;height:300px;position: fixed;right: 0;top: 30%;z-index: 99998;display: none}
+.kefu-group .kefu-group-inner{width: 170px;height:300px;position: relative}
+.kefu-group-btn{position: fixed;right: -5px;top: 28%;z-index: 99999;cursor: pointer}
+.active{display: block}
+/*金裕代理头部*/
+.jygold-header{width:100%;height:115px;background:#241600}
+.jygold-header .header-in{width: 1080px;height: 115px;margin: auto;}
+.jygold-header .logo{  float:left;margin-top: 33px; width:450px; height:49px;  background: url("http://www.jygold.net/statics/version02/images/logo.png") top center no-repeat;  }
+.jygold-header .logo a{display: block;float: left;}
+.jygold-header .logo .home{width: 164px;height: 49px;}
+.jygold-header .logo .nfa{width: 286px;height: 49px;}
+.jygold-header .logo_mid_right{float:right;width:500px;height:115px}
+.jygold-header .logo_mid_right .mid_top{float:left;width:500px;margin-top:3px}
+.jygold-header .logo_mid_right .mid_top .ul_right{float:right;width:220px}
+.jygold-header .logo_mid_right .mid_top .ul_right li{float:left}
+.jygold-header .logo_mid_right .mid_top .ul_right .li_01{margin-top:10px}
+.jygold-header .logo_mid_right .mid_top .ul_right .li_02{padding-left:5px;font-size:28px;color:#d0d0d0}
+.jygold-header .logo_mid_right .mid_bottom{float:left;width:500px;margin-top:15px}
+.jygold-header .logo_mid_right .mid_bottom ul{float:right}
+.jygold-header .logo_mid_right .mid_bottom ul li{float:left}
+.jygold-header .logo_mid_right .mid_bottom ul li img{border:0}
+.jygold-header .logo_mid_right .mid_bottom ul .li_01{margin-right:10px}
+/*金裕代理底部*/
+.copyright{margin:0 auto;text-align:center;padding:30px 0;line-height:30px;background:#241600;color:#fff;}
+.copyright a{color:#fff}
+.copyright a:hover{text-decoration: underline}
+/*金裕代理头部移动*/
+.jygold-header-mobile{ height:58px; border-bottom:1px solid #fcf3f1; background:#f1a42c; overflow: hidden;}
+.jygold-header-mobile .logo{ margin:5px auto 0; width:160px; height:46px;}
+.jygold-header-mobile .logo img{width:100%;}
+.jygold-header-mobile .gohome{ position: absolute; top:0; right:10px; padding-top:10px; width:25px; height: 30px;}
+/*金裕代理头部底动*/
+.jygold-footer-mobile{ border-top:2px solid white; padding:10px 0;margin-top: 10px}
+.jygold-footer-mobile .box{ text-align: center;}
+.jygold-footer-mobile .box a img{display: inline-block;vertical-align: middle}
+/*手机客服*/
+.mobile-kefu{
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    position: fixed;
+    right: 0;
+    bottom:10%;
+    z-index: 99999;
+}
+.mobile-kefu img{
+    display: block;
+    width: 1rem;
+    height: 1rem;
+}
+
+
+
+

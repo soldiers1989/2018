@@ -1,0 +1,150 @@
+
+
+C:\Windows\System32\drivers\etc
+hosts文件用记事本打开，去掉最后两行的#号。
+
+
+http://wz.qyzx.com/admin/login?referer=http%3A%2F%2Fwz.qyzx.com%2F%3Fc%3DAdmin_Index
+
+佟志永资源
+密码：123456
+
+
+
+svn://59.110.45.47/qyjz/branches/1.1test
+
+zhangzhicheng   zhangzhicheng123
+
+
+
+http://www.qyjz.17kb.com/admin/
+账号：资源管理员1  密码：123456
+
+
+线上项目
+wz.qyzx.com/admin
+
+佟志永资源	密码:123456
+
+
+
+企业资讯网页要求文档
+
+http://www.welelope.site/qyzx1/#g=1&p=
+
+
+
+微信开放平台
+https://open.weixin.qq.com/
+
+账号：amaytony@163.com
+密码：yunying168
+
+
+官网测试地址
+
+svn://42.121.17.9/3158/branches/dev
+zhangzhicheng   zhangzhicheng123
+
+http://www.3158.17kb.com/
+
+
+
+
+
+客户
+后台http://www.fhcn001.com/tryineadmin/index.asp
+
+账号：cnfh
+
+密码：cnfh147258
+
+
+
+
+						企业在线运营服务本地目录
+
+
+D:\qyzx_test\3158_main\template_dir\pc\GiteGuide
+D:\qyzx_test\3158_kissy\public\static\pc\newsjt2
+
+
+						移动端企业在线运营服务本地目录
+
+D:\qyzx_test\3158_main\template_dir\mobile\gite_guide
+D:\qyzx_test\3158_kissy\public\static\mobile\shangjitong\css
+
+
+						企业在线行业资讯本地目录
+
+D:\qyzx_test\3158_main\template_dir\pc\IndustryVideos						
+D:\qyzx_test\3158_main\template_dir\pc\IndustryInformation   // 
+D:\qyzx_test\3158_kissy\public\static\pc\product\css  		 // style2017.css
+D:\qyzx_test\3158_kissy\public\static\pc\product\js			 // index.js
+
+
+
+						企业在线行业资讯本地目录M端
+D:\qyzx_test\3158_main\template_dir\mobile\industry_news
+D:\qyzx_test\3158_main\template_dir\mobile\industry_videos				
+D:\qyzx_test\3158_kissy\public\static\mobile\css     //mob.css						
+D:\qyzx_test\3158_kissy\public\static\mobile\js      //mob.js
+D:\qyzx_test\3158_kissy\public\static\mobile\images
+D:\qyzx_test\3158_main\template_dir\mobile\Common     //头尾文件
+
+
+                                 线上对应本地文件目录
+
+D:\qyzx_test\3158_kissy                 //对应静态文件、图片、插件等
+D:\qyzx_test\3158_main\template_dir     //对应html文件
+
+
+
+								后台测试网站对应本地文件目录
+								
+D:\MuBan\main\template_dir\pc\content\index
+D:\MuBan\main\template_dir\pc\content\common
+D:\MuBan\kissy\public\static\pc\css
+D:\MuBan\kissy\public\static\pc\js
+D:\MuBan\kissy\public\static\pc\images
+
+
+
+
+ 
+									官网测试网站头部对应本路文件目录
+									
+D:\qyzx_test\3158_main\template_dir\pc\Common  html
+
+
+
+														小程序appID
+																												
+wxd9222acd7ec91e14
+
+
+														小程序本地图片上传目录
+
+D:\MuBan\kissy\public\static\wxxcx
+
+														
+														格式
+														
+http://wwwcdn.qyjz.17kb.com/public/static/wxxcx/idx_news_bg.jpg														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+
+

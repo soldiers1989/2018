@@ -1,0 +1,460 @@
+
+
+
+                              img是行内块元素，在块元素里默认有3px或者4px空白
+解决方法：display block  或者   vertical-align:top; 或者    vertical-align:bottom都可以
+
+
+
+
+				#tabs ul li.on是类名为on的li元素
+				li  .on是li里面的某些类名为on的子元素集
+
+
+
+
+
+
+                                                  缓存问题
+
+
+出现这样的问题是这样的，   css js  图片  都属于静态资源 ，策略是在url地址不变的情况下，内容输出会缓存第一次的内容 ，所以如果手工刷新需要 在URL后面加“小尾巴” 从而改变缓存内容
+
+第一次 你图片加了小尾巴 单独访问浏览器 内容是新的，而在网页中加图片还是旧的，原因是你改动的css  也要在调用他的HTML中 加小小尾巴 ~  css 也属于静态资源他的缓存策略和图片是一致的~ 
+
+
+
+						input type=text对齐自动下移问题
+
+<div class="h_top_search_input">
+	<input type="text" placeholder="请输入收索内容" class="input1"/><input type="button" value="搜索" class="input2"/>
+	<input type="button" value="我要报名"  class="input3"/>                   
+</div>
+
+
+.h_top_search_input{}
+.h_top_search_input .input1{width: 324px;height: 31px;border: 1px solid #f19ec2;box-sizing: border-box;padding-top: 2px;}
+.h_top_search_input .input2{width: 70px;height: 31px;background-color: #f19ec2;margin-right: 23px;border: 0;color: white;}
+.h_top_search_input .input3{width: 103px;height: 31px;background-color: #f19ec2;border: 0;color: white;}
+
+
+
+
+
+						    js设置背景路径问题
+
+
+$(this).css('background','url("./images/but02.png")');    单引号包含双引号，而且路径的相对位置改变，css是../   js是./
+
+
+
+
+							max-width
+					设置图片最大宽度，到达了图片最大像素就不在拉伸，不失真。	
+
+
+
+
+								图片素材
+
+
+
+				花瓣网，千图网，我图网，摄图网，昵图网，千库网，百度图片，360图片
+
+
+
+
+
+
+							移动端适配rem的计算
+
+浏览器默认字体为16px，一般定义字体为10px，所以在页面中定义html{font-size:62.5%;} 1rem = 10px
+      html font-size 100px 1rem就等于100px
+
+
+
+ 
+							 a标签  后退链接
+
+<a href="javascript:history.back(-1);"></a>
+
+
+				history.back(-1)和history.go(-1)的区别 (2010-12-02 20:01:57)转载▼
+
+history.back(-1):直接返回当前页的上一页，数据全部消息，是个新页面
+history.go(-1):也是返回当前页的上一页，不过表单里的数据全部还在
+history.back(0) 刷新 history.back(1) 前进 history.back(-1) 后退
+
+
+
+@import "font-awesome.css";/*导入字体库*/
+
+
+
+
+
+
+	具体问题具体分析；当前目标
+	在event事件中代表点击对象；
+	loader事件：加载对象；
+	e只是参数，任意取值；对应即可；
+ 
+ 
+	e.target 是目标对象，e.event是目标所发生的事件。
+
+
+
+
+					关于iphone手机点击事件失效
+
+加cursor：pointer；手型css。（不要复制）
+
+
+							div宽度自适应
+						
+						overflow: hidden;zoom: 1;
+
+
+
+
+
+						逻辑思路
+			
+逻辑，有些双向效果事件看起来没生效，可能是因为主体不正确，无限生效消失，所以看起来不起作用。
+
+
+
+
+												强制换行
+
+word-break: break-all; word-wrap:break-word;
+
+
+
+
+												段落文字右边对齐
+												
+text-align: justify;使文本的两端都对齐
+			
+			
+			
+											【史诗】郑州-swiper-麋鹿
+																						
+    如果你喜欢用（或希望能够用）模板搭建应用，请使用Vue
+    如果你喜欢简单和“能用就行”的东西，请使用Vue
+    如果你的应用需要尽可能的小和快，请使用Vue
+    如果你计划构建一个大型应用程序，请使用React
+    如果你想要一个同时适用于Web端和原生App的框架，请选择React
+    如果你想要最大的生态圈，请使用React
+    如果你已经对其中一个用得满意了，就没有必要换了
+
+
+
+											关于img标签设margin的问题
+											
+	暂不知img标签的具体属性特性，设置margin或padding时，要给先设置display:block;  。不然有时会发生不知道的错误。										
+					
+	
+	
+	
+												多个元素同一事件内容写法
+	
+	$('#begin,#end')这个，用逗号隔开。
+	
+
+
+	
+	
+																	关于动态数据添加id或类用for循环输出的
+	
+	var img_num = $('.gongsi-img').length;
+		for ( var i = 1; i <= img_num; i++) {
+			var img_i = 'img'+i;	
+			if( $('#'+img_i+' figure').length==1 ){
+				$('#'+img_i+' figure').addClass('img1_one');
+			}
+		}
+																		动态的变量不可以加引号
+	
+	
+	
+		
+															
+																	关于hover应用color不生效的问题
+																							
+		hover的层级问题，hover的层级只有10.		不继承问题，未设置的元素会继承body的color，默认黑色。但是如果子集设置了color，父级就算写最高级！important也不生效。																		
+		顺序问题，hover要写在应用的元素的类的下面，写在上面不生效。
+	
+	
+																		
+																		网站在浏览器头部的小图标        favicon.ico   域名/favicon.ico  就可以找到小图标
+	
+		<link rel="shortcut icon" href="./images/logo.jpg" type="image/x-icon"/>
+	
+	
+	
+	
+	关于表单选项框单选框和复选框选中获取数据的问题
+
+	一般情况下在选中的框的html里加属性把要获取的值写进去，再获取这个元素获取参数值。
+
+	
+	
+	
+	
+																			计算右边滚动条在不同浏览器下的宽度
+	
+	var cWidth = document.body.clientWidth || document.documentElement.clientWidth;//页面可视区域宽度
+	var iWidth = window.innerWidth;//浏览器窗口大小
+	console.log(iWidth - cWidth);//打印滚动条宽度
+	
+	
+	
+	
+	
+	
+																	360浏览器网站页面截图     ctrl+m
+	
+	
+	
+	
+																		
+																		
+																		
+																		()代表的是方法！
+																		[]代表的是数组！
+																		{}代表的是对象！
+	
+	
+	
+	关于带小括号的函数使用和不带小括号的函数使用         =>a是个函数对象，a()是a函数执行后的返回值
+		
+	
+	
+	
+	
+	对于margin和padding，百分比按照父元素的宽计算，对于定位元素，则按照父元素的高计算。
+	
+	
+	
+	
+	
+				     逻辑运算符||和&&   (逻辑或   和   逻辑与)
+	(&& 的优先级是高于 || 的)
+
+	逻辑或  ||   ( false 有 false 0 "" )
+	
+	1、只要 || 前面为 false,不管 || 后面是 true 还是 false，都返回 || 后面的值。
+	2、只要 || 前面为 true,不管 || 后面是 true 还是 false，都返回 || 前面的值。
+	
+	
+	逻辑与  &&
+
+	1、只要 && 前面是 false，无论 && 后面是 true 还是 false，结果都将返 && 前面的值;
+	2、只要 && 前面是 true，无论 && 后面是 true 还是 false，结果都将返 && 后面的值;
+	
+	
+	
+	
+	
+	
+	
+						关于单引号和双引号的区别
+	
+	
+	百度回答
+	  1.双引号会搜索引号内的内容是不是有变量，有则输出其值，没有则输出原有内容。所以输出纯字符串的时候用单引号比双引号效率高，因为省去检索的过程。
+	  2. 双引号不能包含双引号
+		比如 在程序中$("div").html("<div style='width:50px; height:50px;'></div>");
+		这里面的style 后就不能跟着双引号。要用单引号
+	
+	
+	
+	
+
+
+							移动端媒体查询（css文件）
+				在之前的rem手机端自适应里的css加入这个，修复大屏手机字体过大.
+@media only screen and (min-width: 414px) and (max-width: 1920px)  {
+  html {
+    font-size: 54px !important;
+  }
+}
+
+
+
+只要求判断根据屏幕宽度选择不同的CSS样式表。
+
+<script language=javascript>
+<!--
+if (screen.width == 800)
+{
+document.write('<link rel=stylesheet type="text/css" href="css800.css">')
+}
+else {document.write('<link rel=stylesheet type="text/css" href="css1024.css">')}
+//-->
+</script>
+
+
+
+
+																		javascript 终止函数执行操作
+
+
+		1、如果终止一个函数的用return即可，实例如下：
+		function testA(){
+			alert('a');
+			alert('b');
+			alert('c');
+		}
+		testA(); 程序执行会依次弹出'a','b','c'。
+		function testA(){
+			alert('a');
+			return;
+			alert('b');
+			alert('c');
+		}
+		testA(); 程序执行弹出'a'便会终止。
+		2、在函数中调用别的函数，在被调用函数终止的同时也希望调用的函数终止，实例如下：
+		function testC(){
+			alert('c');
+			return;
+			alert('cc');
+		}
+		function testD(){
+			testC();
+			alert('d');
+		}
+		testD(); 我们看到在testD中调用了testC，在testC中想通过return把testD也终止了，事与愿违return只终止了testC，程序执行会依次弹出'c','d'。
+		function testC(){
+			alert('c');
+			return false;
+			alert('cc');
+		}
+		function testD(){
+			if(!testC()) return;
+			alert('d');
+		}
+		testD(); 两个函数做了修改，testC中返回false，testD中对testC的返回值做了判断，这样终止testC的同时也能将testD终止，程序执行弹出'c'便会终止。																
+																		
+																		
+																		
+	true === 1   false  === 0		true和false是可以用于计算的  1+true = 2;																	
+																		
+																		
+																		
+																		
+	转义字符
+	想要引号或双引号在js字符串中输出，加 \ 斜杠
+																		
+																		
+函数只执行一次或调用一次
+	在函数的最后加上
+	Typing1= function(){};
+																		
+																		
+																		
+																		
+解决任何标签元素固定宽高自适应问题。解决标签只能在行间样式写宽高的自适应问题
+	//解决canvas自适应和失真问题
+	$(window).resize(resizeCanvas);
+	function resizeCanvas() {
+		$("#c1").attr("width", $(window).get(0).innerWidth);
+		$("#c1").attr("height", $(window).get(0).innerHeight);
+	};
+	resizeCanvas();																		
+																		
+																		
+当页面完全呈现的时候执行函数/图片加载完全时显示（好像兼容性不行）
+	    $(window).on("load",function(){  })
+																		
+																		
+
+
+//解决弹出窗滚动穿透问题
+var ModalHelper = (function(bodyCls) {
+  var scrollTop;
+  return {
+    afterOpen: function() {
+      scrollTop = document.scrollingElement.scrollTop;
+      document.body.classList.add(bodyCls);
+      document.body.style.top = -scrollTop + 'px';
+    },
+    beforeClose: function() {
+      document.body.classList.remove(bodyCls);
+      // scrollTop lost after set position:fixed, restore it back.
+      document.scrollingElement.scrollTop = scrollTop;
+    }
+  };
+})('modal-open');
+//CSS
+body.modal-open {
+    position: fixed;
+    width: 100%;
+}
+						
+
+a标签阻止跳转
+	href="javascript:void(0)"
+	
+	
+
+	div.a是选择包含a类的div元素。
+	举个栗子：<div class="a"></div>
+	如果中间有空格的话，是后代选择器。
+	
+	
+	
+//           事件监听
+	document,getElementById( 'start' ).addEventListener( 'click', start, false );
+	function start(  ) {
+		//响应事件，进行相应的操作
+	} 
+	
+	//       jQuery  用  '.on(  )'  也是事件监听
+	$( '#start' ).on( 'click', start );
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+
+

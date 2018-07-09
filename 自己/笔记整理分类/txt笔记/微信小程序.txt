@@ -1,0 +1,341 @@
+
+
+										官方文档地址
+							http://mp.weixin.qq.com/debug/wxadoc/dev/
+
+							
+							
+							
+							
+												微信自带rpx自适应单位，设计图psd宽度为750px时，1px就写1rpx。
+							
+
+							
+							
+							
+								微信小程序与html的区别
+						
+  在微信里面window无法用。例如：alert(123);无法使用。					
+	调试使用console.log();					
+
+  添加事件:
+    bindtab
+	
+  微信事件里的this并非是事件本身的对象，而是整体的对象。     
+	
+  wx  大概相当于window  全局对象
+	
+  wxml:微信里面的标记。
+    <view>
+    <text>
+    <image>
+    <button>
+
+  wxss:微信里面的样式，和之前的一样。
+  微信里的颜色设置不要用英文或是简写，因为有时会出问题，使用6为数全写，#ffffff 。
+  
+  js:也差不多。
+
+
+
+  
+  
+									目录结构
+
+	pages文件夹
+  所有页面的存放根目录，每个页面单分一个子目录。  
+
+	app.js app.json app.wxss
+  所有页面的总配置文件。
+
+	app.json
+  全局的配置项，"pages":[所有页面都要在这里配置],配置页面的基本信息。
+  "pages/文件夹名字/wxml文件名"(文件名不用写后缀)
+  "window":{所有文件头部导航样式配置}
+
+    xx.json
+  分页的json文件，如果不配置，则默认使用全局app.json配置。
+  navigationBarTitleText 设置导航头部标题
+  配置写法   //不需要写window
+    {
+	  "navigationBarBackgroundColor": "#ffffff",
+	  "navigationBarTitleText": "离子烫服务",
+	  "navigationBarTextStyle": "#000000"    //只支持黑白
+	}
+  
+	app.js
+  全局的js
+  data里放的就是数据
+  
+    app.wxss
+  全局的样式
+  
+	单页的json文件配置不能为空白，至少写一个{}.
+
+    wxml
+  js赋予数据的写法
+  {{ xxx }} 然后在js的data里 xxx:"默认数据"
+
+	
+	
+							切换(跳转切换页面)，两种方式。
+							
+  1.标签
+    <navigatr url="../单页文件夹名/wxml文件名(文件名的后缀wxml可以不写)">跳转页面</navigator>
+  2.js事件
+    wx.navigateTo({ url:'../单页文件夹名/文件名' })   (打开页面默认是index页面，相对路径的规则不变)
+	
+	xxx:function(){
+		wx.navigateTo({
+		  url: '../index/index',
+		})
+	  }
+
+  跳转的点击按钮(不是按钮也行)
+    <button bindtap="xxx" size="mini" type="primary">跳转页面</button>
+	(size是设置大小 mini是小 primary是button的默认样式)
+  
+
+									点击事件
+									
+  在标签里加属性  bindtap="xxx" ，然后在js文件里的	page({  })	里面写事件
+    xxx(){ console.log(123); },  
+
+
+	
+										跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面wx.switchTab
+	
+	shoping:function(){
+		wx.switchTab({
+		  url: '../cart/cart',
+		})
+	  },
+	
+	
+										事件
+
+  微信里改变数据从而想让视图实时跟新改变，不能直接写对象数据改变
+    例如：在点击事件里写 this.data.xxx='123';  是没反应的。
+    正确的写法是： this.setData({ xxx:'123'+Date.now()这里不能加;号，会报错，我也不知道为啥~~~ })   										
+
+  更改数据同步view：
+    this.setData({  });
+	
+	
+
+										样式
+
+  行内样式wxml 规则不变
+
+  类class 规则不变
+    
+  加载本地图片
+    1.pages下新建目录images(命名不限)
+	2.复制图片到创建的目录本地文件夹下(无法拖动)
+	3.<image src="../image/xx.jpg" class="img"></image>
+	
+	
+	
+
+
+											调试中的AppData
+											
+  相当于所有js文件里的  page里的data
+
+
+
+  App() ->  注册一个小程序
+  Page() -> 注册一个页面
+  
+  
+  
+  函数getApp();   就是获取全局app.js文件的整个对象。
+    例如：在子页面的js里 
+	var app=getApp();
+	console.log(app);
+	这个是在js最外面写，函数事件、数据等都是写在page({})里面
+	
+  就可以获取所有在app.js里的属性
+    在app.js里的App({})里定义一个变量 a:1,
+    然后在子页面的js里  var app=getApp();
+    在点击事件里  this.setData({ xxx:app.a });   xxx为wxml里的数据标识{{ xxx }}
+
+
+
+
+
+
+												模块化
+
+  例如放在utils文件里，新建一个common.js文件
+
+  导出模块的两种方式：
+    1.module.exports.x = x
+	2.exports.x = x
+  或是导出全局对象
+	module.exports = {};
+	
+  使用
+    let com = require(模块路径);
+
+
+  示例：在commn.js里写
+    function echoHello(user){
+		return '欢迎用户:${user}回来';
+	}
+	function echoBye(user){
+		return '${user}已经退出，欢迎下次再来';
+	}
+    
+	module.exports.echoHello=echoHello;
+	exports.echoBye=echoBye;
+
+  在某个单页js调用(无说明则是最外层，说明一般都是在page({})里面写事件。
+    var com = require('../../utils/common');
+  然后在page里调用使用是：
+	com.echoHello('张三')
+	com.echoBye('张三')
+  
+  调试在页面渲染完成里的函数console.log()
+  
+  
+
+
+												作用事件语句
+		  		
+  条件语句：直接在标签里面加
+    wx:if="{{bshow}}"
+  然后在js文件data里写
+    bShow:false   (true 和 false)
+  元素就隐藏了
+  
+  
+  
+  循环语句：
+    wx:for="{{arr}}" wx:key="{{index}}"(必须要一起使用)
+  实例：
+    <view class="listView">
+		<view class="li" wx:for="{{arr}}" wx:key="{{index}}">
+			{{item}} {{index}}
+		</view>	
+	</view>	
+	
+	js的data里：
+	    arr:['apple','banana','orange']
+	(说明：微信里没有ul标签(写了也不具备原来的属性),所以用view标签+类模拟实现)
+		
+	如果js里的data数据为json数据：
+		arrData[
+			{name:'apple',age:'10'},
+			{name:'banana',age:'18'},
+			{name:'orange',age:'40'}
+		]
+		
+		<view class="listView">
+			<view class="li" wx:for="{{arrData}}" wx:key="{{index}}">
+				{{item.name}} {{item.age}} {{index}}
+			</view>	
+		</view>	
+
+	
+		
+									切换(点击显示隐藏)
+
+  在点击事件里：
+    this.setData({
+		bShow:!this.data.bShow   (十分十分牛逼！！！！)
+	});
+
+
+
+			
+											简易的留言板
+
+  display:flex;(ie10)微信能用，弹性布局。
+  但是注意：设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。
+
+  placeholder-class="xxx"  给placeholder属性设置样式，限微信小程序
+
+  <icon type="cancel"></icon>  圆 里面X图标
+
+^_^
+  
+  wx:if="{{msgData.length==0}}"
+
+  data里
+    inputVal:'',
+	msgData:[]
+  
+  input 标签事件
+    bindinput="changeInputVal"
+    changeInputVal(ev){
+		ev.detail.value  //input里输入的值
+	};
+
+	
+  addMsg(){ //点击事件
+	var list=this.data.msgData;
+	list.push({
+	    msg:this.data.inputVal
+	});
+	
+	this.setData({
+		msgData:list,
+		inputVal:''
+	})
+  }	
+  
+  自定义属性
+    data-index="{{index}}"
+	
+  js获取
+    delMsg(ev){//点击事件
+		//ev.target.dataset.index  //target是对象本身  dataset是自定义属性data的获取方式
+		var n=ev.target.dataset.index;
+		var list=this.data.msgData;
+		list.splice(n,1);
+		this.setData({
+			msgData:list
+		});
+	}
+	
+	
+	本地存储
+  wx.setStorage({
+	key:'名字',
+	data:'值'
+  })
+	
+	
+	
+	
+																		微信小程序如何动态增删class类名
+	
+	//wxml
+<view class="list-wrapper">
+      <view class="list-top">
+         <view data-num="1" class="list-menu list-menu1 {{_num==1?'cur':''}}" bindtap="menuClick">头条</view>
+         <view data-num="2" class="list-menu list-menu2 {{_num==2?'cur':''}}" bindtap="menuClick">活动</view>
+         <view data-num="3" class="list-menu list-menu3 {{_num==3?'cur':''}}" bindtap="menuClick">公告</view>
+      </view>
+</view>
+	
+	
+	//js
+menuClick:function(e){
+      this.setData({
+         _num:e.target.dataset.num
+      })
+  },
+	
+	说明
+通过数据绑定在3个标签上绑定相同的变量_num, 当点击不同标签时, 在js逻辑层中通过event.target.dataset.num来获取标签data-num值, 然后在wxml中通过三元运算符的匹配便可完成class名的增改,
+	
+
+
+
+
+
+
+
+

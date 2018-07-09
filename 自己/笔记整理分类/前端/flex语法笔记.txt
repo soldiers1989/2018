@@ -1,0 +1,126 @@
+flexible box  灵活的盒子，弹性布局。
+兼容ie10或ie11  
+
+
+display: flex;
+行内元素
+display: inline-flex;
+
+Webkit内核的浏览器，必须加上-webkit前缀。
+display: -webkit-flex;  /* Safari */
+display: flex;
+
+*******注意，设为Flex布局以后，子元素的float、clear、和vertical-aling属性将失效。
+
+采用Flex布局的元素，称为Flex容器（flex containter），简称“容器”。它的所有子元素自动成为容器成员，称为Flex项目（flex item），简称”项目“。
+
+容器的属性（6个,容器就是设置了display：flex；的元素）
+flex-direction
+flex-wrap
+flex-flow
+justify-content
+align-items
+align-content
+
+项目的属性（6个，项目就是容器的子元素）
+order
+flex-grow
+flex-shrink
+flex-basis
+flex
+align-self
+
+
+
+设置在父元素的6个属性
+flex-direction: 		子元素的排列方向
+	row					（默认值）正常排序，左到右
+	row-reverse			反向，右到左。
+	column				垂直方向，上到下
+	column-reverse		垂直方向，下到上
+
+flex-wrap：				如何换行
+	nowrap				（默认）不换行
+	wrap				正常换行
+	wrap-reverse		换行，第一行在下方
+	
+flex-flow				是flex-direction和flex-wrap的简写形式
+	row nowrap			默认值
+
+justify-content			子元素水平线上的对齐方式
+	flex-start			左对齐
+	flex-end			右对齐
+	center				居中对齐
+	space-between		两端对齐
+	space-around		每个项目之间间隔相等排列
+	
+align-items				垂直对齐方式
+	flex-start			上对齐
+	flex-end			下对齐
+	center				垂直居中
+	baseline			子元素第一行文字的基线对齐
+	stretch				（默认值）如果子元素未设置高度或auto，将占满整个容器的高度
+
+align-content			多行子元素的垂直排列布局方式
+	flex-start			正常排列布局
+	flex-end			多行底部对齐
+	center				多行垂直居中
+	space-between		多行垂直两端对齐排列
+	space-around		每行上下间隔长度相等垂直排列
+	stretch				（默认值）子元素未设置高度或auto，高度平均垂直排列
+
+
+
+
+设置在子元素的6个属性
+	order				子元素的排列顺序，数值越小，排列越靠前，默认 0
+	
+	flex-grow			当有剩余空间是，子元素的增长比例，默认是 0 ，即不增长。
+	
+	flex-shrink			当空间不足时，子元素的缩小比例，默认是 0 ，即同时等比例缩小。
+						负值对该属性无效。
+						
+	flex-basis			定义在分配剩余空间之前，子元素占据的宽度大小，默认值 auto 即项目本身宽度
+	
+	flex				是flex-grow、flex-shrink和flex-basis，默认值 0 1 auto 。后两个属性可选
+		none			0 0 auto
+		auto			1 1 auto
+		建议优先使用这属性，而不是单独写三个分离的属性，因为浏览器会推算相关值
+		
+	align-self			允许单个项目有不一样的对齐方式，如果没有父元素，则等同于stretch
+		auto			默认值，继承父元素align-items属性。
+		flex-start		
+		flex-end		
+		center			
+		baseline		
+		stretch
+		
+	
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

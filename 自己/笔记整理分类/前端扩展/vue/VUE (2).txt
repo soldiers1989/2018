@@ -1,0 +1,82 @@
+
+npm重新注册
+	npm config set registry "http://registry.npmjs.org/"             //这个就是npm代理设置错误，重新设置代理
+
+
+这里有两个坑:
+第一。一个组件下只能有一个并列的 div，可以这么写，所以复制官网示例的时候只要复制 div 里面的内容就好。
+	//也就是说组件就一个最大的父级，不能有两个。
+
+
+第二。数据要写在 return 里面而不是像文档那样子写
+<script>
+	export default {
+		data () {
+			return {
+				msg: 'Hello Vue!'
+			}
+		}
+	}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,187 @@
+回顾昨天内容：
+
+
+1、HTML：超文本标记语言  
+2、W3C标准规定结构、表现、行为分开（html\css\js） 
+3、css样式格式： 属性：值;
+4、css样式导入方式：
+	4.1 行间样式
+	   <div style="width:200px;"></div>
+	4.2 内部样式（内联样式） 
+
+ 	    <style>
+                 .box{width:100px;}
+ 	    </style>
+
+           <div  class="box"></div>
+	4.3 外部样式（外联样式）
+            css文件：
+               .box{width:100px;}
+
+            head标签中导入：
+              <link href="路径" rel="stylesheet">
+
+             引用样式
+             <div  class="box"></div>
+
+
+
+新内容：
+1、常见样式表：
+  width   height   background-color   border   padding   margin
+
+2、背景（混合样式：背景不只是单一一个属性）
+	background-attachment: scroll;       		/*  scroll  fixed*/
+	background-color: red;
+	background-image: url(pic1.jpg);       		/*  url(图片路径)*/
+	background-repeat: no-repeat;         		/* no-repeat   repeat   repeat-x   repeat-y*/
+	/*background-position: 200px 100px;  */       	/*背景图片相对 元素的原点（0，0）   top:100px; left:200px;*/
+	
+	/*background-position:left center; */    	/* 靠左上下居中，相对盒子*/
+	 background-position:50%   20%;          	/* 左边为宽度一半，top为高度的20%*/
+
+    	background:url(pic1.jpg) no-repeat left center green;    /*混合样式集中设置*/
+
+
+3、文本内容属性
+			 font-family:'宋体',Arial, Helvetica, sans-serif;   /*字体类型*/
+			 font-size:20px; 				    /*字体大小*/
+			  color: pink;                                      /*字体颜色 */
+			  font-weight:bold;                                 /*字体加粗*/
+			  font-style:italic;                                /* 斜体*/
+			  text-align:left;                                  /*文本对齐：left  center  right*/
+			  text-indent:2em;                                  /*首行缩进字体大小的2倍*/
+			  letter-spacing:2px;                               /*字母之间间距*/
+			  word-spacing:3em;                                 /* 单词之间的间距*/
+
+
+
+
+
+
+4、常用标签
+  html   <!--html注释-->   div   head   body   title  meta
+
+
+ img：image缩写   不设置尺寸，以图片大小自己设置宽高;
+   <img src="路径" alt="图片信息"/>      
+  图片信息，当图片不存在时显示    
+  图片设置宽度会让图片有缩放效果
+
+
+ 
+a标签：链接、下载、锚点
+链接：
+<a href="http://www.baidu.com"  target="_blank">链接1</a>  
+        target属性：
+        	_blank:在新窗口打开
+            _self:在当前窗口打链接
+
+下载：
+<a href="文件路径"  target="_blank">链接1</a>    
+
+
+
+锚点：
+   <a href="#div1">锚点1</a>
+   <a href="#div2">锚点2</a>
+   <a href="#div3">锚点3</a>
+
+   <div id="div1">div1</div>
+   <div id="div2">div2</div>
+   <div id="div3">div3</div>
+
+
+  注意：a标签中的href属性有内容名称与 其他元素标签的ID名相同
+
+
+
+
+span：中间层
+
+
+
+
+h1~h6:标题标签 
+
+
+
+
+5、选择符（CSS）
+    
+    选择符{属性：值; 属性：值;。。。。}
+
+  5.1  标签选择符    
+	span{width:100px;}  
+        div{height:300px; background:red;}
+ 
+      标签选择符设置样式，该标签的所有元素的样式都会被改变;
+
+
+  5.2  类选择符 
+      .class1{color:red;}
+   
+      <div class="class1">颜色</div>
+
+      类选择符，只要标签元素拥有这个类，那么该元素就拥有该类对应的属性
+
+
+  5.3  ID选择符（在同一个html文档中，只能有一个元素拥有该ID,唯一）
+      #box1{color:green;}
+
+      <div  id="box1">字体颜色</div>
+
+     当元素拥有该ID,那么元素就会拥有该ID对应属性;
+    <!--后者引用了同一个ID,那么前者则不再拥有该ID，虽然样式还存在>
+
+
+ 5.4  后代选择符（父子之间，元素与其祖先之间）
+       div  span{  background:red;}
+
+
+       <div>
+           <span>kkk<span>
+           
+       <div>
+
+     或
+
+       <div>
+            <li>
+                <span>kkk<span>
+            </li>      
+       </div>
+
+
+
+   那么span标签就会拥有后代选择器的属性
+
+
+
+  5.5 同时具备选择符
+     div.abc{background:red;}
+ 
+
+     只要元素为div标签并且标签拥有abc这个类才能具有该属性;
+
+
+
+ 5.6  集合选择符
+     .box,#qq,.div1{ color:red;}     
+
+    /* .box,#qq,.div1三个选择符的字体颜色属性都 改为red*/
+
+
+
+6、选择符优先级
+   /*
+      默认样式<标签选择符<类选择符<id选择符<行间样式<!important(必需要)
+	    0        1       10       100      1000      1000以上
+   
+     后代选择符运算优先级：
+	   
+	    div   .box{color:red;}         1+10=11 
+		#abc  .box{color:blue;}        100+10=110
+		当上面两都条件都 符合时，后都大;
+	 
+   */

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.jy-head {
+				position: relative;
+				background-color: #172c3c;
+				width: 100%;
+				height: 70px;
+				margin: 0 auto;
+			}
+			
+			.jy-head .guanwang {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				margin-left: -513px;
+			}
+			
+			.jy-head .mgrz {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				margin-left: -380px;
+			}
+			
+			.jy-head .kefu-phone {
+				position: absolute;
+				top: 0;
+				right: 50%;
+				margin-right: -420px;
+			}
+			
+			img {
+				border: 0;
+			}
+			/*右侧悬浮客服*/
+			
+			.kefu-group {
+				display: block;
+				width: 170px;
+				height: 300px;
+				position: fixed;
+				right: 0;
+				top: 30%;
+				z-index: 99998;
+				display: none
+			}
+			
+			.kefu-group .kefu-group-inner {
+				width: 170px;
+				height: 300px;
+				position: relative
+			}
+			
+			.kefu-group-btn {
+				position: fixed;
+				right: -5px;
+				top: 28%;
+				z-index: 99999;
+				cursor: pointer
+			}
+			
+			.active {
+				display: block
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--<div class="head">
+			<a class="guanwang" target="_blank" href="http://www.hj9999.hk/"><img src="images/head1.jpg"/></a>
+			<a class="mgrz" target="_blank" href="https://www.nfa.futures.org/basicnet/Details.aspx?entityid=PTyvV0jyOEo%3d"><img src="images/head2.jpg"/></a>
+			<img class="kefu-phone" src="images/head3.jpg"/>
+		</div> -->
+
+		<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			var _jyheader1 = ['<div class="jy-head">',
+				'<a class="guanwang" target="_blank" href="http://www.hj9999.hk/"><img src="http://www.hj9999.hk/statics/version03/images/common/jy_head1.jpg"/></a>',
+				'<a class="mgrz" target="_blank" href="https://www.nfa.futures.org/basicnet/Details.aspx?entityid=PTyvV0jyOEo%3d"><img src="http://www.hj9999.hk/statics/version03/images/common/jy_head2.jpg"/></a>',
+				'<img class="kefu-phone" src="http://www.hj9999.hk/statics/version03/images/common/jy_head3.jpg"/>',
+				'</div>'
+			].join();
+
+			//		var _kefu=['<img class="kefu-group-btn u-toggle" src="http://www.hj9999.hk/statics/kefuimage/del.png"/>',
+			//  '<a class="kefu-group active xuanfu" target="_blank" href="http://vipwebchat.tq.cn/sendmain.jsp?action=chat&version=vip&admiuin=9146666&ltype=1&iscallback=1&page_templete_id=26317&is_message_sms=0&is_send_mail=0&uin=9796322&tq_rand=410381635156901',
+			//  '    <div class="kefu-group-inner">',
+			//  '        <img src="http://www.hj9999.hk/statics/version03/images/kefu.jpg"/>',
+			//  '    </div>',
+			//  '</a>'].join("");	
+
+			console.log(_jyheader1);
+
+			var body = $("body");
+			body.prepend(_jyheader1);
+			body.append(_kefu);
+
+
+
+			//			var $kefuGroup=$(".kefu-group");
+			//$(".kefu-group-btn").click(
+			//  function () {
+			//      if($kefuGroup.hasClass("active")){
+			//          $kefuGroup.hide(100);
+			//          $(this).attr("src","http://www.hj9999.hk/statics/kefuimage/plus.png");
+			//          $kefuGroup.removeClass("active")
+			//      }
+			//      else{
+			//          $kefuGroup.show(100);
+			//          $(this).attr("src","http://www.hj9999.hk/statics/kefuimage/del.png");
+			//          $kefuGroup.addClass("active")
+			//      }
+			//  });
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,54 @@
+
+1.www.bootcss.com
+
+2.安装了node环境。在服务器端可以运行js代码。node 轻内核，只提供基本功能，额外扩展的功能需要自行安装模块。
+    http://nodejs.cn/
+
+3. npm 包管理工具是 node 安装自带的。
+    npm install packageName@xxx.xxx // -g 全局安装。 --save 保存到当前所在目录。
+    npm uninstall packageName
+    npm update packageName
+    npm search packageName
+    npm config get prefix   //查看全局安装的路径。
+
+
+    https://npm.taobao.org/
+    //安装cnpm 替代npm
+    npm install -g cnpm --registry=https://registry.npm.taobao.org
+    //将 npm 镜像源设置为 淘宝镜像源。
+    npm config set registry http://registry.npm.taobao.org
+
+    npm init --yes //初始化配置文件  package.json 
+    npm install packagename --save-dev  //安装开发依赖包。
+
+
+
+4. 自动化构造工具
+    grunt http://www.gruntjs.net/plugins
+    gulp  //轻内核 http://www.gulpjs.com.cn/
+
+    http://www.browsersync.cn/
+    http://www.browsersync.cn/docs/gulp/
+
+
+
+angularjs
+    MVC、模块化、自动化双向数据绑定、语义化标签、依赖注入等等。
+1. mvc
+2. 模块化
+3. 双向数据绑定
+
+https://docs.angularjs.org/api/ng/directive/ngApp
+
+
+
+使用方式 ： A C E M  <!-- directive:name -->
+
+
+语言包：https://github.com/angular/bower-angular-i18n
+
+路由：通过url实现单页面多视图。
+
+
+
+

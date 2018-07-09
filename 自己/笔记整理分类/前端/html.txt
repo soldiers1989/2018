@@ -1,0 +1,131 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">  
+	<head>  
+	 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">  
+	 	<meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1"/>
+		<title>金裕开年豪礼</title>
+		<meta name="keywords" content="" />
+    	<meta name="description" content="" />
+    	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+    	
+    	<!--[if IE 8]>
+    		<style>
+    			.btn-group .btn-group-item{ background: #e0c28d; }
+    		</style>			
+		<![endif]-->
+		<!--[if IE 9]>
+			<style>
+    			.btn-group .btn-group-item{ background: #e0c28d; }
+    		</style>
+		<![endif]-->
+	</head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+a标签  后退链接
+	<a href="javascript:history.back(-1);"></a>
+	
+	history.back(-1)和history.go(-1)的区别
+	history.back(-1):直接返回当前页的上一页，数据全部消息，是个新页面
+	history.go(-1):也是返回当前页的上一页，不过表单里的数据全部还在
+	history.back(0) 刷新 history.back(1) 前进 history.back(-1) 后退
+
+	
+网页中点击按钮弹出QQ聊天窗口的功能实现
+	<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=123456789&site=qq&menu=yes"><img border="0" src="img/button_11.gif" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+	2、代码中的123456789替换为需要的QQ号，即可在点击该图片后弹出对话框，并且同时可以实现网页端QQ的聊天，两种方式都可以实现聊天。
+
+	
+
+网站在浏览器头部的小图标        favicon.ico
+	<link rel="shortcut icon" href="./images/logo.jpg" type="image/x-icon"/>
+
+
+下拉列表选项实现页面跳转		
+	<select onchange="window.location=this.value;">
+		<option value="a.html">用户管理</option>
+		<option value="b.html">用户</option>
+	</select>
+
+
+表单先验证后提交
+	onclick="javascript:return yanzheng();" 
+
+
+
+qq添加好友
+	 <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=574201314&website=www.oicqzone.com">点击添加我的QQ为好友</a> 
+
+在网页里添加跳转代码，打开网页自动添加你为好友哦。以下代码需要添加在head里。
+	    <meta http-equiv="refresh" content="0; url=tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=574201314&website=www.oicqzone.com"> 
+
+
+强行聊天的代码：
+	tencent://Message/?Uin=574201314&websiteName=www.oicqzone.com&Menu=yes
+
+
+点击拨打电话
+	<a href="tel:18688888888">拨号</a>   
+	
+发信息
+	<a href="sms:18688888888">发短信</a>
+
+
+
+表格
+
+
+
+a标签阻止跳转
+	href="javascript:void(0)"		//注意没有 ; 号
+
+
+
+input  提示文字属性  placeholder
+
+
+
+
+添加qq群pc		https://qun.qq.com/join.html
+<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=f3bbdeaf495100b2e791fe49111d61869b9e54c99d6b1a25b5592be85ea209f1"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="你是谁" title="你是谁"></a>
+
+移动端：mqqapi://card/show_pslcard?src_type=internal&version=1&uin=5555530&card_type=group&source=qrcode
+
+
+PC添加qq群和qq
+<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=4bf1c155a4c962297f5ef9263c2df64adf3963bdc94f9dfd80563dba68fb4614">
+	<img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="你是谁" title="你是谁">
+</a>
+<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=869565225&website=www.oicqzone.com">点击添加我的QQ为好友</a> 
+移动添加qq群和qq
+		<a href="mqqwpa://im/chat?chat_type=wpa&uin=2679571084&version=1&src_type=web&web_src=bjhuli.com">报名咨询</a>
+
+		<a href="mqqapi://card/show_pslcard?src_type=internal&version=1&uin=18863883&card_type=group&source=external">QQ群</a>
+
+
+
+移动端    添加qq好友的   主流浏览器都支持，
+             添加q群的    主流浏览器中，uc不支持，
+pc端      基本都支持，
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

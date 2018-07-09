@@ -1,0 +1,486 @@
+
+
+"use strict";			//使用严格模式
+
+
+jQuery选择器
+	//子级选择
+	$('.box>span').css('border','1px solid black');
+	
+	//选择同级相邻的元素
+	$('p+span').css('border','1px solid red');
+			
+	//选择同级后面的元素
+	$('p~*').css('border','1px solid red');
+
+	
+jQuery动画
+	//参数1：{} 指定运动的属性：运动的目标点
+	//参数2：运动时间
+	//参数3：运动形式
+	//参数4:函数 运动结束执行的函数
+	
+	$('.box').animate({width:400},2000,'linear',function(){
+		alert('end');	
+	});
+	
+	注：动画的2D效果与3D效果有冲突，如果在同一主体同时开启2D与3D，主体设置的transition: 1s;  会影响
+	    2D动画效果的播放。
+	解决方案：在主体里再加入一个不影响整体的元素，如div或img等，分开设置动画与3D，但效果一样。	
+
+	
+jQuery淡入淡出方法
+	jQuery fadeIn() 用于淡入已隐藏的元素
+	jQuery fadeOut() 方法用于淡出可见元素。
+	jQuery fadeToggle() 方法可以在 fadeIn() 与 fadeOut() 方法之间进行切换。 
+	//切换淡入淡出  淡入已隐藏的元素需要  display:none;
+	
+	$(selector).fadeToggle(speed,callback);	
+	可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。
+	可选的 callback 参数是 fading 完成后所执行的函数名称。
+
+	
+jQuery鼠标移出事件
+	mouseleave()
+
+
+鼠标滚轮事件
+	原生的滚轮事件：火狐与其他浏览器使用了不同的事件
+		 * 滚轮事件只有firefox比较特殊，使用DOMMouseScroll; 其他浏览器使用mousewheel;
+		// firefox
+		document.body.addEventListener("DOMMouseScroll", function(event) {
+			var direction= event.detail && (event.detail > 0 ? "mousedown" : "mouseup");
+			console.log(direction);    
+		});
+
+		// chrome and ie
+		document.body.onmousewheel = function (event) {
+			event = event || window.event;
+			var direction = event.wheelDelta && (event.wheelDelta > 0 ? "mouseup" : "mousedown");
+			console.log(direction);
+		};
+		 
+
+	使用jquery兼容后的事件
+
+		// jquery 兼容的滚轮事件
+		$(document).on("mousewheel DOMMouseScroll", function (e) {
+			
+			var delta = (e.originalEvent.wheelDelta && (e.originalEvent.wheelDelta > 0 ? 1 : -1)) ||  // chrome & ie
+						(e.originalEvent.detail && (e.originalEvent.detail > 0 ? -1 : 1));              // firefox
+		
+			if (delta > 0) {
+				// 向上滚
+				console.log("wheelup");
+			} else if (delta < 0) {
+				// 向下滚
+				console.log("wheeldown");
+			}
+		});
+
+		
+用JQ书写样式的事件/延迟载入
+	$(document).ready(function(){});
+	$(function(){})
+
+	
+JQ鼠标移入移出
+$(".header").hover(function (){  
+	$(".content").show();  
+},function (){  
+	$(".content").hide();  
+}); 
+
+JQuery中使用on方法绑定hover事件实例															
+	$(obj).on("mouseover mouseout",function(event){
+		if(event.type == "mouseover"){
+		
+		}else if(event.type == "mouseout"){
+
+		}
+	})	
+
+	
+jq选择奇偶数子集
+	$(':button:nth-child(2n-1)')
+
+	
+删除元素
+	$(".swiper-container").remove();
+
+	
+jq同时修改多个css样式
+	$(document).ready(function(){
+		$("li.start").siblings().css({"color":"red","border":"2px solid red"});
+	});
+
+	
+jq获取内容
+	html()     val()     text()
+
+
+jq同时触发两个,绑定相同函数事件
+	$('#button').trigger('click');绑定两个不同主体的事件。
+
+
+遍历each只改变对应鼠标指向的效果jq
+	$img.each(function(i,elem){
+		$(this).hover(function (){
+			$sw.eq(i).show();
+		},function (){
+			$sw.eq(i).hide();
+		});
+	})
+
+遍历each获取对应的元素下标
+	$('.com_num').each(function(i,elem){		
+		$(this).html('0'+(i+1));
+	})
+
+	
+判断数据类型
+	typeof($('.good_a').html())
+	
+js 字符串转换成数字的三种方法
+	1. 转换函数：parseInt()和parseFloat()
+	parseInt()和parseFloat()两个转换函数。前者把值转换成整数，后者把值转换成浮点数。
+
+	typeof()		//判断数据类型	
+	slice()			//截取最新（数组最后的数据）的指定数目的数据	
+	indexOf()		//获取指定数据在数组的位置（或排序值），或是a在字符串的排序位置
+	
+	
+	分割字符串   split();
+	用特定元素方式分割字符串，返还数组。
+	
+	数组遍历处理返回函数   map();  
+	
+	numbers.map(Math.sqrt);       js原生  数组.map(方法函数);
+	arr = $.map(arr, function (a) {
+		return a + a;
+	});
+	
+	
+	
+	
+	
+元素转换成字符串	join()
+	join()方法用于把数组中的所有元素转换一个字符串。元素是通过指定的分隔符进行分隔的。	
+	
+截取字符串
+	str = str.substring(1);
+	
+截取数组元素
+	str.splice();
+	
+	
+
+添加删除切换类
+	$(this).addClass('svi_type_ac').siblings().removeClass('svi_type_ac');
+
+	
+jquery 获取和失去焦点事件
+	$a.focus()    $a.blur()
+
+
+隐藏和显示滚动条
+	$("body").css("overflow","hidden");
+	$("body").css("overflow","auto")
+
+
+切换类判断新方法  is（）
+	$('.good').click(function(){	
+		var num1 = parseInt($('.good_num').html());
+		if( $('.good').is('.good_yes') ){
+			$('.good_num').html(num1-1);
+		}else{
+			$('.good_num').html(num1+1);
+		}	
+		$(this).toggleClass('good_yes');		
+	})
+
+
+函数只生效一次
+	$('.com_inp_code').off('click');	放在函数内
+
+函数只触发一次														
+	$("p").one("click",function(){
+		$(this).animate({fontSize:"+=6px"});
+	})	
+	
+javascript 终止函数执行操作
+	function testA(){
+		alert('a');
+		return;
+		alert('b');
+		alert('c');
+	}
+	testA(); 程序执行弹出'a'便会终止。
+	
+
+//定时器60秒（手机发送验证码）
+	var mob_code = function(){
+		$('.com_inp_code').click(function(){	
+			var num1 = 60;
+			$(this).html(num1+'s');
+			$(this).css('color','red');
+			var code_time = setInterval(function(){
+				num1--;
+				$('.com_inp_code').html(num1+'s');
+				if( num1==0 ){
+					clearInterval(code_time);
+					$('.com_inp_code').html('发送验证码');
+					mob_code();
+				}
+			},1000);
+			$('.com_inp_code').off('click');
+		})
+	}
+	mob_code();
+	
+	
+AJAX添加元素事件失效的的解决方法
+	事件委托，事件绑定  on方法
+	$('.zx_dt_list').on('click','.good_a',function(){});
+	
+	
+多个元素同一事件内容写法
+	$('#begin,#end')这个，用逗号隔开。
+	
+	
+关于动态数据添加id或类用for循环输出的
+	var img_num = $('.gongsi-img').length;
+	for ( var i = 1; i <= img_num; i++) {
+		var img_i = 'img'+i;	
+		if( $('#'+img_i+' figure').length==1 ){
+			$('#'+img_i+' figure').addClass('img1_one');
+		}
+	}
+	
+	
+只要求判断根据屏幕宽度选择不同的CSS样式表。
+	<script language=javascript>
+		<!--
+			if (screen.width == 800)
+			{
+			document.write('<link rel=stylesheet type="text/css" href="css800.css">')
+			}
+			else {document.write('<link rel=stylesheet type="text/css" href="css1024.css">')}
+		//-->
+	</script>
+	
+	
+点击区域外隐藏该元素
+	$(".dialog").click(function(e){
+		var _target = $(e.target);
+		if (_target.closest(".dg_lick").length == 0) {
+			$(".dg_lick").hide();
+		}
+	})
+	
+	
+完整jquery ajax请求例子
+
+$.ajax({
+    url:'/comm/test1.php',
+    type:'POST', //GET
+    async:true,    //或false,是否异步
+    data:{},
+	dataType:"JSON",
+    timeout:5000,    //超时时间
+    dataType:'json',    //返回的数据格式：json/xml/html/script/jsonp/text
+    beforeSend:function(xhr){
+        console.log(xhr)
+        console.log('发送前')
+    },
+    success:function(data,textStatus,jqXHR){
+        console.log(data)
+        console.log(textStatus)
+        console.log(jqXHR)
+    },
+    error:function(xhr,textStatus){
+        console.log('错误')
+        console.log(xhr)
+        console.log(textStatus)
+    },
+    complete:function(){
+        console.log('结束')
+    }
+})	
+	
+	
+jquery实现的监听文本框输入事件
+	$(function(){
+		$('#text').bind(' input propertychange ',function(){
+			$('#res').val(200);
+		} );
+	})
+	
+全局替换字符串空格正则表达式
+	var a = ' 123 123  21 ';
+	var c = a.replace(/ /g,"");
+	console.log(c);	
+	
+	
+判断input输入框的内容可直接用this 
+数值输入删除0，-开头和限制12位数
+$('.subscribe input').keyup(function(){
+	if ( this.value.slice(0,1) == 0 ) {
+		this.value = null;
+	}else if( this.value.slice(0,1) == '-' ){
+		this.value = null;
+	}else if(this.value.length > 12){
+		this.value = this.value.slice(0,12); 
+	};
+	Principal();
+});
+	
+	
+jQuery判断checkbox是否选中
+	if( !$('#procotol input').is(':checked') ){
+		$('#userCue').html("<font color='red'><b>×请勾选委托合作协议</b></font>");
+		return false;
+	}
+	
+
+jQuery-获取元素坐标(距离屏幕左侧上侧距离)
+	获取页面某一元素的绝对X,Y坐标，可以用offset()：
+	var X = $(‘#DivID’).offset().top;
+	var Y = $(‘#DivID’).offset().left;
+
+	获取相对(父元素)位置:
+	var X = $(‘#DivID’).position().top;
+	var Y = $(‘#DivID’).position().left;
+	
+	
+jquery   获取鼠标位置坐标
+	//获取鼠标位置
+    $(function(){
+        $('body').mousemove(function(e) {
+            e = e || window.event;
+            __xx = e.pageX || e.clientX + document.body.scroolLeft;
+            __yy = e.pageY || e.clientY + document.body.scrollTop;
+        });
+    });	
+	
+	
+JavaScript forEach() 方法
+	定义和用法
+		forEach() 方法用于调用数组的每个元素，并将元素传递给回调函数。
+		注意: forEach() 对于空数组是不会执行回调函数的。
+
+		
+$.each()和$().each(),以及forEach()的用法区别
+	1.forEach是js中遍历数组的方法，如下
+		var arr=[1,2,3,4];
+		arr.forEach(function(val,index,arr){//val为数组中当前的值，index为当前值的下表，arr为原数组
+			arr[index]=2*val;
+		});
+		console.log(arr);//结果是修改了原数组，为每个数乘以2
+		
+	2.$.each()是jquery中遍历数组的方法，如下
+		var arr=[1,2,3,4];
+		$.each(arr,function(i,n){
+			alert("索引"+i+"对应的值"+n);
+		});
+
+	3.$().each()方法规定为每个匹配元素规定运行的函数,如下：
+		 $("li").each(function(){
+				alert($(this).text())
+			});
+	
+	
+窗口大小改变事件
+	$(window).resize(function(){});
+	
+	
+添加对象属性
+	let obj = {};
+	遍历或循环或直接添加    obj[key] = name;   (直接就能添加需要的键值)
+	
+	
+js原生表单提交
+	document.getElementById("form1").submit();
+	
+	
+jQuery animate() - 队列动画	
+	$("button").click(function(){
+	  var div=$("div");
+	  div.animate({height:'300px',opacity:'0.4'},"slow");
+	  div.animate({width:'300px',opacity:'0.8'},"slow");
+	  div.animate({height:'100px',opacity:'0.4'},"slow");
+	  div.animate({width:'100px',opacity:'0.8'},"slow");
+	});
+	
+	
+	
+js立即执行函数: (function ( ){}( ))
+	void function (global) {
+		// 在这里，global 就是全局对象了
+	}(this)    // 在浏览器里，this 就是 window 对象
+	
+	
+	
+当点击 <p> 元素时，增加该元素的文本大小（每个 <p> 元素只能触发一次事件）：
+	$("p").one("click",function(){
+	$(this).animate({fontSize:"+=6px"});
+	});	
+	
+	
+jquery判断滚动条与头部距离 
+	
+	$(document).ready(function(){
+		$(document).scroll(function(){
+			var top = $(document).scrollTop();
+			if(top < 300)	
+				$(".tree01").show();
+			else if(top < 600)
+				$(".tree02").show();
+			else if(top < 900)
+				$(".tree03").show();
+		});
+	});
+	
+	
+	
+	
+	
+去空格函数	
+	function Trim(str,is_global)
+	    {
+		   var result;
+		   result = str.replace(/(^\s+)|(\s+$)/g,"");
+		   if(is_global.toLowerCase()=="g")
+		    {
+		    	result = result.replace(/\s/g,"");
+		    }
+	    return result;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+
+
+
+

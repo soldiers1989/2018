@@ -1,0 +1,72 @@
+
+使用
+	1，头部引用
+			<link rel="stylesheet" href="animate.min.css">
+	2，给指定的元素加上指定的动画样式名，animated是必须的
+			<div class="animated bounceOutLeft"></div>
+
+
+
+    animation-duration: 1s;	//动画持续时间
+    animation-delay: .5s;			//动画延迟时间
+	animation-iteration-count: infinite;		//次数，infinite是循环的意思，填2就是2次
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

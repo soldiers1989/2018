@@ -1,0 +1,118 @@
+
+
+参数含义
+
+tooltip   提示框包括鼠标点击显示坐标十字和X Y轴的文本提示和半透明数据提示框
+
+参数 formatter  半透明提示框设置
+参数 position   提示框位置设置，默认随鼠标变化，移动端问题：显示不全。
+
+
+tooltip: {
+					trigger: 'axis',
+					axisPointer: {
+						animation: false,
+						type: 'cross',
+						lineStyle: {
+							color: '#376df4',
+							width: 2,
+							opacity: 1
+						}
+					},
+					position: function (pos, params, dom, rect, size) {
+					    // 鼠标在左侧时 tooltip 显示到右侧，鼠标在右侧时 tooltip 显示到左侧。
+					    var obj = {top: 60};
+					    obj[['left', 'right'][+(pos[0] < size.viewSize[0] / 2)]] = 5;
+					    return obj;
+					}
+				},
+
+网格线，图表的背景网格线
+splitLine: {
+	show: true,是否显示
+	lineStyle: {
+		color: '#999',
+		type: 'dashed'虚线
+	}
+}
+不要复制粘贴
+yAxis: {
+{
+	show:false                                               是否显示X Y轴中的边线和数值
+	boundaryGap : false,									 
+    axisLine: { lineStyle: { color: '#626161' } },           X Y轴中边边文字样式
+	splitNumber: 4,											 X Y轴限制网格数量
+	axisLabel: {											 X Y轴标签文字朝内还是朝外，默认朝外
+		inside: true,
+		formatter: '\n{value}'								 标签文字与刻度的上下位置，默认居中 \n在前是往下，在后是往上
+	},
+	
+	
+},
+
+
+itemStyle  													图形走向的样式设计，例如柱状图的颜色设置  APIs
+
+
+
+series: [{
+	type: 'line',
+	showSymbol: false,
+	data: valueList,
+	itemStyle: {  													线条样式
+		normal: {
+			color: '#101010'
+		}
+	},																填充区域颜色
+	areaStyle: {
+		normal: {
+			color: '#c7c7c7',
+		}
+	},
+	markLine: {														线标：例如最新或平均值有条横线标记
+		data: [
+			{type: 'average', name: '平均值'}
+		]
+	}，
+	markPoint: {													标记：例如最高或最低有雨点标记
+		data: [
+			{type: 'max', name: '最大值'},
+			{type: 'min', name: '最小值'}
+		]
+	},
+},
+
+
+timeline 组件，提供了在多个 ECharts option 间进行切换、播放等操作的功能。
+
+获取最新的数据   data[data.length-1][1]
+
+markLine: {
+	data: [
+		{
+			symbol: 'none',   										标线的两头样式
+			yAxis: data[data.length-1][1],        					最新数据
+			lineStyle: {											线的样式设置
+				normal: {				
+					color:'#de3b3b',			
+					width:'1',
+					type:'solid'
+				}
+			},
+		}
+	],
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,308 @@
+
+'use strict';         //启用严格模式
+
+注意：不可以用Word或写字板来编写JavaScript或HTML，因为带格式的文本保存后不是纯文本文件，无法被浏览器正常读取。也尽量不要用记事本编写，它会自作聪明地在保存UTF-8格式文本时添加BOM头。
+
+JavaScript的语法和Java语言类似，每个语句以;结束，语句块用{...}。JavaScript并不强制要求在每个语句的结尾加;，浏览器中负责执行JavaScript代码的引擎会自动在每个语句的结尾补上;
+但是： 让JavaScript引擎自动加分号在某些情况下会改变程序的语义，导致运行结果与期望不一致。建议，所有语句都会添加;。
+
+
+JavaScript本身对嵌套的层级没有限制，但是过多的嵌套无疑会大大增加看懂代码的难度。遇到这种情况，需要把部分代码抽出来，作为函数来调用，这样可以减少代码的复杂度。
+
+
+JavaScript在设计时，有两种比较运算符：
+第一种是==比较，它会自动转换数据类型再比较，很多时候，会得到非常诡异的结果；
+第二种是===比较，它不会自动转换数据类型，如果数据类型不一致，返回false，如果一致，再比较。
+
+由于JavaScript这个设计缺陷，不要使用==比较，始终坚持使用===比较。
+
+另一个例外是NaN这个特殊的Number与所有其他值都不相等，包括它自己：
+NaN === NaN; // false
+
+唯一能判断NaN的方法是通过isNaN()函数：
+isNaN(NaN); // true
+
+null表示一个“空”的值，它和0以及空字符串''不同，0是一个数值，''表示长度为0的字符串，而null表示“空”。
+
+
+数组，出于代码的可读性考虑，强烈建议直接使用[ ]。
+
+
+strict模式
+JavaScript在设计之初，为了方便初学者学习，并不强制要求用var申明变量。这个设计错误带来了严重的后果：如果一个变量没有通过var申明就被使用，那么该变量就自动被申明为全局变量：
+
+i = 10; // i现在是全局变量
+所有的JavaScript代码都应该使用strict模式
+
+
+需要特别注意的是，字符串是不可变的，如果对字符串的某个索引赋值，不会有任何错误，但是，也没有任何效果：
+JavaScript为字符串提供了一些常用方法，注意，调用这些方法本身不会改变原有字符串的内容，而是返回一个新字符串：
+
+
+JavaScript把null、undefined、0、NaN和空字符串''视为false，其他值一概视为true
+
+
+
+请注意，for ... in对Array的循环得到的是String而不是Number。
+
+
+JavaScript还有一个免费赠送的关键字arguments，它只在函数内部起作用，并且永远指向当前函数的调用者传入的所有参数。arguments类似Array但它不是一个Array：
+
+
+JavaScript的函数在查找变量时从自身函数定义开始，从“内”向“外”查找。如果内部函数定义了与外部函数重名的变量，则内部函数的变量将“屏蔽”外部函数的变量。
+
+
+我们在函数内部定义变量时，请严格遵守“在函数内部首先申明所有变量”这一规则。最常见的做法是用一个var申明函数内部用到的所有变量：
+function foo() {
+    var
+        x = 1, // x初始化为1
+        y = x + 1, // y初始化为2
+        z, i; // z和i为undefined
+    // 其他语句:
+    for (i=0; i<100; i++) {
+        ...
+    }
+}
+
+
+不在任何函数内定义的变量就具有全局作用域。实际上，JavaScript默认有一个全局对象window，全局作用域的变量实际上被绑定到window的一个属性：
+因此，直接访问全局变量course和访问window.course是完全一样的。
+
+由于函数定义有两种方式，以变量方式var foo = function () {}定义的函数实际上也是一个全局变量，因此，顶层函数的定义也被视为一个全局变量，并绑定到window对象：
+'use strict';
+
+function foo() {
+    alert('foo');
+}
+
+foo(); // 直接调用foo()
+window.foo(); // 通过window.foo()调用
+
+
+function a(x){}
+var a = function(x){};   //加引号
+
+
+
+JavaScript引擎在行末自动添加分号的机制
+
+
+
+在JavaScript中，用var申明的变量实际上是有作用域的。
+如果一个变量在函数体内部申明，则该变量的作用域为整个函数体，在函数体外不可引用该变量：
+如果两个不同的函数各自申明了同一个变量，那么该变量只在各自的函数体内起作用。换句话说，不同函数内部的同名变量互相独立，互不影响：
+由于JavaScript的函数可以嵌套，此时，内部函数可以访问外部函数定义的变量，反过来则不行：
+
+
+不在任何函数内定义的变量就具有全局作用域。实际上，JavaScript默认有一个全局对象window，全局作用域的变量实际上被绑定到window的一个属性：
+因此，直接访问全局变量course和访问window.course是完全一样的。
+你可能猜到了，由于函数定义有两种方式，以变量方式var foo = function () {}定义的函数实际上也是一个全局变量，因此，顶层函数的定义也被视为一个全局变量，并绑定到window对象：
+
+
+全局变量会绑定到window上，不同的JavaScript文件如果使用了相同的全局变量，或者定义了相同名字的顶层函数，都会造成命名冲突，并且很难被发现。
+减少冲突的一个方法是把自己的所有变量和函数全部绑定到一个全局变量中。例如：
+// 唯一的全局变量MYAPP:
+var MYAPP = {};
+
+// 其他变量:
+MYAPP.name = 'myapp';
+MYAPP.version = 1.0;
+
+// 其他函数:
+MYAPP.foo = function () {
+    return 'foo';
+};
+把自己的代码全部放入唯一的名字空间MYAPP中，会大大减少全局变量冲突的可能。
+
+许多著名的JavaScript库都是这么干的：jQuery，YUI，underscore等等。
+
+
+由于JavaScript的变量作用域实际上是函数内部，我们在for循环等语句块中是无法定义具有局部作用域的变量的：
+'use strict';
+
+function foo() {
+    for (var i=0; i<100; i++) {
+        //
+    }
+    i += 100; // 仍然可以引用变量i
+}
+
+
+常量
+由于var和let申明的是变量，如果要申明一个常量，在ES6之前是不行的，我们通常用全部大写的变量来表示“这是一个常量，不要修改它的值”：
+		var PI = 3.14;
+
+
+
+在一个对象中绑定函数，称为这个对象的方法。
+绑定到对象上的函数称为方法，和普通函数也没啥区别，但是它在内部使用了一个this关键字，这个东东是什么？
+在一个方法内部，this是一个特殊变量，它始终指向当前对象，也就是xiaoming这个变量。所以，this.birth可以拿到xiaoming的birth属性。
+		
+		function getAge() {
+			var y = new Date().getFullYear();
+			return y - this.birth;
+		}
+
+		var xiaoming = {
+			name: '小明',
+			birth: 1990,
+			age: getAge
+		};
+
+		xiaoming.age(); // 25, 正常结果
+		getAge(); // NaN		
+		
+		
+如果以对象的方法形式调用，比如xiaoming.age()，该函数的this指向被调用的对象，也就是xiaoming，这是符合我们预期的。
+如果单独调用函数，比如getAge()，此时，该函数的this指向全局对象，也就是window。		
+		
+		
+var fn = xiaoming.age; // 先拿到xiaoming的age函数
+fn(); // NaN
+也是不行的！要保证this指向正确，必须用obj.xxx()的形式调用！		
+由于这是一个巨大的设计错误，要想纠正可没那么简单。ECMA决定，在strict模式下让函数的this指向undefined，因此，在strict模式下，你会得到一个错误：
+
+'use strict';
+
+var xiaoming = {
+    name: '小明',
+    birth: 1990,
+    age: function () {
+        var y = new Date().getFullYear();
+        return y - this.birth;
+    }
+};
+
+var fn = xiaoming.age;
+fn(); // Uncaught TypeError: Cannot read property 'birth' of undefined
+这个决定只是让错误及时暴露出来，并没有解决this应该指向的正确位置。		
+		
+		
+		
+控制this的指向的！		
+要指定函数的this指向哪个对象，可以用函数本身的apply方法，它接收两个参数，第一个参数就是需要绑定的this变量，第二个参数是Array，表示函数本身的参数。
+用apply修复getAge()调用：		
+		function getAge() {
+			var y = new Date().getFullYear();
+			return y - this.birth;
+		}
+
+		var xiaoming = {
+			name: '小明',
+			birth: 1990,
+			age: getAge
+		};
+
+		xiaoming.age(); // 25
+		getAge.apply(xiaoming, []); // 25, this指向xiaoming, 参数为空
+		
+		
+另一个与apply()类似的方法是call()，唯一区别是：
+
+apply()把参数打包成Array再传入；
+call()把参数按顺序传入。
+
+比如调用Math.max(3, 5, 4)，分别用apply()和call()实现如下：
+
+Math.max.apply(null, [3, 5, 4]); // 5
+Math.max.call(null, 3, 5, 4); // 5
+对普通函数调用，我们通常把this绑定为null。		
+		
+		
+JavaScript 函数有个内置的对象 arguments 对象。
+argument 对象包含了函数调用的参数数组。		
+		
+		
+装饰器
+利用apply()，我们还可以动态改变函数的行为。
+JavaScript的所有对象都是动态的，即使内置的函数，我们也可以重新指向新的函数。
+现在假定我们想统计一下代码一共调用了多少次parseInt()，可以把所有的调用都找出来，然后手动加上count += 1，不过这样做太傻了。最佳方案是用我们自己的函数替换掉默认的parseInt()：
+
+'use strict';
+
+var count = 0;
+var oldParseInt = parseInt; // 保存原函数
+
+window.parseInt = function () {
+    count += 1;
+    return oldParseInt.apply(null, arguments); // 调用原函数
+};
+		
+// 测试:
+parseInt('10');
+parseInt('20');
+parseInt('30');
+console.log('count = ' + count); // 3 		
+		
+		
+		
+		
+编写高阶函数，就是让函数的参数能够接收别的函数。		
+		
+		
+		
+如果你读过Google的那篇大名鼎鼎的论文“MapReduce: Simplified Data Processing on Large Clusters”，你就能大概明白map/reduce的概念。		
+		
+		
+map()作为高阶函数		
+由于map()方法定义在JavaScript的Array中，我们调用Array的map()方法，传入我们自己的函数，就得到了一个新的Array作为结果：		
+	'use strict';
+
+function pow(x) {
+    return x * x;
+}
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var results = arr.map(pow); // [1, 4, 9, 16, 25, 36, 49, 64, 81]
+console.log(results);
+
+		
+		
+		
+高阶函数map()    reduce()		
+		
+JavaScript中的‘-’号有一个隐式转换  字符串减去0会把字符串默认转换成数字，这也算个小技巧吧  +号的会把数字默认转换成字符串再进行连接 如；'12234'+0   会变成  ’122340‘
+   //不管是数字0 还是字符串'0' 。
+			
+字符串居然可以直接用数组的方式进行截取
+		var a = '123';
+		console.log(a[0]);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+
+

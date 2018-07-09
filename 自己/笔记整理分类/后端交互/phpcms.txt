@@ -1,0 +1,96 @@
+
+																						安装phpcms
+
+
+1.下载xampp，下载phpcms，
+2.安装完xampp开启Apache和MySQL
+3.确保127.0.0.1不被占用，例如开启了phpStudy，修改了hosts文件。
+4.关闭防火墙，复制解压好的phpcms文件到c:/xampp/htdocs/   目录下
+5.浏览器打开http://127.0.0.1/phpcms_v9/install_package/index.php       phpcms_v9文件目录名字 
+如果出现错误，则改成index.html，端口号默认，用户名和密码到目录   cache/sconfigs/database.php   下修改用户名和密码，然后默认。
+
+进入后台网站地址
+http://localhost/phpcms/install_package/index.php?m=admin&c=index&a=login&pc_hash=       本地的
+
+
+
+
+
+
+
+
+
+
+																				开发新模块（二次开发）
+
+header('Access-Control-Allow-Origin: *');					//放在index.php头部，解决跨域请求问题
+
+1，在phpcms的modules中下载一个模块模板，修改文件名和文件对应的模块名字  		//actives
+2，在phpcms的model中下载一个文件修改成对应的文件名和文件中的名字 			//actives_model.class.php
+3，上传到对应的文件夹下，在后台打开模块管理，点击安装可以看到自己的信息。
+
+ -config.inc.php 模块信息，填写模块名称、简介、开发者信息  
+parentid中的29是模块菜单的Id号，菜单的id可以在扩展中的菜单管理中查看。
+
+后台界面信息，在后台模板文件和根目录下的index.php文件中修改，还有个sql数据库文件
+
+
+
+
+
+添加栏目页
+
+	//添加单页面
+	文件命名以page_xxx.html的形式命名，添加到content文件夹目录下。
+	是否在导航栏显示，否。
+	然后后台添加单页面，模板设置，选择命名的文件即可。
+
+
+	
+标签
+	
+	//链接写法，跳转标签
+{$CATEGORYS[27][url]}			//27为后台内容页，管理栏目，catid	显示的id数字
+
+{$title}{$content}				//内容标签，后台填写的才会显示
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

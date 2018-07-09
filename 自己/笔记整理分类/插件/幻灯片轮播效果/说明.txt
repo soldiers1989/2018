@@ -1,0 +1,80 @@
+
+使用说明：
+		1，底部引用js文件，依赖jq，版本1.6.4以上
+		<script src="http://www.hj9999.hk/statics/version03/js/jquery.min.js"></script>
+		<script src="js/html5zoo.js"></script>
+		<script src="js/lovelygallery.js"></script>
+
+		2，容器添加id 	id="html5zoo-1"		父级添加类 class="html5zoo-slides"
+*********注意*********
+		父级和子级必须是 ul和li标签，例如：
+			<div id="html5zoo-1" class="hd_banner">
+				<ul class="html5zoo-slides">
+					<li class=""><img src="images/banner1.jpg"/></li>
+					<li class=""><img src="images/banner2.jpg"/></li>
+					<li class=""><img src="images/banner3.jpg"/></li>
+				</ul>
+			</div>
+
+		3，css只适应宽高添加样式
+				#html5zoo-1{
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%!important;
+					height: 100%!important;
+					
+				}
+
+
+动画效果说明
+		slide									//从右到左平移
+		crossfade							//高亮闪烁
+		threedhorizontal				//3D左右旋转
+		slice									//条形围栏式切换
+		fade        							//消失显示
+		blocks								//方块填充
+		blinds								//三分从左到右平移填充
+		shuffle								//方块分解变换
+		threed								//3D上下分解旋转切换
+
+
+		//参数说明
+		randomplay  		//随机播放
+		showtimer:false,			//显示下方的轮播间隔时间条
+		pauseonmouseover:true, <!-- 鼠标移上去暂停，离开继续播放。 true false ->
+		isresponsive:false, <!-- 鼠标触发自动响应。 true false ->
+		loop:0, <!-- 循环播放。 0（无限循环） 1（循环1次） ->
+
+
+		var win_width = $(window).width();
+		width:win_width,宽度自适应
+		navwidth  导航点宽度
+		navheight			导航点高度
+	
+
+html5zoo.js  文件参数
+	2464行		bulletNormal				//banner导航点样式
+	2475行		bulletHighlight				//banner导航点  选中点 样式
+	2456行		if (this.options.navstyle == 'bullets') {
+                    x.css({
+							页面加载完，未轮播导航点样式
+
+	
+	871行		a.createArrows();			//banner左右箭头显示
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

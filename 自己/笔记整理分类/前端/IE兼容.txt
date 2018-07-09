@@ -1,0 +1,146 @@
+
+背景透明度	IE8
+	{ filter:alpha(opacity=50); opacity: 0.5; }
+只是背景颜色的透明度
+	background-color:rgba(37,135,219,.6);filter: progid:DXImageTransform.Microsoft.gradient	(startColorstr=#992587db,endColorstr=#992587db);
+
+	37,135,219,颜色的RGB，PS有
+	2587db  颜色的16进制，PS有
+	99  透明度的16进制  0.6*255=153 153转换16进制  99   ( 只保留两位数 )
+
+背景图片设置
+	background-color: #fff;
+	background-image: url(../images/head.jpg);
+	background-repeat: no-repeat;
+	background-position: center 0;
+
+	
+ie8不支持h5标签( 例如header )
+
+
+IE7不支持固定定位position:fixed;
+
+
+IE版本使用js或是css
+	<！ -  [if lte IE 8]>
+	<script src =“ieBetter.js”> </ script>
+	<！[ENDIF]  - >
+
+
+但是，IE10 +开始忽略条件注释。所以，对于这个浏览器，如果页面处于IE6-IE8文档模式，ieBetter.js则会被忽略。所以，也许你可以试试这个方法：
+	if（！document.addEventListener）{
+		// IE6〜IE8
+		document.write（'<script src =“ieBetter.js”> <\ / script>'）;	
+	}	
+
+
+常用的CSS hack方式/使用方式  如果是css
+	<!--[if IE]>
+		<style>
+			.test{color:red;}
+		</style>
+	<![endif]-->
+
+如果是html
+	<!--[if IE 7]>
+		<div id="ie7"></div>
+	<![endif]-->
+
+只在IE下生效
+	<!--[if IE]>
+	这段文字只在IE浏览器显示
+	<![endif]-->
+
+只在IE6下生效
+	<!--[if IE 6]>
+	这段文字只在IE6浏览器显示
+	<![endif]-->
+
+只在IE6以上版本生效
+	<!--[if gte IE 6]>
+	这段文字只在IE6以上(包括)版本IE浏览器显示
+	<![endif]-->
+
+只在IE8上不生效
+	<!--[if ! IE 8]>
+	这段文字在非IE8浏览器显示
+	<![endif]-->
+
+非IE浏览器生效
+	<!--[if !IE]>
+	这段文字只在非IE浏览器显示
+	<![endif]-->
+
+注意了：[1]  不管是什么方法，书写的顺序都是firefox的写在前面，IE7的写在中间，IE6的写在最后面。
+补充：IE6能识别 *，但不能识别 !important,IE7能识别 *，也能识别!important;FF不能识别 *，但能识别!important;下划线”_“,IE6支持下划线，IE7和firefox均不支持下划线[1]  。
+
+
+判断ie的版本
+	window.onload = function(){
+		var userAgent = window.navigator.userAgent.toLowerCase();  
+		$.browser.msie10 = $.browser.msie && /msie 10\.0/i.test(userAgent);
+		$.browser.msie9 = $.browser.msie && /msie 9\.0/i.test(userAgent); 
+		$.browser.msie8 = $.browser.msie && /msie 8\.0/i.test(userAgent);
+		$.browser.msie7 = $.browser.msie && /msie 7\.0/i.test(userAgent);
+		$.browser.msie6 = !$.browser.msie8 && !$.browser.msie7 && $.browser.msie && /msie 6\.0/i.test(userAgent);
+					
+		//  console.log($.browser.msie7);           
+		//  console.log($.type($.browser.msie7));
+		if($.browser.msie7 == 1){
+			alert(123);
+		}else if($.browser.msie8 == 1){
+			alert(456);
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
