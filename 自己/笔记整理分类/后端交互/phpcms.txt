@@ -10,13 +10,18 @@
 如果出现错误，则改成index.html，端口号默认，用户名和密码到目录   cache/sconfigs/database.php   下修改用户名和密码，然后默认。
 
 进入后台网站地址
-http://localhost/phpcms/install_package/index.php?m=admin&c=index&a=login&pc_hash=       本地的
+http://127.0.0.1/phpcms_v9/install_package/index.php?m=admin&c=index&a=login&pc_hash=   phpcms_v9文件目录名字    本地的
+
+数据库账号：root
+密码：      （为空）
+
+超级管理员
+账号：phpcms
+密码：phpcms
 
 
 
-
-
-
+成功连接数据库，但是指定的数据库不存在并且无法自动创建，请先通过其他方式创建数据库
 
 
 
