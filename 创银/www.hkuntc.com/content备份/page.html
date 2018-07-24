@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<link href="{APP_PATH}statics/theme11/css/1.css?v=18.7.6" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+<body>
+{template "content", "header"}
+
+<!--列表页开始-->
+<div class="lbjypz">
+    <div class="lbjypz_s">
+        <div class="lbjypz_lb"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)}</div>
+    </div>
+    <div class="lbjypz_x">
+        <div class="lbjypz_zuo left">
+            <div>{$content}</div>
+        </div>
+    </div>
+</div>
+<!--列表页结束-->
+
+<script type="text/javascript">
+function nTabs(thisObj,Num){
+if(thisObj.className == "active")return;
+var tabObj = thisObj.parentNode.id;
+var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+for(i=0; i <tabList.length; i++)
+{
+  if (i == Num)
+  {
+   thisObj.className = "active"; 
+      document.getElementById(tabObj+"_Content"+i).style.display = "block";
+  }else{
+   tabList[i].className = "normal"; 
+   document.getElementById(tabObj+"_Content"+i).style.display = "none";
+  }
+} 
+}
+</script>
+
+{template "content", "footer"}
+
+
+</body>
+</html>

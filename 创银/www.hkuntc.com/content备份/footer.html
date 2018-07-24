@@ -1,0 +1,61 @@
+<!--商业合作开始-->
+<div class="syhz"></div>
+<!--商业合作结束-->
+<!--版权开始-->
+<div class="banquan">
+    <div class="banquan_nr">
+        <ul>
+            <li>
+                <a>网站首页</a> | 
+                <a target="_blank" href="{$CATEGORYS[5][url]}">开户申请</a> | 
+                <a target="_blank" href="{$CATEGORYS[10][url]}">模拟交易</a> | 
+                <a target="_blank" href="{$CATEGORYS[1][url]}">关于我们</a> | 
+                <a target="_blank" href="{$CATEGORYS[3][url]}">联络我们</a></li>
+            <li class="bqx15">COPYRIGHT @2017 http://www.hkuntc.com/  聯合贸易 版权所有</li>
+            <li class="bqleft">高风险警告：我们的服务包括现货黄金投资，白银投资，国际原油投资，外汇投资开户等，属于保证金交易产品，其中涉及较高的风险，您可能损失全部的初始存款。在决定交易保证金产品之前，您应当综合考虑自己的投资目标、风险承受能力和您对这些产品的交易经验。高杠杆的交易可能赚钱也可能亏损。此外，您应当理解所有有关保证金产品的交易风险，必要时寻求独立的财务意见。根据国际反洗钱法:聯合贸易不为某些地区的公民提供服务,如美国,伊拉克,北朝鲜,伊朗,缅甸,古巴,苏丹和叙利亚。</li>
+        </ul>
+    </div>
+</div>
+<!--版权结束-->
+
+<div class="rightfloat">
+  <span id="rightclose">×</span>
+  <ul class="box" id="rf_online">
+    <li class="o_kf"><a rel="nofollow" target="_blank" href="javascript:;"></a></li>
+    <li class="o_qq"><a rel="nofollow" href="javascript:;" target="_blank"></a></li>
+    <li class="o_zz"><a rel="nofollow" href="javascript:;" target="_blank"></a></li>
+    <li class="o_top"><a rel="nofollow" href="javascript:;"></a></li>
+  </ul>
+</div>
+
+<script src="http://www.hkuntc.com/statics/theme11/js/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#rightclose").click(function () {
+      $(".rightfloat").hide()
+  })
+
+  /* 回到顶部 */
+  $(".o_top").click(function () {
+      $('html,body').stop(true, true).animate({scrollTop: '0px'}, 800);
+  })
+});
+
+// 修改样式
+// function btnWidth(i){
+//   var a = $("#hkIframe").find(".TrClass");
+//   console.log(a[0].css("width"));
+//   a.hide();
+// }
+
+
+
+$(window).scroll(function () {
+    if ($(window).scrollTop() >= 100) {
+        $(".rightfloat .o_top").fadeIn();
+    }
+    else {
+        $(".rightfloat .o_top").fadeOut();
+    }
+})
+</script>

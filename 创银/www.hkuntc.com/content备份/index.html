@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<link href="{APP_PATH}statics/theme11/css/1.css?v1" rel="stylesheet" media="screen" type="text/css">
+<script type="text/javascript" src="{APP_PATH}statics/theme11/js/jquery.min.js"></script>
+<script type="text/javascript" src="{APP_PATH}statics/theme11/js/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+
+<body>
+{template "content", "header"}
+<!--页面banner开始-->
+<div class="bannerBox">
+    <div class="banner">
+        <div class="bd">
+            <ul>
+                <li><a rel="nofollow" href="javascript:;"><img src="{APP_PATH}statics/theme11/images/banner1.jpg" height="600px"/></a></li>
+                <li><a rel="nofollow" href="javascript:;"><img src="{APP_PATH}statics/theme11/images/banner2.jpg" height="600px"/></a></li>
+            </ul>
+        </div>
+        <div class="hd">
+            <ul><li class="on">1</li><li class="">2</li></ul>
+        </div>
+        <div class="btn">
+            <div class="prev"><a href="javascript:void(0)"></a></div>
+            <div class="next"><a href="javascript:void(0)"></a></div>
+        </div>
+    </div>  
+</div>
+<!--页面banner结束-->
+<!-- 显示数据开始 -->
+<div class="grid fn-clear">
+      <div class="main-wrap">
+            <div class="box2 gold">
+                  <div class="hd">
+                        <ul>
+                              <li class="active">金银策略</li>
+                        </ul>
+                  </div>
+                  <div class="bd">
+                        <div class="daypic"><img src="{APP_PATH}statics/theme11/images/day.jpg" width="54" height="49" /></div>
+                        <div class="xian"></div>
+                        <div class="feswitch dates">
+                              <ul>
+                                    <?php
+                          for ( $i=7; $i>0; $i-- ){
+                              echo '<li><span>' . date("m月d日", strtotime("-$i days")) . '</span></li>';
+                          }
+                        ?>
+                                    <li class="hover"><span><?php echo date("m月d日"); ?></span></li>
+                              </ul>
+                        </div>
+                        <div class="feswitchcon">
+                              <?php
+                          for ( $i=7; $i>0; $i-- ){
+                            $nowday = date("Ymd", strtotime("-$i days"));
+                            $where1 = "`title` like '%白盘%' AND FROM_UNIXTIME( `inputtime`, '%Y%m%d' ) = '$nowday' AND `catid`=22";
+                            $where2 = "`title` like '%晚盤%' AND FROM_UNIXTIME( `inputtime`, '%Y%m%d' ) = '$nowday' AND `catid`=22";
+                    ?>
+                              <div class="feswitchs jincon">
+                                    <div class="zaotext"> {pc:content action="lists" catid="22" where="$where1" order="listorder DESC, inputtime DESC" num="5"}
+                                          {loop $data $r}
+                                          {if $n==1}
+                                          <h4><a class="day" href="{$r['url']}" target="_blank">{str_replace('远东国际：', '', $r['title'])}</a></h4>
+                                          <p>{str_cut($r['description'],160)}</p>
+                                          {/if}
+                                          {/loop}
+                                          <ul>
+                                                {loop $data $r}
+                                                {if $n>1}
+                                                <li><a href="{$r['url']}" target="_blank">{str_replace('远东国际：', '', $r['title'])}</a></li>
+                                                {/if}
+                                                {/loop}
+                                          </ul>
+                                          {/pc}
+                                          <div class="more"><a href="{$CATEGORYS[22][url]}">更多</a></div>
+                                    </div>
+                                    <div class="zaotext"> {pc:content action="lists" catid="22" where="$where2" order="listorder DESC, inputtime DESC" num="5"}
+                                          {loop $data $r}
+                                          {if $n==1}
+                                          <h4><a class="night" href="{$r['url']}" target="_blank">{str_replace('远东国际：', '', $r['title'])}</a></h4>
+                                          <p>{str_cut($r['description'],160)}</p>
+                                          {/if}
+                                          {/loop}
+                                          <ul>
+                                                {loop $data $r}
+                                                {if $n>1}
+                                                <li><a href="{$r['url']}" target="_blank">{str_replace('远东国际：', '', $r['title'])}</a></li>
+                                                {/if}
+                                                {/loop}
+                                          </ul>
+                                          {/pc}
+                                          <div class="more"><a href="{$CATEGORYS[22][url]}">更多</a></div>
+                                    </div>
+                              </div>
+                              <?php
+                          }
+                    ?>
+                              <?php
+                            $where1 = "`title` like '%白盘%' AND `catid`=22";
+                            $where2 = "`title` like '%晚盤%' AND `catid`=22";
+                    ?>
+                              <div class="feswitchs jincon" style="display:block">
+                                    <div class="zaotext"> {pc:content action="lists" catid="22" where="$where1" order="listorder DESC, inputtime DESC" num="5"}
+                                          {loop $data $r}
+                                          {if $n==1}
+                                          <h4><a class="day" href="{$r['url']}" target="_blank">{str_replace('远东国际：', '', $r['title'])}</a></h4>
+                                          <p>{str_cut($r['description'],160)}</p>
+                                          {/if}
+                                          {/loop}
+                                          <ul>
+                                                {loop $data $r}
+                                                {if $n>1}
+                                                <li><a href="{$r['url']}" target="_blank">{str_replace('远东国际：', '', $r['title'])}</a></li>
+                                                {/if}
+                                                {/loop}
+                                          </ul>
+                                          {/pc}
+                                          <div class="more"><a href="{$CATEGORYS[22][url]}">更多</a></div>
+                                    </div>
+                                    <div class="zaotext"> {pc:content action="lists" catid="22" where="$where2" order="listorder DESC, inputtime DESC" num="5"}
+                                          {loop $data $r}
+                                          {if $n==1}
+                                          <h4><a class="night" href="{$r['url']}" target="_blank">{str_replace('远东国际：', '', $r['title'])}</a></h4>
+                                          <p>{str_cut($r['description'],160)}</p>
+                                          {/if}
+                                          {/loop}
+                                          <ul>
+                                                {loop $data $r}
+                                                {if $n>1}
+                                                <li><a href="{$r['url']}" target="_blank">{str_replace('远东国际：', '', $r['title'])}</a></li>
+                                                {/if}
+                                                {/loop}
+                                          </ul>
+                                          {/pc}
+                                          <div class="more"><a href="{$CATEGORYS[22][url]}">更多</a></div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <!-- section 1  -->
+                  
+                  <div class="fn-clear" id="jpDis_2" style="display: none;">
+                        <div class="daypic"><img src="{APP_PATH}statics/jy2015/images/day.jpg" width="54" height="49" /></div>
+                        <div class="feswitch dates">
+                              <ul>
+                                    <?php
+                          for ( $i=7; $i>0; $i-- ){
+                              echo '<li><span>' . date("m月d日", strtotime("-$i days")) . '</span></li>';
+                          }
+                        ?>
+                                    <li class="hover"><span><?php echo date("m月d日"); ?></span></li>
+                              </ul>
+                        </div>
+                        <div class="feswitchcon">
+                              <?php
+                          for ( $i=7; $i>0; $i-- ){
+                            $nowday = date("Ymd", strtotime("-$i days"));
+                            $where1 = "`title` like '%白盘%' AND FROM_UNIXTIME( `inputtime`, '%Y%m%d' ) = '$nowday' AND `catid`=140";
+                            $where2 = "`title` like '%晚盤%' AND FROM_UNIXTIME( `inputtime`, '%Y%m%d' ) = '$nowday' AND `catid`=140";
+                    ?>
+                              <div class="feswitchs jincon">
+                                    <div class="zaotext"> {pc:content action="lists" catid="22" where="$where1" order="listorder DESC, inputtime DESC" num="5"}
+                                          {loop $data $r}
+                                          {if $n==1}
+                                          <h4><a class="day" href="{$r['url']}" target="_blank">{$r['title']}</a></h4>
+                                          <p>{str_cut($r['description'],160)}</p>
+                                          {/if}
+                                          {/loop}
+                                          <ul>
+                                                {loop $data $r}
+                                                {if $n>1}
+                                                <li><a href="{$r['url']}" target="_blank">{$r['title']}</a></li>
+                                                {/if}
+                                                {/loop}
+                                          </ul>
+                                          {/pc}
+                                          <div class="more"><a href="{$CATEGORYS[22][url]}">更多</a></div>
+                                    </div>
+                                    <div class="zaotext"> {pc:content action="lists" catid="22" where="$where2" order="listorder DESC, inputtime DESC" num="5"}
+                                          {loop $data $r}
+                                          {if $n==1}
+                                          <h4><a class="night" href="{$r['url']}" target="_blank">{$r['title']}</a></h4>
+                                          <p>{str_cut($r['description'],160)}</p>
+                                          {/if}
+                                          {/loop}
+                                          <ul>
+                                                {loop $data $r}
+                                                {if $n>1}
+                                                <li><a href="{$r['url']}" target="_blank">{$r['title']}</a></li>
+                                                {/if}
+                                                {/loop}
+                                          </ul>
+                                          {/pc}
+                                          <div class="more"><a href="{$CATEGORYS[22][url]}">更多</a></div>
+                                    </div>
+                              </div>
+                              <?php
+                          }
+                    ?>
+                              <?php
+                            $where1 = "`title` like '%白盘%' AND `catid`=140";
+                            $where2 = "`title` like '%晚盤%' AND `catid`=140";
+                    ?>
+                              <div class="feswitchs jincon" style="display:block">
+                                    <div class="zaotext"> {pc:content action="lists" catid="22" where="$where1" order="listorder DESC, inputtime DESC" num="5"}
+                                          {loop $data $r}
+                                          {if $n==1}
+                                          <h4><a class="day" href="{$r['url']}" target="_blank">{$r['title']}</a></h4>
+                                          <p>{str_cut($r['description'],160)}</p>
+                                          {/if}
+                                          {/loop}
+                                          <ul>
+                                                {loop $data $r}
+                                                {if $n>1}
+                                                <li><a href="{$r['url']}" target="_blank">{$r['title']}</a></li>
+                                                {/if}
+                                                {/loop}
+                                          </ul>
+                                          {/pc}
+                                          <div class="more"><a href="{$CATEGORYS[22][url]}">更多</a></div>
+                                    </div>
+                                    <div class="zaotext"> {pc:content action="lists" catid="22" where="$where2" order="listorder DESC, inputtime DESC" num="5"}
+                                          {loop $data $r}
+                                          {if $n==1}
+                                          <h4><a class="night" href="{$r['url']}" target="_blank">{$r['title']}</a></h4>
+                                          <p>{str_cut($r['description'],160)}</p>
+                                          {/if}
+                                          {/loop}
+                                          <ul>
+                                                {loop $data $r}
+                                                {if $n>1}
+                                                <li><a href="{$r['url']}" target="_blank">{$r['title']}</a></li>
+                                                {/if}
+                                                {/loop}
+                                          </ul>
+                                          {/pc}
+                                          <div class="more"><a href="{$CATEGORYS[22][url]}">更多</a></div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <!-- section 2  -->
+                  
+                  <div class="fn-clear" id="jpDis_3" style="display: none;">
+                        <div class="daypic"><img src="{APP_PATH}statics/jy2015/images/day.jpg" width="54" height="49" /></div>
+                        <div class="feswitch dates">
+                              <ul>
+                                    <?php
+                          for ( $i=7; $i>0; $i-- ){
+                              echo '<li><span>' . date("m月d日", strtotime("-$i days")) . '</span></li>';
+                          }
+                        ?>
+                                    <li class="hover"><span><?php echo date("m月d日"); ?></span></li>
+                              </ul>
+                        </div>
+                        <div class="feswitchcon">
+                              <?php
+                          for ( $i=7; $i>0; $i-- ){
+                            $nowday = date("Ymd", strtotime("-$i days"));
+                            $where1 = "`title` like '%白盘%' AND FROM_UNIXTIME( `inputtime`, '%Y%m%d' ) = '$nowday' AND `catid`=22";
+                            $where2 = "`title` like '%晚盤%' AND FROM_UNIXTIME( `inputtime`, '%Y%m%d' ) = '$nowday' AND `catid`=22";
+                    ?>
+                              <div class="feswitchs jincon">
+                                    <div class="zaotext"> {pc:content action="lists" catid="22" where="$where1" order="listorder DESC, inputtime DESC" num="5"}
+                                          {loop $data $r}
+                                          {if $n==1}
+                                          <h4><a class="day" href="{$r['url']}" target="_blank">{$r['title']}</a></h4>
+                                          <p>{str_cut($r['description'],160)}</p>
+                                          {/if}
+                                          {/loop}
+                                          <ul>
+                                                {loop $data $r}
+                                                {if $n>1}
+                                                <li><a href="{$r['url']}" target="_blank">{$r['title']}</a></li>
+                                                {/if}
+                                                {/loop}
+                                          </ul>
+                                          {/pc}
+                                          <div class="more"><a href="{$CATEGORYS[22][url]}">更多</a></div>
+                                    </div>
+                                    <div class="zaotext"> {pc:content action="lists" catid="22" where="$where2" order="listorder DESC, inputtime DESC" num="5"}
+                                          {loop $data $r}
+                                          {if $n==1}
+                                          <h4><a class="night" href="{$r['url']}" target="_blank">{$r['title']}</a></h4>
+                                          <p>{str_cut($r['description'],160)}</p>
+                                          {/if}
+                                          {/loop}
+                                          <ul>
+                                                {loop $data $r}
+                                                {if $n>1}
+                                                <li><a href="{$r['url']}" target="_blank">{$r['title']}</a></li>
+                                                {/if}
+                                                {/loop}
+                                          </ul>
+                                          {/pc}
+                                          <div class="more"><a href="{$CATEGORYS[22][url]}">更多</a></div>
+                                    </div>
+                              </div>
+                              <?php
+                          }
+                    ?>
+                              <?php
+                            $where1 = "`title` like '%白盘%' AND `catid`=22";
+                            $where2 = "`title` like '%晚盤%' AND `catid`=22";
+                    ?>
+                              <div class="feswitchs jincon" style="display:block">
+                                    <div class="zaotext"> {pc:content action="lists" catid="22" where="$where1" order="listorder DESC, inputtime DESC" num="5"}
+                                          {loop $data $r}
+                                          {if $n==1}
+                                          <h4><a class="day" href="{$r['url']}" target="_blank">{$r['title']}</a></h4>
+                                          <p>{str_cut($r['description'],160)}</p>
+                                          {/if}
+                                          {/loop}
+                                          <ul>
+                                                {loop $data $r}
+                                                {if $n>1}
+                                                <li><a href="{$r['url']}" target="_blank">{$r['title']}</a></li>
+                                                {/if}
+                                                {/loop}
+                                          </ul>
+                                          {/pc}
+                                          <div class="more"><a href="{$CATEGORYS[22][url]}">更多</a></div>
+                                    </div>
+                                    <div class="zaotext"> {pc:content action="lists" catid="22" where="$where2" order="listorder DESC, inputtime DESC" num="5"}
+                                          {loop $data $r}
+                                          {if $n==1}
+                                          <h4><a class="night" href="{$r['url']}" target="_blank">{$r['title']}</a></h4>
+                                          <p>{str_cut($r['description'],160)}</p>
+                                          {/if}
+                                          {/loop}
+                                          <ul>
+                                                {loop $data $r}
+                                                {if $n>1}
+                                                <li><a href="{$r['url']}" target="_blank">{$r['title']}</a></li>
+                                                {/if}
+                                                {/loop}
+                                          </ul>
+                                          {/pc}
+                                          <div class="more"><a href="{$CATEGORYS[22][url]}">更多</a></div>
+                                    </div>
+                              </div>
+                        </div>
+                        <!-- section 3  --> 
+                        
+                  </div>
+                  <div class="box2 gold">
+                        <div class="hd">
+                              <ul>
+                                    <li class="active">经济数据</li>
+                              </ul>
+                        </div>
+                        <div class="bd">
+                              <iframe id="iframe"  height="260px"  width="100%"  frameborder="0" scrolling="auto" src="http://www.jin10.com/example/jin10.com.html"></iframe>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <div class="grid-right">
+          <a href="javascript: void" target="_blank">
+                <img src="{APP_PATH}statics/theme11/images/rkf.jpg" width="267" height="289"  />
+           </a>
+            <div class="ibox jy-reg">
+                  <div class="hd">
+                        <ul>
+                              <li class="active">行情报价</li>
+                        </ul>
+                  </div>
+                  <div class="bd">
+                        <iframe width="100%" height="220" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0" src="http://winfuns.iexchange.bz/iExchange/QuotationReceiver/GEGMPrice.aspx?Language=CHS"></iframe>
+                  </div>
+            </div>
+      </div>
+</div>
+</div>
+
+<!-- 显示数据结束 -->
+<!--软件下载开始-->
+<div class="rjxz">
+    <div class="rjxz_t">
+        <div id="myTab1_Content0">
+            <a rel="nofollow" href="http://rst.95ysmshili.com/RSV4Setup.exe"><div style="background:url({APP_PATH}statics/theme11/images/pic01.jpg) center no-repeat; width:100%px; height:398px;"></div></a>
+        </div>
+        <div id="myTab1_Content1" class="none">
+            <a rel="nofollow" href=""><div style="background:url({APP_PATH}statics/theme11/images/pic02.jpg) center no-repeat; width:100%px; height:398px;"></div></a>
+        </div>
+        <div id="myTab1_Content2" class="none">
+            <a rel="nofollow" href="" target="_blank"><div style="background:url({APP_PATH}statics/theme11/images/pic03.jpg) center no-repeat; width:100%px; height:398px;"></div></a>
+        </div>
+        <div id="myTab1_Content3" class="none">
+            <a rel="nofollow" href="" target="_blank"><div style="background:url({APP_PATH}statics/theme11/images/pic04.jpg) center no-repeat; width:100%px; height:398px;"></div></a>
+        </div>
+    </div>
+    <div class="rjxz_hd">
+        <div class="rjxz_hd1">
+            <ul id="myTab1">
+                <li class="active" onMouseOver="nTabs(this,0);"><span>PC版下载</span></li>
+                <li class="normal" onMouseOver="nTabs(this,1);"><span>Android版下载</span></li>
+                <li class="normal" onMouseOver="nTabs(this,2);"><span>IOS版下载</span></li>
+                <li class="normal" onMouseOver="nTabs(this,3);"><span>iPad版下载</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--软件下载结束-->
+
+<!--开设账户开始-->
+<div class="kszh">
+    <div class="kszh_tw">
+        <div class="kszh_tws">准备好开始了吗？</div>
+        <div class="kszh_twx">
+            <div class="kszh_twxz kaihu_zs left">
+                <a href="{$CATEGORYS[5][url]}" target="_blank" class="right">开设真实账户</a>
+            </div>
+            <div class="kszh_twxy kaihu_mn right"><a href="{$CATEGORYS[10][url]}" target="_blank" class="left">开设模拟账户</a></div>
+        </div>
+    </div>
+</div>
+<!--开设账户结束-->
+<!--友情链接-->
+<!-- <div class="yqlj">
+    <div class="yqlj_bt"><strong>交换友链:</strong></div>
+    <div class="yqlj_nr">
+        <ul>
+                        <li><a href="http://www.hktmc.com" target="_blank" >国际商品贸易</a></li>
+                        
+                    </ul>
+    </div>
+</div> -->
+<!--友情链接结束-->
+
+<script type="text/javascript">
+    $(".tempwrap").slide({
+        titCell:".hd li",
+        mainCell:".bd ul",
+        autoPlay:true,
+        effect:"fold",
+        trigger:"click",
+        prevCell:".prev",
+        nextCell:".next",
+        delayTime:200
+    });
+    </script>
+
+<script type="text/javascript">
+function nTabs(thisObj,Num){
+if(thisObj.className == "active")return;
+var tabObj = thisObj.parentNode.id;
+var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+for(i=0; i <tabList.length; i++)
+{
+  if (i == Num)
+  {
+   thisObj.className = "active"; 
+      document.getElementById(tabObj+"_Content"+i).style.display = "block";
+  }else{
+   tabList[i].className = "normal"; 
+   document.getElementById(tabObj+"_Content"+i).style.display = "none";
+  }
+} 
+}
+</script>
+{template "content", "footer"}
+<script type="text/javascript">
+jQuery(".banner").slide({mainCell: ".bd ul",effect: "fold",autoPlay: true,interTime: 3000,delayTime: 500});
+
+				// 数据
+			$(document).ready(function(){
+				$(".nav_box ul li").hover(function(){
+						$(this).addClass('hover');
+						$(this).find("ul:first").show();
+					},function(){
+						$(this).removeClass('hover');
+						$(this).find("ul:first").hide();
+					})
+
+					$(".feswitch li").click(function() {
+				        var cont = $(".feswitch li").index(this);
+				        $(this).addClass("hover").siblings().removeClass("hover");
+				        $(".feswitchcon .feswitchs").hide().eq(cont).show();
+				    })
+			});
+	
+</script>
+
+
+</body>
+</html>

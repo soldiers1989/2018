@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<link href="{APP_PATH}statics/theme11/css/1.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+<body>
+{template "content", "header"}
+
+<!--列表页开始-->
+<div class="lbjypz">
+    <div class="lbjypz_s">
+        <div class="lbjypz_lb"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)}</div>
+    </div>
+    <div class="lbjypz_x">
+        <div class="neiry_zuo left">
+            <div class="neiry_bt"><h1>{$title}</h1></div>
+            <div class="neiry_ly"><span class="left">&nbsp;&nbsp; {date('Y-m-d',strtotime($inputtime))}    &nbsp;<font>来源：</font> {$copyfrom} &nbsp;&nbsp;点击：<span id="hits"></span> </span> </div>         
+            <div class="neiry_zy"><span class="neiryzy_bt">摘要</span>{$description}</div>
+            <div class="neiry_nr">
+                {$content}
+
+                <!-- <p class="f14">
+                <strong>上一篇：</strong><a href="{$previous_page[url]}">{$previous_page[title]}</a><br />
+                <strong>下一篇：</strong><a href="{$next_page[url]}">{$next_page[title]}</a>
+                </p> -->
+            </div>
+        </div>
+        {template "content", "right"}
+    </div>
+</div>
+<!--列表页结束-->
+
+{template "content", "footer"}
+
+<script language="JavaScript" src="{APP_PATH}api.php?op=count&id={$id}&modelid={$modelid}"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+        <div class="lbjypz_you right">
+            <div class="lbjypz_you1">
+                <div class="lbjypz_y1bt">开户通道</div>
+                <div class="lbjypz_y1tw">
+                                        <ul>
+                        <li><a href="{$CATEGORYS[5][url]}"><img src="{APP_PATH}statics/theme11/images/lb3.png" width="50" height="42" /><p>真实开户</p></a></li>
+                        <li><a href="{$CATEGORYS[10][url]}"><img src="{APP_PATH}statics/theme11/images/lb4.png"  width="50" height="42"/><p>模拟开户</p></a></li>
+                        <!-- <li><a rel="nofollow" href="http://my.uskfx.com/public/login" target="_blank"><img src="{APP_PATH}statics/theme11/images/lb5.png" width="50" height="42" /><p>交易登陆</p></a></li>
+                        <li><a href="/danye/whhd.html" target="_blank"><img src="{APP_PATH}statics/theme11/images/lb6.png" width="50" height="42" /><p>最新优惠</p></a></li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="lbjypz_you2">
+                <div class="lbjypz_y2bt">外汇<font>学院</font></div>
+                <div class="lbjypz_y2nr">
+                    <ul>
+                        {pc:content action="lists" catid="7" num="10" order="id DESC"}
+                            {loop $data $r}
+                                <li><a href="{$r[url]}" target="_blank"{title_style($r[style])}>{$r[title]}</a></li>
+                            {/loop}
+                        {/pc}
+                    </ul>
+                </div>
+            </div>
+        </div>

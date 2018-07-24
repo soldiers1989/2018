@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<link href="{APP_PATH}statics/theme11/css/1.css?v=18.7.6" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+<body>
+{template "content", "header"}
+
+<!--列表页开始-->
+<div class="lbjypz">
+    <div class="lbjypz_s">
+        <div class="lbjypz_lb"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)}</div>
+    </div>
+    <div class="lbjypz_x">
+        <div class="lbjypz_zuo left">
+            {pc:content action="lists" catid="$catid" num="5" order="id DESC" page="$page"}
+            <div class="lbwhxy_nr">
+                <ul>
+                {loop $data $r}
+                    <li><a href="{$r[url]}" target="_blank"{title_style($r[style])}>{$r[title]}</a>
+                    <p>{date('Y-m',$r[inputtime])}<span>{date('d',$r[inputtime])}</span></p>
+                    </li>
+                {/loop}
+                </ul>
+            </div>
+            <div class="lbwhxy_yc">{$pages}</div>
+            {/pc}
+        </div>
+    </div>
+</div>
+<!--列表页结束-->
+
+{template "content", "footer"}
+
+
+</body>
+</html>
