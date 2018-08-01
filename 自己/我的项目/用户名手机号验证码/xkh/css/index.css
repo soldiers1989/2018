@@ -1,0 +1,130 @@
+html{ height: 100%; width: 100%;font-size: 0px; outline: 0; -webkit-text-size-adjust:none;}
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0;}
+img{border:0;vertical-align:middle}
+ul{list-style-type:none;}
+a{color: inherit;text-decoration:none;}
+
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 85px!important;
+  }
+}
+body{
+	width: 100%;
+}
+
+.content{
+	width: 6.4rem;margin: 0 auto;
+}
+.cont1{
+	background: url(../images/cont1.jpg) no-repeat 0 0/100% 100%;
+	width: 6.4rem;
+	height: 3.38rem;
+	overflow: hidden;
+}
+.kaihu,.zixun{
+	display: block;
+	float: left;
+	width: 1.9rem;
+	height: 0.48rem;
+}
+.kaihu{
+	margin: 2.72rem 0 0 1.9rem;
+}
+.zixun{
+	margin: 2.72rem 0 0 0.35rem;
+}
+.cont2{
+	background: url(../images/cont2.jpg) no-repeat 0 0/100% 100%;
+	width: 6.4rem;
+	height: 4.43rem;
+}
+.cont3{
+	background: url(../images/cont3.png) no-repeat 0 0/100% 100%;
+	width: 6.4rem;
+	height: 12.8rem;
+	margin: 0.23rem 0 0.35rem;
+}
+.jiaqun{
+	display: block;
+	width: 3.58rem;
+	height: 0.6rem;
+	margin: 0.23rem auto 0;
+}
+.cont4{
+	background: #fdf7e8 url(../images/cont4.jpg) no-repeat 0 0/100% 3.77rem;
+	width: 6.4rem;
+	height: 7.1rem;
+	overflow: hidden;
+}
+.form1{
+	margin: 3.77rem auto 0;
+	width: 5.8rem;
+	font-size: 0.18rem;
+	color: #353e48;
+	overflow: hidden;
+}
+.form1 input{
+	border: 0;
+	background: #858888;
+	outline:none;
+	width: 4.26rem;
+	height: 0.32rem;
+	border-radius: 0.08rem;
+	color: #FFF;
+	font-size: 0.18rem;
+	padding: 0 0.1rem;
+	margin-bottom: 0.17rem;
+}
+.name{
+	margin-top: 0.22rem;
+}
+.sendcode{
+	overflow: hidden;
+	position: relative;
+}
+.codet{
+	float: left;
+	font-size: 0.18rem;
+	color: #353e48;
+	width: 65px;
+	height: 0.32rem;
+	line-height: 0.32rem;
+}
+.sendcode input{
+	width: 3.32rem;
+	float: left;
+	margin-bottom: 0;
+}
+.sendcode img{
+	float: left;
+	display: block;
+	width: 0.25rem;
+	height: 0.22rem;
+	margin: 0.08rem 0 0 0.04rem;
+}
+.code{
+	float: left;
+	width: 0.62rem;
+	height: 0.26rem;
+	margin: 0.04rem 0 0 0.05rem;
+	background-color: #e78d2d;
+	color: #fdf7e8;
+	font-size: 0.18rem;
+	text-align: center;
+	line-height: 0.26rem;
+}
+.form1 .tijiao{
+	display: block;
+	width: 3.59rem;
+	height: 0.61rem;
+	margin: 0 auto;
+	cursor: pointer;
+}
+.cont5{
+	background: url(../images/cont5.jpg) no-repeat center 0/5.79rem 7.41rem;
+	width: 6.4rem;
+	height: 7.41rem;
+	margin-top: 0.52rem;
+	padding-bottom: 2.78rem;
+}

@@ -1,0 +1,177 @@
+<!-- 个人中心 -->
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>永罄</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- <meta name="viewport" content="width=640,initial-scale=0.2,minimum-scale=0.1,maximum-scale=1.0,user-scalable=no" /> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">    
+<script src="/js/jquery-3.0.0.min.js"></script>
+ <script src="/js/laydate/layer-v3.0.3/layer/layer.js"></script>
+
+<style>
+*{margin: 0;padding: 0;}
+body{font-family: "微软雅黑";width: 100%;height: 100%}
+html{background: #e6e6e6;height: 100%}
+li{list-style: none;}
+a{text-decoration: none;}
+input{outline: none}
+.layui-layer-hui{background-color: rgba(206,38,29,.8)!important}
+
+@media (min-width: 360px){
+body{background: #efeff4;}
+.pcBg{width: 100%;margin:0 auto;background: #efeff4;}
+}
+@media (min-width: 768px){
+body{background: #efeff4;}
+.pcBg{width: 100%;margin:0 auto;background: #efeff4;}
+}
+@media (min-width: 1200px){
+body{background: #fff;}
+.pcBg{width: 640px;height:100%;margin:0 auto;background: #efeff4;}
+}
+
+.headering{height: 45px;line-height: 45px;color: #000;font-size: 16px;background: #fff;margin-bottom: 20px;width: 100%}
+.headering a{float: left;width: 15%;text-align: center;}
+.headering span{float: left;width: 80%;text-indent: calc( ( 80% / 2 ) - 14% )}
+.headering a img{width: 23px;vertical-align: middle;}
+.homeBuyBox{margin-bottom: 85px;width: 100%;background: #fff}
+.homeBuyBox .buyType li,.homeBuyBox .moneyBox li,.buyBanl{height: 45px;line-height: 45px;font-size: 16px;color: #333;border-bottom: 1px solid #e6e6e6;padding: 0 15px}
+.homeBuyBox .buyType li label{width: 35%;display: inline-block;}
+.homeBuyBox .buyType li span{width: 53%;display: inline-block;}
+.homeBuyBox .buyType li input{width: 5%;display: inline-block;}
+.homeBuyBox .moneyBox,.buyBanl{border-top: 20px solid #e6e6e6;}
+.homeBuyBox .moneyBox li label,.buyBanl label{width: 40%;display: inline-block;}
+.homeBuyBox .moneyBox li input,.buyBanl font{width: 58%;display: inline-block;background:none;border:none;text-align: right;font-size: 15px}
+
+
+/*交易&我*/
+.footerList{height: 65px;line-height: 65px;width: 100%;position: fixed;bottom: 0}
+.footerList a{float: left;display: inline-block;width: 50%;text-align: center;color: #ececec;font-size: 1.1rem}
+.footerList a img{width: 33px;vertical-align: middle;margin-right: 5px}
+.footerList a:first-child{background: #343434}
+.footerList a:last-child{background: #de3b3b}
+.footerList a input{width: 100%;height: 65px;line-height: 65px;background: none;border:none;font-size: 1.1rem;color: #ececec}
+
+
+</style>
+</head>
+<body>
+<div class="pcBg">
+    
+<div class="headering"><a href="javascript:history.go(-1)"><img src="/img/go1.png"></a><span>{$data.stock_name}</span></div>
+
+<div class="homeBuyBox">
+<ul class="buyType">
+	<li>
+		<label>期限:<font color="#de3b3b">2周</font></label>
+		<span>权利金比例:<font color="#de3b3b">6.32%</font></span>
+		<input type="radio" name="type" scale="6.32" value="2" checked />
+	</li>
+	<li>
+		<label>期限:<font color="#de3b3b">4周</font></label>
+		<span>权利金比例:<font color="#de3b3b">8.93%</font></span>
+		<input type="radio" name="type" scale="8.93"  value="4" />
+	</li>
+	<li>
+		<label>期限:<font color="#de3b3b">6周</font></label>
+		<span>权利金比例:<font color="#de3b3b">10.97%</font></span>
+		<input type="radio" name="type" scale="10.97" value="6" />
+	</li>
+	<li>
+		<label>期限:<font color="#de3b3b">8周</font></label>
+		<span>权利金比例:<font color="#de3b3b">12.70%</font></span>
+		<input type="radio" name="type" scale="12.70" value="8" />
+	</li>
+	<li>
+		<label>期限:<font color="#de3b3b">10周</font></label>
+		<span>权利金比例:<font color="#de3b3b">14.16%</font></span>
+		<input type="radio" name="type" scale="14.16" value="10" />
+	</li>
+	<li>
+		<label>期限:<font color="#de3b3b">12周</font></label>
+		<span>权利金比例:<font color="#de3b3b">15.52%</font></span>
+		<input type="radio" name="type" scale="15.52" value="12" />
+	</li>
+</ul>
+
+<ul class="moneyBox">
+	<li>
+		<label>认购权利金</label>
+		<input type="number" name="money" id="money" onkeyup="money(this)" placeholder="请输入金额"/>
+	</li>
+	<li>
+		<label>名义本金</label>
+		<input type="number" name="prin" class="prin" placeholder="0元" disabled readonly />		
+	</li>
+</ul>
+
+<div class="buyBanl">
+	<label>余额</label>
+	<font color="#de3b3b">{$data.balance}</font>
+</div>
+
+</div>
+
+<div class="footerList">
+    <a href="javascript:;">名义本金：<font color="#de3b3b" class="prin">0元</font></a>
+    <a href="javascript:;"><input type="button" value="开始认购" id="btnBuy"></a>
+</div>
+
+
+<script>
+
+$('#btnBuy').click(function(){
+	var mon = $('#money').val();//认购权利金
+	var scale = $('input[name="type"]:checked').val();//选择购买期限
+	var prin = $('.prin').val();//名义本金
+
+	if (mon == '' || mon <= 0) {
+		_alert('请输入正确的金额');
+		return false;
+	}else{
+		alert(mon);
+		alert(scale);
+		alert(prin);
+		return false;
+		$.ajax({
+			type: "post",
+			data:{mon:mon,scale:scale,prin:prin},
+			dataType:"JSON",
+			url: "",
+			success: function(res){
+				_alert(res);
+				location.reload();
+			}
+
+		});
+
+	}
+})
+
+
+
+$('input[name="type"]').click(function(){
+	var scale = $('input[name="type"]:checked').attr('scale');
+	var buyMoney = $('#money').val();
+	$('.prin').val(parseInt(buyMoney*scale));
+	$('.prin').text(parseInt(buyMoney*scale));
+})
+
+function money(obj){
+	var scale = $('input[name="type"]:checked').attr('scale');
+	$('.prin').val(parseInt(obj.value*scale));
+	$('.prin').text(parseInt(obj.value*scale));
+}
+
+ function _alert(content){
+          layer.msg(content,{
+                anim:0,
+                time:1500,
+          });
+ }
+
+</script>
+
+</body>
+</html>

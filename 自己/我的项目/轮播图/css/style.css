@@ -1,0 +1,50 @@
+html{ height: 100%; width: 100%;font-size: 0px;}
+body,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0;}
+img{border:0;vertical-align:middle}
+input,select,textarea,button {vertical-align:middle}
+button {border:0 none;background-color:transparent;cursor:pointer}
+table {width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed;}
+dl,ul,ol,menu,li{list-style-type:none;}
+a{color: inherit;text-decoration:none;}
+
+.content{
+	width: 100%;max-width: 1920px;
+	margin: 0 auto;
+}
+.slideshow{
+	position: relative;
+	width: 800px;
+	height: 450px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.ban_img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	width: 800px;
+	height: 450px;
+}
+.show{
+	display: block;
+}
+.ban_control{
+	position: absolute;
+	bottom: 30px;
+	width: 100%;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+}
+.ban_control li{
+	width: 30px;
+	height: 30px;
+	margin: 0 10px;
+	border-radius: 15px;
+	background-color: #ffffff;
+	cursor: pointer;
+}
+.ban_control .ac{
+	background-color: red;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    <title></title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+	    <meta name="keywords" content="" />
+	    <meta name="description" content="" />
+	    <link rel="stylesheet" type="text/css" href="./swiper-3.4.2.min.css"/>
+		<style type="text/css">
+			html{ height: 100%; width: 100%;font-size: 0px; outline: 0; -webkit-text-size-adjust:none;}
+			body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0;}
+			body{font-family:Microsoft YaHei,Tahoma,simsun;}
+			img{border:0;vertical-align:middle}
+			ul{list-style-type:none;}
+			a{color: inherit;text-decoration:none;}
+			/*common*/
+						
+			/*header*/
+			.head-nav{width: 100%;overflow: hidden;position: absolute;top: 0;left: 0;}
+			.head-nav .head-title{width: 100%;height: 0.96rem;line-height: 0.96rem;font-size: 0.32rem;color: #FFFFFF;text-align: center;background-color: #018bff;position: relative;}
+			.head-nav .head-title .sousuo{display: block;width: 0.35rem;height: 0.36rem;position: absolute;left: 0.4rem;top: 0.31rem;}
+			.head-nav .nav{position: relative;height: 100%;}
+			.swiper-container233{width: 100%;height: 100%;border-bottom: 1px solid #e3e3e3;}
+			.swiper-container233 .swiper-slide {width:auto!important;margin:0!important;height: 0.8rem;line-height:0.8rem;font-size: 0.32rem;color: #757575;padding: 0 0.27rem;}
+			.swiper-container233 .ac{color: #018bff;}
+			.swiper-container233 .chukou{width: 0.87rem;height: 0.8rem;position: absolute;right: 0;top: 0;background:#FFFFFF url(./images/rukou.jpg) no-repeat 0 center/0.57rem 0.45rem;z-index: 9;}
+			
+			/*固定浮动点击发表*/
+			.fixed-fabiao{width: 0.64rem;height: 0.64rem;position: fixed;bottom: 2.44rem;right: 0.29rem;}
+			/*footer*/
+			.bottom{width: 100%;height:1.07rem;overflow: hidden;background-color: #f7f7f7;position: fixed;bottom: 0;left: 0;border-top: 1px solid #e3e3e3;}
+			.bottom .d1,.bottom .d2,.bottom .d3,.bottom .d4,.bottom .d5{width: 20%;background: url(./images/index.png) no-repeat center 0.12rem/0.53rem 0.48rem;padding-top: 0.7rem;text-align: center;font-size: 0.22rem;
+			color: #999999;float: left;display: block;}
+			.bottom .d2{background: url(./images/news.png) no-repeat center 0.12rem/0.49rem 0.48rem;}
+			.bottom .d3{background: url(./images/shangquan.png) no-repeat center 0.12rem/0.48rem 0.48rem;}
+			.bottom .d4{background: url(./images/qiatan.png) no-repeat center 0.13rem/0.54rem 0.47rem;}
+			.bottom .d5{background: url(./images/user.png) no-repeat center 0.12rem/0.48rem 0.48rem;}
+		</style>			
+	</head>
+	<body>
+		<div class="head-nav">
+			<div class="head-title"><img class="sousuo" src="images/sousuo.png"/>商圈</div>
+			<div class="nav">
+				<div class="swiper-container233">
+			        <div class="swiper-wrapper">
+			            <div class="swiper-slide ac">最新</div>
+			            <div class="swiper-slide">代理圈</div>
+			            <div class="swiper-slide">加盟圈</div>
+			            <div class="swiper-slide">创业圈</div>
+			            <div class="swiper-slide">品牌</div>
+			            <div class="swiper-slide">代理圈</div>
+			            <div class="swiper-slide">加盟圈</div>
+			            <div class="swiper-slide">创业圈</div>
+			            <div class="swiper-slide">品牌</div>
+			            <div class="swiper-slide"><!--必须的--></div>
+			        </div>
+			        <div class="chukou"></div>
+			   </div>		
+			</div>				
+		</div>
+		
+		
+		<img class="fixed-fabiao" src="images/shuxie.png"/>
+		<div class="bottom">
+			<a href="" class="d1">首页</a>
+			<a href="" class="d2">资讯</a>
+			<a href="" class="d3">商圈</a>
+			<a href="" class="d4">洽谈</a>
+			<a href="" class="d5">我的</a>
+		</div>
+	</body>
+</html>
+<script src="./jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="./rem.js" type="text/javascript" charset="utf-8"></script>
+<script src="./swiper-3.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var swiper = new Swiper('.swiper-container233', {
+	    slidesPerView: 5,
+	});
+</script>

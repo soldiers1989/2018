@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<style type="text/css">
+			/*轮播图*/
+			.slideBox{ width:100%; overflow:hidden; position:relative;}
+			.slideBox .hd{ height:15px; overflow:hidden; position:absolute; right:-4px; bottom:12px; z-index:1;width: 100%;}
+			.slideBox .hd ul{ overflow:hidden;width: 52px; margin: 0 auto;  }
+			.slideBox .hd ul li{ float:left;margin-right:15px;width:11px;height:11px;background:#b5b5b5;cursor:pointer;border-radius: 5px; }
+			.slideBox .hd ul li.on{ background:#f41925;}
+			.slideBox .bd{ position:relative; height:100%; z-index:0;}
+			.slideBox .bd li{ zoom:1; vertical-align:middle;}
+			.slideBox .bd img{ width:100%; display:block;}
+		</style>
+		<div id="slideBox" class="slideBox">
+			<div class="hd">
+				<ul><li></li><li></li></ul>
+			</div>
+			<div class="bd">
+				<ul>
+					<li><img src="images/banner.jpg" /></li>
+					<li><img src="images/banner.jpg" /></li>
+				</ul>
+			</div>
+		</div>
+		<script src="jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			jQuery(".slideBox").slide({mainCell:".bd ul",effect:"leftLoop",autoPlay:true});
+		</script>
+		
+	</body>
+</html>

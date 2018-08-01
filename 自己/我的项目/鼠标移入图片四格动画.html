@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				background-color: #c93ddb;
+			}
+			.box{
+				width: 500px;
+				height: 284px;
+				margin: 300px auto;
+				position: relative;
+				overflow: hidden;
+				border: 5px solid rgba(255,255,255,0.5);
+				border-radius: 8px;
+			}
+			.box ul{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			.box ul li{
+				list-style: none;
+				float: left;
+				width: 50%;
+				height: 50%;
+				overflow: hidden;
+				position: relative;
+				
+			}
+			.box li img{
+				display: block;
+				position: absolute;
+				transition: .5s;
+			}
+			.box li:nth-child(1) img{
+				top: 0;
+				left: 0;
+			}
+			.box li:nth-child(2) img{
+				top: 0;
+				left: -250px;
+			}
+			.box li:nth-child(3) img{
+				top: -142px;
+				left: 0;
+			}
+			.box li:nth-child(4) img{
+				top: -142px;
+				left: -250px;
+			}
+			.box span{
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: block;
+				width: 100%;
+				height: 100%;
+				background-image: url(images/gift5.png);
+				-ms-transform: scale(1.5);
+				transform: scale(1.5);
+				transition: .5s;
+			}
+			.box:hover span{
+				-ms-transform: scale(1);
+				transform: scale(1);
+			}
+			.box:hover li:nth-child(1) img{
+				top: 142px;
+			}
+			.box:hover li:nth-child(2) img{
+				left: -499px;
+			}
+			.box:hover li:nth-child(3) img{
+				left: 250px;
+			}
+			.box:hover li:nth-child(4) img{
+				top: -284px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		
+		<div class="box">
+			<span></span>
+			<ul>
+				<li>
+					<img src="images/gift5_b.png"/>
+				</li>
+				<li>
+					<img src="images/gift5_b.png"/>
+				</li>
+				<li>
+					<img src="images/gift5_b.png"/>
+				</li>
+				<li>
+					<img src="images/gift5_b.png"/>
+				</li>
+			</ul>
+			
+		</div>
+		
+		
+	</body>
+</html>

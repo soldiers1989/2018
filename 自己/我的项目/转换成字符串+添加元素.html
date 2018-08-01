@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.jy-head{position: relative;background-color: #172c3c;width: 100%;height: 70px;margin: 0 auto;}
+.jy-head .guanwang{position: absolute;top: 0;left: 50%;margin-left: -513px;}
+.jy-head .mgrz{position: absolute;top: 0;left: 50%;margin-left: -380px;}
+.jy-head .kefu-phone{position: absolute;top: 0;right: 50%;margin-right: -420px;}
+			img{
+				border: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<!--<div class="head">
+			<a class="guanwang" target="_blank" href="http://www.hj9999.hk/"><img src="images/head1.jpg"/></a>
+			<a class="mgrz" target="_blank" href="https://www.nfa.futures.org/basicnet/Details.aspx?entityid=PTyvV0jyOEo%3d"><img src="images/head2.jpg"/></a>
+			<img class="kefu-phone" src="images/head3.jpg"/>
+		</div> -->
+		
+		
+		<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+		var _jyheader1 = ['<div class="jy-head">',
+					'<a class="guanwang" target="_blank" href="http://www.hj9999.hk/"><img src="http://www.hj9999.hk/statics/version03/images/common/jy_head1.jpg"/></a>',
+					'<a class="mgrz" target="_blank" href="https://www.nfa.futures.org/basicnet/Details.aspx?entityid=PTyvV0jyOEo%3d"><img src="http://www.hj9999.hk/statics/version03/images/common/jy_head2.jpg"/></a>',
+					'<img class="kefu-phone" src="http://www.hj9999.hk/statics/version03/images/common/jy_head3.jpg"/>',
+				'</div>'].join("");
+			
+			// console.log(_jyheader1);
+			
+			var body = $("body");
+			body.prepend(_jyheader1);
+
+		var _jyfooter = ['<div class="jy-footer">',
+							'<div class="footer_div"><p>',
+								'<a href="http://www.hj9999.hk/gyjy/" target="_blank">金裕集团</a> | <a href="http://www.hj9999.hk/mzsm/" target="_blank">免责声明</a>',
+								'<br>©Copyright 金裕黄金版权所有,不得转载，违者必究',
+								'<script src="https://s13.cnzz.com/z_stat.php?id=1272981537&web_id=1272981537" language="JavaScript">',
+								'</',
+                        		'script>',
+							'</p><p></p></div>',
+						'</div>'].join("");
+		console.log(_jyfooter);
+		body.prepend(_jyfooter);
+		var aaa = ['<p><a href="javascript:;" id="abc">66666666</a></p>',
+								'<script language="JavaScript">',
+								'$("#abc").click(function(){alert(1111111);})',
+								'</',
+                        		'script>'
+                        		].join("");
+		console.log(aaa);
+		body.prepend(aaa);
+
+
+		</script>
+		
+
+		<!-- <div class="jy-footer">
+			<div class="footer_div"><p>
+					<a href="http://www.hj9999.hk/gyjy/" target="_blank">金裕集团</a> | <a href="http://www.hj9999.hk/mzsm/" target="_blank">免责声明</a>
+					<br>©Copyright 金裕黄金版权所有,不得转载，违者必究
+					<script src="https://s13.cnzz.com/z_stat.php?id=1272981537&web_id=1272981537" language="JavaScript"></script>
+			</p><p></p></div>
+		</div> -->
+		
+	</body>
+</html>

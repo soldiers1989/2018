@@ -1,0 +1,61 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">  
+	<head>  
+	 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">  
+	 	<meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1"/>
+		<title>金裕黄金</title>
+		<meta name="keywords" content="" />
+    	<meta name="description" content="" />
+    	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<div class="head">
+			<a class="guanwang" target="_blank" href="http://www.hj9999.hk/"></a>
+		</div>
+		<div class="content">
+			<div class="cont1">
+				<a href="http://www.hj9999.hk/kailimt4/" target="_blank"><img class="kaihu" src="img/btn1.png"/></a>
+				<a href="https://v1.live800.com/live800/chatClient/chatbox.jsp?companyID=515221&configID=41928&jid=6934404885&s=1&returnbt=1" target="_blank"><img class="zixun" src="img/btn2.png"/></a>
+			</div>
+			<div class="cont2"></div>
+			<div style="height: 225px;overflow: hidden;">
+				<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=3250907e2705f04b6c3aa05d9cb4cdf0c084cf2f32ca67525935a7ae7840c712"><img class="jiaqun" src="img/btn3.png"/></a>
+			</div>		
+			<div class="cont3"></div>
+			<div class="cont4">
+				<form class="form1" id="form1" action="http://www.hj9999.hk/index.php?m=zhuoluye&c=index&a=send" method="post">
+					<div class="name">
+						<span>姓名：</span><input id="name" name="uname" type="text" />
+					</div>
+					<div class="phone">
+						<span>手机号码：</span><input id="phone" name="phone" type="text" />
+					</div>
+					<p style="padding-left: 79px;margin: 37px 0 80px 0;">·请填写正确的资料，方便客服联系阁下·</p>
+					<input type="hidden" name="dosubmit" value="submit" />
+					<div class="tijiao">
+						<img onclick="yanzheng()" src="img/btn4_big.png"/>
+					</div>
+				</form>
+			</div>
+			<div class="cont5"></div>
+		</div>
+		
+		<script>
+			function yanzheng(){
+				var name =  document.getElementById("name");
+				var phone =  document.getElementById("phone");
+			    if( !(/^([a-zA-Z0-9_\u4e00-\u9fa5]){2,16}$/.test(name.value)) ){
+			        alert("请正确填写中文姓名！");
+			        name.focus();
+			        return false;
+			    };
+			    if( !(/^1[3|4|5|7|8]\d{9}$/.test(phone.value))  ){
+			        alert("请正确填写手机号码！");
+			        phone.focus();
+			        return false;
+			    };
+			    document.getElementById("form1").submit();
+			}
+		</script>
+	</body>
+</html>

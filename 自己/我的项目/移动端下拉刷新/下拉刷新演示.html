@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)http://www.zhangxinxu.com/GitHub/drag-loading/demo/example.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>下拉刷新演示</title>
+<style>
+body {
+    margin: 0;
+}
+.loading {
+    line-height: 40px;
+    height: 0;
+    text-align: center;
+    transition: height .25s, border-bottom-width .25s;
+    background-color: #eee;
+    font-size: 14px;
+    overflow: hidden;
+}
+</style>
+</head>
+
+<body>
+<div id="loading" class="loading" style="border-bottom: 0px solid transparent; height: 0px;" data-loading="false">下拉加载...</div>
+<ol id="result"><li>列表内容5664</li><li>列表内容1249895</li><li>列表内容1488292</li><li>列表内容0008885</li><li>列表内容351393041</li><li>列表内容774726475</li><li>列表内容05</li><li>列表内容1932</li><li>列表内容018759</li><li>列表内容40792696</li><li>列表内容71207</li><li>列表内容42282694</li><li>列表内容950453</li><li>列表内容55</li><li>列表内容92518</li><li>列表内容0093</li><li>列表内容5596411301</li><li>列表内容4388677985</li><li>列表内容704156587</li><li>列表内容287957</li><li>列表内容775412352</li><li>列表内容77376714</li><li>列表内容26041791</li><li>列表内容7618952</li><li>列表内容9</li><li>列表内容470735</li><li>列表内容4049567</li><li>列表内容5694</li><li>列表内容803034527</li><li>列表内容40757892</li><li>列表内容48563</li><li>列表内容8149498632</li><li>列表内容755756</li><li>列表内容32</li><li>列表内容376</li><li>列表内容333897</li><li>列表内容5</li><li>列表内容262501</li><li>列表内容2</li><li>列表内容1122481806</li><li>列表内容9394774</li><li>列表内容165702417</li><li>列表内容84605392</li><li>列表内容27217</li><li>列表内容3079</li><li>列表内容5755955</li><li>列表内容974204</li><li>列表内容8034052</li><li>列表内容283</li><li>列表内容7058117</li><li>列表内容64</li><li>列表内容8140986</li><li>列表内容890797</li><li>列表内容6632</li><li>列表内容309685</li><li>列表内容0834180287</li><li>列表内容569</li><li>列表内容272162699</li><li>列表内容532481</li><li>列表内容0994460009</li><li>列表内容1</li><li>列表内容7509488</li><li>列表内容5</li><li>列表内容368</li><li>列表内容56</li><li>列表内容080745</li><li>列表内容4967442554</li><li>列表内容1918</li><li>列表内容13</li><li>列表内容0380842</li><li>列表内容8795333902</li><li>列表内容7373202</li><li>列表内容5512695</li><li>列表内容6246768</li><li>列表内容67962212</li><li>列表内容37</li><li>列表内容275694537</li><li>列表内容11182</li><li>列表内容9406</li><li>列表内容93</li><li>列表内容2508444</li><li>列表内容2</li><li>列表内容2976367738</li><li>列表内容15</li><li>列表内容69307726</li><li>列表内容797970874</li><li>列表内容4289815</li><li>列表内容60615</li><li>列表内容341639</li><li>列表内容25</li><li>列表内容06279</li><li>列表内容73</li><li>列表内容6741271</li><li>列表内容74920763</li><li>列表内容8511297759</li><li>列表内容053</li><li>列表内容3</li><li>列表内容5052142988</li><li>列表内容664506</li><li>列表内容8352</li></ol>
+<script src="./下拉刷新演示_files/zepto.min.js"></script>
+<script src="./下拉刷新演示_files/drag-loading.js"></script>
+<script>
+var fnCreateList = function () {
+    var html = '';
+    for (var index = 0; index < 100; index += 1) {
+        html = html + '<li>列表内容'+ (Math.random() + '').slice(-1 * Math.ceil(10 * Math.random())) +'</li>'
+    }
+    $('#result').html(html);
+};
+fnCreateList();
+
+
+// 下面是演示代码
+new DragLoading($('#loading'), {
+    onReload: function () {
+        var self = this;
+        setTimeout(function () {
+            fnCreateList();
+            self.origin();
+        }, 2000* Math.random());
+    }
+});
+</script>
+
+
+</body></html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style type="text/css">
+			.img{
+				position: fixed;
+				right: 20%;
+				top: 40%;
+			}
+			.img:hover{
+				animation: kaowayi 1s;
+			}
+			
+			/*元素设置了动画需要绑定  动画名  持续时间,持续时间默认值为0.
+			from和to,等同于0%和100%,
+			0%是动画的开始,100%是动画的完成,
+			为了得到最佳的浏览器支持,应该始终定义0%和100%选择器.*/
+			
+			.img_dongqilai{
+				animation: kaowayi 1s;
+			}
+			@keyframes kaowayi{
+				/*from{  }
+				to{  }*/
+				0%{ transform: scale(1,1); }
+				30%{ transform: scale(.6,1.4); }
+				60%{ transform: scale(1.4,.6); }
+				75%{ transform: scale(.8,1.2); }
+				85%{ transform: scale(1.2,.8); }
+				100%{ transform: scale(1,1); }
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<img class="img" src="./img/qq.png"/>
+		
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript">
+			setInterval(function(){
+				$(".img").addClass("img_dongqilai");
+				setTimeout(function(){
+					$(".img").removeClass("img_dongqilai");
+				},1500);
+			},2000);
+		</script>
+	</body>
+</html>

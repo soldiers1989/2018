@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="cont2-industry">
+			<div>
+				alaksfgasglakngsdlkanjdslkgn了撒娇的跟你浪蓝色的留给你了呢阿拉斯加改哪里你
+			</div>
+		</div>
+		
+		
+		<script type="text/javascript">
+				function Trim(str,is_global)
+				{
+					var result;
+					result = str.replace(/(^\s+)|(\s+$)/g,"");
+					if(is_global.toLowerCase()=="g")
+					{
+						result = result.replace(/\s/g,"");
+					}
+					return result;
+				}
+				
+				function Typing(str_element)
+				{
+					dtxt = '';
+					txt = $(".cont2-industry>div").text();
+					str = txt.trim();
+					str_element.html("");
+					
+					time = setInterval(function(){
+						dtxt += str.slice(0,1);
+						str_element.html(dtxt);
+						str = str.substring(1);
+						if( str.length <= 0 ){
+							clearInterval(time);
+						}
+					},100);
+				}
+				Typing($(".cont2-industry>div"));
+		</script>
+	</body>
+</html>

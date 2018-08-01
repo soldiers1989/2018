@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* reset*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}  /* 初始化标签在所有浏览器中的margin、padding值 */
+fieldset,img {border:0 none}  /* 重置fieldset（表单分组）、图片的边框为0*/
+dl,ul,ol,menu,li {list-style:none}   /* 重置类表前导符号为onne,menu在HTML5中有效 */
+blockquote, q {quotes: none}   /* 重置嵌套引用的引号类型 */
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}  /* 重置嵌套引用*/
+input,select,textarea,button {vertical-align:middle}  /* 重置表单控件垂直居中*/
+button {border:0 none;background-color:transparent;cursor:pointer}  /* 重置表单button按钮效果 */
+body {background:#fff}   /* 重置body 页面背景为白色 */
+body,th,td,input,select,textarea,button {font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;} /* 重置页面文字属性 */
+a {color:#666;text-decoration:none}  /* 重置链接a标签 */
+a:active, a:hover {text-decoration:none}   /* 重置链接a标签的鼠标滑动效果 */
+address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}  /* 重置样式标签的样式 */
+caption {display:none;}    /* 重置表格标题为隐藏 */
+table {width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed;}
+a {outline: none;}
+a:active {star:expression(this.onFocus=this.blur());}
+.clear{clear: both;}
+.clearfix:before,.clearfix:after{content: '';display: table;}
+.clearfix:after{clear: both;}
+img{display: block}
+/* /reset */
+.title2-group{
+    width: 660px;
+    height: 94px;
+    margin: auto;
+    position: relative;
+    top: -47px;
+}
+.title2-group-left{
+    width: 0;
+    height: 0px;
+    border-top: 47px solid transparent;
+    border-right:30px solid white ;
+    border-left:30px solid transparent;
+    border-bottom: 47px solid transparent;
+    float: left;
+}
+.title2-group-right{
+    width: 0;
+    height: 0px;
+    border-top: 47px solid transparent;
+    border-left:30px solid white ;
+    border-right:30px solid transparent;
+    border-bottom: 47px solid transparent;
+    float: left;
+}
+.title2-group-middle{
+    width: 540px;
+    height: 94px;
+    background: white;
+    font-size: 52px;
+    line-height: 94px;
+    text-align: center;
+    float: left;
+    color: #25426d;
+    font-weight: bolder;
+}
+.data{width: 100%;height: 1050px;margin-top: 50px;}
+.data .data-inner{width: 1080px;height: 1050px;margin:auto;background:#f1efef}
+
+.non-farm-title{width:300px;font-size:36px;text-align:center;color:#fe0000;font-weight:700;margin:0 auto;display:block}
+.review{height:856px;}
+.review-chart{width:1050px;height:700px;margin:53px auto 0;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;background-color:#f1efef}
+.review-chart>.chart-title{height:35px;line-height:35px;padding:0 15px}
+.review-chart>.chart-title>p{font-size:12px;color:#6f6f6f;text-align:right;display:inline-block;padding-left:737px;border-bottom:1px solid silver}
+.review-chart #chart{margin-top:35px;padding:0 30px}
+.review-chart .prompt-box{height:300px;margin:20px 10px 10px;font-size:19px;
+    position:relative;border:1px solid #258cfe;
+    background-color:#eae4e9;}
+.review-chart .prompt-box .prompt-arrow1{width:28px;height:14px;background:url(../images/triangle.png) center center no-repeat;position:absolute;top:-14px;right:55px}
+.review-chart .prompt-box tr td{width:333px;padding:20px 0}
+.review-chart .prompt-box .prompt-item{width:170px;height:38px;
+    display:inline-block;margin-right:10px;
+    line-height:38px;text-align:center;
+    vertical-align:middle;color:#fff;
+    background:  #ddedf9;
+    font-size: 19px;
+    color: #25426d;
+    border-radius: 10px 10px 0px 0px;
+}
+.review-chart .prompt-box .prompt-data{color:#434343;text-align:left;font-size: 19px;}
+.review-chart .prompt-box .reason{width:1000px;margin:10px auto;line-height:20px}
+.review-chart .prompt-box .reason .reason-title{width:211px;height:37px;color:#fff;line-height:37px;
+    font-size:19px;text-align:center;background:#25426d;
+    border-radius: 20px 20px 0px 0px;
+}
+.review-chart .prompt-box .reason .reason-text{
+    text-align:justify;
+    padding-top:30px;
+    font-size: 19px;
+    color: #545454;
+}
+.clearfix:after {
+    content: "";
+    height: 0;
+    clear: both;
+    display: block;
+}
+.displayblock {
+    display: block;
+}
+.displaynone {
+    display: none;
+}
+
+

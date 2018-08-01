@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<style type="text/css">
+			
+		</style>
+		
+	</head>
+	<body>
+		<div id="t-music" class="t-music">
+			音乐<img src="images/musicoff.gif"/>
+			<audio loop=true autoplay src=""></audio>
+		</div>		
+		<script>
+//			音乐播放
+			function pMusic() {
+				var count = 0;
+				$("#t-music img").click(function(){
+					count = !count;
+					console.log(count)
+					if( count ){ 
+						$("#t-music img").attr("src","images/musicon.gif");
+						$("#t-music audio").attr("src","flash/4.mp3");
+					}
+					else{ 
+						$("#t-music img").attr("src","images/musicoff.gif");
+						$("#t-music audio").attr("src","");
+					}
+				})
+			}
+			pMusic();
+			
+		</script>
+	</body>
+</html>

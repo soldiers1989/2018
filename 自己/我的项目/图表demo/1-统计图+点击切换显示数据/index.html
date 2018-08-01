@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1-条形柱状图+折现图+点击切换显示数据</title>
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/review.css" rel="stylesheet"/>
+    <link href="http://hj9999.hk/statics/version03/jycomponents/components.css" rel="stylesheet"/>
+</head>
+<body>
+
+<div class="data">
+    <div class="data-inner">
+        <div class="title2-group">
+            <div class="title2-group-left"></div>
+            <div class="title2-group-middle">往期数据回顾</div>
+            <div class="title2-group-right"></div>
+        </div>
+        <div class="review NFM-review">
+            <div class="review-chart NFM-review-chart">
+                <div class="chart-title displayblock">
+                    <span style="font-size: 14px;color: #333434; margin-right: 14px; font-weight: bold;">公布值</span>
+                    <p>折线图：<span style="color: #258cfe;">非农数据</span>&nbsp;&nbsp;柱状图：<span style="color: #8bbff7;">ADP数据</span></p>
+                </div>
+                <div class="NFM-chart-title displaynone clearfix">
+                    <span>公布值</span>
+                    <p>折线图：<span>非农数据</span>&nbsp;&nbsp;柱状图：<span>ADP数据</span></p>
+                </div>
+                <div id="chart"></div>
+                <div class="prompt-box displayblock">
+                    <div class="prompt-arrow1 displayblock"></div>
+                    <table style="width: 1000px; margin: 5px 0 0 15px;">
+                        <tr>
+                            <td>
+                                <span class="prompt-item">公布时间</span>
+                                <span class="prompt-data Date"></span>
+                            </td>
+                            <td>
+                                <span class="prompt-item">公布值</span>
+                                <span class="prompt-data NonFarm"></span>
+                            </td>
+                            <td>
+                                <span class="prompt-item">失业率</span>
+                                <span class="prompt-data UnemploymentRate"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="prompt-item">金价波幅范围</span>
+                                <span class="prompt-data GoldPriceMove"></span>
+                            </td>
+                            <td>
+                                <span class="prompt-item" style="width:207px;">伦敦金单手盈利空间</span>
+                                <span class="prompt-data profitRange"></span>
+                            </td>
+                            <td>
+                                <span class="prompt-item">ADP</span>
+                                <span class="prompt-data ADP"></span>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="reason">
+                        <div class="reason-title">金价波幅巨大原因</div>
+                        <p class="reason-text GoldPrizeMoveReson"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/highcharts.js"></script>
+<script src="js/non-farm.js"></script>
+</html>

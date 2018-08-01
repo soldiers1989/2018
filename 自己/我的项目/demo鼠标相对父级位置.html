@@ -1,0 +1,14 @@
+<div id="a" style="width:500px;height:400px; display:block; background-color:#eee;margin:50px auto;"></div>
+<script src="jquery-1.8.3.min.js"></script>
+<script>
+	var a = $("#a");
+	var boxX = a.offset().left;
+	var boxY = a.offset().top;
+	a.mousemove(function(e) {
+		var x = e.pageX;
+		var y = e.pageY;
+		var zX = x - boxX;
+		var zY = y - boxY;
+		$(this).text("X:" + zX + "Y:" + zY);
+	});
+</script>

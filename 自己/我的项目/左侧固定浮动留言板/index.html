@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.liuyan{width: 258px;height: 360px;border: 1px solid #dddddd;position: fixed;top: 200px;left: 20px;display: none;overflow: hidden;z-index: 999;background-color: white;}
+			.liuyan_title{background: url(./icon.jpg) no-repeat left center;background-size: 5px 18px; height: 64px;width: 206px;color: #212121;font-size: 18px;padding-left: 12px;line-height: 64px;font-weight: lighter;margin: 0 auto;}
+			.liuyan_content{resize: none;color: rgb(51, 51, 51);border: 1px solid #dddddd;width: 198px;height: 72px;padding: 14px 9px;border-radius: 3px;margin: 0 20px;font-size: 14px;}
+			.liuyan_tijiao{width: 200px;height: 36px;text-align: center;line-height: 36px;background-color: #1b80d6; color:#ffffff;font-size: 14px;margin: 0 auto;cursor:pointer;margin-top: 27px;border-radius: 5px;}
+			.liuyan input{resize: none;color: rgb(51, 51, 51);border: 1px solid #dddddd;width: 198px;height: 32px;padding: 5px 9px;border-radius: 3px;margin: 0 20px;font-size: 14px;margin-bottom:10px;}
+			.ly{width: 16px;height: 125px;background-color: #1b80d6;position: fixed;top: 200px;left: 0px;font-size: 16px;color: white;padding: 15px 12px 0 12px;line-height: 25px;cursor: pointer;z-index: 999;}
+			.liuyan img{float: right;margin: 27px 3px 0 0;width: 20px;height: 10px;cursor: pointer;}
+		</style>			
+	</head>
+	<body>
+		
+		<div class="ly">
+			留言提问
+		</div>
+		
+		<div class="liuyan">
+			<p class="liuyan_title">向企业留言 <img src="but01.png"/></p>
+			<input id="msgname" type="text" placeholder="请输入姓名" />
+    		<input id="msgphone" type="text" placeholder="请输入手机号" />
+			<textarea placeholder="请输入留言内容" class="liuyan_content"></textarea>
+			<div class="liuyan_tijiao">
+				提交
+			</div>
+		</div>
+			
+		<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+		<script type="text/javascript">
+			$('.ly').click(function(){
+				$('.ly').css('display','none');
+				$('.liuyan').css('display','block');
+			});
+			$('.liuyan img').hover(function(){
+				$('.liuyan img').Attr('src','but02.png');
+			},function(){
+				$('.liuyan img').Attr('src','but01.png');
+			});
+			$('.liuyan img').click(function(){
+				$('.ly').css('display','block');
+				$('.liuyan').css('display','none');
+			});
+		</script>	
+	</body>
+</html>

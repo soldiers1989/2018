@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.fh_top {
+				width: 50px;
+				height: 50px;
+				position: fixed;
+				bottom: 10px;
+				right: 5px;
+				z-index: 9999;
+				display: none;
+			}
+			
+			.fh_top img {
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<body style="height: 3000px;">
+		<!--返回顶部-->
+		<div class="fh_top"><img src="dingbu.png"></div>
+
+		<script src="jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var win_hei = $(window).height() / 2;
+			$(window).scroll(function() {
+				var win_top = $(window).scrollTop();
+				var win_top2 = $(window).scrollTop();
+				if(win_top >= win_hei) {
+					$(".fh_top").fadeIn(300);
+					$(".ztc_wybm").fadeIn(300);
+				} else {
+					$(".fh_top").fadeOut(300);
+					$(".ztc_wybm").fadeOut(300);
+				}				
+			});
+			$(".fh_top").click(function() {
+				$("html,body").animate({
+					scrollTop: 0
+				}, 300);
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <span class="timespan"></span>
+</body>
+<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+
+
+//  倒计时
+//月份是从0开始算的，也就是说0 是 1月。
+//	获取到的时间单位是毫秒，多以/1000
+	var starttime = new Date(2018,1,2,21,30,0);
+	setInterval(function () {
+	    var nowtime = new Date();
+	    var time = starttime - nowtime;
+	    if( time <= 0 ){
+	    	$("#countdownDay").text(0);
+		    $("#countdownHour").text(0);
+		    $("#countdownMinute").text(0);
+		    $("#countdownSecond").text(0);
+	    }else{
+	    	var day = parseInt(time / 1000 / 60 / 60 / 24);
+		    var hour = parseInt(time / 1000 / 60 / 60 % 24);
+		    var minute = parseInt(time / 1000 / 60 % 60);
+		    var seconds = parseInt(time / 1000 % 60);
+		    
+		    $("#countdownDay").text(day);
+		    $("#countdownHour").text(hour);
+		    $("#countdownMinute").text(minute);
+		    $("#countdownSecond").text(seconds);
+	    }
+	}, 1000);
+</script>
+</html>

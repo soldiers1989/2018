@@ -34,7 +34,7 @@
 	    }
 	}, 1000);
 //非农月份时间轮播图
-jQuery(".fndate").slide({mainCell:".fndate_box",effect:"left",vis:3,defaultIndex: 4});
+jQuery(".fndate").slide({mainCell:".fndate_box",effect:"left",vis:3,defaultIndex: 4});		//defaultIndex   设置哪个轮播居中
 //距离下次剖析剩余时间百分比
 var Progress = function() {
 	var progress = {

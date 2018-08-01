@@ -1,0 +1,113 @@
+
+<style>
+  /*留言固定窗口*/
+.liuyan{width: 258px;height: 360px;border: 1px solid #dddddd;position: fixed;top: 200px;left: 20px;overflow: hidden;background:#fff;z-index:99;}
+.liuyan_title{background: url(../images/msg_icon.jpg) no-repeat left center;background-size: 5px 18px; height: 64px;width: 206px;color: #212121;font-size: 18px;padding-left: 12px;line-height: 64px;font-weight: lighter;margin: 0 auto;}
+.liuyan_content{resize: none;color: rgb(51, 51, 51);border: 1px solid #dddddd;width: 198px;height: 72px;padding: 14px 9px;border-radius: 3px;margin: 0 20px;font-size: 14px;position: absolute;top: 0;left: 0;}
+.liuyan_tijiao{width: 200px;height: 36px;text-align: center;line-height: 36px;background-color: #1b80d6; color:#ffffff;font-size: 14px;margin: 0 auto;cursor:pointer;margin-top: 27px;border-radius: 5px;}
+.liuyan input{resize: none;color: rgb(51, 51, 51);border: 1px solid #dddddd;width: 198px;height: 32px;padding: 5px 9px;border-radius: 3px;margin: 0 20px;font-size: 14px;margin-bottom:10px;position: absolute;top: 0;left: 0;}
+.ly{width: 16px;height: 125px;background-color: #1b80d6;position: fixed;top: 200px;left: 0px;font-size: 16px;color: white;padding: 15px 12px 0 12px;line-height: 25px;cursor: pointer;display: none;}
+.liuyan img{float: right;margin: 27px 3px 0 0;width: 20px;height: 10px;cursor: pointer;}
+.liuyan .name,.liuyan .phone{position: relative;height: 32px;margin-bottom: 10px;}
+.liuyan .hint{position: absolute;top: 5px;left: 30px;color: #999999;}
+.liuyan .msg{position: relative;height: 72px;}
+</style>
+
+
+
+<div class="ly">
+  留言提问
+</div>  
+<div class="liuyan">
+  <p class="liuyan_title">向企业留言 <img src="./images/but01.png"/></p>
+  <div class="name"><span class="hint">请输入姓名</span><input id="msgname" type="text"/></div>
+  <div class="phone"><span class="hint">请输入手机号</span><input id="msgphone" type="text"/></div> 
+  <div class="msg"><span class="hint">请输入留言内容</span><textarea id="msgtext" class="liuyan_content"></textarea></div>
+  <div class="liuyan_tijiao">
+    提交
+  </div>
+</div>
+<div class="song1220_wd_ceng" style="display: none;">请输入问题描述！</div>
+<script>
+	$('#msgname').focus(function(){
+		$('.liuyan .name span').html('');
+	})
+	$('#msgname').blur(function(){	
+		if( $('#msgname').val()==false ){
+			$('.liuyan .name span').html('请输入姓名');
+		};		
+	})
+	$('#msgphone').focus(function(){
+		$('.liuyan .phone span').html('');
+	})
+	$('#msgphone').blur(function(){	
+		if( $('#msgphone').val()==false ){
+			$('.liuyan .phone span').html('请输入手机号');
+		};		
+	})
+	$('#msgtext').focus(function(){
+		$('.liuyan .msg span').html('');
+	})
+	$('#msgtext').blur(function(){	
+		if( $('#msgtext').val()==false ){
+			$('.liuyan .msg span').html('请输入手机号');
+		};		
+	})
+	
+	 function song1220_ceng(){
+      $(".song1220_wd_ceng").fadeIn(200);
+      setTimeout(function(){
+          $(".song1220_wd_ceng").fadeOut(200);
+      },2000);
+  }
+  $('.liuyan_tijiao').bind('click',function(){
+      var oBtn = $(this);
+      var msgtext = $("#msgtext").val();
+
+      if(!msgtext || msgtext=="请在这里描述您的问题..."){
+          $(".song1220_wd_ceng").html("请输入问题描述！");
+          song1220_ceng();
+          return;
+      }
+      var msgname = $("#msgname").val();
+      if(!msgname || msgname=="请输入姓名"){
+          $(".song1220_wd_ceng").html("请填写姓名！");
+          song1220_ceng();
+          return;
+      }
+
+      var msgphone  = $("#msgphone").val();
+      if(!msgphone || !(/^1[34578]\d{9}$/.test(msgphone))){
+          $(".song1220_wd_ceng").html("请输入正确的电话！");
+          song1220_ceng();
+          return;
+      }
+      var jsonData = {
+          'name':msgname,
+          'content':msgtext,
+          'mobile':msgphone
+      };
+
+      $.ajax({
+              <{my->getCompanyInfo
+             tpl=' url: "#company_domain#/qyzxqa/",'
+              }>
+              type: "post",
+              data: jsonData,
+              dataType: 'json',
+              success:function(result) {
+                  if(result.ok) {
+                     $(".song1220_wd_ceng").html("发布成功！");
+                      song1220_ceng();
+                    // $("#question_content,#wdtjname,#wdtjphone").val('');
+                      setTimeout(function(){
+                          window.location.href = location.href;
+                      },2200);
+                  }else{
+                      alert(result.msg);
+                  }
+
+              }
+      });
+  });
+</script>
