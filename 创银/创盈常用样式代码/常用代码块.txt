@@ -1,0 +1,67 @@
+	创盈金银表单   昵称和手机号码   验证	以及发送填写资料ajax请求
+		
+	//表单验证
+function yanzheng(){
+	var uname = $("#uname").val();
+	var phone = $("#phone").val();
+    if( uname.trim() == '' ){
+        alert("昵称不能为空");
+        $("#uname").focus();
+        return false;
+    };
+    if( !(/^1[3|4|5|7|8]\d{9}$/.test( phone ))  ){
+        alert("请正确填写手机号码！");
+        $("#phone").focus();
+        return false;
+    };
+    //发送请求
+    $.ajax({
+	   url:"http://www.jygold.net/index.php?m=dailikaihu&c=index&a=send",
+	   data:{uname:uname,phone:phone,dosubmit:1,email:1},
+	   type:"post",
+	   success:function(data){
+		 $(".submitSucceed").fadeIn(500);
+	   },
+	   error:function(){
+		 alert("网络故障，请检查");
+	   }
+   });
+}
+		
+		
+		
+		创盈金银非农早晚行情分析数据ajax请求获取
+		$(function(){
+    var $analysisCon = $("#m-analysisCon");
+    var urlList = [116,214,175,176];
+    for(var i=0; i<urlList.length; i++)
+    {
+    	$.ajax({
+    		url: "http://www.hj9999.hk/api.php?op=get_lists_json&catid="+urlList[i]+"&num=2",
+    		type: "post",
+    		dataType: "json",
+    		success: function(data){
+    			var html = 
+						'<div class="analyst-info">' +
+							'<div class="lt-title">' +data.catname+ '</div>' +
+							'<img class="trend-chart" src="images/trend_chart.jpg"/>' +
+							'<div class="con">' +
+								'<div class="title">' +
+									'<a href="' +data.list[0].url+ '" target="_blank">' +data.list[0].title+ '</a><span class="t-date">' +data.list[0].date+ '</span>' +
+								'</div>' +
+								'<a class="text" href="' +data.list[0].url+ '" target="_blank">' +data.list[0].desc.slice(0,65)+ '...</a>' +
+							'</div>' +
+							'<div style="clear: both;"></div>' +
+							'<div class="title-btm">' +
+								'<a href="' +data.list[0].url+ '">' +data.list[0].title+ '</a>' +
+								'<a style="float: right;" href="' +data.list[1].url+ '" target="_blank">' +data.list[1].title+ '</a>' +
+							'</div>' +
+						'</div>' ;
+				$analysisCon.append(html);
+    		},
+    		error:function(){
+    			console.log('请求数据失败！');
+    		}
+    	})
+    }
+})

@@ -1,0 +1,8 @@
+http://www.hightopo.com/blog/461.html
+数百个 HTML5 例子学习 HT 图形组件 – 拓扑图篇
+
+可先阅读入门手册 http://www.hightopo.com/guide/guide/core/beginners/ht-beginners-guide.html 然后看矢量手册 http://www.hightopo.com/guide/guide/core/vector/ht-vector-guide.html 
+读读数据绑定 http://www.hightopo.com/guide/guide/core/databinding/ht-databindingguide.html 
+掌握数据模型 http://www.hightopo.com/guide/guide/core/datamodel/ht-datamodel-guide.html 这样基本 HT 体系就掌握了
+
+如果有三维应用需求，可读 3D 入门手册 http://www.hightopo.com/guide/guide/core/3d/ht-3d-guide.html 然后建模手册 http://www.hightopo.com/guide/guide/plugin/modeling/ht-modeling-guide.html  掌握 OBJ 导入 http://www.hightopo.com/guide/guide/plugin/obj/ht-obj-guide.html

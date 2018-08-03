@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<title>金裕黄金_金裕交易平台-金裕黄金官网</title>
+<meta name="description" content="金裕黄金手机网站提供最信的现货贵金属行业资讯；包括黄金、原油、外汇的行情分析指导；也介绍了炒黄金开户，原油交易，外汇投资等平台。金裕黄金秉承着“互联网+金融”的最新理念为广大投资者服务">
+<meta name="keywords" content="金裕黄金，金裕贵金属，手机交易平台，炒黄金开户，现货投资平台，原油交易，外汇投资">
+<link rel="stylesheet" href="{APP_PATH}statics/m/css/idangerous.swiper.css"/>
+<link rel="stylesheet" href="{APP_PATH}statics/m/css/style.css"/>
+</head>
+<body>
+<div class="wrap">
+{template "content","header_top"}
+    <div class="container">
+    <div class="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+				
+                
+				<div class="swiper-slide">
+                    <a href="http://i.hj9999.hk/huodong/paizhao/" ><img src="http://i.hj9999.hk/statics/images/NFAbanner1.jpg" alt=""/></a>
+                </div>
+				
+     
+				
+				
+                
+                
+                
+          </div>
+        </div>
+        <div class="swiper-tabs" style="left: 55%">
+            <!-- <a href="#" hidefocus="true" class="active">1</a>
+            <a href="#" hidefocus="true">2</a> -->
+			
+
+			
+        </div>
+    </div>   
+    <div class="shabox index-menu">
+        <ul class="fn-clear">
+            <li class="i1"><a href="{APP_PATH}about/jituanbeijing/"><i></i><span>金裕介绍</span></a></li>
+            <li class="i2"><a href="{APP_PATH}meirijinping/"><i></i><span>每日金评</span></a></li>
+            <li class="i3"><a href="{APP_PATH}kaihujiaoyi/kailizhenshizhanghu/"><i></i><span>开立账户</span></a></li>
+            <li class="i4"><a href="{APP_PATH}kaihujiaoyi/mt4pingtai/"><i></i><span>下载中心</span></a></li>
+            <li class="i5"><a href="http://i.hj9999.hk/jiaoyicelue/"><i></i><span>交易策略</span></a></li>
+            <li class="i6"><a href="{APP_PATH}huangjinxuetang/"><i></i><span>金裕学堂</span></a></li>
+            <li class="i7"><a href="{APP_PATH}dailyfx.html"><i></i><span>财经日历</span></a></li>
+            <li class="i8"><a href="http://zhibo.jintian100.com/studio/m/"><i></i><span>直播喊单</span></a></li>
+        </ul>
+    </div>
+    <div class="index-baojia">
+        <div class="bd" id="mainPrice">
+            <ul>
+            </ul>
+        </div>
+    </div>
+
+    <div class="index-reg">
+            <a class="real" href="{APP_PATH}kaihujiaoyi/kailizhenshizhanghu/">开设真实账户</a>
+            <a class="demo" href="{APP_PATH}kaihujiaoyi/kailimonizhanghu/">领取$20000账户</a>
+    </div>
+
+
+
+
+    <div class="shabox index-article">
+        <div class="j9 hd">
+            <ul class="fn-clear">         
+                <li class="hover">每日金评</li>
+                <li>行情回顾</li>
+                <li>交易策略</li>
+            </ul>
+
+
+        </div>
+        <div class="j9con bd">
+            <div class="j9s">
+                <ul>
+                {pc:content action="lists" catid="2" num="6" order="id DESC"}
+                {loop $data $r}
+                <li><a href="{$r['url']}">{$r['title']}</a></li>
+                {/loop}
+                {/pc}
+                </ul>
+                <a class="more" href="{APP_PATH}meirijinping/">点击查看更多>></a>
+            </div>
+            <div class="j9s" style="display:none;">
+                <ul>
+                {pc:content action="lists" catid="47" num="6" order="id DESC"}
+                {loop $data $r}
+                <li><a href="{$r['url']}">{$r['title']}</a></li>
+                {/loop}
+                {/pc}
+                </ul>
+                <a class="more" href="{APP_PATH}hangqinghuigu/">点击查看更多>></a>
+            </div>
+            <div class="j9s" style="display:none;">
+                <ul>
+                {pc:content action="lists" catid="3" num="6" order="id DESC"}
+                {loop $data $r}
+                <li><a href="{$r['url']}">{$r['title']}</a></li>
+                {/loop}
+                {/pc}
+                </ul>
+                <a class="more" href="{APP_PATH}jiaoyicelue/">点击查看更多>></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="shabox index-caijin">
+        <div class="hd"><h3>财经日历</h3></div>
+        <div class="bd">
+            <div class="row">
+				<iframe frameborder="no" height="410" src="http://www.jygold.net/api/getDailyfx.php" width="100%"></iframe>
+               <!--  <table id="figure" class="list-table row-on-hover figure-calendar-table" width="100%"></table> -->
+              </div>
+        </div>
+    </div>
+
+    <!-- <div class="shabox index-huodong">
+        <div class="title"></div>
+        <div class="item">
+            <a href="{APP_PATH}huodong/"><img src="{APP_PATH}statics/m/images/hdpic1.png" alt=""></a>
+        </div>
+    </div> -->
+
+</div>
+
+<script type="text/javascript" src="{APP_PATH}statics/m/js/jquery.min.js"></script>
+<script type="text/javascript" src="{APP_PATH}statics/m/js/common.js"></script>
+<script type="text/javascript" src="{APP_PATH}statics/m/js/quotation.js"></script>
+<script type="text/javascript" src="{APP_PATH}statics/m/js/dailyfx.js"></script>
+<script type="text/javascript" src="{APP_PATH}statics/m/js/idangerous.swiper.min.js"></script> 
+<script type="text/javascript"> 
+var tabsSwiper = new Swiper('.swiper-container',{
+    autoplayDisableOnInteraction:false,
+    autoplay:3500,
+    onSlideChangeStart: function(){
+        $(".swiper-tabs .active").removeClass('active');
+        $(".swiper-tabs a").eq(tabsSwiper.activeIndex).addClass('active');
+    }
+});
+
+$(".swiper-tabs a").on('touchstart mousedown',function(e){
+    e.preventDefault()
+    $(".swiper-tabs .active").removeClass('active');
+    $(this).addClass('active');
+    tabsSwiper.swipeTo($(this).index());
+});
+
+$(".swiper-tabs a").click(function(e){
+    e.preventDefault();
+});
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116313051-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116313051-2');
+</script>
+
+
+{template "content","footer"}
+
+</body>
+</html>

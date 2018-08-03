@@ -301,7 +301,7 @@ function yanzheng(){
 		 alert("网络故障，请检查");
 	   }
    });
-}	
+}
 		
 		
 		
