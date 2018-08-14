@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>待办事项</title>
+		<script src="./js/vue.js"></script>
+		<style type="text/css">
+			.todostate{
+				text-decoration: line-through;
+				color: gray;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<span>剩下：{{ todocount() }} 工作,共{{todos.length}} 项工作</span>
+			<ul>
+				<li v-for="todo in todos">
+					<input type="checkbox" v-model="todo.done" />
+					<span v-bind:class="{ todostate:todo.done }">{{ todo.text }}</span>
+				</li>
+			</ul>
+			<input type="text" v-model="todotext" placeholder="请输入待办" />
+			<input type="submit" value="添加" v-on:click="addtodo" />
+		</div>
+		
+		<script>
+			var app = new Vue({
+				el:"#app",
+				data:{
+					todotext:"",
+					todos:[
+						{ text:"学习react",done:true },
+						{ text:"学习vue",done:false }
+					]
+				},
+				methods:{
+					todocount:function () {
+						var count = 0;
+						this.todos.forEach(function (item) {
+							count += item.done ? 0:1;
+						})
+						return count;
+					},
+					addtodo:function (){
+						this.todos.push({
+							text:this.todotext,
+							done:false
+						})
+					}
+				}
+		})
+		</script>
+	</body>
+</html>

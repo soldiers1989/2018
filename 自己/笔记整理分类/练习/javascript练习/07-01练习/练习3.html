@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+.menu{
+	width:666px;
+	height:81px;
+	background:url(images/index_top.gif) no-repeat;
+}
+.col{
+	padding:35px 10px;
+}
+</style>
+</head>
+
+<body>
+<div class="menu">
+	<div class="col">
+		<a href="#"><img title="0" src="images/index_00.gif" border="0" /></a>
+		<a href="#"><img title="1" src="images/index_01.gif" border="0" /></a>
+		<a href="#"><img title="2" src="images/index_02.gif" border="0" /></a>
+		<a href="#"><img title="3" src="images/index_03.gif" border="0" /></a>
+		<a href="#"><img title="4" src="images/index_04.gif" border="0" /></a>
+		<a href="#"><img title="5" src="images/index_05.gif" border="0" /></a>
+		<a href="#"><img title="6" src="images/index_06.gif" border="0" /></a>
+		<a href="#"><img title="7" src="images/index_07.gif" border="0" /></a>
+	</div>
+</div>
+
+<script>
+	var aImg = document.getElementsByTagName('img');
+	
+	for(var i=0; i<aImg.length; i++)
+	{
+		//鼠标移入
+		aImg[i].onmouseover = function(){
+			this.src = 'images/index_0'+this.title+'_f2.gif';
+		};
+				
+		//鼠标移出	
+		aImg[i].onmouseout = function(){
+			this.src = 'images/index_0'+this.title+'.gif';
+		};
+	}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<h1>留言板</h1>
+<input type="text" id="txtname" />
+<input type="text" id="txtcontent" />
+<input type="button" id="btnsubmit" value="提交留言" />
+<ul id="box">
+    <!--<li><p>M</p><a></a></li>-->
+</ul>
+
+<script>
+    //let str="北京今天下雨";
+    //console.log("8.13"+str+"我们在上课")
+    var txt1=document.getElementById("txtname");
+    var txt2=document.getElementById("txtcontent");
+    var btn=document.getElementById("btnsubmit");
+    var box=document.getElementById("box");
+
+    btn.onclick= function () {
+        var liobj=document.createElement("li");
+        //es5
+        //liobj.innerHTML="<li><p>"+txt2.value+"</p><a>"+txt1.value+"</a>";
+        liobj.innerHTML=`<p>${txt2.value}</p><a>${txt1.value}</a>`;
+
+        box.appendChild(liobj)
+
+    }
+
+
+</script>
+</body>
+</html>

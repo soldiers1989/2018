@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<script>
+    //变量提升
+    /*let number=10;//全局作用域下面
+    function add(){
+        //var number;//undefined
+        //add 下面 局部作用域
+        console.log(number) //10 undefined 输出的add里面的number 如果改成let 报错
+        let number=5; //变量提升，只是声明，没有赋值
+        console.log(number)//5
+    }
+    add();*/
+    //undefined不是报错，而是你没有赋值 number.string/null/
+    function getvalue(type){
+        if(type){
+            let value="555";//做了变量提升
+            console.log(value)
+        }
+        else{
+           // var value="666";//因为上面时let 代码执行到哪一行
+            console.log(value)
+        }
+    }
+    //getvalue(); 全局作用域污染 let var
+    var Date="aaaaa";
+    console.log(window.Date)
+
+    for(let i=0;i<10;i++){
+       // console.log(i); 0-9  9++
+    }
+    //console.log(i);//i 存在的
+
+</script>
+</body>
+</html>

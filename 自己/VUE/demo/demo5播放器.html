@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="./js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<audio autoplay controls v-bind:src="currentsrc" v-on:ended="playnext"></audio>
+			<ul>
+				<li v-for="(item,index) in songs" v-on:click="playthis(item,index)">
+					<h2>{{ item.name }}{{ item.index }}</h2>
+				</li>
+			</ul>
+		</div>
+		
+		<script>
+//			1.初始化数据
+			var songs = [
+				{ src:"./mp3/1.mp3",name:1 },
+				{ src:"./mp3/2.mp3",name:2 },
+				{ src:"./mp3/3.mp3",name:3 },
+				{ src:"./mp3/4.mp3",name:4 }
+			]
+			var app = new Vue({
+				el:"#app",
+				data:{
+					songs:songs,
+					currentsrc:"",
+					currentindex:0
+				},
+				methods:{
+					playthis:function (item,index) {
+						this.currentsrc = item.src;
+						this.currentindex = index;
+					},
+					playnext(){
+						//自动播放下一首
+						this.currentindex++;
+						this.currentsrc = this.songs[this.currentindex].src;
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

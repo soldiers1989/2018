@@ -1,0 +1,130 @@
+
+使用说明：
+兼容ie8需要在head标签中引用videojs-ie8.min.js。 并且video.js版本必须是V7之前的。
+//测试未通过IE8浏览器
+例如：
+		head标签
+				引用css
+				引用videojs-ie8.min.js
+
+		body标签底部
+				引用js
+
+		html
+				<video width="1094" height="503" class="video-js vjs-big-play-centered" data-setup='{}' poster="http://vjs.zencdn.net/v/oceans.png" controlspreload="none" controls>
+					<source src="media/01.mp4" type="video/mp4"></source>
+					当前浏览器不支持 video直接播放，点击这里下载视频： <a href="media/01.mp4">下载视频</a>
+				</video>
+				
+				
+
+poster="http://vjs.zencdn.net/v/oceans.png"
+		视频封面图片
+				
+preload="none"
+		点击播放之前不预加载
+				
+				
+播放按钮居中
+		在<video>标签中加入vjs-big-play-centered类
+		class="video-js vjs-big-play-centered"
+
+
+
+3 支持<audio>音乐标签
+		video.js 4.9开始支持<audio>标签，与video不同的是：播放audio时封面不会消失。
+		但是上面的播放框还是一直在的，配置方式和<video>标签一样，也必须要配置data-setup参数。
+
+
+4 禁止在iPhone safari中自动全屏
+		方法如下，在<video>标签中加入playsinline参数，
+				<video playsinline ></video>
+		注意，在iOS10之前用的是webkit-playsinline。
+
+
+
+5 暂停时显示播放按钮
+		其实用CSS就可以搞定了：
+		.vjs-paused .vjs-big-play-button,
+		.vjs-paused.vjs-has-started .vjs-big-play-button {
+			display: block;
+		}
+
+
+9 进度显示当前播放时间
+		加2行CSS解决：
+		.video-js .vjs-time-control{display:block;}
+		.video-js .vjs-remaining-time{display: none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

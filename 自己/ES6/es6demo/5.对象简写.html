@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+    var a=5;
+    var obj={
+        a,
+        b(){
+            console.log(this.a);
+        }
+    }
+    obj.b();
+    //Object新加的方法 is 和=== 相同，
+    if(Object.is(NaN,NaN)){
+        console.log("成立")
+    }
+    else{
+        console.log("不成立")
+    }
+    //Object assign 合并
+    var obj1={
+       c:"laalalala",
+        a:20
+    }
+    console.log(Object.assign(obj,obj1));
+    //Object.defineProperty 双向数据绑定
+    var data={};
+    Object.defineProperty(data,"b",{
+         set(newvalue){
+             console.log("set里面的打印："+newvalue)
+         },
+         get(){
+             return 100
+         }
+    })
+    data.b=50;
+    console.log(data.b);
+    /*for(item in data){
+        console.log(item)
+    }*/
+    //Object.keys
+    console.log(Object.keys(obj1))
+
+</script>
+</body>
+</html>

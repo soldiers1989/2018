@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-1.11.1.js"></script>
+        
+        <style type="text/css">
+        	#box{ width: 310px; height: 310px; margin-top:50px ;}
+        	.div1{ width: 100px; height: 100px; text-align: center; font: 20px "微软雅黑";line-height: 100px; 
+        	       border: 1px solid darkblue;float: left;}
+        </style>
+        
+	</head>
+	<body>
+		<input type="button" value="Go" />
+		<br />
+		<div id="box">
+			<div class="div1">皮卡丘</div>
+			<div class="div1">喷火龙</div>
+			<div class="div1">水箭龟</div>
+			<div class="div1">不倒翁</div>
+			<div class="div1">喵星人</div>
+			<div class="div1">大岩石</div>
+			<div class="div1">黑魔术少女</div>
+			<div class="div1">黑魔术师</div>
+			<div class="div1">青眼白龙</div>
+			
+		</div>
+		
+		<script type="text/javascript">
+			$('input').click(function()
+			{
+				clearInterval(time);     //防止定时器重叠错乱,一定要加上!!!
+				 
+				var num=0;
+				
+				var time=setInterval(function()
+				{									
+					$('.div1').css('background','red');
+					$('.div1').eq(num).siblings().css('background','white');
+					
+					if(num==8)
+					{						
+						var close=Math.ceil(Math.random()*8+8);
+						
+						var num1=0;
+						
+						$('.div1').css('background','red');
+				        $('.div1').eq(num1).siblings().css('background','white');
+				        
+//				        if(num==close)
+//				        {
+//				        	console.log(num);
+//						    console.log(close);
+//				        	clearInterval(time);
+//					        alert('恭喜你获得'+$('.div1').eq(num).html()+'一打~~~');
+//				        }
+				        num1++;
+				        console.log(typeof num);
+					    console.log(typeof num1);
+					}
+					
+					num++;
+				
+				},500)
+			})
+			
+		</script>
+	</body>
+</html>

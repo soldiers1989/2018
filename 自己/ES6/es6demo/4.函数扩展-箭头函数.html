@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<script>
+    //箭头函数
+    /*var add=(a,b=8)=>a+b;
+    console.log(add(1));
+
+    //函数有多行
+    var add1=(a,b=8)=>{
+        console.log(555)
+        return a+b;
+    }
+    console.log(add1(4));*/
+
+    var obj={
+        a:5,
+        func:function(){
+            console.log(this.a);
+        },
+        test:function(){
+            var that=this;
+            setTimeout(function(){
+                console.log(this)//window
+                that.func();//报错
+            },1)
+        }
+    }
+    obj.test();
+
+    var obj1={
+        a:5,
+        func:function(){
+            console.log(this.a);
+        },
+        test:function(){
+            setTimeout(()=>
+            {
+                this.func();//报错
+            },1)
+        }
+    }
+    obj1.test();
+</script>
+</body>
+</html>

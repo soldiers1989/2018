@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		
+		<!--<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=bd2cc93d36f7f8204d24bfcebf85d1f44d8e415dcd7d935ae17ad66d9d809b81">
+			<img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="你是谁" title="你是谁">
+		</a>-->
+		
+		
+		
+		
+		<script src="js/jquery1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			'use strict';
+//			只包含一个表达式的箭头函数
+//			function a (x){
+//				return x*x;
+//			}
+//			
+//			a(5);
+//			console.log(a(5));
+//			
+//			var b = x => x*x;
+//			console.log(b(10));
+			
+//			包含多条语句的箭头函数
+//			var c = x => {
+//				if (x>0){
+//					return x*x;
+//				}
+//				else{
+//					return - x*x;
+//				}
+//			}
+//			console.log(c(-5));
+//			两个参数
+//			(x,y)=>x*x+y*y
+//			无参数
+//			()=>3.14
+//			可变参数
+//			(x,y, ...rest) => {
+//				var i, sum = x + y;
+//				for ( i=0; i<rest.length; i++){
+//					sum += rest[i];
+//				}
+//				return sum;
+//			}
+			
+//			返回一个对象
+//			x => ({ foo:x })
+			
+			
+//			typeof new Number(123);
+			
+//			获取当前时间戳
+//			if(Date.now){
+//				console.log(Date.now());
+//				var dn = Date.now();
+//				var d = new Date(dn);
+//				console.log(d.toLocaleString());
+//			}else{
+//				console.log(new Date().getTime());
+//				console.log('假');
+//			}
+
+			
+//			正则表达式
+
+//		var re1 = /ABC\-001/;
+//		var re2 = new RegExp('ABC\\-001');
+//		
+//		var re = /^\d{3}\-\d{3,8}$/;
+//		console.log(re.test('010-12345'));
+//		console.log(re.test('010-1234x'));
+//		console.log(re.test('010 12345'));
+//		var re3 = /^[0-9a-zA-z\.]{3,12}\@[0-9a-zA-Z]{2,12}\.\w+$/;
+//		console.log(re3.test('tom@voyager.org'))
+//		var re4 = /^(\d+)(\@)(\d+)\.\w+/;
+//		console.log(re4.exec('869565225@163.com'));
+//		var re4 = /^\<([0-9a-zA-z]+\s+[0-9a-zA-z]+)\>\s+([0-9a-zA-z\.]{3,12}\@[0-9a-zA-Z]{2,12}\.\w+)$/;;
+//		console.log(re4.exec('<Tom Paris> tom@voyager.org'));
+	
+			
+//			JSON数据
+//		var xiaoming = {
+//			name: '小明',
+//			age: 14,
+//			gender: true,
+//			height: 1.65,
+//			grade: null,
+//			'middle-school': '\"W3C\" Middle School',
+//			skills: ['JavaScript', 'Java', 'Python', 'Lisp']
+//		};
+//		console.log(xiaoming);
+//		var s = JSON.stringify(xiaoming);
+//		console.log(s);
+//		s = JSON.stringify(xiaoming, null, '  ');
+//		console.log(s);
+//		s = JSON.stringify(xiaoming, null, '          ');
+//		console.log(s);
+//		s = JSON.stringify(xiaoming, ['name', 'age', 'skills'], '  ');
+//		console.log(s);
+//		
+//		function aaa(key,value) {
+//			if (typeof value === 'string') {
+//				return value.toUpperCase();
+//			}
+//			return value;
+//		}
+//		s = JSON.stringify(xiaoming, aaa, '  ');
+//		console.log(s);
+		
+//		s = JSON.stringify(xiaoming, aaa, ['name', 'age', 'skills'], '  ');
+//		console.log(s);
+//		
+//		var xiaoming = {
+//			name: '小明',
+//			age: 14,
+//			gender: true,
+//			height: 1.65,
+//			grade: null,
+//			'middle-school': '\"W3C\" Middle School',
+//			toJSON: function () {
+//				return {
+//					'Name': this.name,
+//					'Age': this.age
+//				};
+//			}
+//		};
+//		s = JSON.stringify(xiaoming);
+//		console.log(s);
+		
+//		反序列化
+//		JSON.parse('[1,2,3,true]');
+//		var p = JSON.parse('[1,2,3,true]');
+//		console.log(p);
+//		p = JSON.parse('{"name":"小明","age":14}');
+//		console.log(p);
+//		
+//		var obj = JSON.parse('{"name":"小明","age":14}', function (key, value) {
+//			if (key === 'name') {
+//				return value + '同学';
+//			}
+//			return value;
+//		});
+//		console.log(JSON.stringify(obj));
+		
+		
+			
+			
+		</script>
+		
+		<!-- HTML结构 -->
+		<!--<div id="test-div">
+			<div class="c-red">
+			    <p id="test-p">JavaScript</p>
+			    <p>Java</p>
+			</div>
+			<div class="c-red c-green">
+			    <p>Python</p>
+			    <p>Ruby</p>
+			    <p>Swift</p>
+			</div>
+			<div class="c-green">
+			    <p>Scheme</p>
+			    <p>Haskell</p>
+			</div>
+		</div>
+		
+		
+		<script type="text/javascript">
+			// 选择<p>JavaScript</p>:
+			var js = document.getElementById("test-p");
+			console.log(js);
+			// 选择<p>Python</p>,<p>Ruby</p>,<p>Swift</p>:
+			var arr = document.getElementsByClassName("c-green")[0].children;
+			console.log(arr);
+			// 选择<p>Haskell</p>:
+			var haskell = document.getElementsByClassName("c-green")[1].getElementsByTagName("p")[1];
+			console.log(haskell);
+		</script>-->
+		
+		
+		
+		
+		<!--<form id="test-register" action="#" onsubmit="return checkRegisterForm()">
+		    <p id="test-error" style="color:red"></p>
+		    <p>
+		        用户名: <input type="text" id="username" name="username">
+		    </p>
+		    <p>
+		        口令: <input type="password" id="password" name="password">
+		    </p>
+		    <p>
+		        重复口令: <input type="password" id="password-2">
+		    </p>
+		    <p>
+		        <button type="submit">提交</button> <button type="reset">重置</button>
+		    </p>
+		</form>
+		
+		<script type="text/javascript">
+			function checkRegisterForm(){
+				var uname = document.getElementById("username").value;
+				var upaw = document.getElementById("password").value;
+				var upaw2 = document.getElementById("password-2").value;
+				
+				if ( !( /\w{3,10}/.test(uname) ) ){
+					alert('用户名必须是3-10位英文字母或数字');
+					return false;
+				}
+				if( !( /\w{6,20}/.test(upaw) ) ){
+					alert('口令必须是6-20位');
+					return false;
+				}
+				if( upaw !== upaw2 ){
+					alert('两次输入口令必须一致。');
+					return false;
+				}
+				return true;
+			}
+			
+			
+			
+		</script>-->
+		
+		<!--<a href="#">你是谁？</a>
+		<form method="post" enctype="multipart/form-data">
+			<input type="file" id="filed" />
+			<input type="submit" value="提交啊" />
+		</form>
+		
+		
+		<script type="text/javascript">
+			var f = $("#filed");
+			var fname = f.val();
+			
+			console.log(fname);
+			console.log(fname.endsWidth);
+		</script>-->
+		
+		
+		<!--<script>
+			function refreshPrice(data) {
+				console.log(data);
+			}
+
+		</script>
+		<script src="http://api.money.126.net/data/feed/0000001,1399001?callback=refreshPrice"></script>
+		
+		<div id="aa" style="width: 100px;height: 100px;background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528693142081&di=6f5905bc02122b953092aca1e609db67&imgtype=0&src=http%3A%2F%2Fimg1.gtimg.com%2Fsports%2Fpics%2Fhv1%2F240%2F252%2F2066%2F134406150.jpg);">
+			
+		</div>-->
+		
+		<script type="text/javascript">
+//			$.ajax({
+//				type: "post",
+//				url: "http://api.money.126.net/data/feed/0000001,1399001?callback=?",
+//				dataType: "jsonp",
+//				success: function(data){
+//					console.log(data);
+//				},
+//				error: function (){
+//					console.log('请求失败');
+//				}
+//			});
+
+//<!--			$.ajax({
+//				type: "post",
+//				url: "http://www.runoob.com/try/ajax/jsonp.php",
+//				success: function(data){
+//					console.log(data);
+//				},
+//				error: function (){
+//					console.log('请求失败');
+//				}
+//			});-->
+
+		</script>
+		
+		
+		<script type="text/javascript">
+//			function Pro1(){
+//				return new Promise(function(resolve, reject) {
+//					setTimeout(function(){
+//						resolve('pro1')
+//					}, 300)
+//				})
+//			}
+//			//调用
+//			Pro1()
+//			.then(function(data){
+//				console.log(data)
+//			})
+//			.catch(function(err){
+//				throw new Error(err)
+//			})
+			
+//			函数解析
+//			new Promise(
+//				/* 执行器 executor */
+//				function (resolve, reject) {
+//					//一段耗时很长的异步操作
+//					
+//					resolve();  //  数据处理完成
+//					
+//					reject();  //  数据处理出错
+//					
+//				}
+//			)
+//			
+//				.then(function A() {
+//					//成功，下一步
+//				}, function B() {
+//					//失败，做相应处理
+//				});
+				
+//			一个简单的示例
+//			console.log('here we go');
+//			new Promise( success => {
+//				setTimeout( () => {
+//					success('hello');
+//				}, 2000 );
+//			} )
+//				.then( value => {
+//					console.log( value + ' world' );
+//				} );
+			
+//			两步执行的范例
+//			console.log('两步执行的范例');
+//			new Promise( success => {
+//				setTimeout( () => {
+//					success('hello');
+//				}, 2000 );
+//			} )
+//				.then( value => {
+//					console.log(value);
+//					return new Promise( success => {
+//						setTimeout( () => {
+//							success('world')
+//						}, 2000 );
+//					} );
+//				} )
+//				.then( value => {
+//					console.log( value + ' world' );
+//				} );
+
+
+			var r1, r2, s = null;
+			try {
+			    r1 = s.length; // 此处应产生错误
+			    r2 = 100; // 该语句不会执行
+			} catch (e) {
+			    console.log('出错了：' + e);
+			} finally {
+			    console.log('finally');
+			}
+			console.log('r1 = ' + r1); // r1应为undefined
+			console.log('r2 = ' + r2); // r2应为undefined
+
+
+
+
+
+
+
+
+
+
+
+
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

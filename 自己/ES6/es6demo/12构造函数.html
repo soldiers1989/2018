@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+
+    function Person(name,sex)
+    {
+        this.name=name;
+        this.sex=sex;
+        this.showname=function(){
+            alert(this.name)
+        }
+    }
+    var p1=new Person("张三","男");
+    p1.showname();
+    //之前的继承
+    function parent(name,sex,password){
+        Person.call(this,name,sex);
+        this.password=password;
+    }
+    var p2=new parent("a","b","c");
+    p2.showname();
+
+    //es6
+    class Person1{
+        //构造函数
+        constructor(name,sex){
+            this.name=name;
+            this.sex=sex;
+        }
+        showname(){
+            //实例方法
+            alert(this.name)
+        }
+        //静态方法 ，只能通过类名调用  Person1
+        static getsex()
+        {
+            return "asafdsdf"
+        }
+    }
+    var p1=new Person1("离岛","女");
+    console.log(Person1.getsex());//静态方法的调用
+    p1.showname();
+
+    class student extends Person1{
+        constructor(name,sex,password){
+            super(name,sex);//继承父类
+            this.password=password;
+        }
+    }
+    var p3=new student("es6继承的子类","11","123");
+    p3.showname();
+
+
+
+
+</script>
+
+</html>

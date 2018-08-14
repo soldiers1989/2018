@@ -1,0 +1,121 @@
+body {width: 1920px;height: 7634px;margin: 0 auto;}
+.nav .nav_top {border-bottom: 3px #ef6f66 solid;}
+
+/*建站系统zz*/
+.top_banner{width:100%;height: 220px;background:url(../images/zz_banner.png) no-repeat;background-size:100% 100%;padding-top: 380px;}
+.top_banner .top_banner1{width: 200px;height: 50px;margin: 0 auto;background-color: #ef6f66;color: white;font-size: 24px;border-radius: 4px;text-align: center;line-height: 50px;letter-spacing: 15px;text-indent: 0.5em;cursor: pointer;}
+.top_banner .top_banner2{width: 460px;height: 50px;margin: 38px auto;background-color: white;border-radius: 4px;padding:0 20px;}
+.top_banner .top_banner2 div{width: 230px;height: 50px;float: left;line-height: 50px;position: relative;}
+.top_banner .top_banner2 div span:first-child{font-size: 22px;color: #e63636;}
+.top_banner .top_banner2 div span:last-child{color: #666666;}
+.top_banner .top_banner2 div:nth-child(2){text-indent: 7em;}
+.top_banner .top_banner2 div .top_banner2_a1{position: absolute;top: 0;left: 84px;}
+.top_banner .top_banner2 div .top_banner2_a2{position: absolute;top: 0;left: 77px;}
+
+/*我们的优势*/
+#advantage{width: 100%;height: 1000px;text-align: center;}
+#advantage p{width: 100%;font-size: 28px;margin:70px 0;color: #666666;}
+#advantage_a1{width: 1200px;height: 100%;margin: 0 auto;padding-left:90px;}
+#advantage_a1 div{width: 256px;height: 349px;background-repeat:no-repeat;background-position:50% 38%;float: left;font-size: 30px;line-height: 15;position: relative;}
+#advantage_a1 .hidden_box{padding:126px 20px 0 20px;width: 216px;height: 223px;font-size: 20px;line-height: 25px;letter-spacing:4px;color: white;display: none;position: absolute;top: 0;left: 0;background-color: #ef6f66;opacity:0.9;text-align: center;}
+
+
+/*精选案例*/
+#case{width:100%;height:615px;background:#287bfa;}
+#case p{font-size: 28px;color: white;text-align: center;padding: 70px 0 90px 0;}
+#case_a1{width: 100%;height: 418px;overflow: hidden;}
+#case_a1_a1{width: 1740px;height: 310px;margin: 0 auto;}
+#case_a1_a1 div{width: 580px;height: 310px;float: left;background-repeat: no-repeat;margin: 0;}
+
+fieldset, img { border: 0; }
+img { display:inline-block; }
+
+ol, ul { list-style: none outside none; }
+#wrapper{ width:1000px;margin:auto;position:relative; }
+.show_images_list_li {
+position: absolute;
+cursor: pointer;
+vertical-align:bottom; display:block
+}
+
+#belt {display: block;height: 122px;left: 200px;line-height: 1000px;overflow: hidden;position: absolute;top: 1px;width: 149px;
+background:url(features6.6/images/beltnew1.png) no-repeat; background:url(features6.6/images/images/beltnew.png) no-repeat\0; z-index:100;}
+
+.btn { background:url(features6.6/images/btn.jpg) no-repeat; width:101px; height:25px; margin:auto; position:relative; padding-top:350px;}
+.btn  a{width:17px; height:15px; overflow:none; display:block;background:url(features6.6/images/btn.jpg)  no-repeat; cursor: pointer;float:left;}
+.btn  a.active{ background:url(features6.6/images/btn.jpg) -17px 0 no-repeat;}
+
+        fieldset, img { border: 0; }
+        img { display:inline-block; }
+        :focus { outline: 0; }
+        address, caption, cite, code, dfn, em, strong, th, var, optgroup { font-style: normal; font-weight: normal; }
+        h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+        abbr, acronym { border: 0; font-variant: normal; }
+        input, button, textarea, select, optgroup, option { font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit; }
+        code, kbd, samp, tt { font-size:100%; }
+        input, button, textarea, select { *font-size: 100%;
+        }
+	ol, ul { list-style: none outside none; }
+        table { border-collapse: collapse; border-spacing: 0; }
+        sup, sub { font-size: 100%; vertical-align: baseline; }
+        :link, :visited, ins { text-decoration: none; }
+        blockquote, q { quotes: none; }
+        blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+        a{+A:expression(this.onFocus=this.blur());}
+        a:focus{outline:none;}
+        body{font-size:75%; font-family:Tahoma, Arial;}	
+/*建站流程*/
+#site{width: 1200px;height: 680px;margin: 0 auto;color: #666666;text-align: center;}
+#site p{width: 100%;font-size: 28px;margin:70px 0 140px 0;color: #666666;}
+#site_a1 div{width: 239px;height: 300px;background-repeat:no-repeat;background-position:50% 38%;float: left;font-size: 28px;line-height: 17.5;background-color: #f1665c;border-radius: 4px;color: white;}
+
+/*成功案例*/
+#success{width: 100%;height: 900px;background: url(../images/success_bg.jpg) no-repeat;border-top: 2px solid #dfdfdf;}
+#success p{font-size:28px ;color: white;text-align: center;margin: 70px 0 19px 0;}
+#success_a1{width: 100%;height: 23px;margin-top: 19px;margin-bottom: 33px;}
+#success_a1 p{text-align: right;width: 1200px;margin: 0 auto;color: white;font-size: 14px;padding-right:100px ;}
+#pc{color: white;cursor: pointer;}
+#mob{background-color: white;cursor: pointer;}
+#success_a1 #more{color: white;}
+#success_a1 #more:hover {text-decoration:underline;}
+#success_a1_a1{width: 88px;height: 23px;margin: 0 auto;text-align: center;line-height: 21px;}
+#success_a1_a1 div{border: 1px solid white;width: 42px;height: 21px;float: left;}
+#success_a2{width: 1200px;height: 660px;margin:0 auto;position: relative;}
+#success_a2_a1,#success_a2_a2{width: 1200px;height: 660px;position: absolute;top: 0;left: 0;}
+#success_a2_a1 div,#success_a2_a2 div{width: 580px;height: 310px;margin:10px;float: left;}
+#success_a2_a2{display: none;}
+/*展示平台*/
+#platform{width: 1200px;height: 1070px;margin: 0 auto;}
+#platform p:first-child{font-size: 28px;text-align: center;color: #666666;margin: 67px 0 11px 0;}
+#sm{text-align: center;color: #666666;margin-bottom: 132px;margin-bottom: 130px;}
+#platform div{width: 954px;height: 562px;background:url(../images/display.jpg) no-repeat;margin: 0 auto;}
+/*服务*/
+#service{width: 100%;height: 1101px;background: url(../images/service_bg.jpg) no-repeat;background-size: 100% 100%;}
+#service_a1{width: 1200px;height: 100%;margin: 0 auto;}
+#service p{font-size: 32px;text-align: center;color: white;padding: 107px 0 106px 0;}
+#service .details{width: 1000px;height: 170px;background-color: white;margin: 0 auto;margin-bottom: 15px;font-size: 21.4px;color: #52a3ff;text-align: center;line-height: 70px;}
+#service .details div{float: left;padding: 50px 55px;}
+#service .details .details_a1{width: 93px;height: 70px;border-right: 1px solid black;}
+#service .details .details_a2{width: 119px;height: 70px;border-right: 1px solid black;}
+#service .details .details_a3{width: 455px;height: 70px;line-height: 30px;}
+#service .details .details_a1{width: 203px;height: 170px;padding: 0;line-height: 170px;}
+/*#service .details_a3{font-size: 17.3px;}*/
+/*结尾*/
+#end{width: 1200px;height: 320px;margin: 0 auto;}
+#end div{width: 370px;height: 80px;float: left;margin: 120px 98px;line-height: 80px;color: #666666;letter-spacing: 5px;}
+#end_a1{background: url(../images/logo_s1.png) no-repeat right;}
+#end_a2{background: url(../images/logo_s2.png) no-repeat right;margin-left: 165px;}
+#end span{font-size: 30px;color: #e63636;}
+/*联系*/
+#contact{width:100%;height:700px;background:#287bfa;border-top: 2px solid #dfdfdf;}
+#contact p{font-size: 32px;text-align: center;color: white;padding-top: 74px;}
+#contact div{width: 1200px;height: 395px;background: url(../images/map.png) no-repeat left;margin: 0 auto;padding-top: 95px;padding-left: 500px;}
+#contact ul{list-style: none;float: left;width: 126px;height: auto;margin-left: 100px;margin-top: 37px;}
+#contact ul li{width: 100%;height: 42px;margin-bottom: 28px;}
+#contact .p1{font-size: 12px;padding: 0;background: url(../images/tel_logo2.png) no-repeat;text-indent: 1em;font-weight: bold;}
+#contact .p2{font-size: 10px;padding: 0;margin-top: 8px;}
+#contact ul li p span{font-weight: bold;}
+
+/*footer*/
+#footer_a1{margin: 20px 0 80px 0;font: 14px;color: #666666;}
+#ie7{height: 27px;width: 100%;}

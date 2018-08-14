@@ -1,0 +1,89 @@
+
+webpack依赖node，安装最新稳定版node。如果是使用4+版本，还需要安装CLI
+
+基本安装 （局部安装）
+	首先我们创建一个目录，初始化npm，然后本地安装webpack，接着安装webpack-cli（此工具用于在命令行中运行webpack）
+
+	mkdir webpack-demo && cd webpack-demo
+	npm init -yes
+	npm install webpack webpack-cli --save-dev
+	注意：如果错误，则尝试使用淘宝镜像，cnpm。
+
+简写
+	install  i
+	--yes  -y
+	--save-dev  -D
+
+	mkdir webpack-demo && cd webpack-demo
+	npm init -y
+	npm i -D webpack
+	npm i -D webpack-cli
+	npm i --save lodash
+	npx webpack
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

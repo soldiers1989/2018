@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+    //交换
+
+    //let a=1;
+    //let b=2;
+    /* 之前的
+    var c=a;
+    a=b;
+    b=c;*/
+    //[a,b]=[b,a]
+
+    //console.log(b);
+    //解构-数组
+    let [a,b]=[11,22];
+    let [c,d,[e,f],g]=[1,2,[3,4],5]
+    console.log(e)
+    //解构-对象
+    let obj={
+        name:"离岛",
+        sex:"女"
+    }
+    let {name:uname,sex:usex}=obj;
+    console.log(uname)
+
+    //字符串-解构
+    let [aa,bb,cc]="sjfdlsjdf";
+    console.log(aa)
+
+</script>
+</body>
+</html>

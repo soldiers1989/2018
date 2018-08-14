@@ -1,0 +1,8 @@
+.m{margin:0 50px; column-count: 1; column-gap: 30px; color: darkblue;
+		       -webkit-column-count: 1;
+		       -webkit-column-gap: 30px;
+		       color:darkblue;
+		       -moz-column-count: 1;
+		       -moz-column-gap: 30px;
+		       color:darkblue;		       
+		      }

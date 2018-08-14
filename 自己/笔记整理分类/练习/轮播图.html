@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#viewport{width: 300px;height: 500px;margin: 200px auto;padding:0 50px;position: relative;}
+			#viewport .vi{width: 300px;height: 500px;position: relative;overflow: hidden;}
+			#viewport .shuffing{width: 900px;height: 400px;position: absolute;top: 0;left: 0;}
+			#viewport .shuffing div{width: 300px;height: 400px;background-size: cover;background-repeat: no-repeat;float: left;}
+			#viewport .pag{width: 75px;height: 15px;margin: 0 auto;}
+			#viewport .pag div{width: 15px;height: 15px;background-color: brown;float: left;margin: 430px 10px 0 0;}
+			#viewport .prev,#viewport .nex{width: 50px;height: 100px;}
+			#viewport .prev{position: absolute;left: -20px;top: 150px;background-image: url(img/left.png);}
+			#viewport .nex{position: absolute;right: -20px;top: 150px;background-image: url(img/right.png);}
+		</style>
+	</head>
+	<body>
+		
+		<div id="viewport">
+			<div class="vi">
+				<div class="shuffing">
+				<div style="background-image: url(img/10.jpg);"></div>
+				<div style="background-image: url(img/2.jpg);"></div>
+				<div style="background-image: url(img/4.jpg);"></div>
+				<!--<div style="clear: both;"></div>-->
+			</div>
+			</div>			
+			<div class="pag">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="prev"></div>
+			<div class="nex"></div>
+		</div>
+		
+		
+		<script src="js/jquery1.12.4.min.js"></script>
+		<script type="text/javascript">
+			var $tu = $('.shuffing');
+			var $pag = $('.pag').children();
+			$pag.click(function(){
+				switch( $(this).index() ){
+					case 0:$tu.css('left','0');break;
+					case 1:$tu.css('left','-300px');break;
+					case 2:$tu.css('left','-600px');break;
+				}				
+			})
+			
+			var $pot = [($pag.index()-1)*300]
+			$('.prev').click(function(){
+				if( $pag.index()>0 ){
+					$tu.css('left','');
+				}
+			})
+			
+		</script>
+	</body>
+</html>

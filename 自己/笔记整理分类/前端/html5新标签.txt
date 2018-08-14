@@ -1,0 +1,320 @@
+﻿  
+  HTML
+   
+   <!DOCTYPE html>
+   <html>
+      <head>
+	      <meta charset="UTF-8">
+		  <title></title>
+	  </head>
+	  <body>
+	  </body>
+   </html>
+   
+   
+  语义化标签
+    <header>页面头部</header>
+    
+	<hgroup>页面上的一个标题组合,一个标题和一个子标题，或者标语的组合</hgroup> 
+	<hgroup>
+		<h1>趣味课堂</h1>
+		 <h2>带您走向人生巅峰，出任CEO，迎接白富美</h2>
+	</hgroup>
+
+	<nav></nav> 导航 （包含链接的的一个列表）
+
+	<footer></footer>页脚  页面的底部 或者 版块底部
+
+	<section> <section> 页面上的版块.用于划分页面上的不同区域,或者划分文章里不同的节
+
+	<article></ article > 用来在页面中表示一套结构完整且独立的内容部分
+    可以用来呈现论坛的一个帖子，杂志或报纸中的一篇文章，一篇博客，用户提交的评论内容，可互动的页面模块挂件等。
+
+	<figure> < figure > 用于对元素进行组合。一般用于图片或视频
+    <figcaption> <figcaption> figure的子元素 用于对figure的内容 进行说明
+	
+	<time></time>用来表现时间或日期
+	
+    <datalist></datalist>选项列表。与 input 元素配合使用，来定义 input 可能的值。
+  
+    <dialog></dialog>定义一段对话
+	<dialog>
+	  <dt>老师</dt>
+	  <dd>2+2 等于？</dd>
+	  <dt>学生</dt>
+	  <dd>4</dd>
+	  <dt>老师</dt>
+	  <dd>答对了！</dd>
+	</dialog>
+  
+	<address></address> 定义文章 或页面作者的详细联系信息
+	<mark></mark> 需要标记的词或句子
+	<keygen>给表单添加一个公钥
+
+    <progress><progress>定义进度条
+    <progress max="100" value="76">
+         <span>76</span>%
+    </progress>
+  
+    
+  
+  
+  
+  IE兼容新标签
+    针对IE6-8这些不支持HTML5语义化标签的浏览器我们可以使用javascript来解决他们 方法如下：
+    在页面的头部加下：
+	<script>
+			document.createElement(“header”);
+			document.createElement(“nav”);
+			document.createElement(“footer”);
+	……
+	</script>
+
+  样式
+	HTML5语义化标签在IE6-8下，我们用js创建出来之后，他是不会有任何默认样式的甚至是 display，
+	所以在样式表里 要对这些标签定义一下 它默认的display
+  
+  
+  
+  
+  
+  表单 forms
+	新的输入型控件
+	email  :  电子邮箱文本框，跟普通的没什么区别
+	当输入不是邮箱的时候，验证通不过
+	移动端的键盘会有变化
+	tel   :   电话号码
+	url   :   网页的URL
+	search  :  搜索引擎
+	chrome下输入文字后，会多出一个关闭的X
+	range  :  特定范围内的数值选择器
+	min、max、step( 步数 )
+	例子 :  用JS来显示当前数值
+
+    新的输入型控件_2
+	number  :  只能包含数字的输入框
+	color  :  颜色选择器
+	datetime  :  显示完整日期
+	datetime-local  :  显示完整日期，不含时区
+	time  :  显示时间，不含时区
+	date  :    显示日期
+	week  :  显示周
+	month  :  显示月
+
+  datetime:<input type="datetime"/>
+  time:<input type="time"/>
+  
+  
+  新的表单特性和函数
+	- placeholder  :  输入框提示信息 
+	  例子 :  微博的密码框提示
+	- autocomplete  :  是否提示用户输入过值 
+	   默认为on，关闭提示选择off
+	- autofocus  :  指定表单获取输入焦点
+	- list和datalist  :  为输入框构造一个选择列表
+	   list值为datalist标签的id
+	- required  :  此项必填，不能为空
+	- Pattern : 正则验证  pattern="\d{1,5}“
+	- Formaction 在submit里定义提交地址
+
+  <form action="">
+	<!--提示文字-->
+	<input type="text" placeholder="请输入用户名"/><br />
+	<!--自动提示  默认情况下是 on 打开   off 关闭-->
+	<input type="text" autocomplete="off" name="username"/>	<br />
+	<!--自动获取焦点-->
+	<input type="text" autofocus="autofocus"/><br />
+	<!--必填,如为空，提交失败-->
+	<input type="text" required="required"/><br />
+	<!--正则表达式-->
+	<input type="text" pattern="\d{1,5}"/>
+	<!--地址-->
+	<input type="submit" formaction="http://www.taobao.com"/>
+  </form>
+  
+  
+  表单验证
+	validity对象，通过下面的valid可以查看验证是否通过，如果八种验证都通过返回true，一种验证失败返回false
+	- oText.addEventListener("invalid",fn1,false);
+	ev.preventDefault()
+	value: 输入为空false
+	- valueMissing  :  输入值为空时true
+	- typeMismatch :  控件值与预期类型不匹配
+	- patternMismatch  :  输入值不满足pattern正则
+
+	- rangeUnderflow : 验证的number/range最小值
+	- rangeOverflow：验证的number/range最大值
+	- stepMismatch: 验证number/range 的当前值 是否符合min、max及step的规则
+
+	- customError 不符合自定义验证
+	setCustomValidity(); 自定义验证
+
+  表单验证
+	- Invalid事件  :  验证反馈 
+	  input.addEventListener('invalid',fn,false)
+	阻止默认验证：ev.preventDefault()
+	- formnovalidate属性  :  关闭验证
+  
+  
+  
+  
+  
+  
+  新的选择器
+	//当有多个元素满足条件，只匹配第一个元素
+    var a = document.querySelector('#divid');                      id获取
+	var a = document.querySelector('.divclass');                   class获取	
+	var a = document.querySelector('div');                         标签名获取	
+	var a = document.querySelector('[title=hello]');               属性获取
+	
+	//获取的是集合
+  var a = document.querySelectorAll('.divclass');
+  
+  getElementsByClassName
+  
+  
+  
+  获取class列表classList	
+	length :  class的长度	
+	//添加类
+	a.classList.add('box4');			
+	//删除类
+	a.classList.remove('box1');			
+	//切换类  如果类不存在 添加    存在的类删除			
+	a.classList.toggle('box1');
+  
+  
+  json新方法
+	parse() : 把字符串转成json
+	stringify() : 把json转化成字符串
+	
+  
+  深浅拷贝
+  json新方法实现深拷贝
+	var a = JSON.stringify(c);//obj-->string
+	var b = JSON.parse(astr);//string-->obj
+  
+  
+  
+  
+  data-自定义属性
+    data-自定义属性名字                             //自定义属性
+	
+	属性名 data-name                                获取时 dataset.name
+	属性名 data-name-first                          获取时 dataset.nameFirst 
+	data-数据在jquery mobile中有着重要作用
+
+  
+  
+  
+  
+  
+  拖放事件
+  draggable ：设置为true，元素就可以拖拽了
+  <li draggable="true">1</li>
+  
+    拖拽开始
+	a.ondragstart = function(){}
+	
+	拖拽中---连续触发	
+	a.ondrag = function(){}	
+	
+	拖拽结束
+	a.ondragend = function(){}
+		
+	拖拽元素进入目标元素
+	a.ondragenter = function(){}
+
+	进入目标与离开目标之间 ---连续触发
+	odiv.ondragover = function(ev){
+		
+		var ev = ev || window.event;
+		//阻止默认事件
+		ev.preventDefault();
+	}
+		
+	//离开目标元素
+	odiv.ondragleave = function(){}
+	
+	//在目标元素身上释放鼠标
+	//触发的条件：ondragover事件阻止默认事件
+	odiv.ondrop = function(){}
+  
+  
+  解决火狐下的问题
+	必须设置dataTransfer对象才可以拖拽除图片外的其他标签
+
+	dataTransfer对象
+	setData() : 设置数据 key和value(必须是字符串)
+	getData() : 获取数据，根据key值，获取对应的value
+
+  拖拽开始
+	ali[i].ondragstart = function(ev){
+		var ev = ev || window.event;
+		
+		//设置数据做兼容(key-->value设置)
+		ev.dataTransfer.setData('name','hello');
+	}
+  
+    ev.dataTransfer.getData('name'));               //通过key获取数据
+  
+  
+  
+  本地文件拖拽      (上传本地文件，图片时要用)
+  拖拽本地文件的时候，默认情况文件自动打开
+  !!!!!看原课件资料
+  
+  
+  地图APP
+  百度地图API
+  ！！！看原课件资料
+  
+  
+  
+  
+  
+  
+                                           
+                                           canvas画布
+  
+  <canvas id="cv" width="400px" height="400px">
+	    您的浏览器不支持。
+  </canvas>
+  获取画布对象
+  var cv = document.getElementById('cv');
+  设置绘制环境:目前只支持2d场景
+  var ctx = cv.getContext('2d');
+  
+  画布插件
+  jc插件jCanvaScript
+  
+  
+  
+  地图与音视频
+  单次与多次定位，临时与永久存储，存储事件，离线应用缓存，音视频。
+  
+  延迟加载，hash值历史管理，pushstate历史管理
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
