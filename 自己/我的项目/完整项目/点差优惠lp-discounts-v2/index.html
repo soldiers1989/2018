@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http_equiv="x-ua-compatible" content="IE=edge,chrome=1"/>
+    <title>返点优惠震撼来袭</title>
+    <link href="css/style.css" rel="stylesheet"/>
+	<script>
+		var _czc = _czc || [];
+		_czc.push(["_setAccount", "1272981537"]);
+		
+		function uaredirect(){
+            var c = window.location.hash;
+            if(!c.match("fromapp")) {
+                if( navigator.userAgent.match(/(iPhone|iPod|iPad|Android|ios)/i) ){
+//                  window.location.href = 'http://i.hj9999.hk/huodong/m-lp-vip-v2/';
+                }
+            }
+        }
+        uaredirect();
+	</script>
+</head>
+
+<body>
+	<div class="content" id="content">
+		<div class="banner" id="banner"></div>
+		
+		<div class="cont1">
+			<img class="com_title" src="images/cont1_title.png" alt="" />
+			<div class="account_discounts">
+				<div class="account_discounts_box cont1-content">
+					<a onclick="_czc.push(['_trackEvent', '返点优惠活动页版本V2', '开立优惠账户']);" href="https://v1.live800.com/live800/chatClient/chatbox.jsp?companyID=515221&configID=41928&jid=6934404885&s=1&returnbt=1" target="_blank">开立优惠账户</a>
+				</div>
+				<div class="account_discounts_box1 cont1-content">
+					<a onclick="_czc.push(['_trackEvent', '返点优惠活动页版本V2', '开立钻石账户']);" href="https://v1.live800.com/live800/chatClient/chatbox.jsp?companyID=515221&configID=41928&jid=6934404885&s=1&returnbt=1" target="_blank">开立钻石账户</a>
+				</div>
+				<div class="account_discounts_box2 cont1-content">
+					<a onclick="_czc.push(['_trackEvent', '返点优惠活动页版本V2', '开立VIP账户']);" href="https://v1.live800.com/live800/chatClient/chatbox.jsp?companyID=515221&configID=41928&jid=6934404885&s=1&returnbt=1" target="_blank">开立VIP账户</a>
+				</div>
+			</div>
+
+			<div class="activity_rule" style="margin-top: 58px">
+				<a id="activityRule" href="javascript:;">活动规则  》</a>
+			</div>
+		</div>
+		
+		<div class="cont2">
+			<img class="com_title" src="images/cont2_title.png" alt="" />
+			<img class="com_title_text" src="images/cont2_text.png" alt="" />
+			
+			<div class="gain">
+				<div class="gain_label">
+					<p>VIP</p>
+					<p>账户</p>
+				</div>
+				<div class="gain_equation">
+					<div class="gain_equation_img">
+						<img src="images/gain_img1.png"/>
+					</div>
+					<p class="gain_equation_img_p">每手盈利</p>
+					<p class="gain_equation_img_p com_pink">$1000</p>
+				</div>
+				<div class="gain_equation">
+					<div class="gain_equation_symbol">+</div>
+				</div>
+				<div class="gain_equation">
+					<div class="gain_equation_img">
+						<img src="images/gain_img2.png"/>
+					</div>
+					<p class="gain_equation_img_p">每手返点回馈</p>
+					<p class="gain_equation_img_p com_pink">$27</p>
+				</div>
+				<div class="gain_equation">
+					<div class="gain_equation_symbol">=</div>
+				</div>
+				<div class="gain_equation">
+					<div class="gain_equation_img">
+						<img src="images/gain_img3.png"/>
+					</div>
+					<p class="gain_equation_img_p">每手总盈利</p>
+					<p class="gain_equation_img_p com_pink">$1027</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="cont3">
+			<img class="com_title" src="images/cont3_title.png" alt="" />
+			<img class="com_title_text" src="images/cont3_text.png" alt="" />
+			
+			<div class="calculator">
+				<div class="calculator_title"></div>
+				
+				<div class="calculator_box">
+					<div class="calculator_box_account">
+						账户类型
+						<select id="account">
+							<option value="10">优惠账户</option>
+							<option value="23">钻石账户</option>
+							<option value="27">VIP账户</option>
+						</select>
+					</div>
+					<div class="calculator_box_account">
+						买卖类型
+						<select class="bottom_select" id="type">
+							<option value="0">买</option>
+							<option value="1">卖</option>
+						</select>
+					</div>
+				</div>
+				<div class="calculator_box">
+					<div class="calculator_box_account">
+						开仓价
+						<input type="number" id="buy" />
+					</div>
+					<div class="calculator_box_account">
+						平仓价
+						<input type="number" id="sell" />
+					</div>
+				</div>
+				<div class="calculator_box calculator_box3">
+					<div class="calculator_box_account">
+						<p>交易手数</p>
+						<input type="number" id="count" />
+					</div>
+				</div>
+				<div class="clear"></div>
+				
+				<input class="calculator_btn" onclick="calculatet();" id="calculator_btn" type="button" name="" value="开始计算" />
+				<div class="calculator_hx"></div>
+				
+				<div class="calculator_result" id="box-result"></div>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+	<!--活动规则-->
+	<div class="rulesbox" id="rulesBox">
+		<div class="rulesbox_cont">
+			<a href="javascript:;" class="rulesbox_close" id="rulesBoxClose">X</a>
+	        <div class="rulesbox_details">
+	        	<p class="rulesbox_details_title">「活动介绍」</p>
+	        	1.新客开户入金3000美金，点差优惠返23美金/手，入金3000美金以下点差优惠统一返10美金/手；<br />
+				2.在2014年8月之前开户的，在8月起当月净入金2000美金报名升级账户，返点优惠返23美金/手；<br />
+				3.参加返点优惠或升级的客户，该账户在入金之日起30天内不可出金，盈利部分可出。30天后本金可出；<br />
+				4.所有参加返点优惠的资金，都需在3个工作日内到位；<br />
+				5.以上手数客户平仓后，返点将月结返还到客户账户中；<br />
+				6.金裕黄金拥有最终解释权。
+				
+	        	<div class="rulesbox_hx"></div>
+	        	
+	        	<p class="rulesbox_details_title">「活动细则」</p>
+	        	1.此优惠只适用于贵金属交易<br />
+				2.交易手数是平仓手数计算<br />
+				3.参加了返点优惠活动的资金，需要在账户保留一个月<br />
+				4.优惠金额将显示于客户日结单<br />
+				5.客户平仓后，返点将月结返还到客户账户中<br />
+				6.申请优惠的客户需要保留申请活动的本金一个月，如活动期间出金，金裕将收回活动的返点优惠<br />
+				7.金裕黄金拥有最终解释权
+	        	
+	        	<div class="hx"></div>
+	        	
+	        	<p class="rulesbox_details_title">「用户须知」</p>
+	        	关于账户升级提醒，初级账户升级到高级账户要符合高级账户的要求，提交资料申请需3个工作日审核。
+	        	
+	        </div>
+		</div>
+    </div>
+	
+	<!--右边悬浮客服-->
+	<a href="https://v1.live800.com/live800/chatClient/chatbox.jsp?companyID=515221&configID=41928&jid=6934404885&s=1&returnbt=1" target="_blank">
+		<div class="server" id="server">
+			<img src="images/server_info.png"/>
+			<p>咨询客服</p>
+		</div>
+	</a>
+	
+	<script src="http://www.hj9999.hk/statics/version03/js/jquery.min.js"></script>
+	<script src="http://hj9999.hk/statics/version03/jycomponents/components.js"></script>
+	<script src="js/snowfall.jquery.min.js"></script>
+	<script src="./js/index.js"></script>
+</body>
+</html>

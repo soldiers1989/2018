@@ -9,12 +9,8 @@ npm get registry
 设成淘宝的
 npm config set registry http://registry.npm.taobao.org/
 
- 
-
 2.换成原来的
 npm config set registry https://registry.npmjs.org/
-
-
 
 
 														运行vue.js
@@ -23,18 +19,10 @@ npm config set registry https://registry.npmjs.org/
 	npm run dev													
 
 	
-	
-	
-	
 									可以直接引入 vue.js 到页面，
 									
-																										
 模版通过 <script type="text/x-template" id="myTemp"></script> 声明
 
-
-	
-	
-	
 
 													vue.js模板语法
 													

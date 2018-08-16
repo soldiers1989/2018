@@ -1,4 +1,4 @@
-
+﻿
 cnpm install vue-cli -g		//cli 命令行工具  -g全局安装
 vue init webpack helloworld 	//init	初始化  下载初始化webpack模板，有其他模板，详情看官网
 
@@ -6,37 +6,76 @@ vue init webpack helloworld 	//init	初始化  下载初始化webpack模板，�
 
 然后根据提示进行	选择npm   cd进入目录  npm run dev
 
-cnpm install --production  		//安装生产环境所需依赖
+cnpm install --production  		//安装生产环境所需依赖,一般都是直接安装好了的，不需要再安装
 生产环境依赖，json文件下，dependencies  的列表
 
 
 
+										Vue.js起步
+实例化Vue，Vue构造器。
+	语法格式：
+		var vm = new Vue({
+			//选项
+		})
+	实例：
+		<div id="vue_app">
+			<h1>我叫{{ name }}</h1>
+			<h1>{{ age() }}</h1>	//方法 ()
+		</div>
+		<script>
+			var vApp = new Vue({	//初始化实例
+				el: '#vue_app',		//绑定元素主体、影响范围
+				data: {
+					name: '小明'
+				},
+				methods: {
+					age: function() {
+						return this.name + '年年18岁。';
+					}
+				}
+			})
+		</script>
 
 
+										Vue.js模板语法
+
+										插值
+文本	{{}}  双大括号的文本插值
 
 
+html	<div v-html="message"></div>	data:{ message: '<h1>我是一只小啊小小鸟~~~~~</h1>' }
+	提示：如果插入的指令元素内有内容，内容为空，输出指令html结构代码
+
+	
+属性	v-bind="classname"
+	动态的切换类类：
+		v-bind:class={ classname : bool }
+		样式.classname{color:red}  数据data:{ bool: true }
+	注意：使用vue绑定的类，不可使用-拼接命名，如果使用了则需带''，否则使用 _ 例如：vue_app
+
+	多样式绑定：v-bind="{ class1: bool, class2: bool }"
+	与原类共用：class="classname" v-bind="{ class1: bool }" 
 
 
+表达式	vue提供了完全的表达式支持
+	<p>{{ 5+5 }}</p>
+	<p>{{ ok ? 'yes' : 'no' }}</p>
+	<p>{{ message.split('').reverse().join('') }}</p>
+	<div v-bind:id="'list-' + id"> 一笑而过 </div>
+
+	注意：{{}}  双大括号内为文本插值或运算，非数字则为变量，需定义或带单引号为字符串（上文OK需data中定义）。
 
 
+指令	指令是带有v-前缀的特殊属性。
+	<p v-if="seen">现在你看到我了</p>
+	data: {seen: true}		//根据seen的真假值，决定是否插入p
+	<a v-on:click="doSomething">a</a>	methods: { doSomething: function(){ console.log('点击事件'); } }
+	
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+修饰符	修饰符就是带.的特殊后缀，例如这个.prevent则是调用event.preventDefault() 事件，取消默认事件，表单不默认提交
+	<form v-on:submit.prevent="onSubmit">
+		<input type="submit" name="submit" value="提交" />
+	</form>
 
 
 

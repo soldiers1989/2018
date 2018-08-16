@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>金裕金融-美国NFA牌照贵金属代理平台,现货黄金、伦敦银、国际原油开户行情资讯第一网站！</title>
+    <meta name="keywords" content="金裕,金裕金融,黄金代理,现货黄金白银代理,外汇原油招商平台,金裕贵金属代理,金裕环球代理商" />
+    <meta name="description" content="金裕金融是最受欢迎的国际黄金、外汇、原油交易代理平台，提供最新行情咨询，最优惠开户条件；贵金属加盟高佣金，国际期货代理低门槛要求，首选贵金属品牌首选金裕金融[www.jygold.net]" />
+    <meta name="baidu-site-verification" content="x0gCheugMn" />
+    <meta name="baidu-site-verification" content="2FS82yFfOu" />
+    <meta name="sogou_site_verification" content="urGJZBW5oM"/>
+    <meta name="360-site-verification" content="c835f204faad535bf45e1a930cac1ae7" />
+    <link href="{APP_PATH}statics/version02/css/common.css" rel="stylesheet"/>
+    <script type="text/javascript">
+        //pc或移动判断
+        function uaredirect(){
+            var c = window.location.hash;
+            if(!c.match("fromapp")) {
+                if( navigator.userAgent.match(/(iPhone|iPod|iPad|Android|ios)/i) ){
+                    window.location.href = 'http://www.jygold.net/m/';
+                }
+            }
+        }
+        uaredirect();
+    </script>
+    <script src="{APP_PATH}statics/version02/js/jquery.min.js"></script>
+</head>
+<body>
+{template 'content','header'}
+<link href="{APP_PATH}statics/version02/css/home.css" rel="stylesheet"/>
+<!--banner start-->
+<div class="banner">
+    <div class="bannerBox">
+        <div class="hd">
+            <ul>
+                <li></li>
+                <li></li>
+       			<!-- <li></li> -->
+           
+               
+				
+            </ul>
+        </div>
+        <div class="bd">
+            <ul>
+                
+            	<!-- <li><a href="http://www.jygold.net/lp/lp-fn201808-v1/" class="d1" ><img src="http://www.jygold.net/statics/version02/banners/fn20180801.jpg"/></a> </li> -->
+                <li><a href="http://www.jygold.net/lp/lp-nfa-v1/" class="d1" ><img src="http://www.jygold.net/statics/version02/banners/NFCbanner1.jpg"/></a> </li>
+                <li><a href="javascript:;" class="d1" ><img src="http://www.jygold.net/statics/version02/banners/banner1.jpg"/></a> </li>
+                <!-- <li><a href="javascript:;" class="d1" ><img src="http://www.jygold.net/statics/version02/banners/banner2.jpg"/></a> </li>
+ -->
+
+            </ul>
+        </div>
+    </div>
+</div>
+<!--banner end-->
+<div class="mainpart">
+    <div class="dataCount">
+        <ul class="dataCount-main">
+            <li>
+                <div class="count_up">
+                    <span class="day_num"></span>天
+                    <span class="hour_num"></span>时
+                    <span class="min_num"></span>分
+                    <span class="sec_num"></span>秒
+                </div>
+                9年运营保证
+            </li>
+            <li>
+                <span class="timer" id="tradeCount" data-to="268040326" data-speed="1500"></span><br>
+                累计交易笔数
+            </li>
+            <li>
+                <span class="timer" id="customCount" data-to="2848967" data-speed="1500"></span><br>
+                已服务客户人数
+            </li>
+            <li>
+                <span class="timer" id="viewCount" data-to="348976967" data-speed="1500"></span><br>
+                网站累计到访数
+            </li>
+        </ul>
+        <div class="dataCount-btn-group">
+            <a class="dataCount-btn-realAccount" target="_blank" href="http://www.jygold.net/account_open/real/"></a>
+			<a class="dataCount-btn-demoAccount" target="_blank" href="http://www.jygold.net/mt4churujin/"></a>
+        </div>
+    </div>
+    <div class="quotesData-group">
+        <div class="quotesData-title"><span></span>行情数据</div>
+        <div id="mainPrice">
+            <ul>
+            </ul>
+        </div>
+    </div>
+    <div class="info">
+        <div class="info-left">
+            <div class="info-tab-btn-group">
+                <ul>
+                    <li class="active">走势分析</li>
+                    <li>黄金快讯</li>
+                </ul>
+                <a>MORE+</a>
+            </div>
+            <div class="info-list">
+                <div class="info-list-item active">
+                    <a class="hqpic" href=""><img src="{APP_PATH}statics/version02/images/dp.jpg"/></a>
+                    {pc:content action="lists" catid="36" num="1" order="id DESC" page="$page"}
+                    {loop $data $r}
+                    <div class="info-intro">
+                        <h4><a href="{$r['url']}">{$r[title]}</a></h4>
+                        <a href="{$r[url]}" target="_blank">{str_cut($r[description],300,'…')}</a>
+                    </div>
+                    {/loop}
+                    {/pc}
+                    <ul class="infotip-list">
+                        {pc:content action="lists" catid="36" num="3" order="inputtime DESC"}
+                        {loop $data $r}
+                        <li>
+                            <a href="{$r['url']}">{$r['title']}</a>&nbsp;&nbsp; {date('Y-m-d',$r['inputtime'])}
+                        </li>
+                        {/loop}
+                        {/pc}
+                    </ul>
+                </div>
+                <div class="info-list-item ">
+                    <a class="hqpic" href=""><img src="{APP_PATH}statics/version02/images/dp.jpg"/></a>
+                    {pc:content action="lists" catid="50" num="1" order="id DESC" page="$page"}
+                    {loop $data $r}
+                    <div class="info-intro">
+                        <h4><a href="{$r['url']}">{$r[title]}</a></h4>
+                        <a href="{$r[url]}" target="_blank">{str_cut($r[description],300,'…')}</a>
+                    </div>
+                    {/loop}
+                    {/pc}
+                    <ul class="infotip-list">
+                        {pc:content action="lists" catid="50" num="3" order="inputtime DESC"}
+                        {loop $data $r}
+                        <li>
+                            <a href="{$r['url']}">{$r['title']}</a>&nbsp;&nbsp; {date('Y-m-d',$r['inputtime'])}
+                        </li>
+                        {/loop}
+                        {/pc}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="download-part">
+        <a class="mt4-download" target="_blank" href="http://www.jygold.net/account_open/mt4/" >MT4 下载</a>
+        <h1>国际通用，90%交易量载体</h1>
+        <h4>数十年不断完善，成熟，安全，精准，稳定</h4>
+        <p><span class="dot">●</span>18种画线工具&nbsp;
+            <span class="dot">●</span>9种交易时段图标&nbsp;
+            <span class="dot">●</span>30种国际流行指标&nbsp;
+            <span class="dot">●</span>多种自定义功能</p>
+        <dl class="ml92">
+            <dt>
+                <img src="{APP_PATH}statics/version02/images/appstore.jpg"/>
+            </dt>
+            <dd>App Store下载</dd>
+        </dl>
+        <dl class="ml27">
+            <dt>
+                <img src="{APP_PATH}statics/version02/images/Android.jpg"/>
+            </dt>
+            <dd>Android下载</dd>
+        </dl>
+        <img class="pcpic" src="{APP_PATH}statics/version02/images/pc.png"/>
+        <ul class="download-group">
+            <li>
+                <div class="download-icon s-bgcolor1">
+                    <span class="windows"></span>
+                </div>
+                <a class="download-item s-bgcolor1" href="http://www.jygold.net/account_open/mt4/" target="_blank">电脑版下载</a>
+            </li>
+            <li>
+                <div class="download-icon s-bgcolor2">
+                    <span class="apple"></span>
+                </div>
+                <a class="download-item s-bgcolor2 s-color" href="http://www.jygold.net/account_open/mt4/pingguo/" target="_blank">App Store下载</a>
+            </li>
+            <li>
+                <div class="download-icon s-bgcolor3">
+                    <span class="android"></span>
+                </div>
+                <a class="download-item s-bgcolor3" href="http://www.jygold.net/account_open/mt4/anzhuo/" target="_blank">Android下载</a>
+            </li>
+        </ul>
+    </div>
+    <div class="calendar">
+        <div class="financial">
+            <div class="financial-title">
+                <h1 style="position:relative;left:20px;top:15px;">财经日历</h1>
+                <ul class="calendar-btn-group"></ul>
+                <ul class="daily" id="daily">
+                    <!-- <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li> -->
+                </ul>
+            </div>
+            <!-- <div class="financial-info" id="financial-info">
+                <table id="figure" class="list-table row-on-hover figure-calendar-table" width="100%">
+                </table>
+            </div> -->
+            <iframe frameborder="no" height="410" src="http://www.jygold.net/api/getDailyfx.php" width="648"></iframe>
+
+        </div>
+        <div class="jy-opinion">
+            <div class="jy-opinion-title">
+                <h1 style="position:relative;left:20px;top:15px;">金裕观点</h1>
+            </div>
+            <ul>
+                {pc:content action="lists" catid="35" num="5" order="inputtime DESC"}
+                {loop $data $r}
+                <li>
+                    <span class="daily-dot">●</span><a href="{$r[url]}" class="daily-title">{str_replace('金裕黄金：', '', $r['title'])}</a>
+                    <a href="{$r[url]}" class="daily-title">{str_cut($r['description'],160)}</a>
+                </li>
+                {/loop}
+            </ul>
+        </div>
+    </div>
+    <div class="act-group">
+        <div class="act-group-item">
+            <div class="act-title">
+                合作加盟
+            </div>
+            <a class="pic" href="http://www.jygold.net/lp/lp-zml-v2">
+                <img src="{APP_PATH}statics/version02/images/pic1.jpg"/></a>
+                <div class="act-group-item-info">
+                    加盟金裕 共同富裕<br>
+                    0成本合作，无需资金，人脉变钱脉<br>
+                    
+                </div>
+            
+			<a class="more" href="http://www.jygold.net/account_open/ApplyAccount/" target="_blank">马上加入</a>
+        </div>
+        <div class="act-group-item">
+            <div class="act-title">
+                集团介绍
+            </div>
+            <a class="pic" href="">
+                <img src="{APP_PATH}statics/version02/images/pic2.jpg"/>
+            </a>
+            <div class="act-group-item-info">
+                <span class="s-color">打造金融贸易服务一流品牌十年</span><br>
+                ◆2017年金裕环球平台获得世界三大金融牌照之一|美国NFA牌照|认证。
+
+            </div>
+            <a class="more" href="http://www.jygold.net/about/jituan/beijing/" target="_blank">更多</a>
+        </div>
+        <div class="act-group-item">
+            <div class="act-title">
+                最新公告
+            </div>
+            <a class="pic" href="">
+                <img src="{APP_PATH}statics/version02/images/pic4.jpg"/>
+            </a>
+            {pc:content action="lists" catid="17" num="1" order="inputtime DESC"}
+            {loop $data $r}
+            <div class="act-group-item-info">
+               <a  href="{$r[url]}" target="_blank">{$r[title]}</a><br>
+                <a href="{$r[url]}" target="_blank">{str_cut($r[description],300,'…')}</a>
+            </div>
+            {/loop}
+            {/pc}
+            <a class="more" href="{APP_PATH}about/baodao/gonggao/" target="_blank">更多</a>
+        </div>
+    </div>
+</div>
+<div class="co-media">
+    <div class="co-media-inner">
+        <p>合作媒体</p>
+        <ul>
+            <li><img src="{APP_PATH}statics/version02/images/partner.jpg"/> </li>
+            <li><img src="{APP_PATH}statics/version02/images/partner2.jpg"/> </li>
+            <li><img src="{APP_PATH}statics/version02/images/partner3.jpg"/> </li>
+            <li><img src="{APP_PATH}statics/version02/images/partner4.jpg"/> </li>
+            <li><img src="{APP_PATH}statics/version02/images/partner5.jpg"/> </li>
+            <li><img src="{APP_PATH}statics/version02/images/partner6.jpg"/> </li>
+        </ul>
+    </div>
+</div>
+<script src="{APP_PATH}statics/version02/js/quotation.js"></script>
+<script src="{APP_PATH}statics/version02/js/daily.js"></script>
+<script src="{APP_PATH}statics/version02/js/countTo.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-71214413-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-71214413-1');
+</script>
+{template 'content','footer'}
