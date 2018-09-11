@@ -22,10 +22,11 @@
     });
 
 
-
-
-
-
+	
+	API参数
+		Progress(进度)
+			watchSlidesVisibility
+		
 
 
 

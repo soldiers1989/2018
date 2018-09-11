@@ -1,4 +1,15 @@
 ﻿
+运行vue项目步骤
+	npm install，第一步
+	第二步，npm run dev
+
+	npm run build	第三步 打包
+
+
+
+
+
+
 cnpm install vue-cli -g		//cli 命令行工具  -g全局安装
 vue init webpack helloworld 	//init	初始化  下载初始化webpack模板，有其他模板，详情看官网
 
@@ -8,6 +19,11 @@ vue init webpack helloworld 	//init	初始化  下载初始化webpack模板，�
 
 cnpm install --production  		//安装生产环境所需依赖,一般都是直接安装好了的，不需要再安装
 生产环境依赖，json文件下，dependencies  的列表
+
+
+
+
+
 
 
 
@@ -47,14 +63,8 @@ html	<div v-html="message"></div>	data:{ message: '<h1>我是一只小啊小小�
 	提示：如果插入的指令元素内有内容，内容为空，输出指令html结构代码
 
 	
-属性	v-bind="classname"
-	动态的切换类类：
-		v-bind:class={ classname : bool }
-		样式.classname{color:red}  数据data:{ bool: true }
-	注意：使用vue绑定的类，不可使用-拼接命名，如果使用了则需带''，否则使用 _ 例如：vue_app
+属性	v-bind:属性=""
 
-	多样式绑定：v-bind="{ class1: bool, class2: bool }"
-	与原类共用：class="classname" v-bind="{ class1: bool }" 
 
 
 表达式	vue提供了完全的表达式支持
@@ -78,73 +88,274 @@ html	<div v-html="message"></div>	data:{ message: '<h1>我是一只小啊小小�
 	</form>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+过滤器		由“管道符”指示，格式如下：
+	{{ msg | capitalize	}}							//在两个大括号中
+	<div v-bind:id="rawId | formatId"></div>		//在v-bind指令中
+	//在Vue控制器中 是在filters中，而非methods中
+	filters: {
+		capitalize: function (value) {
+			if (!value) return ''
+			value = value.toString()
+			return value.charAt(0).toUpperCase() + value.slice(1)
+		}
+	}
+
+	过滤器串联：
+		{{ msg | filterA | filterB }}		//数据字符msg  经过函数filterA处理过滤，再经过函数filterB处理返回。
+	过滤器参数，过滤器是javascript函数，因此可以接受参数：
+		{{ msg | filterA('arg1', arg2) }}
+		msg是第一个参数，字符串'arg1'将传给过滤器作为第二个参数，arg2表达式的值将被求值然后传给过滤器作为第三个参数。
+
+
+	缩写	Vue.js为最为常用的指令提供了特别的缩写：
+		<a v-bind:href="url"></a>
+		<a :href="url"></a>
+		<a v-on:click="doSomething"></a>
+		<a @click="doSomething"></a>
+
+
+注意点：
+	当我们给一个比如 props 中，或者 data 中被观测的对象添加一个新的属性的时候，不能直接添加，必须使用 Vue.set 方法。
+	Vue.set 方法用来新增对象的属性。如果要增加属性的对象是响应式的，那该方法可以确保属性被创建后也是响应式的，同时触发视图更新
+	这里本来 food 对象是没有 count 属性的，我们要给其添加 count 属性就必须使用 Vue.set 方法，而不能写成 this.food.count = 1
+
+
+
+
+											Vue.js条件与循环
+
+Math.random()	随机数0-1
+
+条件判断	v-if
+	与原js的if条件语句语法类似，根据条件判断选择输出html语句
+	v-if=""		v-if=""		v-if=""
+				v-else		v-else-if=""
+							v-else
+
+展示隐藏	v-show
+	根据条件显示隐藏语句
+
+
+循环语句	v-for
+	v-for指令需要以site in sites形式的特殊语法， sites是源数据数组，site是迭代的别名。
+	完整例子：
+		<ol>
+			<li v-for="(value, key, index) in sites">
+				{{ value }}
+			</li>
+		</ol>
+		value：直接迭代输出数据sites原对象不管是什么类型
+		key：数组键名
+		index：索引
+		value.name 迭代输出数组对应键名的值
+
+		<ol v-for="(value, key, index) in sites">
+			<li>
+				{{ value }}
+			</li>
+			<li>---------</li>
+		</ol>
+		迭代输出内容（两个li）
+
+	迭代整数
+		<ul>
+			<li v-for="n in 10">
+				{{ n }}
+			</li>
+		</ul>
+
+
+计算属性	computed
+	例子： 
+		<p>{{ msg }}</p>
+		<p>计算反转字符串：{{ reversedMessage }}</p>
+		var vm = new Vue({
+			el: '#app',
+			computed: {
+				reversedMessage: function () {
+					return this.msg.split('').reverse().join('')
+				}
+			},
+			methods:{
+				
+			}
+		})
+
+	computed 和 methods 对比较
+		可以使用methods来替代computed，效果上一致。
+		不同点： 计算属性基于它的依赖（msg）缓存，只要相关依赖发生改变时才会重新取值。
+				 methods在重新渲染的时候，函数总会重新调用执行。
+
+	computed setter
+		computed 属性默认只有getter，不过在需要时可以提供一个setter：
+		
+		computed: {
+			reversedMessage: {
+				//getter
+				get: function () {
+					return this.msg + ' ' + '直接获取然后执行函数'
+				},
+				//setter	newValue为新更改的值
+				set: function (newValue) {
+					return newValue + ' ' + '再运行函数时会调用setter'
+				}
+			}
+		}
+		例如：vm.reversedMessage: = '这个数据就是setter中参数newValue的数据';    //这样就是调用setter
+		
+
+监听属性	watch
+	可以通过watch来响应数据的变化
+	例子：
+		<input type = "text" v-model = "kilometers">
+		<input type = "text" v-model = "meters">
+		
+		data:{
+			kilometers : 0,
+			meters:0
+		},
+		watch: {
+			kilometers: function(val) {
+				this.kilometers = val;
+				this.meters = val * 1000;
+			},
+			meters: function (val) {
+				this.kilometers = val/1000;
+				this.meters = val;
+			}
+		}
+		//$watch 是一个在线实例方法
+		vm.$watch('kilometers', function (newValue, oldValue) {
+			//这个回调将在vm.kilometers 改变后调用
+			document.getElementById("info").innerHTML = "修改前值为：" +oldValue+ "，修改后值为：" +newValue;
+		})
+
+发现点：v-model绑定的input，绑定的值的函数，参数（value）就是绑定的input的值，也就是说，input在输入的时候，值改变，函数带参的value的值也会改变.	
+		
+		
+样式绑定
+	动态的切换类类：
+		v-bind:class={ classname : bool }
+		样式.classname{color:red}  数据data:{ bool: true }
+	注意：使用vue绑定的类，不可使用-拼接命名，如果使用了则需带''，否则使用 _ 例如：vue_app
+
+	多样式绑定：v-bind="{ class1: bool, class2: bool }"
+	与原类共用：class="classname" v-bind="{ class1: bool }" 
+		
+		
+Vue.js事件处理器
+	知识点：this在方法里指当前Vue实例
+			event是原生DOM事件,也可直接是JavaScript直接调用方法  vApp.age()
+		
+	事件监听可以使用v-on指令	
+	知识点：事件可以定义的方法名，下面写方法执行内容，或是直接行间样式写事件内容，例：v-on:click="counter +=1"	
+		
+	内联JavaScript语句：	
+		v-on:click="say('hi')"
+		methods: {
+			say: function (message) {
+				alert(message)
+			}
+		}
+		
+	事件修饰符	
+		Vue.js 为 v-on 提供了事件修饰符来处理 DOM 事件细节，如：event.preventDefault() 或 event.stopPropagation()。
+		Vue.js通过由点(.)表示的指令后缀来调用修饰符。
+		
+		<!-- 阻止单击事件冒泡 -->
+		<a v-on:click.stop="doThis"></a>
+		
+		<!-- 提交事件不再重载页面 -->
+		<form v-on:submit.prevent="onSubmit"></form>
+		
+		<!-- 修饰符可以串联 -->
+		<a v-on:click.stop.prevent="doThat"><>
+		
+		<!-- 只有修饰符 -->
+		<form v-on:submit.prevent></form>
+
+		<!-- 添加事件监听器时使用事件捕获模式 -->
+		<div v-on:click.capture="doThis">...</div>
+
+		<!-- 只当事件在该元素本身（而不是子元素）触发时触发回调 -->
+		<div v-on:click.self="doThat">...</div>
+
+		<!-- click 事件只能点击一次，2.1.4版本新增 -->
+		<a v-on:click.once="doThis"></a>
+
+
+	按键修饰符
+		Vue允许为v-on在监听键盘事件时添加按键修饰符：
+		
+		<!-- 只有在keyCode 是13时调用 vm.submit() -->
+		<input v-on:keyup.13="submit">
+
+		Vue为最常用的按键提供了别名：
+			<!-- 同上 -->
+			<input v-on:keyup,enter="submit">
+			<!-- 缩写语法 -->
+		
+		全部的按键别名:
+		.enter
+		.tab
+		.delete（捕获“删除”和“退格”键）
+		.esc
+		.space
+		.up
+		.down
+		.left
+		.right
+		.ctrl
+		.alt
+		.shift
+		.meta
+		
+		
+		
+Vue.js表单
+		复选框 checkbox
+			复选框中，data绑定的v-model为字符串或是布尔值，则为true、false，如果绑定的为[],数组，则为input中，value属性的值。
+			
+		单选按钮 radio  
+			v-model绑定的值为字符串 input的value值
+		
+		select列表 
+			v-model绑定的值为option选项的value值
+		
+		修饰符
+			v-model.lazy=""		//在change而不是在input事件中更新。 比如需要按inter键才会显示改变
+			v-model.number=""   //自动将用户输入的值转为Number类型，因为输入值也总是会返回字符串类型，所以很有用。
+			v-model.trim=""     //自动过滤用户输入的首尾空格
+		
+		注意知识点：js的onchange事件，是用户改变input内容时触发，也就是用户离开input输入框的时候触发，而input事件是指input内容改变时立即触发的事件。
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
 
 

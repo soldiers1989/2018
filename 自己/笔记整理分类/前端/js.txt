@@ -160,8 +160,10 @@ js 字符串转换成数字的三种方法
 		return a + a;
 	});
 	
-	
-	
+js 字符串转换成数字，小技巧。
+	string - 0  //类型就转换成了number
+
+	反之+'0'    //number就会转换成string
 	
 	
 元素转换成字符串	join()

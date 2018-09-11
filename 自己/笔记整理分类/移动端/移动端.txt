@@ -1,4 +1,9 @@
 
+移动端字体设置
+	font-family: "Helvetica","微软雅黑","microsoft yahei";
+
+
+
 移动端媒体查询（css文件）
 	在之前的rem手机端自适应里的css加入这个，修复大屏手机字体过大.
 	@media only screen and (min-width: 414px) and (max-width: 1920px)  {

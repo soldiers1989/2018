@@ -131,7 +131,49 @@ function yanzheng(){
 
 
 
-
+倒计时
+	HTML
+		<div class="countdown">
+			<p class="countdown_title">距下个非农数据公布时间：</p>
+			<span class="countdown_num countdown_num1" id="countdownDay"></span>天
+			<span class="countdown_num" id="countdownHour"></span>时
+			<span class="countdown_num" id="countdownMinute"></span>分
+			<span class="countdown_num" id="countdownSecond"></span>秒
+		</div>
+	JS
+		var endTime = new Date(2018,7,3,20,30,0);
+		setInterval(function () {
+			var nowtime = new Date();
+			var time = endTime - nowtime;
+			if( time <= 0 ){
+				$("#countdownDay").text('00');
+				$("#countdownHour").text('00');
+				$("#countdownMinute").text('00');
+				$("#countdownSecond").text('00');
+			}else{
+				var day = parseInt(time / 1000 / 60 / 60 / 24);
+				var hour = parseInt(time / 1000 / 60 / 60 % 24);
+				var minute = parseInt(time / 1000 / 60 % 60);
+				var seconds = parseInt(time / 1000 % 60);
+				if( day<10 ){
+					day = '0' + day;
+				}
+				if( hour<10 ){
+					hour = '0' + hour;
+				}
+				if( minute<10 ){
+					minute = '0' + minute;
+				}
+				if( seconds<10 ){
+					seconds = '0' + seconds;
+				}
+				
+				$("#countdownDay").text(day);
+				$("#countdownHour").text(hour);
+				$("#countdownMinute").text(minute);
+				$("#countdownSecond").text(seconds);
+			}
+		}, 1000);
 
 
 

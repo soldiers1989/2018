@@ -86,8 +86,6 @@ input  提示文字属性  placeholder
 
 
 添加qq群pc		https://qun.qq.com/join.html
-<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=f3bbdeaf495100b2e791fe49111d61869b9e54c99d6b1a25b5592be85ea209f1"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="你是谁" title="你是谁"></a>
-
 移动端：mqqapi://card/show_pslcard?src_type=internal&version=1&uin=5555530&card_type=group&source=qrcode
 
 
@@ -108,12 +106,14 @@ PC添加qq群和qq
 pc端      基本都支持，
 
 
+	
+	
+	
+		label标签和input
 
-
-
-
-
-
+<label for="male"> A </label>
+<input type="radio" id="male" >
+	label标签，for属性绑定input选项的id，点击label或id都可触发选项
 
 
 
