@@ -1,0 +1,275 @@
+头部美国执照链接
+https://www.nfa.futures.org/basicnet/Details.aspx?entityid=PTyvV0jyOEo%3d
+开户、真实账户、免费开户
+http://www.hj9999.hk/kailimt4/
+http://i.hj9999.hk/kaihujiaoyi/kailizhenshizhanghu/
+模拟账户
+http://www.hj9999.hk/mt4moni/
+http://i.hj9999.hk/kaihujiaoyi/kailimonizhanghu/
+VIP
+http://www.hj9999.hk/lp/lp-vip-v1/
+推荐
+http://www.hj9999.hk/huodong/tuijian/
+入金
+http://www.hj9999.hk/mt4churujin/
+
+
+
+新TQ客服链接
+http://vipwebchat.tq.cn/sendmain.jsp?action=chat&version=vip&admiuin=9146666&ltype=1&iscallback=1&page_templete_id=26317&is_message_sms=0&is_send_mail=0&uin=9796322&tq_rand=410381635156901
+手机端客服链接live800
+https://v1.live800.com/live800/chatClient/chatbox.jsp?companyID=515221&configID=41928&jid=6934404885&s=1&returnbt=1
+新的客服链接
+http://yq.im-cc.com/webchat_new/static/html/index.html?ht=9180
+
+
+
+
+共用样式文件链接
+<script src="http://www.hj9999.hk/statics/version03/jycomponents/components.js"></script>
+jq1.8.3
+<script src="http://www.hj9999.hk/statics/version03/js/jquery.min.js"></script>
+
+
+
+金裕直播喊单群：534818573
+<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=6651eeb1e11796b92beed28b2e3c120bac8fd2d6a83d91587621076c186f1632 
+"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png 
+" alt="黄金投资喊单指导群" title="黄金投资喊单指导群"></a>
+
+
+
+代理官网链接
+
+开立账户
+http://www.jygold.net/account_open/real/
+咨询客服
+https://v1.live800.com/live800/chatClient/chatbox.jsp?companyID=515221&configID=41928&jid=6934404885&s=1&returnbt=1
+入金
+http://www.jygold.net/mt4churujin/
+
+
+
+
+
+
+
+竞价页对应FTP		sxuzpp.cn
+
+新客户
+	http://hj9999.chuanggi.cn/lp/lp-xkh-v1/
+	http://www.hj9999.hk/lp/lp-xkh-v1/
+	http://i.hj9999.hk/huodong/m-lp-xkh-v1/ 
+	http://hj9999.chuanggi.cn/lp/m-lp-xkh-v1/
+
+
+新年豪礼活动页面
+	http://hj9999.chuanggi.cn/lp/lp-2018start-v1/
+	http://www.hj9999.hk/lp/lp-2018start-v1/
+	http://i.hj9999.hk/huodong/m-lp-2018Start-v1/
+	http://hj9999.chuanggi.cn/lp/m-lp-2018Start-v1/
+	
+	http://www.hj9999.hk/lp/lp-2017end-v1/    （替换的页面）
+	http://i.hj9999.hk/huodong/m-lp-2017end-v1/
+
+
+移动端牌照
+http://i.hj9999.hk/huodong/paizhao/
+	
+
+	非农请求链接
+	var urlList=[116,214,175,176];
+	url:"http://www.hj9999.hk/api.php?op=get_lists_json&catid="+urlList[i]+"&num=2",
+	
+	
+	
+非农活动页面参考
+
+pc		http://www.hj9999.hk/lp/lp-fn20180105-v1/   http://www.hj9999.hk/lp/lp-fn11-v1/
+移动	http://i.hj9999.hk/huodong/m-lp-fn11-v1/
+非农数据参考网站        http://www.igoldhk.com/college/non-farm.html
+
+每个月第一个周五北京时间（夏令时：4月--10月）20:30发布，（冬令时：11月--3月）21:30
+倒计时是现在到2月2号21：30的倒计时
+非农结束时间分夏令时和冬令时
+
+
+201802-非农
+http://www.hj9999.hk/lp/lp-fn201802-v1/
+http://hj9999.chuanggi.cn/lp/lp-fn201802-v1/
+http://i.hj9999.hk/huodong/m-lp-fn02-v1/
+
+201803非农
+http://www.hj9999.hk/lp/lp-fn201803-v1/
+http://hj9999.chuanggi.cn/lp/lp-fn201803-v1/
+
+
+金裕2018开年庆典
+http://i.hj9999.hk/huodong/m-lp-2018newActivity/
+http://hj9999.chuanggi.cn/lp/m-lp-2018newActivity/
+http://www.hj9999.hk/lp/lp-2018new-v1/	
+http://hj9999.chuanggi.cn/lp/lp-2018new-v1/
+
+
+旧招募令
+http://www.jygold.net/lp/lp-zml-v1/
+http://jygold.net/m/huodong/m-lp-zml-v1/
+新招募令
+http://www.jygold.net/lp/lp-zml-v2/
+http://hj9999.cdsa518.cn/lp/lp-zml-v2/
+http://www.jygold.net/m/huodong/m-lp-zml-v2/
+http://hj9999.cdsa518.cn/lp/m-lp-zml-v2/
+
+
+
+复活节
+http://www.hj9999.hk/lp/lp-easter-v1/
+http://hj9999.chuanggi.cn/lp/lp-easter-v1/
+http://i.hj9999.hk/huodong/m-lp-easter-v1/
+http://hj9999.chuanggi.cn/lp/m-lp-easter-v1/
+
+
+2018非农4月份
+http://www.hj9999.hk/lp/lp-fn201804-v1/
+http://hj9999.cdsa518.cn/lp/lp-fn201804-v1/
+http://i.hj9999.hk/huodong/m-lp-fn04-v1/
+http://hj9999.cdsa518.cn/lp/m-lp-fn04-v1/
+
+
+
+效果预览地址
+http://www.hj9999.hk/lp/lp-preview-v1/
+http://i.hj9999.hk/huodong/m-lp-preview-v1/
+
+
+新客户版本V2
+	http://www.hj9999.hk/lp/lp-xkh-v2/
+	http://i.hj9999.hk/huodong/m-lp-xkh-v2/ 
+	http://hj9999.chuanggi.cn/lp/lp-xkh-v2/
+	http://hj9999.chuanggi.cn/lp/m-lp-xkh-v2/
+
+
+新的开户页面
+	http://www.hj9999.hk/ApplyAccount/
+	http://i.hj9999.hk/kaihujiaoyi/ApplyAccount/
+
+
+
+
+2018非农5月份
+http://www.hj9999.hk/lp/lp-fn201805-v1/
+http://hj9999.cdsa518.cn/lp/lp-fn201805-v1/
+http://i.hj9999.hk/huodong/m-lp-fn05-v1/
+http://hj9999.cdsa518.cn/lp/m-lp-fn05-v1/
+
+
+
+直客吸引股票用户
+	http://www.hj9999.hk/lp/lp-gupiao-v1/
+	http://i.hj9999.hk/huodong/m-lp-gupiao-v1/ 
+
+
+六小福
+原网站：http://www.gdlxf.com/
+参考模板：
+http://restaurant-1049269.view.websiteonline.cn/
+
+	http://www.hj9999.hk/lp/lxf/
+	线上地址：http://www.gdlxf.com/
+
+
+
+加入VIP特权活动页面
+版本V1
+http://www.hj9999.hk/lp/lp-vip-v1/
+版本V2
+http://www.hj9999.hk/lp/lp-vip-v2/
+
+http://hj9999.cdsa518.cn/lp/lp-vip-v2/
+
+
+
+点差优惠活动页
+原版本V1
+http://www.hj9999.hk/youhui/
+版本V2
+http://www.hj9999.hk/lp/lp-discounts-v2
+
+
+金裕推荐返佣计划  V1
+http://www.hj9999.hk/huodong/tuijian/
+版本V2
+http://www.hj9999.hk/lp/lp-recommend-v2/
+
+
+
+
+
+新招募令V3
+http://www.jygold.net/lp/lp-zml-v3/
+http://hj9999.cdsa518.cn/lp/lp-zml-v3/
+http://www.jygold.net/m/huodong/m-lp-zml-v3/
+http://hj9999.cdsa518.cn/lp/m-lp-zml-v3/
+
+
+
+创盈金店
+参考网站：          http://jewelry-1074762.view.websiteonline.cn/
+原网站：             http://tmall.cygse.com/
+
+
+2018非农6月份
+http://www.hj9999.hk/lp/lp-fn201806-v1/
+http://i.hj9999.hk/huodong/m-lp-fn06-v1/
+代理官网非农
+http://www.jygold.net/lp/lp-fn201806-v1/
+http://www.jygold.net/m/huodong/m-lp-fn06-v1/
+
+2018非农7月份
+http://www.hj9999.hk/lp/lp-fn201807-v1/
+http://i.hj9999.hk/huodong/m-lp-fn07-v1/
+代理官网非农
+http://www.jygold.net/lp/lp-fn201807-v1/
+http://www.jygold.net/m/huodong/m-lp-fn07-v1/
+
+
+直客竞价页面返点优惠活动
+http://hj9999.cdsa518.cn/lp/lp-zhike-v1/
+
+
+2018非农8月份
+http://www.hj9999.hk/lp/lp-fn201808-v1/
+http://i.hj9999.hk/huodong/m-lp-fn201808-v1/
+代理官网非农
+http://www.jygold.net/lp/lp-fn201808-v1/
+http://www.jygold.net/m/huodong/m-lp-fn201808-v1/
+
+
+
+白银活动
+http://hj9999.sxuzpp.cn/lp/lp-silver-v1/
+http://hj9999.sxuzpp.cn/lp/m-lp-silver-v1/
+
+
+黄金活动
+http://www.hj9999.hk/lp/lp-goldAct-v1/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

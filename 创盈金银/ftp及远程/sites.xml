@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FileZilla3 version="3.33.0" platform="windows">
+	<Servers>
+		<Folder expanded="1">我的站点<Folder expanded="1">ChuangYing<Server>
+					<Host>124.172.156.228</Host>
+					<Port>21</Port>
+					<Protocol>0</Protocol>
+					<Type>0</Type>
+					<User>webmaster@H10033746</User>
+					<Pass encoding="base64">TTM3Z1Q5N0c=</Pass>
+					<Logontype>1</Logontype>
+					<TimezoneOffset>0</TimezoneOffset>
+					<PasvMode>MODE_DEFAULT</PasvMode>
+					<MaximumMultipleConnections>0</MaximumMultipleConnections>
+					<EncodingType>Auto</EncodingType>
+					<BypassProxy>0</BypassProxy>
+					<Name>cygse.com</Name>
+					<Comments />
+					<Colour>0</Colour>
+					<LocalDir />
+					<RemoteDir />
+					<SyncBrowsing>0</SyncBrowsing>
+					<DirectoryComparison>0</DirectoryComparison>
+				</Server>
+			</Folder>
+			<Server>
+				<Host>166.62.28.142</Host>
+				<Port>22</Port>
+				<Protocol>1</Protocol>
+				<Type>0</Type>
+				<User>vsh3ol3cjmfq</User>
+				<Pass encoding="base64">SCZkRXB1cjU=</Pass>
+				<Logontype>1</Logontype>
+				<TimezoneOffset>0</TimezoneOffset>
+				<PasvMode>MODE_DEFAULT</PasvMode>
+				<MaximumMultipleConnections>0</MaximumMultipleConnections>
+				<EncodingType>Auto</EncodingType>
+				<BypassProxy>0</BypassProxy>
+				<Name>FeVip</Name>
+				<Comments />
+				<Colour>0</Colour>
+				<LocalDir />
+				<RemoteDir />
+				<SyncBrowsing>0</SyncBrowsing>
+				<DirectoryComparison>0</DirectoryComparison>
+			</Server>
+			<Folder expanded="1">JinYu<Server>
+					<Host>47.90.95.165</Host>
+					<Port>21</Port>
+					<Protocol>0</Protocol>
+					<Type>0</Type>
+					<User>jyhj9999</User>
+					<Pass encoding="base64">N1lkNGJZelpWdUh1ZnI4Yw==</Pass>
+					<Logontype>1</Logontype>
+					<TimezoneOffset>0</TimezoneOffset>
+					<PasvMode>MODE_DEFAULT</PasvMode>
+					<MaximumMultipleConnections>0</MaximumMultipleConnections>
+					<EncodingType>Auto</EncodingType>
+					<BypassProxy>0</BypassProxy>
+					<Name>47.90.95.165</Name>
+					<Comments />
+					<Colour>0</Colour>
+					<LocalDir />
+					<RemoteDir />
+					<SyncBrowsing>0</SyncBrowsing>
+					<DirectoryComparison>0</DirectoryComparison>
+				</Server>
+				<Server>
+					<Host>47.90.95.165</Host>
+					<Port>21</Port>
+					<Protocol>0</Protocol>
+					<Type>0</Type>
+					<User>cyhtwl99</User>
+					<Pass encoding="base64">MTJkZmIjZGhnaXVmZGY=</Pass>
+					<Logontype>1</Logontype>
+					<TimezoneOffset>0</TimezoneOffset>
+					<PasvMode>MODE_DEFAULT</PasvMode>
+					<MaximumMultipleConnections>0</MaximumMultipleConnections>
+					<EncodingType>Auto</EncodingType>
+					<BypassProxy>0</BypassProxy>
+					<Name>cyhtwl99</Name>
+					<Comments />
+					<Colour>0</Colour>
+					<LocalDir />
+					<RemoteDir />
+					<SyncBrowsing>0</SyncBrowsing>
+					<DirectoryComparison>0</DirectoryComparison>
+				</Server>
+				<Server>
+					<Host>xyu4600420001.my3w.com</Host>
+					<Port>21</Port>
+					<Protocol>0</Protocol>
+					<Type>0</Type>
+					<User>xyu4600420001</User>
+					<Pass encoding="base64">alkxNjc4N2YwMw==</Pass>
+					<Logontype>1</Logontype>
+					<TimezoneOffset>0</TimezoneOffset>
+					<PasvMode>MODE_DEFAULT</PasvMode>
+					<MaximumMultipleConnections>0</MaximumMultipleConnections>
+					<EncodingType>Auto</EncodingType>
+					<BypassProxy>0</BypassProxy>
+					<Name>jiaoyidaheng.com</Name>
+					<Comments />
+					<Colour>0</Colour>
+					<LocalDir />
+					<RemoteDir />
+					<SyncBrowsing>0</SyncBrowsing>
+					<DirectoryComparison>0</DirectoryComparison>
+				</Server>
+			</Folder>
+			<Folder expanded="1">Jydh<Server>
+					<Host>60.205.207.167</Host>
+					<Port>22</Port>
+					<Protocol>1</Protocol>
+					<Type>0</Type>
+					<User>root</User>
+					<Pass encoding="base64">RjhYODE3Yng3MGNmOGZ6N18=</Pass>
+					<Logontype>1</Logontype>
+					<TimezoneOffset>0</TimezoneOffset>
+					<PasvMode>MODE_DEFAULT</PasvMode>
+					<MaximumMultipleConnections>0</MaximumMultipleConnections>
+					<EncodingType>Auto</EncodingType>
+					<BypassProxy>0</BypassProxy>
+					<Name>db</Name>
+					<Comments />
+					<Colour>0</Colour>
+					<LocalDir />
+					<RemoteDir />
+					<SyncBrowsing>0</SyncBrowsing>
+					<DirectoryComparison>0</DirectoryComparison>
+				</Server>
+				<Server>
+					<Host>47.93.40.109</Host>
+					<Port>22</Port>
+					<Protocol>1</Protocol>
+					<Type>0</Type>
+					<User>root</User>
+					<Pass encoding="base64">RjhYODE3Yng3MGNmOGZ6N18=</Pass>
+					<Logontype>1</Logontype>
+					<TimezoneOffset>0</TimezoneOffset>
+					<PasvMode>MODE_DEFAULT</PasvMode>
+					<MaximumMultipleConnections>0</MaximumMultipleConnections>
+					<EncodingType>Auto</EncodingType>
+					<BypassProxy>0</BypassProxy>
+					<Name>frontend</Name>
+					<Comments />
+					<Colour>0</Colour>
+					<LocalDir />
+					<RemoteDir />
+					<SyncBrowsing>0</SyncBrowsing>
+					<DirectoryComparison>0</DirectoryComparison>
+				</Server>
+				<Server>
+					<Host>60.205.186.28</Host>
+					<Port>22</Port>
+					<Protocol>1</Protocol>
+					<Type>0</Type>
+					<User>root</User>
+					<Pass encoding="base64">RjhYODE3Yng3MGNmOGZ6N18=</Pass>
+					<Logontype>1</Logontype>
+					<TimezoneOffset>0</TimezoneOffset>
+					<PasvMode>MODE_DEFAULT</PasvMode>
+					<MaximumMultipleConnections>0</MaximumMultipleConnections>
+					<EncodingType>Auto</EncodingType>
+					<BypassProxy>0</BypassProxy>
+					<Name>maughanii</Name>
+					<Comments />
+					<Colour>0</Colour>
+					<LocalDir />
+					<RemoteDir />
+					<SyncBrowsing>0</SyncBrowsing>
+					<DirectoryComparison>0</DirectoryComparison>
+				</Server>
+				<Server>
+					<Host>123.56.4.182</Host>
+					<Port>22</Port>
+					<Protocol>1</Protocol>
+					<Type>0</Type>
+					<User>root</User>
+					<Pass encoding="base64">RjhYODE3Yng3MGNmOGZ6N18=</Pass>
+					<Logontype>1</Logontype>
+					<TimezoneOffset>0</TimezoneOffset>
+					<PasvMode>MODE_DEFAULT</PasvMode>
+					<MaximumMultipleConnections>0</MaximumMultipleConnections>
+					<EncodingType>Auto</EncodingType>
+					<BypassProxy>0</BypassProxy>
+					<Name>xdemo</Name>
+					<Comments />
+					<Colour>0</Colour>
+					<LocalDir />
+					<RemoteDir />
+					<SyncBrowsing>0</SyncBrowsing>
+					<DirectoryComparison>0</DirectoryComparison>
+				</Server>
+			</Folder>
+			<Folder expanded="1">Tmc<Server>
+					<Host>119.28.15.98</Host>
+					<Port>21</Port>
+					<Protocol>0</Protocol>
+					<Type>0</Type>
+					<User>winfungu</User>
+					<Pass encoding="base64">d0YjMTM2Ny5mdHA4OQ==</Pass>
+					<Logontype>1</Logontype>
+					<TimezoneOffset>0</TimezoneOffset>
+					<PasvMode>MODE_ACTIVE</PasvMode>
+					<MaximumMultipleConnections>0</MaximumMultipleConnections>
+					<EncodingType>Auto</EncodingType>
+					<BypassProxy>0</BypassProxy>
+					<Name>119.28.15.98</Name>
+					<Comments />
+					<Colour>0</Colour>
+					<LocalDir />
+					<RemoteDir />
+					<SyncBrowsing>0</SyncBrowsing>
+					<DirectoryComparison>0</DirectoryComparison>
+				</Server>
+				<Server>
+					<Host>xyu3597470001.my3w.com</Host>
+					<Port>21</Port>
+					<Protocol>0</Protocol>
+					<Type>0</Type>
+					<User>xyu3597470001</User>
+					<Pass encoding="base64">ZGl5Y2ZhbjE2OA==</Pass>
+					<Logontype>1</Logontype>
+					<TimezoneOffset>0</TimezoneOffset>
+					<PasvMode>MODE_DEFAULT</PasvMode>
+					<MaximumMultipleConnections>0</MaximumMultipleConnections>
+					<EncodingType>Auto</EncodingType>
+					<BypassProxy>0</BypassProxy>
+					<Name>hktmcs.com</Name>
+					<Comments />
+					<Colour>0</Colour>
+					<LocalDir />
+					<RemoteDir />
+					<SyncBrowsing>0</SyncBrowsing>
+					<DirectoryComparison>0</DirectoryComparison>
+				</Server>
+				<Server>
+					<Host>xyu3682450001.my3w.com</Host>
+					<Port>21</Port>
+					<Protocol>0</Protocol>
+					<Type>0</Type>
+					<User>xyu3682450001</User>
+					<Pass encoding="base64">ZGl5Y2ZhbjE2OA==</Pass>
+					<Logontype>1</Logontype>
+					<TimezoneOffset>0</TimezoneOffset>
+					<PasvMode>MODE_DEFAULT</PasvMode>
+					<MaximumMultipleConnections>0</MaximumMultipleConnections>
+					<EncodingType>Auto</EncodingType>
+					<BypassProxy>0</BypassProxy>
+					<Name>tmccb.com</Name>
+					<Comments />
+					<Colour>0</Colour>
+					<LocalDir />
+					<RemoteDir />
+					<SyncBrowsing>0</SyncBrowsing>
+					<DirectoryComparison>0</DirectoryComparison>
+				</Server>
+			</Folder>
+		</Folder>
+	</Servers>
+</FileZilla3>

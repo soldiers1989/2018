@@ -1,0 +1,20 @@
+这个代码放在新的招募令页面上
+
+
+部署页面：落地页的全站页面
+部署方式：页面加载时执行代码
+
+部署位置：body与/body 之间
+
+
+代码：
+<script type='text/javascript'>
+(function(w,d,s,l,a){
+    w._CommandName_=l;w[l]=w[l]||function(){(w[l].q=w[l].q||[]).push(arguments);
+	w[l].track = function(){(w[l].q[w[l].q.length-1].t=[]).push(arguments)};return w[l]},w[l].a=a,w[l].l=1*new Date();
+	var c = d.createElement(s);c.async=1;
+	c.src='//fm.ipinyou.com/j/a.js';
+	var h = d.getElementsByTagName(s)[0];h.parentNode.insertBefore(c, h);
+})(window,document,'script','py','bYs..rGs4ExZhTSKEZfa7kjm5p_');
+py('event','viewPage');
+</script>

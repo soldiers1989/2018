@@ -1,0 +1,121 @@
+
+
+统计代码管理查看页面
+https://web.umeng.com/main.php?c=site&a=show
+
+账号	2220482727@qq.com
+密码	jinyu123654
+
+
+
+统计代码出问题一般就两个方面：
+1，代码问题。
+	缺少字母、字符，代码出错，引用代码引用错误，没有添加统计代码。
+2.域名出错
+	域名不完整，没有添加http:// 或没有添加www
+
+
+
+hj9999.hk
+
+<script src="https://s13.cnzz.com/z_stat.php?id=1272981537&web_id=1272981537" language="JavaScript"></script>
+
+i.hj9999.hk
+
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1255347657'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255347657' type='text/javascript'%3E%3C/script%3E"));
+
+
+jygold.net
+
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan style=\"display:none;\" id='cnzz_stat_icon_1260985671'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260985671' type='text/javascript'%3E%3C/script%3E"));
+
+
+jyqq9999.com
+
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260985305'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260985305' type='text/javascript'%3E%3C/script%3E"));
+
+竞价
+360 hj9999hk.tdbcml.com  青岛银佳汇通商品经营有限公司
+sougou hj9999.hanchengtz.cc  韩城集升商贸有限公司
+hj9999.sxuzpp.cn  金创互动科技（深圳）有限公司
+
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260985382'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260985382' type='text/javascript'%3E%3C/script%3E"));
+
+
+
+www.wyzb99.com
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1253238746'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/z_stat.php%3Fid%3D1253238746' type='text/javascript'%3E%3C/script%3E"));
+
+
+
+
+部署虚拟PV跟踪、事件跟踪等API代码之前，需要先在页面的</head>之前添加如下代码
+
+<script>
+	//声明_czc对象:
+	var _czc = _czc || [];
+	//绑定siteid，请用您的siteid替换下方"XXXXXXXX"部分
+	_czc.push(["_setAccount", "XXXXXXXX"]);
+</script>
+
+
+调用范例
+<a href="#" onclick="_czc.push(['_trackEvent', '小说', '打分', '达芬奇密码','5','dafen']);">打分</a>
+
+
+
+官网
+<script>
+	var _czc = _czc || [];
+	_czc.push(["_setAccount", "1272981537"]);
+</script>
+
+ onclick="_czc.push(['_trackEvent', '小说', '打分', '达芬奇密码','5','dafen']);"
+
+
+竞价页
+<script>
+	var _czc = _czc || [];
+	_czc.push(["_setAccount", "1260985382"]);
+</script>
+
+ onclick="_czc.push(['_trackEvent', '小说', '打分', '达芬奇密码','5','dafen']);"
+
+
+
+
+谷歌统计代码
+
+金裕hj9999
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116313051-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116313051-1');
+</script>
+
+
+金裕代理jygold
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-71214413-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-71214413-1');
+</script>
+
+
+
+
+
+
+
+
+
+
+

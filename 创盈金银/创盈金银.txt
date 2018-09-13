@@ -1,0 +1,296 @@
+﻿
+负责的网站
+
+http://www.jygold.net/ 			代理
+http://www.jygold.net/m/		手机端
+
+
+http://www.hj9999.hk/     官网
+首页模板在 /hj9999.hk/phpcms/templates/20151117/content 
+http://i.hj9999.hk/		   手机端
+
+
+
+http://www.cygse.com/ 
+
+
+
+
+http://tmall.cygse.com/ 
+
+
+
+
+http://www.shengtuolispring.com/
+
+
+
+http://demo.hktmc.com/
+
+
+
+
+
+http://www.hj9999.hk/	//官网修改公共部分需要修改两个地方，同时后台需要更新，栏目和内容
+
+hj9999.hk/phpcms/templates/20151117/content
+hj9999.hk/phpcms/templates/default/content
+
+批量更新栏目页、批量更新内容页
+
+
+
+
+
+
+不知道哪里的数据库
+	数据库 newshopcygse
+	cygseu
+	gb7589ttf
+
+	47.90.95.165
+	administrator
+	密：jy#hj99@srv.152
+
+	
+	
+									http://www.hj9999.hk/
+
+网站服务器信息
+FTP
+47.90.95.165
+
+jyhj9999
+7Yd4bYzZVuHufr8c
+
+
+									http://www.shengtuolispring.com
+
+cyhtwl99
+12dfb#dhgiufdf
+
+47.90.95.165 
+
+									http://www.ictmc.org/
+
+119.28.15.98 
+
+winfungu
+wF#1367.ftp89					（注意：这个需要在传输设置里，选项：主动）				
+									
+									
+				数据库的					
+
+
+'hostname' => 'localhost',
+'port' => 3306,
+'database' => 'ictmcdb',
+'username' => 'winfunsu',
+'password' => 'tfvNx3JHxddCdhbY',
+
+
+TMC旧网站	http://www.hktmc.com/
+	管理中心
+	http://www.hktmc.com/admin.php 
+
+	admin
+	JN#gx2015look
+
+ftp
+	winfungu
+	wF#1367.ftp89
+
+	119.28.15.98 
+
+
+
+
+http://www.hj9999.hk/     官网
+首页模板在 /hj9999.hk/phpcms/templates/20151117/content 
+
+										lp指的是活动页面
+页面都要放两个域名(pc端)
+1. http://hj9999.chuanggi.cn/lp/lp-xkh-v1/
+ftp目录  /sxuzpp.cn/lp/lp-xkh-v1
+
+2. http://www.hj9999.hk/lp/lp-xkh-v1/
+ftp目录  /hj9999.hk/lp/lp-xkh-v1/
+
+
+
+页面都要放两个域名(移动端)
+1. http://hj9999.chuanggi.cn/lp/m-lp-xkh-v1/
+ftp目录   /sxuzpp.cn/lp/m-lp-xkh-v1
+
+2. http://i.hj9999.hk/huodong/m-lp-xkh-v1/
+ftp目录  /m.hj9999.hk/huodong/m-lp-xkh-v1
+
+
+
+访客找回代码
+<script type="text/javascript">
+		(function(w,d,s,l,a){
+		    w._CommandName_=l;w[l]=w[l]||function(){(w[l].q=w[l].q||[]).push(arguments);
+			w[l].track = function(){(w[l].q[w[l].q.length-1].t=[]).push(arguments)};return w[l]},w[l].a=a,w[l].l=1*new Date();
+			var c = d.createElement(s);c.async=1;
+			c.src='//fm.ipinyou.com/j/a.js';
+			var h = d.getElementsByTagName(s)[0];h.parentNode.insertBefore(c, h);
+		})(window,document,'script','py','bYs..rGs4ExZhTSKEZfa7kjm5p_');
+		py('event','viewPage');
+		</script>
+
+		
+将复制的代码，粘贴到适当的网页中（<body></body> 之间）。
+
+
+
+
+
+
+http://www.hj9999.hk/lp/lp-2018start-v1/ 
+http://www.hj9999.hk/lp/lp-xkh-v1/ 
+http://www.hj9999.hk/lp/lp-vip-v1/ 
+
+http://www.jygold.net/lp/lp-zml-v1/ 
+
+http://hj9999.cdsa518.cn/lp/lp-2018start-v1/
+http://hj9999.cdsa518.cn/lp/lp-xkh-v1/
+http://hj9999.chuanggi.cn/lp/lp-zml-v1/
+http://hj9999.cdsa518.cn/lp/lp-vip-v1/
+
+
+
+手机端客服链接live800
+https://v1.live800.com/live800/chatClient/chatbox.jsp?companyID=515221&configID=41928&jid=6934404885&s=1&returnbt=1
+
+
+
+
+软件网站项目
+http://www.ictmc.org/
+
+网站用繁体
+香港公司
+简称用 TMC
+
+公司名 國際商品貿易管理中心
+地址：香港九龍九龍灣臨澤街8號傲騰廣場23樓2301室
+電話：852-39968222
+cs.jyg@outlook.com
+
+
+
+如何在后台查看表单提交后是否成功
+	1.登录对应的后台
+	2.点击模块，在模块管理查找对应在哪个模块
+		例如：http://www.jygold.net/index.php?m=dailikaihu&c=index&a=send    m=dailikaihu 是对应的开户模块
+	3.点击左栏目对应的模块查看是否有刚提交的数据
+
+
+
+
+推荐返佣测试交易账号
+317000058
+
+
+
+
+
+hkuntc.com
+
+主机管理控制台地址：
+https://cp.aliyun.com
+用户名：xyu3705460001
+untc963999
+
+FTP登录主机地址：
+xyu3705460001.my3w.com
+用户名：xyu3705460001
+funtc963999
+
+MySQL数据库连接地址：
+xdm48026272.my3w.com
+用户名：xdm48026272
+muntc963999
+
+
+数据库导入
+https://dms-net.aliyun.com/?spm=cp-aliyun-com.10698423.109.3.7aa97231WkMRyH&host=xdm48026272.my3w.com&port=3306&dbType=MySQL&userName=xdm48026272
+
+
+
+
+服务器复制一个网站步骤
+	1.下载那个网站的所有文件，对应根目录下的所有文件，如果是服务器下对应多个域名，则下载对应的文件夹下的所有文件。
+	2.把所有文件上传到新的ftp服务器下的ftdocs文件夹下。
+	3.修改文件夹目录下caches/configs/database.php  这个文件的参数
+		'hostname' => 'xdm48026272.my3w.com',             //数据库地址
+		'database' => 'xdm48026272_db',                   //这里填数据库名称
+		'username' => 'xdm48026272',                      //数据库用户名
+		'password' => 'muntc963999',                      //数据库密码
+
+    如有不懂，进入主机管理控制台或是询问后台。
+
+
+	
+	
+	
+创银金店http://tmall.cygse.com/
+ftp服务器    jinyu  -> cyhtwl99   ->   cygse.com/tmall
+	
+配置文件目录
+	cygse.com/tmall/inc/site_config.php
+
+	如果打得开网站网页打得开php文件但是html文件显示找不到，则上传.htaccess文件到服务器。
+
+
+
+
+<?php
+/*****************************
+*数据库连接
+*****************************/
+$conn = @mysql_connect("xdm447914195.my3w.com","xdm447914195","czy5600988");		数据库地址、用户名、密码
+if (!$conn){
+	die("连接数据库失败：" . mysql_error());
+}
+mysql_select_db("xdm447914195_db", $conn);											数据库名
+//字符转换，读库
+mysql_query("set character set 'utf8'");
+//写库
+mysql_query("set names 'utf8'");
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

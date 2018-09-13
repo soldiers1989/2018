@@ -350,7 +350,7 @@ jQuery-获取元素坐标(距离屏幕左侧上侧距离)
 	var X = $(‘#DivID’).offset().top;
 	var Y = $(‘#DivID’).offset().left;
 
-	获取相对(父元素)位置:
+	获取相对父元素位置:
 	var X = $(‘#DivID’).position().top;
 	var Y = $(‘#DivID’).position().left;
 	

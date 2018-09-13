@@ -1,0 +1,36 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule ^xing.html xing.php
+RewriteRule ^index.html index.php
+RewriteRule ^news.html news.php
+RewriteRule ^info.html info.php
+RewriteRule ^hylogin.html hylogin.php
+RewriteRule ^gouwu1.html gouwu1.php
+RewriteRule ^orderfile.html orderfile.php
+RewriteRule ^finddd.html finddd.php
+RewriteRule ^reg.html reg.php
+RewriteRule ^help.html help.php
+RewriteRule ^taboo.html taboo.php
+RewriteRule ^server.html server.php
+RewriteRule ^maintain.html maintain.php
+RewriteRule ^fuwu.html fuwu.php
+RewriteRule ^payfile.html payfile.php
+RewriteRule ^make.html make.php
+RewriteRule ^guestbook.html guestbook.php
+RewriteRule ^make2.html make2.php
+RewriteRule ^make3.html make3.php 
+RewriteRule ^gouwu1.html gouwu1.php
+RewriteRule ^product.html product.php
+RewriteRule ^buy-back.html buy-back.php
+RewriteRule ^contact.html contact.php
+RewriteRule ^about.html about.php
+RewriteRule ^news-([0-9]+).html news.php?CateId=$1
+RewriteRule ^news-([0-9]+)-([0-9]+).html news2.php?CateId=$1&p=$2
+RewriteRule ^info_detail-([0-9]+).html info_detail.php?InfoId=$1
+RewriteRule ^shipin_detail-([0-9]+).html shipin_detail.php?InfoId=$1
+RewriteRule ^product-([0-9]+).html product.php?CateId=$1                
+RewriteRule ^productx-([0-9]+)-([0-9]+).html productx.php?CateId=$1&CateId2=$2          
+RewriteRule ^product-([0-9]+)-([0-9]+).html product2.php?CateId=$1&p=$2       
+RewriteRule ^productx-([0-9]+)-([0-9]+)-([0-9]+).html product3.php?CateId=$1&CateId2=$2&p=$3
+RewriteRule ^pro_detail-([0-9]+).html pro_detail.php?ProId=$1
+</IfModule>
