@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue应用需要实例化Vue来实现</title>
+		<script src="./js/vue.js"></script>
+		<style type="text/css">
+			.class1{
+				color: red;
+			}
+			.fff_ccc{
+				color: aquamarine;			
+			}
+			.active {
+				width: 100px;
+				height: 100px;
+				background: green;
+			}
+			.text-danger {
+				background: red;
+			}
+		</style>
+	</head>
+	<body style="padding-bottom: 500px;">
+		<div id="vue_det">
+			<!--文本插值-->
+			<li>我是一只小啊小小鸟~~~~~~~{{ a }}</li>
+			<li>你不是。。。{{ b }}</li>
+			<li>没有，下一个。{{ c }}</li>
+			<!--方法-->
+			<li v-html="jq">{{ details() }}</li>
+			<li></li>
+			
+			<!--属性绑定-->
+			<label for="r1">修改颜色</label><input type="checkbox" v-model="classA" id="r1" />
+			<br />
+			<h3 class="fff_ccc" v-bind:class="{class1 : classA}">
+				你系风儿~~~~~~~~
+			</h3>
+			<h3 v-bind:class="{class1 : classA}">
+				你系风儿~~~~~~~~
+			</h3>
+			<h3 v-bind:class="{'class1' : classA}">
+				我是沙~~~~~~~~~~~
+			</h3>
+			<h3 v-bind:class="{fff_ccc : classA}">
+				缠缠绵绵~~~~~~~~~
+			</h3>
+			
+			<!--完全的js表达式支持-->
+			<p></p>
+			{{5+5}} <br />
+			{{ ok ? 'yes' : 'no' }} <br />
+			{{ 'ok' ? 'yes' : 'no' }} <br />
+			{{ message.split('').reverse().join('') }} <br />
+			<div v-bind:id="'list-' + id">菜鸡教程</div>
+			
+			<!--指令  v-if 根据seen的真假值决定是否插入P-->
+			<p v-if="seen">现在你看到我了</p>
+			
+			<!--参数-->
+			<pre><a v-bind:href="url">菜鸡教程</a></pre>
+			<a v-on:click="doSomething">这是什么？</a>
+			
+			<!--修饰符-->
+			<!--修饰符就是带.的特殊后缀，例如这个.prevent则是调用event.preventDefault()事件，取消默认事件，表单不会默认提交-->
+			<form v-on:submit.prevent="onSubmit">		
+				<input type="submit" name="submit" id="submit" value="提交" />
+			</form>
+			
+			<!--用户输入-->
+			<!--在input输入框中我们可以使用v-model指令来实现双向数据绑定：-->
+			<p>{{ msg }}</p>
+			<input v-model="msg" />	<br />
+			<!--单个复选框，绑定到布尔值-->
+			<input type="checkbox" id="checkbox" v-model="checked">
+			<!--<label for="checkbox">{{ checked }}</label>-->
+			
+			<!--监听按钮事件-->
+			<p>{{ message }}</p>
+			<button v-on:click="reverseMessage">反转字符串</button>
+			
+			<!--过滤器-->
+			<div>{{ message1 | capitalize }}</div>
+			<div>{{ message1 | capitalize | capitalize2 }}</div>
+			
+			<!--条件判断-->
+			<p v-if="seen">现在你看到我了</p>
+			<template v-if="ok">
+				<h1>菜鸟教程</h1>
+				<p>学的不仅是技术，更是梦想！</p>
+				<p>额，打字变流畅了~~~~~~~~~~</p>				
+			</template>
+			
+			<div v-if="Math.random() > 0.5">
+				Sorry
+			</div>
+			<div v-else>
+				Not sorry
+			</div>
+			<div v-if="type==='A'">
+				A
+			</div>
+			<div v-else-if="type==='B'">
+				B
+			</div>
+			<div v-else-if="type==='C'">
+				C
+			</div>
+			<div v-else=>
+				Not ABC
+			</div>
+			
+			<!--v-show-->
+			<h1 v-show="">Hello!</h1>
+			
+			<!--v-for循环-->
+			<!--site 是数组元素迭代的别名-->
+			<ol>
+				<li v-for="site in sites">{{ site.name }}</li>
+				<li>---------</li>
+				<li v-for="site in sites">{{ site }}</li>
+			</ol>
+			<!--模板中使用v-for-->
+			<ol v-for="site in sites">
+				<li>{{ site.name }}</li>
+				<li>0000000</li>
+			</ol>
+			<ul>
+				<template v-for="site in sites">
+					<li>{{ site.name }}</li>
+					<li>=============</li>
+				</template>
+			</ul>
+			
+			<!--迭代对象-->
+			<ul>
+				<!--v-for 可以通过一个对象的属性来迭代数据：-->
+				<li v-for="value in object">
+					{{ value }}
+				</li>
+				<li>+++++++++++</li>
+				<li v-for="abc in object">
+					{{ abc }}
+				</li>
+			</ul>
+			
+			<!--也可以提供第二个的参数为键名：-->
+			<ul>
+				<li v-for="(value, key) in object">
+					{{ key }} : {{ value }}
+				</li>
+			</ul>
+			<!--第三个参数为索引：-->
+			<ul>
+				<li v-for="(value, key, index) in object">
+					{{ index }}. {{ key }} : {{ value }}
+				</li>
+			</ul>
+			<!--v-for迭代整数-->
+			<ul>
+				<li v-for="n in 10">
+					{{ n }}
+				</li>
+			</ul>
+			<ol>
+				<li v-for="(value, key, index) in sites">
+					{{ value }}
+				</li>
+			</ol>
+			
+			<!--监听属性-->
+			<div id="computed_props">
+				千米： <input type="text" v-model="kilometers" />
+				米: <input type="text" v-model="meters" />
+			</div>
+			<p id="info"></p>
+			
+			<!--样式绑定-->
+			<!--样式绑定可以绑定数据里的一个对象：-->
+			<div v-bind:class="classObject"></div>
+			<!--数组语法-->
+			<div v-bind:class="[activeClass, errorClass]"></div>
+			<!--三元表达式切换列表中的class-->
+			<div v-bind:class="[errorClass, isActive ? activeClass : '']"></div>
+			<!--内联样式-->
+			<!--<div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">菜鸡守则</div>-->
+			<!--当v-bind:style使用需要特定前缀的css属性时，如transform，vue.js会自动侦测并添加相应的前缀。-->
+			
+			
+			<!--vue.js事件处理器-->
+			<!--事件监听可以使用v-on指令-->
+			<button v-on:click="counter += 1">增加 1</button>
+			<p>这个按钮被点击了 {{ counter }}次。</p>
+			<!--知识点：事件可以定义的方法名，下面写方法执行内容，或是直接行间样式写事件内容，例：v-on:click="counter +=1"-->
+			<!--内联JavaScript语句：-->
+			<button v-on:click="say('hi')">Say hi</button>
+			<button v-on:click="say('what')">Say what</button>
+			<!--事件修饰符-->
+			<p><!-- Alt + C --></p>
+			<input @keyup.alt.67="clear" />
+			<!-- Ctrl + Click -->
+			<div @click.ctrl="doSomething">Do something</div>
+			<input v-on:keydown.enter="al" />
+			
+			
+			<!--Vue.js表单-->
+			<!--复选框-->
+			<p>单个复选框：</p>
+			<input type="checkbox" id="checkbox" value="bbb" v-model="checked" />
+			<label for="checkbox">{{ checked }}</label>
+			
+			<p>多个复选框：</p>
+			<input type="checkbox" id="runoob" value="bbb" v-model="checkedNames" />
+			<!--<label for="runoob">Runoob</label>-->
+			<input type="checkbox" id="google" value="Google" v-model="checkedNames" />
+			<label for="google">Google</label>
+			<input type="checkbox" id="taobao" value="Taobao" v-model="checkedNames" />
+			<label for="taobao">taobao</label>
+			<br />
+			<span>选择的值为：{{ checkedNames }}</span>
+			<br />
+			<!--单选按钮-->
+			<input type="radio" id="runoob" value="Runoob" v-model="picked" />
+			<label for="runoob">Runoob</label>
+			<br />
+			<input type="radio" id="google" value="Google" v-model="picked" />
+			<label for="google">Google</label>
+			<br />
+			<span>选中的值为：{{ picked }}</span>
+			<br />
+			<!--select列表-->
+			<select name="fruit" v-model="selected">
+				<option value="">选择一个水果</option>
+				<option value="香蕉">香蕉</option>
+				<option value="菠萝">菠萝</option>
+			</select>
+			
+			<div>
+				选择的维生素是：{{ selected }}
+			</div>
+			
+			<!--修饰符-->
+			<!--在“change”而不是在“input”事件中更新-->
+			<input v-model.lazy="msg" />
+			<p>{{ msg }}</p>
+			<!--自动将用户输入的值转为Number类型（如果原值的转换结果为NaN则返回原值）-->
+			<input type="number" v-model.number="age" />
+			<p>{{ age }}</p>
+			<!--这通常很有用，因为在 type="number" 时 HTML 中输入的值也总是会返回字符串类型。-->
+			<!--自动过滤用户输入的首尾空格-->
+			<input v-model.trim="msg" />
+			<p>{{ msg }}</p>
+			<input v-model="age" />
+			<p>{{age}}</p>
+			<p>串联去空格和number修饰符尝试</p>
+			<input type="number" v-model.number="age" @change="chuanlian()" />
+			<p>{{ age }}</p>
+			
+			<!--全选与取消全选-->
+			<p>全选：</p>
+			<input type="checkbox" v-model="checked" @change="changeAllChecked()" />
+			<!--inpu用点击事件，会发生我暂时不知道的问题错误-->
+			<!--<input type="checkbox" v-model="checked" @click="changeAllChecked()" />-->
+			<label for="checkbox">{{ checked }}</label>
+			<p>多个复选框：</p>
+			<input type="checkbox" id="runoob" value="Runoob" v-model="checkedNames" />
+			<label for="runoob">Runoob</label>
+			<input type="checkbox" id="google" value="Google" v-model="checkedNames" />
+			<label for="google">Google</label>
+			<input type="checkbox" id="taobao" value="Taobao" v-model="checkedNames" />
+			<label for="taobao">Taobao</label>
+			<p>选择的值为：{{ checkedNames }}</p>
+			
+			<!--组件-->
+			<runoob></runoob>
+			<!--局部组件-->
+			<child></child>
+			
+		</div>
+		
+		<script>
+			
+//			全局组件
+//			注册
+			Vue.component('runoob', {
+				template: '<h1>runoob自定义组件</h1>'
+			})
+			
+//			局部组件
+			var  Child = {
+				template: '<h1>自定义组件!</h1>'
+			}
+			
+			
+			var vm = new Vue({
+				el: '#vue_det',
+				data: {
+					a: '我不是，我没有，别瞎说~~~~~',
+					b: '超人',
+					c: 'gogoggogo！！！',
+					jq: '<h1>两只老虎~~~~</h1>',
+					classA: false,
+					message: '床前明月光',
+					ok: '1',
+					id: 1,
+					seen: true,
+					url: 'http://www.runoob.com',
+					msg: '疑是地上霜',
+					checked: false,
+					message1: 'roob',
+					type: 'B',
+					sites: [
+						{ name: '小白' },
+						{ name: '白又白' },
+						{ name: '真可爱' }
+					],
+					object: {
+						name: '菜鸟',
+						url: 'runoob.com',
+						slogan: '飞呀飞~~~~',
+						en: '问题是我不会飞~~'
+					},
+					kilometers: 0,
+					meters: 0,
+					isActive: true,
+					error: null,
+					activeClass: 'active',
+					errorClass: 'text-danger',
+					counter: 0,
+					checked: false,
+					checkedNames: [],
+					picked: 'Runoob',
+					selected: '',
+					age: 18,
+					checkedArr: ["Runoob", "Google", "Taobao"]
+				},
+				methods: {
+					details: function() {
+						return this.c + "  学的学习，天天向上！";
+					},
+					doSomething: function() {
+						console.log('点击事件');
+					},
+					reverseMessage: function () {
+						this.message = this.message.split('').reverse().join('')
+					},
+					say: function (message) {
+						alert(message)
+					},
+					al: function () {
+						alert('按了enter键')
+					},
+					changeAllChecked: function () {
+						if (this.checked) {
+							this.checkedNames = this.checkedArr
+						}else{
+							this.checkedNames = []
+						};
+					},
+					chuanlian: function() {
+						console.log('生效');
+						console.log(typeof(this.msg));
+					}
+				},
+				computed: {
+					classObject: function () {
+						return {
+							active: this.isActive && !this.error,
+							'text-danger': this.error && this.error.type === 'fatal',
+						}
+					}
+				},
+				watch: {
+					kilometers: function(val) {
+//						this.kilometers = val;
+						this.meters = val * 1000;
+					},
+					meters: function (val) {
+						this.kilometers = val / 1000;
+//						this.meters = val;
+					},
+					checkedNames: function() {
+						if(this.checkedNames.length == this.checkedArr.length) {
+							this.checked = true
+						}else{
+							this.checked = false
+						}
+					},
+					age: function() {
+						console.log('生效');
+					}
+				},
+				filters: {
+					capitalize: function (value) {
+						if (!value) return '';
+						value = value.toString();
+						return value.charAt(0).toUpperCase() + value.slice(1);
+					},
+					capitalize2: function (value) {
+						return value + '添加长度'
+					}
+				},
+				components: {
+					//<child>将只能在父模板可用
+					'child': Child
+				}
+			})
+			//$watch 是一个实例方法
+			vm.$watch('kilometers', function (newValue, oldValue) {
+				//这个回调将在vm.kilometers改变后调用
+				document.getElementById("info").innerHTML = "修改前值为：" + oldValue + "，修改后值为：" + newValue;
+			})
+			
+
+			
+			
+		</script>
+
+	</body>
+</html>
