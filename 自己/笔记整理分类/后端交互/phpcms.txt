@@ -31,6 +31,9 @@ http://127.0.0.1/phpcms_v9/install_package/index.php?m=admin&c=index&a=login&pc_
 header('Access-Control-Allow-Origin: *');					//放在index.php头部，解决跨域请求问题
 
 1，在phpcms的modules中下载一个模块模板，修改文件名和文件对应的模块名字  		//actives
+   还要修改所有中文名，比如黄金LP申请
+   在install文件夹下的是安装信息文件，module.sql中后两个时间 安装日期 更新日期
+   
 2，在phpcms的model中下载一个文件修改成对应的文件名和文件中的名字 			//actives_model.class.php
 3，上传到对应的文件夹下，在后台打开模块管理，点击安装可以看到自己的信息。
 
@@ -39,7 +42,8 @@ parentid中的29是模块菜单的Id号，菜单的id可以在扩展中的菜单
 
 后台界面信息，在后台模板文件和根目录下的index.php文件中修改，还有个sql数据库文件
 
-
+****缓存问题
+	修改phpcms/languages/zh-ch目录下的  system_menu.lang.php  和  自己对应文件名的.php文件（一般都在相邻的位置）
 
 
 

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>vue-路由</title>
+		<script src="js/vue.js"></script>
+		<script src="js/vue-resource.min.js"></script>
+	</head>
+	<body>
+		
+		<!--如果需要传递数据，可以使用 this.$http.get('get.php',jsonData) 格式，第二个参数 jsonData 就是传到后端的数据。-->
+		<!--this.$http.get('get.php',{a:1,b:2}).then(function(res){
+		    document.write(res.body);    
+		},function(res){
+		    console.log(res.status);
+		});-->
+		
+		<!--get请求-->
+		<!--<div id="box">
+			<input type="button" @click="get()" value="点我异步获取数据" />
+		</div>
+		<script>
+			window.onload = function() {
+				var vm = new Vue({
+					el: '#box',
+					data: {
+						msg: 'Hello World!',
+					},
+					methods: {
+						get: function(){
+							//发送get请求
+							this.$http.get('ajax/1.txt').then(function(res){
+								document.write(res.body);
+							}, function(){
+								console.log('请求失败处理');
+							});
+						}
+					}
+				})
+			}
+		</script>-->
+		
+		
+		<!--post请求-->
+		<div id="box">
+			<input type="button" @click="post()" value="点我异步获取数据（Post）" />
+		</div>
+		<script>
+			window.onload = function(){
+				var vm = new Vue({
+					el: '#box',
+					data: {
+						msg: 'Hello world!',
+					},
+					methods: {
+						post: function(){
+							//发送post请求
+							this.$http.post( 'ajax/1.php', {name: "菜鸟教程", url: "http://www.runoob.com"}, {emulateJSON:true}).then(function(res){
+								document.write(res.body);
+							}, function(res){
+								console.log(res.status);
+							});
+						}
+					}
+				})
+			}
+		</script>
+	</body>
+</html>
