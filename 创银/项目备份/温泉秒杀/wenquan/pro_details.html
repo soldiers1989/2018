@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详情</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="build/flexible.js"></script>
+	</head>
+	<body>
+		<div class="cont_frame">
+			<!--商品展示轮播图-->
+			<div class="banner">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img class="sc01_img" src="images/pro_det_ban.png"/></div>
+			        <div class="swiper-slide"><img class="sc01_img" src="images/pro_det_ban.png"/></div>
+			    </div>
+			    <div class="swiper-pagination">
+			    	<span class="swiper-pagination-current">1</span>
+			    	 / 
+			    	<span class="swiper-pagination-total">3</span>
+			    </div>
+			</div>
+			<!--商品展示轮播图结束-->
+
+			<!--商品信息-->
+			<div class="pdet_info">
+				<p class="pdet_info_tit">
+					<span class="pdet_info_tit_tag">秒杀价</span>【限时抢购】豪华大床房含双早
+				</p>
+				<p class="pdet_info_sup">圣托利温泉庄园提供 ｜ 已售 25</p>
+				<div class="pro_price">
+					<span class="pro_pri_sym">￥</span>588
+					<span class="yuanjia">￥788</span>
+				</div>
+				<div class="pdet_info_gua">
+					<span>品质保证</span><span>企业认证</span><span>赠送好友</span>
+				</div>
+			</div>
+			<!--商品信息结束-->
+
+			<!--限时秒杀-->
+			<div class="seckill">
+				<div class="sk_info">
+					<div class="sk_time">
+						<div class="sk_time_countdown">
+							<span id="countdownHour">00</span>时
+							<span id="countdownMinute">00</span>分
+							<span id="countdownSecond">00</span>秒
+						</div>
+						<div class="sk_time_tit">距离结束</div>
+					</div>
+					<div class="sk_repertory">
+						<img class="sk_time_img" src="images/time_img.png"/>
+							剩余库存  <span class="sk_re_num">10</span><span> /</span>10
+						</span>
+					</div>
+				</div>
+				<div class="no_seckill">
+					<div class="no_sk_yuanjia"><a href="">
+						<span class="no_sk_yj_pri">￥788</span>直接购买价
+					</a></div>
+					<div class="no_sk_buy"><a href="">
+						去购买<img class="no_sk_buy_r" src="images/right.png" alt="" />
+					</a></div>
+				</div>
+			</div>
+			<!--限时秒杀结束-->
+
+			<!--订购须知与图文详情-->
+			<div>
+				<div id="notDetNav" class="not_det_nav">
+					<div>
+						<a class="on" href="#notNav">订购须知</a>
+					</div>
+					<div>
+						<a href="#detNav">图文详情</a>
+					</div>
+				</div>
+				<div id="notNav" class="pd_intro">
+					<span class="pd_intro_stit">产品名称：</span>限时抢购豪华大床房含双早<br />
+					<span class="pd_intro_stit">门店原价：</span><span class="yuanjia">788</span>元/位<br />
+					<span class="pd_intro_stit">微信专享价：</span><span class="pd_intro_zxj">588元/位</span><br />
+					<span class="pd_intro_stit">适用地点：</span>圣托利温泉庄园<br />
+					<span class="pd_intro_stit">酒店地址：</span>广州从化温泉镇温泉东路112号<br />
+					<span class="pd_intro_stit">有效日期：</span>至2018年12月30日(周末、平日通用)<br />
+					<span class="pd_intro_stit">使用方法：</span>请至少提前一天预约
+					
+					<p class="pd_intro_p pd_intro_stit">温馨提示：</p>
+					<span class="pd_intro_zxj">1.购买成功后不可退款</span><br />
+					2.为保证服务质量,请提前1天联系我们进行预约<br />
+					3.预约热线：(86 20) 8788 2388<br />
+					（预约时把账户中的电子券码给工作人员进行核销）
+				</div>
+				
+				<p class="pd_imgtext_tit">图文详情</p>
+				<div class="pd_imgtext_xhx"></div>
+				<div id="detNav" class="pd_imgtext">
+					<img src="images/det_img.png"/>
+				</div>
+			</div>
+			<!--订购须知与图文详情结束-->
+
+			<!--其他用户浏览商品-->
+			<p class="pd_others_tit">其他用户还看了</p>
+			<div class="pro_main pd_others">
+				<div class="swiper-wrapper">
+	            	<div class="swiper-slide pro_item pro_seckill">
+						<img class="pro_seckill_tag" src="images/seckill_tag.png"/>
+						<img class="pro_img" src="images/pro1.png"/>
+						<div class="pro_tit">
+							【限时抢购】豪华大床房含双早豪华大床房含双早豪华大床房含双早豪华大床房含双早
+						</div>
+						<div class="pro_price">
+							<span class="pro_pri_sym">￥</span>588<span class="yuanjia">￥788</span>
+						</div>
+					</div>
+					<div class="swiper-slide pro_item">
+						<img class="pro_seckill_tag" src="images/seckill_tag.png"/>
+						<img class="pro_img" src="images/pro2.png"/>
+						<div class="pro_tit">
+							【限时抢购】豪华大床房含双早豪华大床房含双早豪华大床房含双早豪华大床房含双早
+						</div>
+						<div class="pro_price">
+							<span class="pro_pri_sym">￥</span>588<span class="yuanjia">￥788</span>
+						</div>
+					</div>
+					<div class="swiper-slide pro_item">
+						<img class="pro_seckill_tag" src="images/seckill_tag.png"/>
+						<img class="pro_img" src="images/pro1.png"/>
+						<div class="pro_tit">
+							【限时抢购】豪华大床房含双早豪华大床房含双早豪华大床房含双早豪华大床房含双早
+						</div>
+						<div class="pro_price">
+							<span class="pro_pri_sym">￥</span>588<span class="yuanjia">￥788</span>
+						</div>
+					</div>
+					<div class="swiper-slide pro_item pro_seckill">
+						<img class="pro_seckill_tag" src="images/seckill_tag.png"/>
+						<img class="pro_img" src="images/pro2.png"/>
+						<div class="pro_tit">
+							【限时抢购】豪华大床房含双早豪华大床房含双早豪华大床房含双早豪华大床房含双早
+						</div>
+						<div class="pro_price">
+							<span class="pro_pri_sym">￥</span>588<span class="yuanjia">￥788</span>
+						</div>
+					</div>
+		        </div>
+	       </div>
+			<!--其他用户浏览商品结束-->
+			
+			<!--底部固定栏目导航-->
+			<div class="pd_bottom_nav">
+				<a class="pd_btm_nav_item" href="">
+					<img src="images/index.png"/>首页
+				</a>
+				<a class="pd_btm_nav_item" href="">
+					<img src="images/goods.png"/>订单
+				</a>
+				<a class="pd_btm_nav_item" href="">
+					立即秒杀
+				</a>
+			</div>
+			<!--底部固定栏目导航结束-->
+		</div>
+
+		<!--底部js-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/swiper-3.4.2.jquery.min.js"></script>
+		<script src="js/main.js"></script>
+		<!--底部js结束-->
+	</body>
+</html>

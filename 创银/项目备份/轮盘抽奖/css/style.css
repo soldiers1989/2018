@@ -1,0 +1,344 @@
+/*清除input默认样式*/
+input[type=number] { -moz-appearance:textfield; }  
+input[type=number]::-webkit-inner-spin-button,  
+input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none;  margin: 0; }  
+
+.content{
+	width: 100%;max-width: 1920px;
+	margin: 0 auto;
+	font-family: "微软雅黑","microsoft yahei";
+	overflow: hidden;
+}
+.banner{
+	position: relative;
+	width: 100%;
+	height: 520px;
+	background-image: url(../images/banner.png);
+	background-position: center 0;
+	overflow: hidden;
+}
+.ban_join{
+	width: 140px;
+	height: 140px;
+	margin: 469px auto 0;
+	background-image: url(../images/ban_join.png);
+	font-size: 22px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 140px;
+}
+.cont1{
+	position: relative;
+	width: 100%;
+	height: 687px;
+	background-image: url(../images/cont1.png);
+	background-position: center 0;
+	overflow: hidden;
+}
+
+.cont2{
+	position: relative;
+	width: 100%;
+	height: 1222px;
+	background-image: url(../images/cont2.png);
+	background-position: center 0;
+	overflow: hidden;
+}
+.act_rule_btn {
+	position: absolute;
+    top: 110px;
+    left: 50%;
+    padding: 2px 14px;
+    margin-left: 200px;
+    background: #427ecc;
+    border-radius: 11px;
+    font-size: 13px;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+.act_rule_btn:hover {
+	padding: 5px 17px;
+	margin: -4px 0 0 195px;
+    font-size: 15px;
+}
+.wp_wrap{
+	width: 670px;
+	margin: 160px auto 20px;
+	text-align: center;
+}
+.ct2_phone{
+	width: 352px;
+	height: 62px;
+	box-sizing: border-box;
+	padding: 0 30px;
+	border-radius: 10px;
+	font-size: 28px;
+	outline: 0;
+}
+.ct2_cjbtn{
+	width: 218px;
+	height: 62px;
+	border-radius: 10px;
+	border: 0;
+	background: linear-gradient(#0b62f6, #001377);
+	font-size: 28px;
+	color: #FFFFFF;
+	outline: 0;
+	cursor: pointer;
+	transition: .3s;
+}
+.ct2_cjbtn:hover{
+	background: linear-gradient(#001377, #0b62f6);
+}
+/*抽奖轮盘开始*/
+.g-content {
+	color: #FFFFFF;
+}
+.g-content .g-lottery-case {
+    width: 1047px;
+    height: 845px;
+    margin: 0 auto;
+    background: url(../images/lp_btm.png) no-repeat center bottom;
+    overflow: hidden;
+}
+.lucky_list{
+	position:relative;
+	width: 575px;
+	height: 45px;
+	margin: 0 0 80px 237px;
+	background: #2a293b;
+}
+.lucky_list .bd{ padding:10px; }
+.lucky_list .bd .tempWrap{ width:100% !important; }
+.lucky_list .bd ul{ overflow:hidden; zoom:1; }
+.lucky_list .bd li{
+	float:left;
+	width:100% !important;
+	height:27px;
+	margin-right:20px;
+	line-height:24px;
+	text-align:center;
+	_display:inline;
+}
+.lucky_list .bd .ll_img{
+	margin-right: 9px;
+	vertical-align: -5px;
+}
+.lucky_list .bd a{
+	font-size: 20px;
+	color: #FFFFFF;
+}
+.txtMarquee-left .bd ul li span{ color:#999;  }
+.g-content .g-lottery-case .g-left {
+    width: 450px;
+    float: left;
+}
+.g-lottery-box {
+    width: 640px;
+    height: 640px;
+    margin-left: 200px;
+    position: relative;
+    background: url(../images/ly-plate-c.png) no-repeat 0 0/640px 640px;
+}
+.g-lottery-box .g-lottery-img {
+	position: relative;
+	left: 30px;
+    top: 30px;
+    width: 580px;
+    height: 580px;
+    background: url(../images/bg-lottery.png) no-repeat;
+}
+.g-lottery-box .playbtn {
+    width: 232px;
+    height: 272px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -113px;
+    margin-top: -157px;
+    background: url(../images/playbtn.png) no-repeat;
+}
+/*抽奖轮盘结束*/
+/*活动规则*/
+.rulesbox{
+	display: none;
+	position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+	width: 100%;
+    height: 100%;
+    font-family: "微软雅黑","microsoft yahei";
+    font-size: 16px;
+    color: #343434;
+    line-height: 1.6em;
+}
+.rulesbox_cont{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 1000px;
+	box-sizing: border-box;
+    margin: -300px 0 0 -500px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    color: #565656;
+    height: 0px;
+    height: 584px;
+}
+.rulesbox_tit{
+	height: 54px;
+	background-color: #e7e7e7;
+    font-size: 22px;
+    text-align: center;
+    line-height: 54px;
+}	
+.rulesbox_close{
+	position: absolute;
+    right: 22px;
+    top: 9px;
+    padding: 5px 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+.rulesbox_close:hover{
+	-ms-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+.rulesbox_close:active{
+	-ms-transform: scale(.8);
+	transform: scale(.8);
+}
+.rulesbox_details{
+    overflow: auto;
+    height: 470px;
+    padding: 0 52px 24px;
+    font-size: 16px;
+}
+.rdet_p{
+	margin-top: 15px;
+}
+.rdet_tit{
+	font-size: 17px;
+	font-weight: bold;
+}
+.rdet_stit{
+	font-size: 16px;
+	font-weight: bold;
+}
+.rulesbox table{
+	width: 917px;
+	margin: 25px auto 0;
+}
+.rulesbox table th,.rulesbox table td{
+	height: 46px;
+	background: #f9f9f9;
+	border: 1px solid #eeeeee;
+	font-size: 16px;
+}
+.rulesbox table th{
+	background: #efefef;
+}
+.rulesbox table td{
+	text-align: center;
+}
+.rulesbox table th:nth-child(2n){
+	background: #e3e3e3;
+}
+.rulesbox table td:nth-child(2n){
+	background: #ffffff;
+}
+.col_red{
+	color: #ff0000;
+}
+/*右边悬浮客服*/
+.server{
+	display: none;
+	position: absolute;
+	top: 165px;
+	right: 20px;
+	width: 154px;
+	height: 279px;
+	background-image: url(../images/server_bg.png);
+}
+.server_btn{
+	display: block;
+	width: 109px;
+	height: 26px;
+	margin: 79px auto 0;
+	border-radius: 4px;
+	background-color: #f2f3f2;
+	background: linear-gradient(#ffffff, #c9c9c8);
+	box-shadow: 0 4px #174470;
+	font-size: 14px;
+	color: #2564ab;
+	line-height: 26px;
+	transition: .3s;
+	outline: 0;
+}
+.server_choujiang{
+	display: block;
+	width: 135px;
+	height: 135px;
+	margin: 11px auto 0;
+}
+.server_btn:hover{
+	width: 120px;
+	background: linear-gradient(#c9c9c8, #ffffff);
+}
+/*抽奖结果弹窗提示*/
+#succTipMask{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.3);
+	z-index: 999999;
+}
+.stm_result{
+	position: relative;
+	top:50%;
+	left: 50%;
+	width: 313px;
+	height: 515px;
+	margin: -300px 0 0 -156px;
+	background: url(../images/stm_rs_bg.png);
+	overflow: hidden;
+}
+.stm_rs_tit{
+	margin-top: 152px;
+	font-size: 34px;
+	color: #b01712;
+	text-align: center;
+}
+.stm_rs_pz{
+	position: relative;
+	width: 286px;
+	height: 213px;
+	margin: 30px auto 0;
+}
+.stm_rs_pz img{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.stm_rs_btn{
+	display: block;
+	width: 226px;
+	height: 47px;
+	margin: 0 auto;
+	font-size: 20px;
+	color: #b01712;
+	text-align: center;
+	line-height: 47px;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购买</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="build/flexible.js"></script>
+	</head>
+	<body>
+		<div class="cont_frame">
+			<!--购买的商品信息-->
+			<div class="buy_pro">
+				<p class="buy_pro_tit">
+					<span class="buy_pro_sx"></span>【限时抢购】豪华大床房含双早
+				</p>
+				<p class="buy_pro_sup">圣托利温泉庄园提供</p>
+				<div class="buy_pro_price">
+					￥<span id="buyPrice">588</span>
+				</div>
+			</div>
+			<!--购买的商品信息结束-->
+
+			<!--商品购买详情单-->
+			<div class="buy_single">
+				<div class="buy_sg_num buy_sg_item">
+					<div class="buy_sg_ltit">购买数量</div>
+					<div class="buy_sg_num_inp">
+						<input id="buyNumber" class="buy_sg_inp" type="number" value="1" />
+						<img id="numDown" class="num_down" src="images/num_down.png"/>
+						<img id="numUp" class="num_up" src="images/num_up.png"/>
+					</div>
+				</div>
+				<div class="buy_sg_user buy_sg_item">
+					<div class="buy_sg_ltit">购买人<span></span></div>
+					<div class="buy_sg_user_wrap">
+						<input id="buyUser" class="buy_sg_inp" type="text" placeholder="请输入购买人" />
+						<p class="buy_sg_user_tips"><img src="images/error.png"/>请正确输入购买人</p>
+					</div>
+				</div>
+				<div class="buy_sg_phone buy_sg_item">
+					<div class="buy_sg_ltit">联系方式</div>
+					<div class="buy_sg_phone_wrap">
+						<input id="buyPhone" class="buy_sg_inp" type="text" placeholder="请输入购买人手机" />
+						<p class="buy_sg_phone_tips"><img src="images/error.png"/>请正确输入购买人联系方式</p>
+					</div>
+				</div>
+				<div class="buy_sg_pay buy_sg_item">
+					<div class="buy_sg_ltit">支付方式</div>
+					<span>微信支付</span>
+				</div>
+			</div>
+			<!--商品购买详情单结束-->
+
+			<!--商品购买说明-->
+			<div class="buy_exp">
+				<p class="buy_exp_tit"><img src="images/explain_img.png" alt="" />说明</p>
+				<div class="buy_exp_text">1.商品过有效期后不能使用；</div>
+			</div>
+			<!--商品购买说明结束-->
+
+			<!--底部固定栏目导航-->
+			<div class="buy_bottom_nav">
+				<div class="buy_btm_nav_money">￥<span id="buyTotalMoney">588</span></div>
+				<div id="toPay" class="buy_btm_nav_pay" onclick="yanzhengpay()">立即支付</div>
+			</div>
+			<!--底部固定栏目导航结束-->
+		</div>
+
+		<!--底部js-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/swiper-3.4.2.jquery.min.js"></script>
+		<script src="js/main.js"></script>
+		<!--底部js结束-->
+	</body>
+</html>

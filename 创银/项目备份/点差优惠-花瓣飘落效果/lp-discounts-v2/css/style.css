@@ -1,0 +1,438 @@
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+select::-ms-expand { display: none; }
+/*清除input默认样式*/
+input[type=number] { -moz-appearance:textfield; }  
+input[type=number]::-webkit-inner-spin-button,  
+input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none;  margin: 0; }  
+
+body{
+	/*display: none;*/
+}
+.content{
+	width: 100%;max-width: 1920px;
+	margin: 0 auto;
+	font-family: "微软雅黑","microsoft yahei";
+}
+.banner{
+	position: relative;
+	width: 100%;
+	height: 600px;
+	margin-bottom: 58px;
+	background-image: url(../images/banner.jpg);
+	background-position: center 0;
+}
+.banner .snowfall-flakes{animation:sakura 1s linear 0s infinite;}
+	@keyframes sakura{
+	0% {transform:rotate3d(0, 0, 0, 0deg);}
+	25%{transform:rotate3d(1, 1, 0, 60deg);}
+	50%{transform:rotate3d(1, 1, 0, 0deg);}
+	75%{transform:rotate3d(1, 0, 0, 60deg);}
+	100% {transform:rotate3d(1, 0, 0, 0deg);}
+}
+/*cont1*/
+.cont1,.cont2,.cont3{
+	width: 100%;
+	padding-top: 1px;
+}
+.com_title{
+	display: block;
+	margin: 0 auto 38px;
+}
+.com_pink{
+	color: #f86187;
+}
+.account_discounts{
+	width: 970px;
+	height: 366px;
+	margin: 0 auto;
+}
+.cont1-content{
+	float: left;
+	width: 293px;
+	height: 366px;
+	margin-left: 44px;
+	border-radius: 14px;
+	background-image: url(../images/account_discounts_img2.png);
+	transition: .3s;
+	cursor: pointer;
+	position: relative;
+}
+.account_discounts_box{
+	margin-left: 0;
+	background-image: url(../images/account_discounts_img1.png);
+}
+.account_discounts_box2{
+	background-image: url(../images/account_discounts_img3.png);
+}
+.cont1-content:hover{
+	margin-top: -10px;
+	box-shadow: 1px 2px 24px 2px rgba(0,0,0,.3);
+}
+.cont1-content a{
+	display: block;
+	left: 37px;
+	position: absolute;
+	bottom: 36px;
+	width: 218px;
+	height: 44px;
+	text-align: center;
+	line-height: 44px;
+	border-radius: 30px;
+	color: white;
+	font-size: 26px;
+	transition: .3s;
+}
+.cont1-content a:hover{width: 236px;left:28px }
+.account_discounts_box a{background: #565656}
+.account_discounts_box1 a{background: #f86187}
+.account_discounts_box2 a{background: #89c38b}
+.btn_group{
+	width: 650px;
+	margin: 56px auto;
+	text-align: center;
+}
+.btn{
+	display: inline-block;
+	width: 256px;
+	height: 60px;
+	box-sizing: border-box;
+	font-size: 23px;
+	line-height: 60px;
+	color: #FFFFFF;
+	border-radius: 10px;
+	transition: .3s;
+}
+.btn_left{
+	line-height: 56px;
+	margin-right: 86px;
+	color: #353535;
+	border: 2px solid #353535;
+}
+.btn_right{
+	background-color:  #f86187;
+}
+.btn:hover{
+	width: 300px;
+}
+.activity_rule{
+	position: relative;
+	width: 130px;
+	height: 32px;
+	margin: 0 auto 88px;
+	font-size: 22px;
+	line-height: 1em;
+	border-bottom: 1px solid #929292;
+}
+.activity_rule a{
+	position: absolute;
+	top: 0;
+	left: 12px;
+	color: #606060;
+}
+.activity_rule:hover{
+	border-bottom: 1px solid #f86187;
+}
+.activity_rule:hover a{
+	color: #f86187;
+}
+/*cont2*/
+.com_title_text{
+	display: block;
+	margin: 0 auto 48px;
+}
+.gain{
+	position: relative;
+	width: 970px;
+	height: 187px;
+	margin: 0 auto 77px;
+	box-sizing: border-box;
+	padding: 25px 0 0 163px;
+	background-color: #eeeeee;
+	border-radius: 12px;
+	color: #393939;
+}
+.gain_label{
+	position: absolute;
+	top: 0;
+	left: 28px;
+	width: 71px;
+	height: 96px;
+	background-image: url(../images/gain_label.png);
+}
+.gain_label p{
+	font-size: 25px;
+	line-height: 1em;
+	text-align: center;
+}
+.gain_label p:first-child{
+	margin-top: 16px;
+}
+.gain_equation{
+	float: left;
+	
+}
+.gain_equation_img{
+	width: 82px;
+	height: 82px;
+	margin: 0 auto;
+	overflow: hidden;
+	border-radius: 41px;
+	background-color: #565656;
+	transition: .3s;
+	cursor: pointer;
+}
+.gain_equation_img:hover{
+	background-color: #f86187;
+}
+.gain_equation_img img{
+	display: block;
+	margin: 19px auto 0;
+}
+.gain_equation_img_p{
+	font-size: 18px;
+	line-height: 1em;
+	text-align: center;
+}
+.gain_equation_img_p:nth-child(2){
+	margin: 13px auto 7px;
+}
+.gain_equation_symbol{
+	width: 188px;
+	padding-top: 43px;
+	font-size: 32px;
+	text-align: center;
+}
+/*cont3*/
+.calculator{
+	position: relative;
+	width: 970px;
+	height: 430px;
+	margin-top: 100px;
+	box-sizing: border-box;
+	margin: 0 auto 110px;
+	padding: 73px 0 0 40px;
+	border: 1px solid #565656;
+}
+.calculator_title{
+	position: absolute;
+	top: -18px;
+	left: 274px;
+	width: 402px;
+	height: 30px;
+	background-color: #FFFFFF;
+	background-image: url(../images/calculator_title.png);
+	background-repeat: no-repeat;
+}
+.calculator_box{
+	float: left;
+	margin-right: 50px;
+}
+.calculator_box_account{
+	height: 40px;
+	margin-bottom: 27px;
+	font-size: 22px;
+	line-height: 40px;
+	color: #565656;
+}
+.calculator_box_account select{
+	width: 176px;
+	height: 40px;
+	margin-left: 20px;
+	padding-left: 27px;
+	background: url(../images/triangle.png) no-repeat 152px 15px/15px 11px;
+	border: 1px solid #565656;
+	font: 20px/1.5 "微软雅黑","microsoft yahei";
+	color: #565656;
+	cursor: pointer;
+	appearance:none;
+ 	-moz-appearance:none;
+ 	-webkit-appearance:none;
+}
+.calculator_box_account .bottom_select{
+	padding-left: 57px;
+}
+.calculator_box_account input{
+	width: 176px;
+	height: 40px;
+	margin-left: 20px;
+	padding-left: 27px;
+	border: 1px solid #565656;
+	font: 20px/1.5 "微软雅黑","microsoft yahei";
+	color: #565656;
+}
+.calculator_box3{
+	margin-right: 0;
+}
+.calculator_box3 p{
+	text-align: center;
+}
+.calculator_box3 input{
+	margin-left: 0;
+}
+.clear{
+	clear: both;
+}
+.calculator_btn{
+	display: block;
+	width: 246px;
+	height: 62px;
+	margin: 17px auto 36px;
+	background-color: #cfcfcf;
+	background: linear-gradient( #eaeaea, #cecece ); 
+	border-radius: 10px;
+	font-size: 29px;
+	color: #565656;
+    outline: none;
+    cursor: pointer;
+}
+.calculator_hx{
+	height: 1px;
+	margin-bottom: 35px;
+	background-color: #565656;
+}
+.calculator_result{
+	width: 656px;
+	height: 30px;
+	box-sizing: border-box;
+	padding-left: 330px;
+	margin: 0 auto;
+	background-image: url(../images/calculator_result.png);
+	font-size: 24px;
+	color: #565656;
+	line-height: 24px;
+}
+
+/*活动规则*/
+.rulesbox{
+	display: none;
+	position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+	width: 100%;
+    height: 100%;
+    font-family: "微软雅黑","microsoft yahei";
+}
+.rulesbox_cont{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 833px;
+	box-sizing: border-box;
+    padding: 24px 52px;
+    margin: -300px 0 0 -416px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    color: #565656;
+    height: 0px;
+}
+.rulesbox_close{
+	position: absolute;
+    right: 13px;
+    top: 13px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.rulesbox_details{
+    overflow: auto;
+    height: 538px;
+    font-size: 16px;
+}
+.rulesbox_details_title{
+	margin: 0 0 5px -10px;
+	font-size: 18px;
+	font-weight: bold;
+}
+.rulesbox_hx{
+	height: 2px;
+	margin: 17px auto 14px;
+	background-color: #d2d2d2;
+}
+/*右边悬浮客服*/
+.server{
+	display: none;
+	position: absolute;
+	top: 165px;
+	right: 20px;
+	width: 80px;
+	height: 80px;
+	background-image: url(../images/server_bg.png);
+	cursor: pointer;
+}
+.server img{
+	position: absolute;
+	top: 14px;
+	left: 22px;
+}
+.server p{
+	margin-top: 55px;
+	font-size: 12px;
+	line-height: 1em;
+	color: #FFFFFF;
+	text-align: center;
+}
+@-webkit-keyframes serverAni{
+	0% {
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1)
+	}
+	30% {
+		-webkit-transform: scale3d(1.25, .75, 1);
+		transform: scale3d(1.25, .75, 1)
+	}
+	40% {
+		-webkit-transform: scale3d(.75, 1.25, 1);
+		transform: scale3d(.75, 1.25, 1)
+	}
+	50% {
+		-webkit-transform: scale3d(1.15, .85, 1);
+		transform: scale3d(1.15, .85, 1)
+	}
+	65% {
+		-webkit-transform: scale3d(.95, 1.05, 1);
+		transform: scale3d(.95, 1.05, 1)
+	}
+	75% {
+		-webkit-transform: scale3d(1.05, .95, 1);
+		transform: scale3d(1.05, .95, 1)
+	}
+	to {
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1)
+	}
+}
+@keyframes serverAni{
+	0% {
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1)
+	}
+	30% {
+		-webkit-transform: scale3d(1.25, .75, 1);
+		transform: scale3d(1.25, .75, 1)
+	}
+	40% {
+		-webkit-transform: scale3d(.75, 1.25, 1);
+		transform: scale3d(.75, 1.25, 1)
+	}
+	50% {
+		-webkit-transform: scale3d(1.15, .85, 1);
+		transform: scale3d(1.15, .85, 1)
+	}
+	65% {
+		-webkit-transform: scale3d(.95, 1.05, 1);
+		transform: scale3d(.95, 1.05, 1)
+	}
+	75% {
+		-webkit-transform: scale3d(1.05, .95, 1);
+		transform: scale3d(1.05, .95, 1)
+	}
+	to {
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1)
+	}
+}
+.server:hover img{
+	animation: serverAni 1s;
+}
