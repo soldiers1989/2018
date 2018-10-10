@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>插件直接将链接转换成二维码</title>
+		<style type="text/css">
+			#qrcode {
+				width:160px;
+			    height:160px;
+			    margin-top:15px;
+			    padding:10px;
+			    border:1px solid #f5f5f5;
+			    box-shadow:0px 1px 1px #e5e5e5;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<input type="text" name="url" id="url" placeholder="请输入URL" value="www.baidu.com" />
+		<button id="shbtn" type="button" onclick="makeCode()">生成二维码</button>
+		<div id="qrcode"></div>
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/qrcode.min.js"></script>
+		<script>
+			var qrcode = new QRCode(document.getElementById("qrcode"), {
+				width : 160,
+				height : 160,
+				colorDark : "#458761",
+			    colorLight : "#ffffff",
+			    correctLevel : QRCode.CorrectLevel.H
+			});
+			
+			function makeCode () {      
+			    var elText = document.getElementById("url");
+			    if (!elText.value) {
+			    	alert('请输入URL链接！')
+			        elText.focus();
+			        return;
+			    }
+			    
+			    qrcode.makeCode(elText.value);
+			}
+		</script>
+	</body>
+
+</html>

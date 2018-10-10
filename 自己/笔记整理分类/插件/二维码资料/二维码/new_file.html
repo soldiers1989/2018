@@ -1,0 +1,70 @@
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>JS生成二维码-www.jbxue.com</title>
+		<script src="js/qrcode.js"></script>
+		<script src="js/qart.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<style>
+			#output {
+				margin-left: 300px;
+				margin-top: 100px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="output"></div>
+		<script>
+			window.onload = function() {
+				var trs = $('#output').qrcode({
+						width: 100,
+						height: 100,
+						render: "canvas", //设置渲染方式 table canvas
+						text: utf16to8("javascript生成二维码"),
+						background: "#ffffff", //背景颜色 
+						foreground: "red" //前景颜色 
+					}).find('tr'),
+					trLen = Math.floor(trs.size() / 2),
+					tdLen = Math.floor(trs.eq(0).find('td').size() / 2),
+					tds, bgColor;
+				var colors = [
+					['#ff0000', '#0100e2'],
+					['#00ed01', '#9f4d95']
+				];
+				trs.each(function(j) {
+					tds = $(this).find('td');
+					tds.each(function(i) {
+						bgColor = this.style.backgroundColor;
+						if(bgColor == 'red') {
+							this.style.backgroundColor = colors[j < trLen ? 0 : 1][i < tdLen ? 0 : 1];
+						}
+					});
+				});
+			}
+
+			function utf16to8(str) {
+				var out, i, len, c;
+				out = "";
+				len = str.length;
+				for(i = 0; i < len; i++) {
+					c = str.charCodeAt(i);
+					if((c >= 0x0001) && (c <= 0x007F)) {
+						out += str.charAt(i);
+					} else if(c > 0x07FF) {
+						out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));
+						out += String.fromCharCode(0x80 | ((c >> 6) & 0x3F));
+						out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+					} else {
+						out += String.fromCharCode(0xC0 | ((c >> 6) & 0x1F));
+						out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+					} // www.jbxue.com
+				}
+				return out;
+			}
+		</script>
+
+	</body>
+
+</html>
