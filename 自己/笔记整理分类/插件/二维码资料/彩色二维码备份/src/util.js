@@ -11,4 +11,5 @@ class Util {
     return (0.2126*r + 0.7152*g + 0.0722*b >= value) ? 255 : 0;
   }
 }
+
 export default Util;

@@ -1,0 +1,214 @@
+
+
+盛腾贸易代理网站http://www.hkuntc.com/
+
+	后台
+	http://www.hkuntc.com/admin.php
+	admin
+	tmc2018uji
+
+	主机管理控制台地址：
+	https://cp.aliyun.com
+	用户名：xyu3705460001
+	untc963999
+
+	FTP登录主机地址：
+	xyu3705460001.my3w.com
+	用户名：xyu3705460001
+	funtc963999
+
+	MySQL数据库连接地址：
+	xdm48026272.my3w.com
+	用户名：xdm48026272
+	muntc963999
+
+	数据库导入
+	https://dms-net.aliyun.com/?spm=cp-aliyun-com.10698423.109.3.7aa97231WkMRyH&host=xdm48026272.my3w.com&port=3306&dbType=MySQL&userName=xdm48026272
+
+
+
+
+
+盛腾贸易代理网站hkunt.com
+
+	主机管理控制台地址：
+	https://cp.aliyun.com
+	用户名：xyu3462970001
+	unt9638888
+
+	FTP登录主机地址：
+	xyu3462970001.my3w.com
+	用户名：xyu3462970001
+	funt9638888
+
+	MySQL数据库连接地址：
+	xdm340876676.my3w.com
+	用户名：xdm340876676
+	munt9638888
+
+
+
+	hkuntc.com
+	www.hkuntc.com
+	xyu3705460001.my3w.com
+	47.90.84.3
+
+
+	hkunt.com
+	www.hkunt.com
+	xyu3462970001.my3w.com
+	47.90.60.108
+
+
+
+TMC
+
+www.tmccb.com 
+
+	主机管理控制台地址：
+	https://cp.aliyun.com
+	用户名：xyu5193690001
+	Tcb9637777
+
+	FTP登录主机地址：
+	xyu5193690001.my3w.com
+	用户名：xyu5193690001
+	fTcb9637777
+
+	MySQL数据库连接地址：
+	xdm463318570.my3w.com
+	用户名：xdm463318570
+	mTcb9637777
+
+	www.hktmcs.com
+	主机管理控制台地址：
+	https://cp.aliyun.com
+	用户名：xyu5213660001
+	Tmc9636666
+
+	FTP登录主机地址：
+	xyu5213660001.my3w.com
+	用户名：xyu5213660001
+	fTmc9636666
+
+	MySQL数据库连接地址：
+	xdm310377271.my3w.com
+	用户名：xdm310377271
+	mTmc9636666
+
+
+
+创银金店（广西创之盈投资咨询有限公司）
+http://tmall.cy9999.net/
+
+
+	163邮箱：gxcy9999@163.com
+	   密码：gxcy9999.   （密码最后有个小数点）
+	手机号码：15777166893
+
+	阿里云账号：gxcy9999 （国际站）
+		  密码：gxcy123.   （密码最后有个小数点）
+
+	阿里云账号：gxcy9999 （中国站）
+		  密码：cyjy5600988
+
+	绑定邮箱 1282902500@qq.com
+
+	密码：czy5600988
+
+	云虚拟主机密码：czy5600988
+
+	管理控制台登录密码：czy5600988
+
+	FTP登录密码：czy5600988
+
+	MYSQL数据库登录密码：czy5600988
+
+
+
+
+创盈商城（代理网站2、杨总网站资料）
+http://tmall.gzy9999.net/
+
+	阿里云
+	用户名 nngzy 密码 nngzy7799
+
+	绑定手机  13317806586
+
+
+	nnguizhiying@163.com
+	密 nngzy7799
+
+	域名 gzy9999.net 
+
+	管理控制台登录密码:NNgzy7799
+
+	FTP登录密码:NNgzy7799
+
+	MySQL数据库登录密码:NNgzy7799
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
