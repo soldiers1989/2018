@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<FileZilla3 version="3.36.0" platform="windows">
+<FileZilla3 version="3.37.4" platform="windows">
 	<Servers>
 		<Folder expanded="1">我的站点<Folder expanded="0">ChuangYing<Server>
 					<Host>124.172.156.228</Host>
@@ -86,7 +86,7 @@
 				<SyncBrowsing>0</SyncBrowsing>
 				<DirectoryComparison>0</DirectoryComparison>
 			</Server>
-			<Folder expanded="0">JinYu<Server>
+			<Folder expanded="1">JinYu<Server>
 					<Host>47.90.95.165</Host>
 					<Port>21</Port>
 					<Protocol>0</Protocol>
@@ -235,27 +235,6 @@
 					<DirectoryComparison>0</DirectoryComparison>
 				</Server>
 			</Folder>
-			<Server>
-				<Host>xyu4833650001.my3w.com</Host>
-				<Port>21</Port>
-				<Protocol>6</Protocol>
-				<Type>0</Type>
-				<User>xyu4833650001</User>
-				<Pass encoding="base64">Y3p5NTYwMDk4OA==</Pass>
-				<Logontype>1</Logontype>
-				<TimezoneOffset>0</TimezoneOffset>
-				<PasvMode>MODE_DEFAULT</PasvMode>
-				<MaximumMultipleConnections>0</MaximumMultipleConnections>
-				<EncodingType>Auto</EncodingType>
-				<BypassProxy>0</BypassProxy>
-				<Name>tmall.cy9999.net</Name>
-				<Comments />
-				<Colour>0</Colour>
-				<LocalDir />
-				<RemoteDir />
-				<SyncBrowsing>0</SyncBrowsing>
-				<DirectoryComparison>0</DirectoryComparison>
-			</Server>
 			<Folder expanded="0">Tmc<Server>
 					<Host>119.28.15.98</Host>
 					<Port>21</Port>
@@ -320,8 +299,51 @@
 					<DirectoryComparison>0</DirectoryComparison>
 				</Server>
 			</Folder>
+			<Folder expanded="1">创银代理的商城网站<Server>
+					<Host>xyu4833650001.my3w.com</Host>
+					<Port>21</Port>
+					<Protocol>6</Protocol>
+					<Type>0</Type>
+					<User>xyu4833650001</User>
+					<Pass encoding="base64">Y3p5NTYwMDk4OA==</Pass>
+					<Logontype>1</Logontype>
+					<TimezoneOffset>0</TimezoneOffset>
+					<PasvMode>MODE_DEFAULT</PasvMode>
+					<MaximumMultipleConnections>0</MaximumMultipleConnections>
+					<EncodingType>Auto</EncodingType>
+					<BypassProxy>0</BypassProxy>
+					<Name>tmall.cy9999.net</Name>
+					<Comments />
+					<Colour>0</Colour>
+					<LocalDir />
+					<RemoteDir />
+					<SyncBrowsing>0</SyncBrowsing>
+					<DirectoryComparison>0</DirectoryComparison>
+				</Server>
+				<Server>
+					<Host>47.90.55.159</Host>
+					<Port>21</Port>
+					<Protocol>6</Protocol>
+					<Type>0</Type>
+					<User>xyu4476540001</User>
+					<Pass encoding="base64">Tk5nenk3Nzk5</Pass>
+					<Logontype>1</Logontype>
+					<TimezoneOffset>0</TimezoneOffset>
+					<PasvMode>MODE_DEFAULT</PasvMode>
+					<MaximumMultipleConnections>0</MaximumMultipleConnections>
+					<EncodingType>Auto</EncodingType>
+					<BypassProxy>0</BypassProxy>
+					<Name>tmall.gzy9999.net</Name>
+					<Comments />
+					<Colour>0</Colour>
+					<LocalDir />
+					<RemoteDir />
+					<SyncBrowsing>0</SyncBrowsing>
+					<DirectoryComparison>0</DirectoryComparison>
+				</Server>
+			</Folder>
 		</Folder>
-		<Folder expanded="0">自己<Server>
+		<Folder expanded="1">自己<Server>
 				<Host>60.205.27.18</Host>
 				<Port>21</Port>
 				<Protocol>6</Protocol>
