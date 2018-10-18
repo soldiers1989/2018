@@ -4,6 +4,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<script src="js/polyfill.min.js" type="text/javascript"></script>
 		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
 
 		<style type="text/css">
@@ -13,32 +14,20 @@
 
 	<body>
 		<div id="app">
-			<p>
-				全选：
-			</p>
-			<input type="checkbox" id="checkbox" v-model="checked" @click="changeAllChecked()">
-			<label for="checkbox">
-		{{checked}}
-	</label>
-			<p>
-				多个复选框：
-			</p>
+			<p>全选：</p>
+			<input type="checkbox" id="checkbox" v-model="checked" @change="changeAllChecked()">
+			<label for="checkbox">{{checked}}</label>
+			
+			<p>多个复选框：</p>
 			<input type="checkbox" id="runoob" value="Runoob" v-model="checkedNames">
-			<label for="runoob">
-		Runoob
-	</label>
+			<label for="runoob">Runoob</label>
 			<input type="checkbox" id="google" value="Google" v-model="checkedNames">
-			<label for="google">
-		Google
-	</label>
+			<label for="google">Google</label>
 			<input type="checkbox" id="taobao" value="Taobao" v-model="checkedNames">
-			<label for="taobao">
-		taobao
-	</label>
+			<label for="taobao">taobao</label>
+			
 			<br>
-			<span>
-		选择的值为:{{checkedNames}}
-	</span>
+			<span>选择的值为:{{checkedNames}}</span>
 		</div>
 
 		<script type="text/javascript">
