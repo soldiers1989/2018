@@ -8,8 +8,9 @@ https://jingyan.baidu.com/article/454316ab02c329f7a7c03a0e.html
 	会弹出登录电脑的用户名和密码。输入后就可以远程控制电脑进行问题协助处理
 
 
+                                        VPN地址：103.214.146.42
+ 服务器IP：103.214.146.42:52961         账号 : jyusr  密码: Diycfan@2018
 
- 服务器IP：103.214.146.42:52961         账号 : administrator  密码: Yundc@2018@
 
 
 
