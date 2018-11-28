@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>分时图 - Hx9999.com</title>
+<link href="https://images.hx9999.com/styles/quoteChartStyle.css" rel="stylesheet" />
+<script type="text/javascript" src="https://images.hx9999.com/scripts/jquery-1.8.3.js"></script>
+<script src="https://images.hx9999.com/scripts/highcharts.js"></script>
+<script src="https://images.hx9999.com/scripts/jquery.query.js"></script>
+<script src="https://images.hx9999.com/scripts/goldChart.js"></script>
+</head>
+<body>
+<div class="price-wrap">
+<ul class="tab_pro">
+	<li id='gold'><a class="pro_type" value="gold" href="javascript:;"><span class="p-name">伦敦金</span><span class="p-price"><i>00</i>.00<i class="arrow"></i></span><span class="p-per"><i>0.00</i><i>0.00%</i></span></a></li>
+	<li id='silver'><a class="pro_type"  value="silver" href="javascript:;"><span class="p-name">伦敦银</span><span class="p-price"><i>0</i>.000<i class="arrow"></i></span><span class="p-per"><i>0.00</i><i>0.00%</i></span></a></li>
+	<li id='xaucnh'><a class="pro_type"   value="xaucnh" href="javascript:;"><span class="p-name">CNH黄金</span><span class="p-price"><i>00</i>.00<i class="arrow"></i></span><span class="p-per"><i>0.00</i><i>0.00%</i></span></a></li>
+	<li id='xagcnh'><a class="pro_type"   value="xagcnh" href="javascript:;"><span class="p-name">CNH白银</span><span class="p-price"><i>00</i>.00<i class="arrow"></i></span><span class="p-per"><i>0.00</i><i>0.00%</i></span></a></li>
+	<li id='usdx'><a class="pro_type"   value="usdx" href="javascript:;"><span class="p-name">美元指数</span><span class="p-price"><i>00</i>.00<i class="arrow"></i></span><span class="p-per"><i>0.00</i><i>0.00%</i></span></a></li>
+	<li id='usdcnh'><a class="pro_type"   value="usdcnh" href="javascript:;"><span class="p-name">USDCNH</span><span class="p-price"><i>00</i>.00<i class="arrow"></i></span><span class="p-per"><i>0.00</i><i>0.00%</i></span></a></li>
+	
+</ul>
+<div class="tab_time">
+	<ul>
+        <li class="time_type" ><a value="1day" href="https://news1.hx9999.com/cn/stock_k.html?time_type=1day">日K</a></li>
+		<li class="time_type"><a value="60min" href="https://news1.hx9999.com/cn/stock_k.html?time_type=60min">M60</a></li>
+		<li class="time_type"><a value="5min" href="https://news1.hx9999.com/cn/stock_k.html?time_type=5min">M5</a></li>
+        <li class="time_type fenshi" ><a value="mh" href="https://news1.hx9999.com/cn/price.html">分时</a></li>
+	</ul>
+</div>
+<div class="clear"></div>
+</div>
+<style>
+    body{font-family:"Hiragino Sans GB","Microsoft Yahei",sans-serif;font-size:12px;}
+	a:link,a:visited{color:#666;text-decoration:none;}
+	li{list-style: none;}
+	.rule{color:#666;font-size:10px;text-align:left;margin:10px 7px;}
+	.rule span{float:right;}
+
+	.tab_pro{margin:0;padding:0;}
+	.tab_pro:after{clear:both;content:".";display:block;height:0;visibility:hidden;font-size:0;}
+	.tab_pro li{display:inline-block;width:19%;margin:0;}
+    .tab_pro li{ *display:inline;}
+	.tab_pro li a{font-size: 12px;display: block;padding:10px 5px;line-height:1.2em;margin:0;text-align:center;}
+	.tab_pro li a.cur{border-bottom:3px solid #ccb054;}
+	.tab_pro li a:not(.cur):hover{border-bottom:3px solid #ccc;}
+	.tab_pro li a span{display:block;}
+	.tab_pro li a span i{font-style:normal;font-size:12px;}
+	.tab_pro li a.godown{color:#53bb07;}
+	.tab_pro li a.godown .arrow{width:16px;height:16px;margin:0 3px;display:inline-block;background:url("https://images.hx9999.com/up2.gif") no-repeat;background-size:12px;}
+	.tab_pro li a.goup .arrow{width:16px;height:16px;margin:0 3px;display:inline-block;background:url("https://images.hx9999.com/down2.gif") no-repeat;background-size:12px;}
+	.tab_pro li a.goup{color:#f45256;}
+	.tab_pro li a .p-price i{font-size:20px;font-weight:bold;}
+	.tab_pro li a .p-name{color:#333;margin-bottom:5px;}
+	.tab_pro li a .p-per i{display:inline-block;padding-right:5px;}
+	
+	.tab_pro_idx li a{line-height:30px;color:#666;}
+	.tab_pro_idx li.cur a,.tab_pro_idx li.cur a:hover{font-weight:bold;background:none;color:#dca600;line-height:30px;border-bottom:1px solid #dca600;}
+
+    .tab_time{position: relative;z-index: 8;margin: 15px 0;}
+    .tab_time ul{text-align: right;font-size: 0;}
+    .tab_time li{
+        display: inline-block;
+        *display: inline;
+        width: 50px;
+        text-align: center;
+        margin-right: 8px;
+    }
+    .tab_time li a{font-size: 14px;color: #000;display: block;line-height: 25px;border-radius: 3px;}
+    .tab_time li a:hover{background-color: #f8f8f8;}
+    .tab_time li.cur a,.tab_time li.cur a:hover{background-color: #ccb054;
+        color: #fff;}
+	.clear{clear: both;}
+	#chart-box{width:95%;margin:0 auto;}
+	
+	/*for手机版*/
+	#price-wrap-mob .tab_pro{position: relative;z-index: 9;padding:4px 0;margin:4px;text-align:center;}
+	#price-wrap-mob .tab_pro li{display:inline-block;width:23%;margin:1.2% 0.5%;background-color:#fff;border-radius:3px;-moz-box-shadow:0px 2px 3px #eee; -webkit-box-shadow:0 2px 3px #eee; box-shadow:0 2px 3px #eee;}
+	#price-wrap-mob .tab_pro li a{display: block;padding:10px 2px;font-size:11px;line-height:1.2em;text-align:center;border:0;}
+	#price-wrap-mob .tab_pro li a.cur{border:0;}
+	#price-wrap-mob .tab_pro li a.godown .arrow{width:12px;height:16px;margin:0 3px;display:inline-block;background:url("https://images.hx9999.com/up2.gif") no-repeat;background-size:12px;}
+	#price-wrap-mob .tab_pro li a.goup .arrow{width:12px;height:16px;margin:0 3px;display:inline-block;background:url("https://images.hx9999.com/down2.gif") no-repeat;background-size:12px;}
+	#price-wrap-mob .tab_pro li a .p-price i{font-size:18px;}
+	#price-wrap-mob .tab_pro li a .p-name{color:#999;}
+	#price-wrap-mob .tab_pro li a span i{font-size:9px;}
+
+    #price-wrap-mob #usdcnh,#usdcnh,#price-wrap-mob #usdx,#price-wrap-mob .tab_time{display:none;}
+	@media (max-width:640px){
+		body{font-family:"Hiragino Sans GB",sans-serif;}
+	}
+	@media (max-width:360px){
+		#price-wrap-mob .tab_pro li a .p-price i{}
+		#price-wrap-mob .arrow{display:none;}
+	}
+</style>
+<script type="text/javascript">
+$(function(){
+    var type = $.query.get('type');
+    var time_type = $.query.get('time_type');
+    var lastp='';
+    type=(type)?type:'gold';
+    time_type=(time_type)?time_type:'mh';
+    var fix = (type=='silver')?3:2;
+	var for_page = $.query.get('for');
+	var for_page_a='';
+	var to_page='';
+	if(for_page=='INDEX'){
+		$('#container').css('height','250px');
+		for_page_a='&for=INDEX';
+	}
+	if(QueryString('f')=="mob" || $("#price-wrap-mob")[0]){
+		for_page_a +='&f=mob';
+		to_page='/quote';
+	}else{
+		to_page='';
+	}
+	
+	for(var i=0; i<$('.pro_type').length;i++){
+        $('.pro_type').eq(i).removeClass("cur");
+        if($('.pro_type').eq(i).attr('value').toUpperCase()==type.toUpperCase()){
+            $('.pro_type').eq(i).addClass("cur");
+        }
+    }
+
+    for(var i=0;i<$('.time_type').length;i++){
+        if(!$('.time_type').eq(i).hasClass('fenshi')){
+		var time_type_to_page=(to_page=='/quote')?to_page:$('.time_type a').eq(i).attr('href');
+            $('.time_type a').eq(i).attr('href',time_type_to_page+'&type='+type.toLowerCase()+for_page_a);
+        }
+        $('.time_type').eq(i).removeClass("cur");
+        if(time_type==$('.time_type a').eq(i).attr("value"))
+        {
+            $('.time_type').eq(i).addClass("cur");
+        }
+    }
+    //分时url设置
+    $('.fenshi a').attr('href',$('.fenshi a').attr('href')+'?type='+type.toUpperCase()+for_page_a);
+    $('.pro_type').click(function(){
+		if($("#header").hasClass('index')){
+			window.location.href=to_page+"?type="+$(this).attr('value')+"&time_type="+time_type+for_page_a+"";
+		}else{
+			window.location.href="?type="+$(this).attr('value')+"&time_type="+time_type+for_page_a+"";
+		}
+    });
+getindexdata();
+function getindexdata(){
+ var step = $('input[name="controller"]').val()==1?'se':'fi';
+	$.getJSON('https://news1.hx9999.com/datajson/ajaxindexdata?'+ new Date().getTime() + '&jsoncallback=?',
+			{"type": step },function(t){
+			var obj = t;
+			if(obj.status===0){
+			$.each(obj.data,function(key,value){
+				var k_id = key.toLowerCase();
+				if($('.tab_pro li#'+k_id+'')){
+					var pri = value['now'].split(".");
+					pri[1]=(pri[1])?pri[1]:'00';
+					pri[0]=(pri[0]!='--')?pri[0]:'00';
+						if(k_id=='xagcnh'){
+							$('.tab_pro li#'+k_id+' .p-price').html('<i>'+pri[0]+'</i><i class="arrow"></i>');
+						}else{
+							$('.tab_pro li#'+k_id+' .p-price').html('<i>'+pri[0]+'</i>.'+pri[1]+'<i class="arrow"></i>');
+						}
+						$('.tab_pro li#'+k_id+' .p-per').html('<span class="p-per"><i>'+value['fluctuate']+'</i><i>'+value['Percent']+'%</i></span>');
+					if(value['fluctuate']>0){
+						//godown
+						$('.tab_pro li#'+k_id+' .pro_type').removeClass('godown,goup').addClass('godown');
+					}else if(value['fluctuate']<0){
+						//goup
+						$('.tab_pro li#'+k_id+' .pro_type').removeClass('godown,goup').addClass('goup');
+					}else{
+						$('.tab_pro li#'+k_id+' .pro_type').removeClass('godown,goup');
+					
+					}
+				}
+			});				
+			}
+		}
+	);
+}
+
+setInterval(getindexdata,15800);
+	
+function QueryString(item){
+	var sValue=location.search.match(new RegExp("[\?\&]"+item+"=([^\&]*)(\&?)","i"))
+	return sValue?sValue[1]:sValue
+}
+
+$(function(){
+	if(QueryString('f')=="mob"){
+		$(".price-wrap").attr('id','price-wrap-mob');
+	}
+});
+
+});	//数字行情
+</script>
+	<div>
+        <div class="rule"><span id="Time"></span>USD/OZ</div>
+        <div id="container">
+            <div id="close" style="display:none;height:220px;margin-top:20px auto 20px auto;background-color:rgb(238, 238, 238);text-align:center;">
+                <b style="margin-top:40px;margin:90px auto auto auto;text-align:center;font-size:20px;color:red; position: absolute">休市中...</b></div>
+        </div>
+        <!--* 以上报价有延迟，实际报价以交易平台为准。-->
+	</div>
+<input type="hidden" name="controller" value="0"/>
+</body>
+</html>

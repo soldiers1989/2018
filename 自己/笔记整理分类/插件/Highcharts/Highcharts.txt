@@ -21,7 +21,26 @@ title		//是必须的	不需要则为空
 		backgroundColor: 'red'
 	},
 
-	
+//范围选择器
+rangeSelector: {
+	enabled:false,                         //启用或禁用范围选择器
+	inputEnabled: false,                //启用或禁用日期输入框。当有足够的空间时，默认为启用，如果没有(通常是移动的)则禁用。
+	labelStyle: {                            //用于标签的CSS样式——缩放、从文本到文本。
+		// visibility: 'hidden'
+		text:'还原'
+	}
+},	
+
+//      导航器
+navigator: {
+	enabled: false,           //启用或禁用导航器
+},
+
+//      滚动条
+scrollbar: {
+	enabled: false           //启用或禁用导航器
+},
+
 取消图标右边数据刻度和标题
 	{
 		title: {
