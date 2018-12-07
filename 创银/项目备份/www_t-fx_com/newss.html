@@ -1,0 +1,460 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>行情分析_恒通国际</title>
+<meta name="keywords" content="恒通国际">
+<link href="css/template.css" rel="stylesheet" type="text/css"/>
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css"/>
+<link rel="shortcut icon" href="fav.ico">
+<link rel="apple-touch-icon image_src" href="fav.ico">
+<link rel="stylesheet" href="css/template.css">
+<link href="css/newss.css" rel="stylesheet" type="text/css"/>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery.blockui.js"></script>
+<script src="js/template.js"></script>
+</head>
+<body class="home-page" onhashchange="$.initNews()">
+ <div class="header"> 
+            <!-- Bengin stick megamenu larger than 1366px -->
+            <div class="pcst-megamenu clearfix"> 
+                  <!-- Begin header bar -->
+                  <div class="header-bar">
+                        <div class="row">
+                              <div class="col-xs-1 col-s sm-1">
+                                    <div class="logo"> <a href="index.html"><img src="images/logo-header.gif" /></a> </div>
+                              </div>
+                              <div class="col-xs-10 col-ssm-10">
+                                    <ul class="mega-menu clearfix">
+                                          <li> <a href="index.html">网站首页</a> </li>
+                                          <li> <a href="">关于我们</a>
+                                                <ul class="sub-menu">
+                                                      <li> <a href="">联络我们</a> </li>
+                                                </ul>
+                                          </li>
+                                          <li> <a href="">交易品种</a>
+                                                <ul class="sub-menu">
+                                                      <li> <a href="">黄金</a> </li>
+                                                      <li> <a href="">白银</a> </li>
+                                                      <li> <a href="">原油</a> </li>
+                                                </ul>
+                                          </li>
+                                          <li> <a href="">开户申请</a>
+                                                <ul class="sub-menu">
+                                                      <li> <a href="">出金注意事项</a> </li>
+                                                      <li> <a href="">入金指南</a> </li>
+                                                      <li> <a href="">入金操作视频</a> </li>
+                                                </ul>
+                                          </li>
+                                          <li> <a href="">平台下载</a> </li>
+                                          <li> <a href="">行情分析</a> </li>
+                                          <li class="bt-log"> <a href="" target="_blank">用户中心</a> </li>
+                                          <li class="bt-hel"> <a href="">立即开户</a> </li>
+                                    </ul>
+                              </div>
+                        </div>
+                  </div>
+                  <!-- End header bar --> 
+            </div>
+            <!-- End stick megamenu larger than 1366px --> 
+            <!-- Bengin stick megamenu less than 1366px -->
+            <div class="mobilest-megamenu">
+                  <div class="row">
+                        <div class="col-xs-1 col-ssm-1">
+                              <div class="logo"> <a href="index.html"><img src="images/logo-header.gif" /></a> </div>
+                        </div>
+                        <div class="col-xs-10 col-ssm-10">
+                              <ul class="par-menu clearfix">
+                                    <li class="bt-log"> <a href="" target="_blank">用户中心</a> </li>
+                                    <li class="bt-hel"> <a href="">立即开户</a> </li>
+                                    <li class="ic-menu">
+                                          <div class="cookie-wrapper"> <i></i> <i></i> <i></i> </div>
+                                          <div class="child1-wrapper">
+                                                <ul class="sub-child1 clearfix">
+                                                      <li> <a href="index.html">网站首页</a> </li>
+                                                      <li> <a href="">关于我们</a> </li>
+                                                      <li> <a href="">交易品种</a>
+                                                            <ul class="sub-child2">
+                                                                  <li> <a href="">黄金</a> </li>
+                                                                  <li> <a href="">白银</a> </li>
+                                                                  <li> <a href="">原油</a> </li>
+                                                            </ul>
+                                                      </li>
+                                                      <li> <a href="">开户申请</a>
+                                                            <ul class="sub-child2">
+                                                                  <li> <a href="">出金注意事项</a> </li>
+                                                                  <li> <a href="">入金指南</a> </li>
+                                                                  <li> <a href="">入金操作视频</a> </li>
+                                                            </ul>
+                                                      </li>
+                                                      <li> <a href="">平台下载</a> </li>
+                                                      <li> <a href="">行情分析</a> </li>
+                                                </ul>
+                                          </div>
+                                    </li>
+                              </ul>
+                        </div>
+                  </div>
+            </div>
+            <!-- End stick megamenu less than 1366px --> 
+            <!-- Begin header bar -->
+            <div id="megamenu-show" class="header-bar">
+                  <div class="row">
+                        <div class="col-xs-1 col-ssm-1">
+                              <div class="logo"> <a href="index.html"><img src="images/logo-header.gif"></a> </div>
+                              <div class="logo-black"> <a href="index.html"><img class="img-responsive" src="images/logo-header.gif"></a> </div>
+                        </div>
+                        <div class="col-xs-10 col-ssm-10">
+                              <ul class="mega-menu clearfix">
+                                    <li> <a href="index.html">网站首页</a> </li>
+                                    <li> <a href="">关于我们</a> </li>
+                                    <li> <a href="">交易品种</a>
+                                          <ul class="sub-menu">
+                                                <li> <a href="">黄金</a> </li>
+                                                <li> <a href="">白银</a> </li>
+                                                <li> <a href="">原油</a> </li>
+                                          </ul>
+                                    </li>
+                                    <li> <a href="">开户申请</a>
+                                          <ul class="sub-menu">
+                                                <li> <a href="">出金注意事项</a> </li>
+                                                <li> <a href="">入金指南</a> </li>
+                                                <li> <a href="">入金操作视频</a> </li>
+                                          </ul>
+                                    </li>
+                                    <li> <a href="">平台下载</a> </li>
+                                    <li> <a href="">行情分析</a> </li>
+                                    <li class="cre-bt"> <a href="" target="_blank">用户中心</a> </li>
+                                    <li class="bt-log"> <a href="">立即开户</a> </li>
+                              </ul>
+                              <ul class="par-menu stick clearfix">
+                                    <li class="bt-log"> <a href="">用户中心</a> </li>
+                                    <li class="bt-hel"> <a href="">立即开户</a> </li>
+                                    <li class="ic-menu">
+                                          <div class="cookie-wrapper"> <i></i> <i></i> <i></i> </div>
+                                          <div class="child1-wrapper">
+                                                <ul class="sub-child1 clearfix">
+                                                      <li> <a href="index.html">网站首页</a> </li>
+                                                      <li> <a href="">关于我们</a> </li>
+                                                      <li> <a href="">交易品种</a>
+                                                            <ul class="sub-child2">
+                                                                  <li> <a href="">黄金</a> </li>
+                                                                  <li> <a href="">白银</a> </li>
+                                                                  <li> <a href="">原油</a> </li>
+                                                            </ul>
+                                                      </li>
+                                                      <li> <a href="">开户申请</a>
+                                                            <ul class="sub-child2">
+                                                                  <li> <a href="">出金注意事项</a> </li>
+                                                                  <li> <a href="">入金指南</a> </li>
+                                                                  <li> <a href="">入金操作视频</a> </li>
+                                                            </ul>
+                                                      </li>
+                                                      <li> <a href="">平台下载</a> </li>
+                                                      <li> <a href="">行情分析</a> </li>
+                                                </ul>
+                                          </div>
+                                    </li>
+                              </ul>
+                        </div>
+                  </div>
+            </div>
+            <!-- End header bar --> 
+      </div>
+      <div class="top-banner">
+      <div class="banner">
+            <div class="container">
+                  <div class="title-banner">行情分析</div>
+                  <div class="sub-title">实时提供最新行情资讯分析</div>
+            </div>
+      </div>
+</div>
+<!-- 面包屑-->
+<div class="crumb-wrap">
+      <div class="w clearfix">
+            <div class="item"><a href="index.html">首页</a></div>
+            <div class="item sep">></div>
+            <div class="item"><a href="newss.html">行情分析</a></div>
+            
+      </div>
+</div>
+<div class="main-content">
+      <div class="container clearfix">
+            <div id="news_more">
+                  <div id="" class="col-md-12">
+                        <div class="col-md-2 widt-colum1"><img src="https://img.t-fx.com/source/public/info/other/3.jpg"></div>
+                        <div class="col-md-10 widt-colum2">
+                              <div class="tit-time clearfix"><a href="/cn/info/news/news-detailed.html#99753" desurl="newdetail" class="title-content">创富12月5日美国DJ30指数分析：威廉姆斯鹰派谈话，道琼斯暴跌近800点</a>
+                                    <p class="summary"></p>
+                                    <p class="date"><span class="pd-r">2018-12-05</span><span> 15:08:08</span></p>
+                              </div>
+                        </div>
+                  </div>
+                  <div id="" class="col-md-12">
+                        <div class="col-md-2 widt-colum1"><img src="https://img.t-fx.com/source/public/info/other/2.jpg"></div>
+                        <div class="col-md-10 widt-colum2">
+                              <div class="tit-time clearfix"><a href="/cn/info/news/news-detailed.html#99752" desurl="newdetail" class="title-content">中科院院士姚期智区块链项目获红杉中国投资</a>
+                                    <p class="summary">12月5日，新浪财经援引《财富》的消息称，区块链协议项目Conflux近日从红杉中国和多家中国互联网公司获得3500万美元融资。</p>
+                                    <p class="date"><span class="pd-r">2018-12-05</span><span> 15:06:54</span></p>
+                              </div>
+                        </div>
+                  </div>
+                  <div id="" class="col-md-12">
+                        <div class="col-md-2 widt-colum1"><img src="https://img.t-fx.com/source/public/info/other/1.jpg"></div>
+                        <div class="col-md-10 widt-colum2">
+                              <div class="tit-time clearfix"><a href="/cn/info/news/news-detailed.html#99751" desurl="newdetail" class="title-content">美股暴跌你怕了吗？四大指标揭示如何避免下次踩雷</a>
+                                    <p class="summary">美国股市隔夜突然出现暴跌，分析师认为，美国暴跌的原因包括美国债券收益率差距缩小、美联储12月加息预期以及投资者对贸易紧张局势的担忧情绪。不过，通过观察相关指标，投资者还是有可能预测下一次市场崩溃。这些指标是债券收益率曲线、VIX恐慌指数、消费者信心指数、垃圾债券收益率和美国国债之间的息差。</p>
+                                    <p class="date"><span class="pd-r">2018-12-05</span><span> 15:02:59</span></p>
+                              </div>
+                        </div>
+                  </div>
+                  <div id="" class="col-md-12">
+                        <div class="col-md-2 widt-colum1"><img src="https://img.t-fx.com/source/public/info/other/0.jpg"></div>
+                        <div class="col-md-10 widt-colum2">
+                              <div class="tit-time clearfix"><a href="/cn/info/news/news-detailed.html#99750" desurl="newdetail" class="title-content">俄罗斯金融市场委员会主席：国家支持的稳定币就等于数字法币</a>
+                                    <p class="summary">俄罗斯国家杜马金融市场委员会主席Anatoly Aksakov表示，国家支持的稳定币就相当于国家在数字空间运作的数字法币，也就是经过数字化加密的卢布。</p>
+                                    <p class="date"><span class="pd-r">2018-12-05</span><span> 14:50:42</span></p>
+                              </div>
+                        </div>
+                  </div>
+                  <div id="" class="col-md-12">
+                        <div class="col-md-2 widt-colum1"><img src="https://img.t-fx.com/source/public/info/other/36.jpg"></div>
+                        <div class="col-md-10 widt-colum2">
+                              <div class="tit-time clearfix"><a href="/cn/info/news/news-detailed.html#99748" desurl="newdetail" class="title-content">一文读懂卡塔尔退出OPEC事件及未来影响</a>
+                                    <p class="summary">12月3日，卡塔尔宣布自明年1月起退出OPEC，结束其长达58年的成员国身份，而在国际油价跌宕起伏的当口。卡塔尔此次退群反映出OPEC内部的日益割裂，该组织面对外部政治动荡的脆弱，以及日益深刻的国际能源格局变化。另外，也反映了天然气时代的到来，油气平衡的影响将逐渐显现。</p>
+                                    <p class="date"><span class="pd-r">2018-12-05</span><span> 14:41:59</span></p>
+                              </div>
+                        </div>
+                  </div>
+                  <div id="" class="col-md-12">
+                        <div class="col-md-2 widt-colum1"><img src="https://img.t-fx.com/source/public/info/other/37.jpg"></div>
+                        <div class="col-md-10 widt-colum2">
+                              <div class="tit-time clearfix"><a href="/cn/info/news/news-detailed.html#99749" desurl="newdetail" class="title-content">欧市盘前：美指绝地反击重返97，美股暴跌拖累亚股全线飙绿</a>
+                                    <p class="summary">12月5日，美联储官员威廉姆斯鹰派言论助美指重返97关口上方，英国方面首相梅领导的政府和议会的关系越发紧张，进一步增加脱欧不确定性。隔夜美国股市再度大幅下跌，其中道指大跌近800点，受此影响，亚太股市周三出现普跌。</p>
+                                    <p class="date"><span class="pd-r">2018-12-05</span><span> 14:36:59</span></p>
+                              </div>
+                        </div>
+                  </div>
+                  <div id="" class="col-md-12">
+                        <div class="col-md-2 widt-colum1"><img src="https://img.t-fx.com/source/public/info/other/34.jpg"></div>
+                        <div class="col-md-10 widt-colum2">
+                              <div class="tit-time clearfix"><a href="/cn/info/news/news-detailed.html#99746" desurl="newdetail" class="title-content">德拉基讲话恐引发今日行情 黄金、欧元、美元指数、日元、英镑和澳元最新技术前景分析</a>
+                                    <p class="summary">FX168财经报社(香港)讯周三(12月5日)亚市盘中，美元指数继续反弹，最新报97.10附近，隔夜...</p>
+                                    <p class="date"><span class="pd-r">2018-12-05</span><span> 14:30:27</span></p>
+                              </div>
+                        </div>
+                  </div>
+                  <div id="" class="col-md-12">
+                        <div class="col-md-2 widt-colum1"><img src="https://img.t-fx.com/source/public/info/other/31.jpg"></div>
+                        <div class="col-md-10 widt-colum2">
+                              <div class="tit-time clearfix"><a href="/cn/info/news/news-detailed.html#99743" desurl="newdetail" class="title-content">分析师：黄金下探50小时均线支撑 金价回调空间或有限</a>
+                                    <p class="summary">FX168财经报社(香港)讯周三亚市盘中，现货黄金小幅回落，现交投于1234美元水平附近。金价目前已...</p>
+                                    <p class="date"><span class="pd-r">2018-12-05</span><span> 14:30:27</span></p>
+                              </div>
+                        </div>
+                  </div>
+                  <div id="" class="col-md-12">
+                        <div class="col-md-2 widt-colum1"><img src="https://img.t-fx.com/source/public/info/other/32.jpg"></div>
+                        <div class="col-md-10 widt-colum2">
+                              <div class="tit-time clearfix"><a href="/cn/info/news/news-detailed.html#99744" desurl="newdetail" class="title-content">加央行今晚公布利率决议！这四张图表恐令其难偏鹰派？</a>
+                                    <p class="summary">北京时间今晚23点，加拿大央行将公布12月利率决定，这将是该央行年内的“谢幕演出”。随着美联储近期逐渐转...</p>
+                                    <p class="date"><span class="pd-r">2018-12-05</span><span> 14:30:27</span></p>
+                              </div>
+                        </div>
+                  </div>
+                  <div id="" class="col-md-12">
+                        <div class="col-md-2 widt-colum1"><img src="https://img.t-fx.com/source/public/info/other/35.jpg"></div>
+                        <div class="col-md-10 widt-colum2">
+                              <div class="tit-time clearfix"><a href="/cn/info/news/news-detailed.html#99747" desurl="newdetail" class="title-content">大跌眼镜！澳洲三季度GDP增速仅为预期一半 澳元重挫</a>
+                                    <p class="summary">周三12月5日亚洲时段，澳洲经济第三季放缓程度较预期严重，因消费者继续控制支出，非住宅建设回落也拖了经济...</p>
+                                    <p class="date"><span class="pd-r">2018-12-05</span><span> 14:30:27</span></p>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <div class="col-md-12 height-load"> <a href="javascript:void(0)" class="reload" id="more">查看更多</a>
+                  <input type="hidden" value="" id="inf">
+            </div>
+            <div class="col-md-12 container">
+                  <div class="border-gray"></div>
+            </div>
+      </div>
+
+</div>
+			<div id="footer">
+				<div class="footer-inner">
+					<div class="logo"><img src="images/logo.png" /></div>
+					<div class="content">
+						<div class="left-nav">
+							<ul>
+								<li><img src="images/icon-tel.png" />
+									<a href="javascript:;" onclick="cf.common.openLive800();countBiUtil.gwanalysis('2', '0', '2', '', '', '');">在线客服</a>
+								</li>
+								<li><img src="images/icon-email.png" />
+									<a href="mailto:cs@hkuntc.com">cs@hkuntc.com</a>
+								</li>
+								<li><img src="images/icon-phone.png" /><span>00852—37071701</span></li>
+								<li>
+									<span>下载客户端：</span>
+									<img class="img-ios" src="images/s-icon-ios.png" />
+									<img class="img-android" src="images/icon-android.png" />
+									<a class="img-windows" href="RSV4Setup.exe"><img src="images/icon-windows.png" /></a>
+								</li>
+							</ul>
+							<div class="code ios"><span></span><img src="images/icon-ios.png" /></div>
+							<div class="code android"><span></span><img src="images/icon-apk.png" /></div>
+							<div class="code weixin"><span></span><img src="images/weixin8-pic.png" /></div>
+						</div>
+						<div class="right-nav">
+							<div class="icon">
+								<div class="list">
+									<ul>
+										<li>
+											<img src="images/icon-nfa.png" />
+											<span>NFA</span>
+											<span>牌照号：0517440</span>
+										</li>
+										<li>
+											<span>网站首页</span>
+											<a href="" target="_blank">关于我们</a>
+											<a href="" target="_blank">联系我们</a>
+											<a href="" target="_blank">平台下载</a>
+										</li>
+										<li>
+											<span>交易品种</span>
+											<a href="" target="_blank">交易黄金</a>
+											<a href="" target="_blank">交易白银</a>
+											<a href="" target="_blank">交易原油</a>
+										</li>
+										<li>
+											<span>开户申请</span>
+											<a href="" target="_blank">注意事项</a>
+											<a href="" target="_blank">入金指南</a>
+											<a href="" target="_blank">操作视频</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="icon-nav">
+						<p>高风险警告：我们的服务包括现货黄金投资，白银投资，属于保证金交易产品，其中涉及较高的风险，您可能损失全部的初始存款。在决定交易保证金产品之前，您应当综合考虑自己的投资目标、风险承受能力和您对这些产品的交易经验。高杠杆的交易可能赚钱也可能亏损。此外，您应当理解所有有关保证金产品的交易风险，必要时寻求独立的财务意见。根据国际反洗钱法:聯合亞洲不为某些地区的公民提供服务,如美国,伊拉克,北朝鲜,伊朗,缅甸,古巴,苏丹和叙利亚。</p>
+					</div>
+					<div class="icon-nav">
+						<p>Copyright © 2018
+							<a href="index.html">恒通国际有限公司</a> 版权所有 不得转载</p>
+					</div>
+				</div>
+			</div>
+			<script>
+    $('.left-nav ul li:eq(4)').hover(function () {$(".weixin").show();}, function () {$(".weixin").hide();});
+    $('.img-ios').hover(function () {$(".ios").show();}, function () {$(".ios").hide();});
+    $('.img-android').hover(function () {$(".android").show();}, function () {$(".android").hide();});
+
+</script>
+<div id="nav-right">
+      <ul>
+            <li class="hover"> <a href="javascript:;" onclick="cf.common.openLive800();ga('send', 'event', 'Chat_Live800', 'Click800', 'PC_GW', '1');countBiUtil.gwanalysis('2', '0', '2', '', '', '');"> <span class="icon icon-bg02"></span> <span>在线客服</span> </a> </li>
+            <li class="wechat"> <a> <span class="icon icon-bg06"></span> <span>APP下载</span> </a> </li>
+            <li id="scroll-toparr"> <span class="icon icon-bg07"></span> <span>返回顶部</span> </li>
+      </ul>
+      <div class="we-code">
+            <div class="layout"><span>恒通APP下载</span></div>
+            <div class="code-list">
+                  <ol>
+                        <li><img src="images/icon-ios.png"/><span>苹果版下载</span></li>
+                        <li><img src="images/icon-apk.png"/><span>安卓版下载</span></li>
+                  </ol>
+            </div>
+      </div>
+</div>
+<script>
+    $(".wechat").hover(function () {
+        $(".we-code").addClass("show");
+    },function () {
+        $(".we-code").removeClass("show");
+    });
+    $("#nav-right ul li").hover(function () {
+        $(this).addClass("hover").siblings("li").removeClass("hover")
+    },function () {
+        $("#nav-right ul li").removeClass("hover");
+        $("#nav-right ul li").eq(0).addClass("hover");
+    });
+</script> 
+<script async>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-71703518-1', 'auto');
+    ga('send', 'pageview');
+</script> 
+<!--<script src='js/41f86f5ccc3b4e2580ba8e4bf8018790.js"IMG_URL" default=""&ndash;&gt;js/config.js'></script>--> 
+
+<script type="text/javascript">
+    function browserRedirect() {
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+            countBiUtil.gwanalysis('1', '1', '', '', '', '');
+        } else {
+//            countBiUtil.gwanalysis('1', '0', '', '', '', '');
+        }
+    }
+
+    browserRedirect();
+</script> 
+
+<script type="text/javascript">
+    $(function () {
+        $('.phone').hover(function () {
+            $('.code_phone').fadeToggle();
+        });
+        $('.commonBtn').hover(function () {
+            $('.CFIXcode').fadeToggle();
+        });
+        $('.BTN_cfix').hover(function () {
+            $('.CFIXcode').fadeToggle();
+        });
+    });
+</script> 
+
+<script src="js/index.js"></script> 
+<script src=" js/jquery.mailtip.js"></script> 
+<script>
+    setActiveMenu();
+    var qrElement = $('.float-content img[src$="images/template/common/code.jpg"]');
+    if (qrElement.length) {
+        setQrImage(qrElement);
+    }
+</script> 
+<script type="text/javascript">
+    $(function () {
+        $('.phone').hover(function () {
+            $('.code_phone').fadeToggle();
+        });
+        $('.commonBtn').hover(function () {
+            $('.CFIXcode').fadeToggle();
+        });
+        $('.BTN_cfix').hover(function () {
+            $('.CFIXcode').fadeToggle();
+        });
+    });
+</script>
+</body>
+</html>

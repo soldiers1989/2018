@@ -1,0 +1,600 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>平台功能_平台介绍_恒通国际</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="shortcut icon" href="fav.ico">
+<link rel="apple-touch-icon image_src" href="fav.ico">
+<link rel="stylesheet" href="css/template.css">
+<link rel="stylesheet" href="css/compare.css">
+</head>
+
+<body ng-controller="homeCtrl">
+<div class="contract-forex">
+      <div class="header"> 
+            <!-- Bengin stick megamenu larger than 1366px -->
+            <div class="pcst-megamenu clearfix"> 
+                  <!-- Begin header bar -->
+                  <div class="header-bar">
+                        <div class="row">
+                              <div class="col-xs-1 col-s sm-1">
+                                    <div class="logo"> <a href="index.html"><img src="images/logo-header.gif" /></a> </div>
+                              </div>
+                              <div class="col-xs-10 col-ssm-10">
+                                    <ul class="mega-menu clearfix">
+                                          <li> <a href="index.html">网站首页</a> </li>
+                                          <li> <a href="">关于我们</a>
+                                                <ul class="sub-menu">
+                                                      <li> <a href="">联络我们</a> </li>
+                                                </ul>
+                                          </li>
+                                          <li> <a href="">交易品种</a>
+                                                <ul class="sub-menu">
+                                                      <li> <a href="">黄金</a> </li>
+                                                      <li> <a href="">白银</a> </li>
+                                                      <li> <a href="">原油</a> </li>
+                                                </ul>
+                                          </li>
+                                          <li> <a href="">开户申请</a>
+                                                <ul class="sub-menu">
+                                                      <li> <a href="">出金注意事项</a> </li>
+                                                      <li> <a href="">入金指南</a> </li>
+                                                      <li> <a href="">入金操作视频</a> </li>
+                                                </ul>
+                                          </li>
+                                          <li> <a href="">平台下载</a> </li>
+                                          <li> <a href="">行情分析</a> </li>
+                                          <li class="bt-log"> <a href="" target="_blank">用户中心</a> </li>
+                                          <li class="bt-hel"> <a href="">立即开户</a> </li>
+                                    </ul>
+                              </div>
+                        </div>
+                  </div>
+                  <!-- End header bar --> 
+            </div>
+            <!-- End stick megamenu larger than 1366px --> 
+            <!-- Bengin stick megamenu less than 1366px -->
+            <div class="mobilest-megamenu">
+                  <div class="row">
+                        <div class="col-xs-1 col-ssm-1">
+                              <div class="logo"> <a href="index.html"><img src="images/logo-header.gif" /></a> </div>
+                        </div>
+                        <div class="col-xs-10 col-ssm-10">
+                              <ul class="par-menu clearfix">
+                                    <li class="bt-log"> <a href="" target="_blank">用户中心</a> </li>
+                                    <li class="bt-hel"> <a href="">立即开户</a> </li>
+                                    <li class="ic-menu">
+                                          <div class="cookie-wrapper"> <i></i> <i></i> <i></i> </div>
+                                          <div class="child1-wrapper">
+                                                <ul class="sub-child1 clearfix">
+                                                      <li> <a href="index.html">网站首页</a> </li>
+                                                      <li> <a href="">关于我们</a> </li>
+                                                      <li> <a href="">交易品种</a>
+                                                            <ul class="sub-child2">
+                                                                  <li> <a href="">黄金</a> </li>
+                                                                  <li> <a href="">白银</a> </li>
+                                                                  <li> <a href="">原油</a> </li>
+                                                            </ul>
+                                                      </li>
+                                                      <li> <a href="">开户申请</a>
+                                                            <ul class="sub-child2">
+                                                                  <li> <a href="">出金注意事项</a> </li>
+                                                                  <li> <a href="">入金指南</a> </li>
+                                                                  <li> <a href="">入金操作视频</a> </li>
+                                                            </ul>
+                                                      </li>
+                                                      <li> <a href="">平台下载</a> </li>
+                                                      <li> <a href="">行情分析</a> </li>
+                                                </ul>
+                                          </div>
+                                    </li>
+                              </ul>
+                        </div>
+                  </div>
+            </div>
+            <!-- End stick megamenu less than 1366px --> 
+            <!-- Begin header bar -->
+            <div id="megamenu-show" class="header-bar">
+                  <div class="row">
+                        <div class="col-xs-1 col-ssm-1">
+                              <div class="logo"> <a href="index.html"><img src="images/logo-header.gif"></a> </div>
+                              <div class="logo-black"> <a href="index.html"><img class="img-responsive" src="images/logo-header.gif"></a> </div>
+                        </div>
+                        <div class="col-xs-10 col-ssm-10">
+                              <ul class="mega-menu clearfix">
+                                    <li> <a href="index.html">网站首页</a> </li>
+                                    <li> <a href="">关于我们</a> </li>
+                                    <li> <a href="">交易品种</a>
+                                          <ul class="sub-menu">
+                                                <li> <a href="">黄金</a> </li>
+                                                <li> <a href="">白银</a> </li>
+                                                <li> <a href="">原油</a> </li>
+                                          </ul>
+                                    </li>
+                                    <li> <a href="">开户申请</a>
+                                          <ul class="sub-menu">
+                                                <li> <a href="">出金注意事项</a> </li>
+                                                <li> <a href="">入金指南</a> </li>
+                                                <li> <a href="">入金操作视频</a> </li>
+                                          </ul>
+                                    </li>
+                                    <li> <a href="">平台下载</a> </li>
+                                    <li> <a href="">行情分析</a> </li>
+                                    <li class="cre-bt"> <a href="" target="_blank">用户中心</a> </li>
+                                    <li class="bt-log"> <a href="">立即开户</a> </li>
+                              </ul>
+                              <ul class="par-menu stick clearfix">
+                                    <li class="bt-log"> <a href="">用户中心</a> </li>
+                                    <li class="bt-hel"> <a href="">立即开户</a> </li>
+                                    <li class="ic-menu">
+                                          <div class="cookie-wrapper"> <i></i> <i></i> <i></i> </div>
+                                          <div class="child1-wrapper">
+                                                <ul class="sub-child1 clearfix">
+                                                      <li> <a href="index.html">网站首页</a> </li>
+                                                      <li> <a href="">关于我们</a> </li>
+                                                      <li> <a href="">交易品种</a>
+                                                            <ul class="sub-child2">
+                                                                  <li> <a href="">黄金</a> </li>
+                                                                  <li> <a href="">白银</a> </li>
+                                                                  <li> <a href="">原油</a> </li>
+                                                            </ul>
+                                                      </li>
+                                                      <li> <a href="">开户申请</a>
+                                                            <ul class="sub-child2">
+                                                                  <li> <a href="">出金注意事项</a> </li>
+                                                                  <li> <a href="">入金指南</a> </li>
+                                                                  <li> <a href="">入金操作视频</a> </li>
+                                                            </ul>
+                                                      </li>
+                                                      <li> <a href="">平台下载</a> </li>
+                                                      <li> <a href="">行情分析</a> </li>
+                                                </ul>
+                                          </div>
+                                    </li>
+                              </ul>
+                        </div>
+                  </div>
+            </div>
+            <!-- End header bar --> 
+      </div>
+      <div class="top-banner">
+            <div class="img-banner">
+                  <div class="container">
+                        <div class="title-banner">多元化平台  极致交易体验</div>
+                        <div class="sub-title">人性化、智能化双交易平台  全面满足投资者交易需求</div>
+                  </div>
+            </div>
+      </div>
+      <!-- 面包屑-->
+      <div class="crumb-wrap">
+            <div class="w clearfix">
+                  <div class="item"><a href="/">首页</a></div>
+                  <div class="item sep">></div>
+                  <div class="item"><a href="/cn/platform.html">平台介绍</a></div>
+                  <div class="item sep">></div>
+                  <div class="item"><a href="javascript:;">平台功能</a></div>
+            </div>
+      </div>
+      <div class="article">
+            <div class="main-article">
+                  <div class="section-compare container clearfix">
+                        <div class="title-compare">
+                              <div class="col-md-3 col-ssm-3" style="width:30%;"></div>
+                              <div class="col-md-3 col-ssm-3" style="width:38%;">
+                                    <p class="tit" style="color: #37aeb3;font-size: 30px;">恒通交易平台</p>
+                              </div>
+                         
+                        </div>
+                        <div class="img-compare" >
+                              <div class="col-md-3 col-ssm-3" style="width:100%;"></div>
+                              <div class="col-md-3 col-ssm-3" style="width:100%;"> <img src="images/img-b-1.png" class="img-responsive"> </div>
+                    
+                        </div>
+                        <div class="content-compare clearfix">
+                              <table width="100%" border="0">
+                                    <tr class="row-table ">
+                                          <td><table width="100%">
+                                                      <tr>
+                                                            <td class="td-1"><p class="tit-td">平台支持</p></td>
+                                                            <td class="td-1 b-right"></td>
+                                                            <td class="td-2 b-right"><p class="text-td-icon"><i class="icon-win"></i>Windows XP 或更新版本</p>
+                                                                  <p class="text-td-iconbr"><i class="icon-ios"></i>iOS 5.1.1 或以上</p>
+                                                                  <p class="text-td-iconbr" style="padding-bottom: 40px;"><i class="icon-android"></i>Android 4.0 或以上</p></td>
+                                                       
+                                                      </tr>
+                                                </table></td>
+                                    </tr>
+                                    <tr class="row-table">
+                                          <td><table width="100%">
+                                                      <tbody>
+                                                            <tr>
+                                                                  <td class="td-1"><p class="tit-td">平台界面</p></td>
+                                                                  <td class="td-1 b-right"><p class="text-td">迷你界面 </p></td>
+                                                                  <td class="td-2 b-right"><div class="icon-check"></div></td>
+                                                          
+                                                            </tr>
+                                                            <tr>
+                                                                  <td class="td-1"></td>
+                                                                  <td class="td-1 b-right"><p class="text-td">报价版面 </p></td>
+                                                                  <td class="td-2 b-right"><p class="text-td-ct">2 种 </p></td>
+                                            
+                                                            </tr>
+                                                            <tr>
+                                                                  <td class="td-1"></td>
+                                                                  <td class="td-1 b-right"><p class="text-td p-bottom">自选喜爱产品 </p></td>
+                                                                  <td class="td-2 b-right"><div class="icon-check p-bottom"></div></td>
+                                                               
+                                                            </tr>
+                                                      </tbody>
+                                                </table></td>
+                                    </tr>
+                                    <tr class="row-table">
+                                          <td><table width="100%">
+                                                      <tbody>
+                                                            <tr>
+                                                                  <td class="td-1"><p class="tit-td">平台功能</p></td>
+                                                                  <td class="td-1 b-right"><p class="text-td">游客登录</p></td>
+                                                                  <td class="td-2 b-right"><div class="icon-check"></div></td>
+                                                               
+                                                            </tr>
+                                                            <tr>
+                                                                  <td class="td-1"></td>
+                                                                  <td class="td-1 b-right"><p class="text-td">每口报价查询 </p></td>
+                                                                  <td class="td-2 b-right"><div class="icon-check"></div></td>
+                                                             
+                                                            </tr>
+                                                            <tr>
+                                                                  <td class="td-1"></td>
+                                                                  <td class="td-1 b-right"><p class="text-td">报表查询 </p></td>
+                                                                  <td class="td-2 b-right"><p class="text-td-ct">2 种 </p></td>
+                                                              
+                                                            </tr>
+                                                            <tr>
+                                                                  <td class="td-1"></td>
+                                                                  <td class="td-1 b-right"><p class="text-td p-bottom">交易模式</p></td>
+                                                                  <td class="td-2 b-right"><p class="text-td-ct p-bottom">一击成交 / 双击成交 / 确定成交</p></td>
+                                                               
+                                                            </tr>
+                                                      </tbody>
+                                                </table></td>
+                                    <tr class="row-table">
+                                          <td><table width="100%">
+                                                      <tbody>
+                                                            <tr>
+                                                                  <td class="td-1"><p class="tit-td">分析工具</p></td>
+                                                                  <td class="td-1 b-right"><p class="text-td">图表</p></td>
+                                                                  <td class="td-2 b-right"><p class="text-td-ct">闪电图 / 分时图 / K线图</p></td>
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                  <td class="td-1"></td>
+                                                                  <td class="td-1 b-right"><p class="text-td p-bottom">技术指标</p></td>
+                                                                  <td class="td-2 b-right"><p class="text-td-ct p-bottom">68 种 + 可自定义指标</p></td>
+                                                                 
+                                                            </tr>
+                                                      </tbody>
+                                                </table></td>
+                                    </tr>
+                                    <tr class="row-table">
+                                          <td><table width="100%">
+                                                      <tbody>
+                                                            <tr>
+                                                                  <td class="td-1"><p class="tit-td p-bottom">资金管理</p></td>
+                                                                  <td class="td-1 b-right"><p class="text-td p-bottom">资金管理</p></td>
+                                                                  <td class="td-2 b-right"><p class="text-td-ct p-bottom">存款、取款</p></td>
+                                                                  <!--<td class="td-2">
+                                                <p class="text-td-ct p-bottom">存款、取款</p>
+                                            </td>--> 
+                                                            </tr>
+                                                      </tbody>
+                                                </table></td>
+                                    </tr>
+                                    <tr class="row-table">
+                                          <td><table width="100%">
+                                                      <tbody>
+                                                            <tr>
+                                                                  <td class="td-1"><p class="tit-td">下单交易</p></td>
+                                                                  <td class="td-1 b-right"><p class="text-td">下单指令</p></td>
+                                                                  <td class="td-2 b-right"><p class="text-td-ct">市价单、限价单、停损单</p>
+                                                                        <p class="text-td-br">止盈单、止损单</p></td>
+                                                                  
+                                                            </tr>
+                                                            <tr>
+                                                                  <td class="td-1"></td>
+                                                                  <td class="td-1 b-right"><p class="text-td p-bottom">对冲（锁仓）</p></td>
+                                                                  <td class="td-2 b-right"><div class="icon-check p-bottom"></div></td>
+                                                               
+                                                            </tr>
+                                                      </tbody>
+                                                </table></td>
+                                    </tr>
+                                    <tr class="row-table">
+                                          <td><table width="100%">
+                                                      <tbody>
+                                                            <tr>
+                                                                  <td class="td-1"><p class="tit-td">交易条件</p></td>
+                                                                  <td class="td-1 b-right"><p class="text-td">最低交易金额</p></td>
+                                                                  <td class="td-2 b-right"><p class="text-td-ct">2 美元</p></td>
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                  <td class="td-1"></td>
+                                                                  <td class="td-1 b-right"><p class="text-td">交易时间</p></td>
+                                                                  <td class="td-2 b-right"><p class="text-td-ct">5 天 24 小时</p></td>
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                  <td class="td-1"></td>
+                                                                  <td class="td-1 b-right"><p class="text-td">交易品种</p></td>
+                                                                  <td class="td-2 b-right"><p class="text-td-ct">多种包括外汇</p>
+                                                                        <p class="text-td-br">商品、指数产品</p></td>
+                                                                 
+                                                            </tr>
+                                                            <tr>
+                                                                  <td class="td-1"></td>
+                                                                  <td class="td-1 b-right"><p class="text-td">最高杠杆</p></td>
+                                                                  <td class="td-2 b-right"><p class="text-td-ct">1 : 500</p></td>
+                                                                  
+                                                            </tr>
+                                                            <tr>
+                                                                  <td class="td-1"></td>
+                                                                  <td class="td-1 b-right"><p class="text-td">层级点差</p></td>
+                                                                  <td class="td-2 b-right"><div class="icon-del"></div></td>
+                                                                  <!--<td class="td-2">
+                                                <div class="icon-check"></div>
+                                            </td>--> 
+                                                            </tr>
+                                                            <tr>
+                                                                  <td class="td-1"></td>
+                                                                  <td class="td-1 b-right"><p class="text-td">层级保证金</p></td>
+                                                                  <td class="td-2 b-right"><div class="icon-del"></div></td>
+                                                                 
+                                                            </tr>
+                                                            <tr>
+                                                                  <td class="td-1"></td>
+                                                                  <td class="td-1 b-right"><p class="text-td p-bottom">市场深度</p></td>
+                                                                  <td class="td-2 b-right"><div class="icon-del"></div></td>
+                                                                  
+                                                            </tr>
+                                                      </tbody>
+                                                </table></td>
+                                    </tr>
+                                    <tr class="row-table">
+                                          <td><table width="100%">
+                                                      <tbody>
+                                                            <tr>
+                                                                  <td class="td-1"><p class="tit-td">新闻资讯</p></td>
+                                                                  <td class="td-1 b-right"><p class="text-td">持仓比例</p></td>
+                                                                  <td class="td-2 b-right"><div class="icon-check"></div></td>
+                                                                  
+                                                            </tr>
+                                                            <tr>
+                                                                  <td class="td-1"></td>
+                                                                  <td class="td-1 b-right"><p class="text-td">实时国际新闻</p></td>
+                                                                  <td class="td-2 b-right"><div class="icon-check"></div></td>
+                                                                  
+                                                            </tr>
+                                                            <tr>
+                                                                  <td class="td-1"></td>
+                                                                  <td class="td-1 b-right"><p class="text-td">财经日历</p></td>
+                                                                  <td class="td-2 b-right"><div class="icon-check"></div></td>
+                                                                  
+                                                            </tr>
+                                                            <tr>
+                                                                  <td class="td-1"></td>
+                                                                  <td class="td-1 b-right"><p class="text-td">持仓比例</p></td>
+                                                                  <td class="td-2 b-right"><div class="icon-check p-bottom"></div></td>
+                                                                  <!--<td class="td-2">
+                                               <div class="icon-del"></div>
+                                            </td>--> 
+                                                            </tr>
+                                                      </tbody>
+                                                </table></td>
+                                    </tr>
+                                    <tr class="row-table b-bottom">
+                                          <td><table width="100%">
+                                                      <tr>
+                                                            <td class="td-1"><p class="tit-td">平台下载</p></td>
+                                                            <td class="td-1 b-right"><p class="text-td">下载</p></td>
+                                                            <td class="td-2 b-right" id="plat-down"><a href="RSV4Setup.exe" class="btn-compare p-bottom" >立即下载</a> <a href="javascript:;" class="btn-compare p-bottom Btn left" >ios下载 <span class="codeios left"> <img src="images/icon-ios.png"></span> </a> <a href="javascript:;" class="btn-compare p-bottom Btn right" >APK下载 <span class="codeios right"> <img src="images/icon-apk.png"></span> </a></td>
+                                                            
+                                                      </tr>
+                                                      <tr>
+                                                            <td class="td-1"></td>
+                                                            <td class="td-1 b-right"><p class="text-td"></p></td>
+                                                            <td class="td-2 b-right"></td>
+                                                            
+                                                      </tr>
+                                                </table></td>
+                                    </tr>
+                              </table>
+                              <div class="note"></div>
+                        </div>
+                        <!-------------------end table compare------------------------>
+                        <div class="yingying"></div>
+                  </div>
+                  <!---->
+                  <div class="section3 clearfix">
+                        <div class="container">
+                              <div class="tit-sec3">点击了解平台操作指南</div>
+                              <div class="fl-sec3 pdt-sec3">
+                                    <div class="img-lef"> <img src="images/bj-img03.png"> </div>
+                                    <div class="cont-right">
+                                          <p class="sub-title-sec3">恒通交易平台</p>
+                                          <p class="des-sec3">以保证金交易 多种热门产品包括外汇、 指数、 商品</p>
+                                          <a href="/cn/platform/comparison.html">了解更多</a> </div>
+                              </div>
+
+                        </div>
+                  </div>
+            </div>
+
+            <div class="cf-customer">
+                  <div class="container">
+                        <h2>成为我们的客户</h2>
+                        <p>不同交易方式相同投资机会，实时进行开户及平台下载</p>
+                        <div class="row">
+                              <div class="col-xs-6 col-ssmm-12 col-ssm-6">
+                                    <div class="register">
+                                          <div class="bg-left"></div>
+                                          <div class="bg-center">
+                                                <h3>立即开户</h3>
+                                                <img class="img-responsive bg-newuser" src="images/new-user.png" alt=""> </div>
+                                          <div class="bg-right">
+                                                <div class="linkcus-box"> <a href="">真实开户</a> <a href="" >模拟体验</a> </div>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="col-xs-6 col-ssmm-12 col-ssm-6">
+                                    <div class="devices">
+                                          <div class="bg-left"></div>
+                                          <div class="bg-center">
+                                                <h3>平台下载</h3>
+                                                <img class="img-responsive bg-download" src="images/download.png" alt=""> </div>
+                                          <div class="bg-right">
+                                                <div class="linkcus-box"> <a class="margintop" href="RSV4Setup.exe">恒通交易平台</a> 
+
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <!-- End new register customer footer form--> 
+      </div>
+</div>
+<!-- =====End main content contract page===== --> 
+<script src="js/jquery-1.11.3.min.js"></script> 
+<script src="js/jquery.blockui.js"></script> 
+<script src="js/template.js"></script>
+<div id="footer">
+      <div class="footer-inner">
+            <div class="logo"><img src="images/logo.png" /></div>
+            <div class="content">
+                  <div class="left-nav">
+                        <ul>
+                              <li><img src="images/icon-tel.png" /> <a href="javascript:;" >在线客服</a> </li>
+                              <li><img src="images/icon-email.png" /> <a href="mailto:cs@hkuntc.com">cs@hkuntc.com</a> </li>
+                              <li><img src="images/icon-phone.png" /><span>00852—37071701</span></li>
+                              <li> <span>下载客户端：</span> <img class="img-ios" src="images/s-icon-ios.png" /> <img class="img-android" src="images/icon-android.png" /> <a class="img-windows" href="RSV4Setup.exe"><img src="images/icon-windows.png" /></a> </li>
+                        </ul>
+                        <div class="code ios"><span></span><img src="images/icon-ios.png" /></div>
+                        <div class="code android"><span></span><img src="images/icon-apk.png" /></div>
+                        <div class="code weixin"><span></span><img src="images/weixin8-pic.png" /></div>
+                  </div>
+                  <div class="right-nav">
+                        <div class="icon">
+                              <div class="list">
+                                    <ul>
+                                          <li> <img src="images/icon-nfa.png" /> <span>NFA</span> <span>牌照号：0517440</span> </li>
+                                          <li> <span>网站首页</span> <a href="" target="_blank">关于我们</a> <a href="" target="_blank">联系我们</a> <a href="" target="_blank">平台下载</a> </li>
+                                          <li> <span>交易品种</span> <a href="" target="_blank">交易黄金</a> <a href="" target="_blank">交易白银</a> <a href="" target="_blank">交易原油</a> </li>
+                                          <li> <span>开户申请</span> <a href="" target="_blank">注意事项</a> <a href="" target="_blank">入金指南</a> <a href="" target="_blank">操作视频</a> </li>
+                                    </ul>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <div class="icon-nav">
+                  <p>高风险警告：我们的服务包括现货黄金投资，白银投资，属于保证金交易产品，其中涉及较高的风险，您可能损失全部的初始存款。在决定交易保证金产品之前，您应当综合考虑自己的投资目标、风险承受能力和您对这些产品的交易经验。高杠杆的交易可能赚钱也可能亏损。此外，您应当理解所有有关保证金产品的交易风险，必要时寻求独立的财务意见。根据国际反洗钱法:聯合亞洲不为某些地区的公民提供服务,如美国,伊拉克,北朝鲜,伊朗,缅甸,古巴,苏丹和叙利亚。</p>
+            </div>
+            <div class="icon-nav">
+                  <p>Copyright © 2018 <a href="index.html">恒通国际有限公司</a> 版权所有 不得转载</p>
+            </div>
+      </div>
+</div>
+
+<div id="nav-right">
+      <ul>
+            <li class="hover"> <a href="javascript:;" onclick="cf.common.openLive800();ga('send', 'event', 'Chat_Live800', 'Click800', 'PC_GW', '1');countBiUtil.gwanalysis('2', '0', '2', '', '', '');"> <span class="icon icon-bg02"></span> <span>在线客服</span> </a> </li>
+            <li class="wechat"> <a> <span class="icon icon-bg06"></span> <span>APP下载</span> </a> </li>
+            <li id="scroll-toparr"> <span class="icon icon-bg07"></span> <span>返回顶部</span> </li>
+      </ul>
+      <div class="we-code">
+            <div class="layout"><span>恒通APP下载</span></div>
+            <div class="code-list">
+                  <ol>
+                        <li><img src="images/icon-ios.png"/><span>苹果版下载</span></li>
+                        <li><img src="images/icon-apk.png"/><span>安卓版下载</span></li>
+                  </ol>
+            </div>
+      </div>
+</div>
+<script>
+    $(".wechat").hover(function () {
+        $(".we-code").addClass("show");
+    },function () {
+        $(".we-code").removeClass("show");
+    });
+    $("#nav-right ul li").hover(function () {
+        $(this).addClass("hover").siblings("li").removeClass("hover")
+    },function () {
+        $("#nav-right ul li").removeClass("hover");
+        $("#nav-right ul li").eq(0).addClass("hover");
+    });
+</script>
+</div>
+<script type="text/javascript">
+    	$(function(){
+    		$('.Btn.left').hover(function(){
+    			$('.codeios.left').fadeToggle(300);
+    		})
+    		$('.Btn.right').hover(function(){
+    			$('.codeios.right').fadeToggle(300);
+    		})
+    	})
+    </script> 
+<script async>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-71703518-1', 'auto');
+    ga('send', 'pageview');
+</script> 
+<script type="text/javascript">
+    function browserRedirect() {
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+            countBiUtil.gwanalysis('1', '1', '', '', '', '');
+        } else {
+//            countBiUtil.gwanalysis('1', '0', '', '', '', '');
+        }
+    }
+
+    browserRedirect();
+</script> 
+<script type="text/javascript">
+    $(function () {
+        $('.phone').hover(function () {
+            $('.code_phone').fadeToggle();
+        });
+        $('.commonBtn').hover(function () {
+            $('.CFIXcode').fadeToggle();
+        });
+        $('.BTN_cfix').hover(function () {
+            $('.CFIXcode').fadeToggle();
+        });
+    });
+</script> 
+</body>
+</html>

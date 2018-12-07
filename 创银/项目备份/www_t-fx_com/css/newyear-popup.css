@@ -1,0 +1,237 @@
+﻿/* .win .win-close:hover {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+} */
+/*倒计时*/
+.fliper-timer-popup{
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  top:50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -44px;
+}
+.fliper-timer-popup img{
+  margin-right: 10px;
+}
+.fliper-timer-popup .fliper-text-popup{
+  font-size: 18px;
+  position: relative;
+  top:-1px;
+}
+.fliper-timer-popup span{
+  font-size: 18px;
+}
+.fliper-timer-popup  span.time-text{
+  font-size: 24px;
+}
+.item-wrapper-popup{
+  display: inline-block;
+}
+.win-wrapper-yearend {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  margin: -150px 0 0 -225px;
+  width: 450px;
+  height: 300px;
+  background: url(../images/popup1803.jpg) no-repeat;
+}
+.win-wrapper-yearend a {
+  text-decoration: none;
+}
+.win-wrapper-yearend .logo-pop {
+  display: block;
+  margin: 0 auto;
+  width: 196px;
+  height: 87px;
+  margin-bottom: 12px;
+}
+.win-wrapper-yearend .logo-pop a {
+  line-height: 0;
+  display: block;
+}
+.win-wrapper-yearend .pop-title {
+  text-align: center;
+  font-size: 33px;
+  color: #003333;
+  margin-bottom: 25px;
+}
+.win-wrapper-yearend .main-form {
+  width: 100%;
+}
+.win-wrapper-yearend .main-form input {
+  width: 88%;
+  height: 37px;
+  border: 2px solid #818285;
+  border-radius: 7px;
+  padding-left: 41px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.win-wrapper-yearend .main-form input.submit {
+  width: 100%;
+  background: #ea9c2c;
+  padding: 0;
+  text-align: center;
+  font-size: 26px;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  top: 25px;
+}
+.win-wrapper-yearend .main-form input.submit:hover {
+  background: #f1be76;
+}
+.win-wrapper-yearend #loginname {
+  background: url(../images/member-ic.png) no-repeat scroll 8px center;
+}
+.win-wrapper-yearend #password {
+  background: url(../images/lock-pop.png) no-repeat scroll 8px center;
+}
+.win-wrapper-yearend #captcha_image {
+  background: url(../images/polar.png) no-repeat scroll 8px center;
+  margin-bottom: 0;
+}
+.win-wrapper-yearend .polar-wrapper {
+  position: relative;
+}
+.win-wrapper-yearend .accuracy {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+}
+.win-wrapper-yearend .lock-wrapper {
+  position: relative;
+}
+.win-wrapper-yearend .lock-wrapper a {
+  width: 25px;
+  height: 20px;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  background: url(../images/eye-pop.png);
+}
+.win-wrapper-yearend .lock-wrapper a:hover {
+  opacity: .75;
+}
+.win-wrapper-yearend .win {
+  position: relative;
+  height: 100%;
+  /*border: #ccc solid 1px;*/
+  padding-top: 234px;
+  padding-left: 15px;
+}
+.win-wrapper-yearend .win a.button-click ,.win-wrapper-yearend .win a.active {
+	width: 190px;
+	height: 45px;
+	background-size: 100% 100%;
+	margin: 0 auto;
+	display: inline-block;
+	color: #fff;
+	font-size: 16px;
+	line-height: 45px;
+	text-align: center;
+	background: #a17e48;
+    border: 1px solid #a17e48;
+    transition: all 0.3s;
+}
+.win-wrapper-yearend .win a.button-click{
+  background: none;
+  border: 1px solid #a17e48;
+  color:#a17e48 ;
+}
+.win-wrapper-yearend .win a.active{
+  margin-right:30px;
+}
+.win-wrapper-yearend .win a.active:hover{
+  background: #fff;
+  color:#a17e48 ;
+}
+.win-wrapper-yearend .win a.button-click:hover{
+  background: #a17e48;
+  color:#fff ;
+}
+.win-wrapper-yearend .win .win-close {
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  z-index: 1001;
+  width:80px;
+  height:80px;
+  line-height: 0;
+  background: url(../images/xx.png) no-repeat;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -ms-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+}
+.win-wrapper-yearend .error-wrapper {
+  height: 37px;
+  visibility: visible;
+  font-size: 15px;
+  line-height: 37px;
+  color: #cc0000;
+  text-align: left;
+}
+.win-wrapper-yearend .error-wrapper #error {
+  background: url(../images/err-icon.png) no-repeat scroll left center;
+  text-align: left;
+  padding-left: 25px;
+  font-weight: 700;
+}
+.win-wrapper-yearend ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #666666;
+  font-size: 20px;
+  padding-top: 3px;
+}
+.win-wrapper-yearend ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #666666;
+  font-size: 20px;
+  padding-top: 3px;
+}
+.win-wrapper-yearend :-ms-input-placeholder {
+  /* IE 10+ */
+  color: #666666;
+  font-size: 20px;
+  padding-top: 3px;
+}
+.win-wrapper-yearend :-moz-placeholder {
+  /* Firefox 18- */
+  color: #666666;
+  font-size: 20px;
+  padding-top: 3px;
+}
+
+#overlay-region {
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  background: #000;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position: fixed;
+}
+
+div.show {
+  display: block;
+}
+
+div.hide {
+  display: none;
+}
+
+/*# sourceMappingURL=yearend-popup.css.map */

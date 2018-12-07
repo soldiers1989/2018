@@ -1,0 +1,929 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>拓盈T-rex专业正规贵金属交易平台_黄金交易开户_黄金期货投资_炒黄金首选拓盈</title>
+    <meta name="keywords" content="贵金属交易平台,专业黄金交易开户,外汇期货交易平台,白银价格走势图,外汇投资软件"/>
+    <meta name="description" content="拓盈T-rex投资交易平台——为交易者提供业内专业正规的贵金属交易，外汇投资，期货交易，现货黄金开户等多种专业正规的交易服务，平台实时查看黄金价格走势且实时解析行情走势，投资交易优选拓盈投资交易平台"/>
+    <script src='//www.t-fx.com/cn/js/config.js'></script>
+
+    
+
+
+
+    <link rel="shortcut icon" href="//img.t-fx.com/source/www/template/fav.ico">
+<link rel="apple-touch-icon image_src" href="//img.t-fx.com/source/www/template/fav.ico">
+<link rel="stylesheet" href="/cn/css/template.css">
+    <link rel="stylesheet" href="/cn/css/swiper.min-4.0.7.css">
+    <link rel="stylesheet" href="/cn/css/legacy.css">
+    <link rel="stylesheet" href="/cn/css/homepage.css">
+    <script src="/cn/js/jquery-1.11.3.min.js"></script>
+<script src="/cn/js/jquery.blockUI.js"></script>
+<script src="/cn/js/template.js"></script>
+
+</head>
+<body>
+<div id="main">
+    <div class="header">
+    <!-- Bengin stick megamenu larger than 1366px -->
+    <div class="pcst-megamenu clearfix">
+        <!-- Begin header bar -->
+        <div class="header-bar">
+            <div class="row">
+                <div class="col-xs-1 col-ssm-1">
+                    <div class="logo">
+                        <a href="/"><img  src="//img.t-fx.com/source/www/template/logo-header.gif"/></a>
+                    </div>
+                </div>
+                <div class="col-xs-10 col-ssm-10">
+                    <ul class="mega-menu clearfix">
+                        <li>
+                            <a href="/cn/aboutUS.html">关于拓盈</a>
+                            <ul class="sub-menu">
+                                <li><a href="/cn/aboutUS.html">关于我们</a></li>
+                                <li><a href="/cn/about/advantage.html">拓盈优势</a></li>
+                                <!--<li><a href="/cn/about/security.html">安全保障</a></li>-->
+                                <li><a href="/cn/about/team-service.html">团队服务</a></li>
+                                <li><a href="/cn/about/message.html">在线留言</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/cn/product/forex.html">交易产品</a>
+                            <ul class="sub-menu">
+                                <li><a href="/cn/product/commodities.html">商品</a></li>
+                                <li><a href="/cn/product/forex.html">外汇</a></li>
+                                <li><a href="/cn/product/indices.html">股指</a></li>
+                                <li><a href="/cn/product/virtual.html">虚拟货币</a></li>
+                                <li><a href="/cn/product/calculator.html">计算工具</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/cn/platform/comparison.html">交易平台</a>
+                            <!--<ul class="sub-menu">
+                                <li><a href="/cn/platform/cfd/step.html">CFD平台</a></li>
+                                <li><a href="/cn/platform/comparison.html">平台功能</a></li>
+                            </ul>-->
+                        </li>
+                        <li>
+                            <a href="/cn/information/newss.html">行情资讯</a>
+                            <ul class="sub-menu">
+                                <li><a href="/cn/information/newss.html">环球新闻</a></li>
+                                <li><a href="/cn/edu/analyst.html">专家评论</a></li>
+                                <li><a href="/cn/information/quote.html">实时报价</a></li>
+                                <li><a href="/cn/information/calendar.html">财经日历</a></li>
+                                <li><a href="/cn/zt/non-farm.html">非农专题</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="//ac.t-fx.com/ac/pc/rcfd_account" onclick="ga('send', 'event', 'Reg_Real', 'ClickAccount', 'PC_GW', '1');">开户交易</a>
+                            <ul class="sub-menu">
+                                <li><a href="//ac.t-fx.com/cn/pc/rcfd_account" onclick="ga('send', 'event', 'Reg_Real', 'ClickAccount', 'PC_GW', '1');">真实开户</a></li>
+                                <li><a href="//ac.t-fx.com/cn/pc/dcfd_account" onclick="ga('send', 'event', 'Reg_Demo', 'ClickAccount', 'PC_GW', '1');">模拟开户</a></li>
+                                <li><a href="/cn/exchangerate.html">汇率兑换</a></li>
+                                <li><a href="/cn/acc/terms.html">账户类型</a></li>
+                                <li><a href="/cn/faq.html">常见问题</a></li>
+                                <li><a href="/cn/acc/promotion.html">最新优惠</a></li>
+                            </ul>
+                        </li>
+                        <li class="bt-log">
+                            <a href="https://user88.t-forex.com" target="_blank">用户中心</a>
+                        </li>
+                        <li class="bt-hel">
+                            <a href="//ac.t-fx.com/cn/pc/rcfd_account" onclick="ga('send', 'event', 'Reg_Real', 'ClickAccount', 'PC_GW', '1');">立即开户</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- End header bar -->
+    </div>
+    <!-- End stick megamenu larger than 1366px -->
+    <!-- Bengin stick megamenu less than 1366px -->
+    <div class="mobilest-megamenu">
+        <div class="row">
+            <div class="col-xs-1 col-ssm-1">
+                <div class="logo"><a href="/"><img src="//img.t-fx.com/source/www/template/logo-header.gif"/></a></div>
+            </div>
+            <div class="col-xs-10 col-ssm-10">
+                <ul class="par-menu clearfix">
+                    <li class="bt-log"><a href="https://user88.t-forex.com">用户中心</a></li>
+                    <li class="bt-hel"><a href="//ac.t-fx.com/cn/pc/rcfd_account" onclick="ga('send', 'event', 'Reg_Real', 'ClickAccount', 'PC_GW', '1');">立即开户</a></li>
+                    <li class="ic-menu">
+                        <div class="cookie-wrapper">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+                        <div class="child1-wrapper">
+                            <ul class="sub-child1 clearfix">
+                                <li>
+                                    <a href="/cn/aboutUS.html">关于拓盈</a>
+                                    <ul class="sub-child2">
+                                        <li><a href="/cn/aboutUS.html">关于我们</a></li>
+                                        <li><a href="/cn/about/advantage.html">拓盈优势</a></li>
+                                        <!--<li><a href="/cn/about/security.html">安全保障</a></li>-->
+                                        <li><a href="/cn/about/team-service.html">团队服务</a></li>
+                                        <li><a href="/cn/about/message.html">在线留言</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/cn/product/forex.html">交易产品</a>
+                                    <ul class="sub-child2">
+                                        <li><a href="/cn/product/commodities.html">商品</a></li>
+                                        <li><a href="/cn/product/forex.html">外汇</a></li>
+                                        <li><a href="/cn/product/indices.html">股指</a></li>
+                                        <li><a href="/cn/product/virtual.html">虚拟货币</a></li>
+                                        <li><a href="/cn/product/calculator.html">计算工具</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="/cn/platform/comparison.html">交易平台</a>
+                                    <!--<ul class="sub-menu">
+                                        <li><a href="/cn/platform/cfd/step.html">CFD平台</a></li>
+                                        <li><a href="/cn/platform/comparison.html">平台功能</a></li>
+                                    </ul>-->
+                                </li>
+                                <li><a href="/cn/information/newss.html">行情资讯</a>
+                                    <ul class="sub-child2">
+                                        <li><a href="/cn/information/newss.html">环球新闻</a></li>
+                                        <li><a href="/cn/edu/analyst.html">专家评论</a></li>
+                                        <li><a href="/cn/information/quote.html">实时报价</a></li>
+                                        <li><a href="/cn/information/calendar.html">财经日历</a></li>
+                                        <li><a href="/cn/zt/non-farm.html">非农专题</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="//ac.t-fx.com/cn/pc/rcfd_account" onclick="ga('send', 'event', 'Reg_Real', 'ClickAccount', 'PC_GW', '1');">开户交易</a>
+                                    <ul class="sub-child2">
+                                        <li><a href="//ac.t-fx.com/cn/pc/rcfd_account" onclick="ga('send', 'event', 'Reg_Real', 'ClickAccount', 'PC_GW', '1');">真实开户</a></li>
+                                        <li><a href="//ac.t-fx.com/cn/pc/dcfd_account" onclick="ga('send', 'event', 'Reg_Demo', 'ClickAccount', 'PC_GW', '1');">模拟开户</a></li>
+                                        <li><a href="/cn/exchangerate.html">汇率兑换</a></li>
+                                        <li><a href="/cn/acc/terms.html">账户类型</a></li>
+                                        <li><a href="/cn/faq.html">常见问题</a></li>
+                                        <li><a href="/cn/acc/promotion.html">最新优惠</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End stick megamenu less than 1366px -->
+    <!-- Begin header bar -->
+    <div id="megamenu-show" class="header-bar">
+        <div class="row">
+            <div class="col-xs-1 col-ssm-1">
+                <div class="logo">
+                    <a href="/"><img  src="//img.t-fx.com/source/www/template/logo-header.gif"></a>
+                </div>
+                <div class="logo-black">
+                    <a href="/"><img class="img-responsive" src="//img.t-fx.com/source/www/template/logo-header.gif"></a>
+                </div>
+            </div>
+            <div class="col-xs-10 col-ssm-10">
+                <ul class="mega-menu clearfix">
+                    <li>
+                        <a href="/cn/aboutUS.html">关于拓盈</a>
+                        <ul class="sub-menu">
+                            <li><a href="/cn/aboutUS.html">关于我们</a></li>
+                            <li><a href="/cn/about/advantage.html">拓盈优势</a></li>
+                            <!--<li><a href="/cn/about/security.html">安全保障</a></li>-->
+                            <li><a href="/cn/about/team-service.html">团队服务</a></li>
+                            <li><a href="/cn/about/message.html">在线留言</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/cn/product/forex.html">交易产品</a>
+                        <ul class="sub-menu">
+                            <li><a href="/cn/product/commodities.html">商品</a></li>
+                            <li><a href="/cn/product/forex.html">外汇</a></li>
+                            <li><a href="/cn/product/indices.html">股指</a></li>
+                            <li><a href="/cn/product/virtual.html">虚拟货币</a></li>
+                            <li><a href="/cn/product/calculator.html">计算工具</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/cn/platform/comparison.html">交易平台</a>
+                        <!--<ul class="sub-menu">
+                            <li><a href="/cn/platform/cfd/step.html">CFD平台</a></li>
+                            <li><a href="/cn/platform/comparison.html">平台功能</a></li>
+                        </ul>-->
+                    </li>
+                    <li>
+                        <a href="/cn/information/newss.html">行情资讯</a>
+                        <ul class="sub-menu">
+                            <li><a href="/cn/information/newss.html">环球新闻</a></li>
+                            <li><a href="/cn/edu/analyst.html">专家评论</a></li>
+                            <li><a href="/cn/information/quote.html">实时报价</a></li>
+                            <li><a href="/cn/information/calendar.html">财经日历</a></li>
+                            <li><a href="/cn/zt/non-farm.html">非农专题</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="//ac.t-fx.com/cn/pc/rcfd_account" onclick="ga('send', 'event', 'Reg_Real', 'ClickAccount', 'PC_GW', '1');">开户交易</a>
+                        <ul class="sub-menu">
+                            <li><a href="//ac.t-fx.com/cn/pc/rcfd_account" onclick="ga('send', 'event', 'Reg_Real', 'ClickAccount', 'PC_GW', '1');">真实开户</a></li>
+                            <li><a href="//ac.t-fx.com/cn/pc/dcfd_account" onclick="ga('send', 'event', 'Reg_Demo', 'ClickAccount', 'PC_GW', '1');">模拟开户</a></li>
+                            <li><a href="/cn/exchangerate.html">汇率兑换</a></li>
+                            <li><a href="/cn/acc/terms.html">账户类型</a></li>
+                            <li><a href="/cn/faq.html">常见问题</a></li>
+                            <li><a href="/cn/acc/promotion.html">最新优惠</a></li>
+                        </ul>
+                    </li>
+                    <li class="cre-bt"><a href="https://user88.t-forex.com" target="_blank">用户中心</a></li>
+                    <li class="bt-log">
+                        <a href="//ac.t-fx.com/cn/pc/rcfd_account" onclick="ga('send', 'event', 'Reg_Real', 'ClickAccount', 'PC_GW', '1');">立即开户</a>
+                    </li>
+                </ul>
+                <ul class="par-menu stick clearfix">
+                    <li class="bt-log"><a href="https://user88.t-forex.com">用户中心</a></li>
+                    <li class="bt-hel"><a href="//ac.t-fx.com/cn/pc/rcfd_account" onclick="ga('send', 'event', 'Reg_Real', 'ClickAccount', 'PC_GW', '1');">立即开户</a></li>
+                    <li class="ic-menu">
+                        <div class="cookie-wrapper">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+                        <div class="child1-wrapper">
+                            <ul class="sub-child1 clearfix">
+                                <li>
+                                    <a href="/cn/aboutUS.html">关于拓盈</a>
+                                    <ul class="sub-child2">
+                                        <li><a href="/cn/aboutUS.html">关于我们</a></li>
+                                        <li><a href="/cn/about/advantage.html">拓盈优势</a></li>
+                                        <!--<li><a href="/cn/about/security.html">安全保障</a></li>-->
+                                        <li><a href="/cn/about/team-service.html">团队服务</a></li>
+                                        <li><a href="/cn/about/message.html">在线留言</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/cn/product/forex.html">交易产品</a>
+                                    <ul class="sub-child2">
+                                        <li><a href="/cn/product/commodities.html">商品</a></li>
+                                        <li><a href="/cn/product/forex.html">外汇</a></li>
+                                        <li><a href="/cn/product/indices.html">股指</a></li>
+                                        <li><a href="/cn/product/virtual.html">虚拟货币</a></li>
+                                        <li><a href="/cn/product/calculator.html">计算工具</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="/cn/platform/comparison.html">交易平台</a>
+                                    <!--<ul class="sub-menu">
+                                        <li><a href="/cn/platform/cfd/step.html">CFD平台</a></li>
+                                        <li><a href="/cn/platform/comparison.html">平台功能</a></li>
+                                    </ul>-->
+                                </li>
+                                <li><a href="/cn/information/newss.html">行情资讯</a>
+                                    <ul class="sub-child2">
+                                        <li><a href="/cn/information/newss.html">环球新闻</a></li>
+                                        <li><a href="/cn/edu/analyst.html">专家评论</a></li>
+                                        <li><a href="/cn/information/quote.html">实时报价</a></li>
+                                        <li><a href="/cn/information/calendar.html">财经日历</a></li>
+                                        <li><a href="/cn/zt/non-farm.html">非农专题</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="//ac.t-fx.com/cn/pc/rcfd_account" onclick="ga('send', 'event', 'Reg_Real', 'ClickAccount', 'PC_GW', '1');">开户交易</a>
+                                    <ul class="sub-child2">
+                                        <li><a href="//ac.t-fx.com/cn/pc/rcfd_account" onclick="ga('send', 'event', 'Reg_Real', 'ClickAccount', 'PC_GW', '1');">真实开户</a></li>
+                                        <li><a href="//ac.t-fx.com/cn/pc/dcfd_account" onclick="ga('send', 'event', 'Reg_Demo', 'ClickAccount', 'PC_GW', '1');">模拟开户</a></li>
+                                        <li><a href="/cn/exchangerate.html">汇率兑换</a></li>
+                                        <li><a href="/cn/acc/terms.html">账户类型</a></li>
+                                        <li><a href="/cn/faq.html">常见问题</a></li>
+                                        <li><a href="/cn/acc/promotion.html">最新优惠</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End header bar -->
+</div>
+    <div class="index-video">
+        <div class="video" data-vide-bg="//img.t-fx.com/source/www/index/video-index.mp4?1018" data-vide-options="position: 0% 50%"></div>
+        <div class="account">
+            <!--<img src="&lt;!&ndash;#echo var='IMG_URL' default=''/source/www/index/video-font.png"/>-->
+            <a href="//ac.t-fx.com/cn/mobile/rcfd_account" onclick="ga('send', 'event', 'Reg_Real', 'ClickAccount', 'SJ_GW', '1')">开立真实账户</a>
+        </div>
+        <div class="layout">
+            <div class="inner">
+                <ul>
+                    <li>
+                        <span>10年</span>
+                        <p>风控经验</p>
+                    </li>
+                    <li>
+                        <span>$0</span>
+                        <p>手续费</p>
+                    </li>
+                    <li>
+                        <span>$70</span>
+                        <p>最低入金</p>
+                    </li>
+                    <li>
+                        <span>30min</span>
+                        <p>最快出金</p>
+                    </li>
+                    <li>
+                        <span>0.06S</span>
+                        <p>秒速成交</p>
+                    </li>
+                    <li>
+                        <span>无负数</span>
+                        <p>结余保证</p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="kcharts">
+        <div class="inner">
+            <div class="title">
+                <span>产品实时报价</span>
+            </div>
+            <div class="k-list">
+                <ul class="number">
+                    <li name="EURUSD" class="EURUSD">
+                        <div class="layout-1">
+                            <!--<div class="item-img"><img src="&lt;!&ndash;#echo var='IMG_URL' default=''&ndash;&gt;/source/www/index/EURUSD.png"/></div>-->
+                            <div class="item1"><span>欧元美元</span><p>EURUSD</p></div>
+                        </div>
+                        <div class="layout">
+                            <div class="item3"></div>
+                            <div class="item2"></div>
+                        </div>
+                    </li>
+                    <li name="USDJPY" class="USDJPY">
+                        <div class="layout-1">
+                            <!--<div class="item-img"><img src="&lt;!&ndash;#echo var='IMG_URL' default=''&ndash;&gt;/source/www/index/USDJPY.png"/></div>-->
+                            <div class="item1"><span>美元日元</span><p>USDJPY</p></div>
+                        </div>
+                        <div class="layout">
+                            <div class="item3"></div>
+                            <div class="item2"></div>
+                        </div>
+                    </li>
+                    <li name="TECH100" class="TECH100">
+                        <div class="layout-1">
+                            <!--<div class="item-img"><img src="&lt;!&ndash;#echo var='IMG_URL' default=''&ndash;&gt;/source/www/index/TECH100.png"/></div>-->
+                            <div class="item1"><span>TECH100</span><p>TECH100</p></div>
+                        </div>
+                        <div class="layout">
+                            <div class="item3"></div>
+                            <div class="item2"></div>
+                        </div>
+                    </li>
+                    <li name="DJ30" class="DJ30">
+                        <div class="layout-1">
+                            <!--<div class="item-img"><img src="&lt;!&ndash;#echo var='IMG_URL' default=''&ndash;&gt;/source/www/index/DJ30.png"/></div>-->
+                            <div class="item1"><span>美国DJ30</span><p>DJ30</p></div>
+                        </div>
+                        <div class="layout">
+                            <div class="item3"></div>
+                            <div class="item2"></div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="number">
+                    <li name="XAUUSD" class="XAUUSD">
+                        <div class="layout-1">
+                            <!--<div class="item-img"><img src="&lt;!&ndash;#echo var='IMG_URL' default=''&ndash;&gt;/source/www/index/XAUUSD.png"/></div>-->
+                            <div class="item1"><span>现货黄金</span><p>XAUUSD</p></div>
+                        </div>
+                        <div class="layout">
+                            <div class="item3"></div>
+                            <div class="item2"></div>
+                        </div>
+                    </li>
+                    <li name="UKOil" class="UKOil">
+                        <div class="layout-1">
+                            <!--<div class="item-img"><img src="&lt;!&ndash;#echo var='IMG_URL' default=''&ndash;&gt;/source/www/index/UKOil.png"/></div>-->
+                            <div class="item1"><span>美国原油</span><p>UKOil</p></div>
+                        </div>
+                        <div class="layout">
+                            <div class="item3"></div>
+                            <div class="item2"></div>
+                        </div>
+                    </li>
+                    <li name="BTCUSD" class="BTCUSD">
+                        <div class="layout-1">
+                            <!--<div class="item-img"><img src="&lt;!&ndash;#echo var='IMG_URL' default=''&ndash;&gt;/source/www/index/BTCUSD.png"/></div>-->
+                            <div class="item1"><span>比特币</span><p>BTCUSD</p></div>
+                        </div>
+                        <div class="layout">
+                            <div class="item3"></div>
+                            <div class="item2"></div>
+                        </div>
+                    </li>
+                    <li name="BCHUSD" class="BCHUSD">
+                        <div class="layout-1">
+                            <!--<div class="item-img"><img src="&lt;!&ndash;#echo var='IMG_URL' default=''&ndash;&gt;/source/www/index/BCHUSD.png"/></div>-->
+                            <div class="item1"><span>比特现金</span><p>BCHUSD</p></div>
+                        </div>
+                        <div class="layout">
+                            <div class="item3"></div>
+                            <div class="item2"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--<div id="m-container" node-name="qData"></div>-->
+            <div class="more"><a href="/cn/information/quote.html" target="_blank">更多产品行情，敬请查看>></a></div>
+        </div>
+    </div>
+    <div class="index-banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper" id="banner"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="index-page">
+        <div class="inner">
+            <div class="title">
+                <span>拓盈交易平台</span>
+                <p>一个账户交易全球外汇、商品、股指、虚拟货币等41+种热门产品</p>
+            </div>
+            <div class="legacy">
+                <div class="index-page">
+                    <div class="index_scrolling-mobile-section" data-30p-top="opacity: 1;" data--100p-bottom="opacity: 1;">
+                        <div class="mobile-phone_wrapper">
+                            <div class="phone-img-wrapper">
+                                <div class="mobile-phone_item-wrapper"
+                                     data-20p-top="transform:translateY(-90%) translateX(-50%) scale(1) rotate(0deg); position: absolute; opacity: 1;"
+                                     data-0p-top="transform:translateY(-50%) translateX(0%) scale(1) rotate(30deg); position: absolute; opacity: 1;"
+                                     data--150p-top="transform:translateY(150%) translateX(0%) scale(1) rotate(360deg); position: absolute; opacity: 0;">
+                                    <img src="//img.t-fx.com/source/www/index/icon-02.png">
+                                    <span>7*24H实时快讯</span>
+                                </div>
+                                <div class="mobile-phone_item-wrapper"
+                                     data-20p-top="transform:translateY(-90%) translateX(-150%) scale(1) rotate(0deg); position: absolute; opacity: 1;"
+                                     data-0p-top="transform:translateY(-50%) translateX(0%) scale(1) rotate(-60deg); position: absolute; opacity: 1;"
+                                     data--150p-top="transform:translateY(150%) translateX(0%) scale(1) rotate(-180deg); position: absolute; opacity: 0;">
+                                    <img src="//img.t-fx.com/source/www/index/icon-01.png">
+                                    <span>4大权威实时解盘</span>
+                                </div>
+                                <div class="mobile-phone_item-wrapper"
+                                     data-20p-top="transform:translateY(-90%) translateX(50%) scale(1) rotate(0deg); position: absolute; opacity: 1;"
+                                     data-0p-top="transform:translateY(-50%) translateX(0%) scale(1) rotate(20deg); position: absolute; opacity: 1;"
+                                     data--150p-top="transform:translateY(150%) translateX(0%) scale(1) rotate(170deg); position: absolute; opacity: 0;">
+                                    <img src="//img.t-fx.com/source/www/index/icon-03.png">
+                                    <span>41+种全球热门产品</span>
+                                </div>
+                                <div class="mobile-phone_item-wrapper"
+                                     data-20p-top="transform:translateY(-90%) translateX(150%) scale(1) rotate(0deg); position: absolute; opacity: 1;"
+                                     data-0p-top="transform:translateY(-50%) translateX(0%) scale(1) rotate(-45deg); position: absolute; opacity: 1;"
+                                     data--150p-top="transform:translateY(150%) translateX(0%) scale(1) rotate(-90deg); position: absolute; opacity: 0;">
+                                    <img src="//img.t-fx.com/source/www/index/icon-04.png">
+                                    <span>68种分析工具和指标</span>
+                                </div>
+                                <div class="phone-screen">
+                                    <div class="phone-screen-inner-wrapper" data--10p-top="transform:translateY(-50%);" data--50p-top="transform:translateY(0%);">
+                                        <img src="//img.t-fx.com/source/www/index/phone-con02.jpg">
+                                        <img src="//img.t-fx.com/source/www/index/phone-con01.jpg">
+                                    </div>
+                                </div>
+                                <img src="//img.t-fx.com/source/www/index/phone-bg.png" class="phone-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="download">
+                <ul>
+                    <li>
+                        <img src="//img.t-fx.com/source/www/index/icon-windows.png"/>
+                        <a>电脑版下载</a>
+                    </li>
+                    <li>
+                        <img src="//img.t-fx.com/source/www/index/icon-ios.png"/>
+                        <img class="code" src="//img.t-fx.com/source/www/nav-right/icon-ios.png"/>
+                        <a>苹果版下载</a>
+                    </li>
+                    <li>
+                        <img src="//img.t-fx.com/source/www/index/icon-android.png"/>
+                        <img class="code" src="//img.t-fx.com/source/www/nav-right/icon-apk.png"/>
+                        <a>安卓版下载</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="index-page bg-color">
+        <div class="inner">
+            <div class="layout">
+                <img src="//img.t-fx.com/source/www/index/neiye-bg.png"/>
+                <span class="color">你有一个亿的小目标吗？</span>
+                <div class="item big">
+                    <span>YES</span>
+                    <p>梦想还是要有的</p>
+                </div>
+            </div>
+            <div class="hide-con">
+                <div class="layout-1"><span class="size">万一在拓盈实现呢</span></div>
+                <div class="layout-1">
+                    <span>小投入</span>
+                    <span>拓未来</span>
+                </div>
+                <div class="layout-2">
+                    <ul>
+                        <li>
+                            <img src="//img.t-fx.com/source/www/index/icon-05.png"/>
+                            <span>2美元即可交易</span>
+                        </li>
+                        <li>
+                            <img src="//img.t-fx.com/source/www/index/icon-06.png"/>
+                            <span>隔离存管保障资金</span>
+                        </li>
+                        <li>
+                            <img src="//img.t-fx.com/source/www/index/icon-07.png"/>
+                            <span>7*24h客户服务</span>
+                        </li>
+                        <li>
+                            <img src="//img.t-fx.com/source/www/index/icon-08.png"/>
+                            <span>0.06s一击交易</span>
+                        </li>
+                        <li>
+                            <img src="//img.t-fx.com/source/www/index/icon-09.png"/>
+                            <span>30min极速取款</span>
+                        </li>
+                        <li>
+                            <img src="//img.t-fx.com/source/www/index/icon-10.png"/>
+                            <span>24h实时喊单</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="index-news">
+        <div class="inner">
+            <div class="news-nav">
+                <ul>
+                    <li class="check"><span>行情资讯</span></li>
+                    <li><span>财经日历</span></li>
+                </ul>
+            </div>
+            <div class="news-con news">
+                <ul id="newsData">
+                    <!--<li>
+                        <a>
+                            <span>国家副主席王岐山：中国仍准备与美国讨论贸易解决方案国家副主席王岐山：中国仍准备与美国讨论贸易解决方案</span>
+                            <p>直观热炒讯号提示逾万客户持仓量最高之七大产品，以近四十种外汇实时报价及可真实成交点差进行辅助，再配合佣金手续费全免之交易，投资更一步到位以近四十种外汇实时报价及可真实成交点差进行辅助，再配合佣金手续费全免之交易，投资更一步到位...</p>
+                            <time>2018-11-12 10:24</time>
+                        </a>
+                    </li>
+                    <li>
+                        <span>黄金技术分析：黄金短线走势偏震荡...</span>
+                        <p>直观热炒讯号提示逾万客户持仓量最高之七大产品，以近四十种外汇实时报价及可真实成交点差进行辅助，再配合佣金手续费全免之交易，投资更一步到位...</p>
+                        <time>2018-11-12 10:24</time>
+                    </li>
+                    <li>
+                        <span>黄金技术分析：黄金短线走势偏震荡...</span>
+                        <p>直观热炒讯号提示逾万客户持仓量最高之七大产品，以近四十种外汇实时报价及可真实成交点差进行辅助，再配合佣金手续费全免之交易，投资更一步到位...</p>
+                        <time>2018-11-12 10:24</time>
+                    </li>
+                    <li>
+                        <span>黄金技术分析：黄金短线走势偏震荡...</span>
+                        <p>直观热炒讯号提示逾万客户持仓量最高之七大产品，以近四十种外汇实时报价及可真实成交点差进行辅助，再配合佣金手续费全免之交易，投资更一步到位...</p>
+                        <time>2018-11-12 10:24</time>
+                    </li>-->
+                </ul>
+                <div class="news-more"><a href="/cn/information/newss.html">查看更多>></a></div>
+            </div>
+            <div class="news-con calendar">
+                <ul class="cal-time" id="cal-time"></ul>
+                <ul id="cal-Data">
+                    <!--<li>
+                        <div class="item">
+                            <img class="flag" src="//img.t-fx.com/source/www/index/flag/bx.png"/>
+                            <time>时间<span>07:50</span></time>
+                            <img class="star" src="//img.t-fx.com/source/www/index/flag/1star.png"/>
+                        </div>
+                        <div class="item-1"><p>美国 截至10月22日当周 货币供给M1(亿美元)</p></div>
+                        <div class="item-2">
+                            <p>前值：<span>1</span></p>
+                            <p>预测值：<span>2</span></p>
+                            <p>公布值：<span>3</span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <img class="flag" src="//img.t-fx.com/source/www/index/flag/bx.png"/>
+                            <time>时间<span>07:50</span></time>
+                            <img class="star" src="//img.t-fx.com/source/www/index/flag/1star.png"/>
+                        </div>
+                        <div class="item-1"><p>美国 截至10月22日当周 货币供给M1(亿美元)</p></div>
+                        <div class="item-2">
+                            <p>前值：<span>1</span></p>
+                            <p>预测值：<span>2</span></p>
+                            <p>公布值：<span>3</span></p>
+                        </div>
+                    </li>-->
+                </ul>
+                <div class="news-more"><a href="/cn/information/calendar.html">查看更多>></a></div>
+            </div>
+        </div>
+    </div>
+    <div id="nav-right">
+    <ul>
+        <li class="hover">
+            <a href="javascript:;" onclick="cf.common.openLive800();ga('send', 'event', 'Chat_Live800', 'Click800', 'PC_GW', '1');countBiUtil.gwanalysis('2', '0', '2', '', '', '');">
+                <span class="icon icon-bg02"></span>
+                <span>在线客服</span>
+            </a>
+        </li>
+        <li class="wechat">
+            <a>
+                <span class="icon icon-bg06"></span>
+                <span>APP下载</span>
+            </a>
+        </li>
+        <li id="scroll-toparr">
+            <span class="icon icon-bg07"></span>
+            <span>返回顶部</span>
+        </li>
+    </ul>
+    <div class="we-code">
+        <div class="layout"><span>拓盈APP下载</span></div>
+        <div class="code-list">
+            <ol>
+                <li><img src="//img.t-fx.com/source/www/nav-right/icon-ios.png"/><span>苹果版下载</span></li>
+                <li><img src="//img.t-fx.com/source/www/nav-right/icon-apk.png"/><span>安卓版下载</span></li>
+            </ol>
+        </div>
+    </div>
+</div>
+<script>
+    $(".wechat").hover(function () {
+        $(".we-code").addClass("show");
+    },function () {
+        $(".we-code").removeClass("show");
+    });
+    $("#nav-right ul li").hover(function () {
+        $(this).addClass("hover").siblings("li").removeClass("hover")
+    },function () {
+        $("#nav-right ul li").removeClass("hover");
+        $("#nav-right ul li").eq(0).addClass("hover");
+    });
+</script>
+    <div id="footer">
+    <div class="footer-inner">
+        <div class="logo"><img src="//img.t-fx.com/source/www/template/logo.png"/></div>
+        <div class="content">
+            <div class="left-nav">
+                <ul>
+                    <li><img src="//img.t-fx.com/source/w/footer/icon-tel.png"/><a href="javascript:;" onclick="cf.common.openLive800();countBiUtil.gwanalysis('2', '0', '2', '', '', '');">在线客服</a></li>
+                    <li><img src="//img.t-fx.com/source/w/footer/icon-email.png"/><a href="mailto:cs@t-fx.com">cs@t-fx.com</a></li>
+                    <li><img src="//img.t-fx.com/source/w/footer/icon-phone.png"/><span>400-8425188</span></li>
+                    <li>
+                        <span>下载客户端：</span>
+                        <img class="img-ios" src="//img.t-fx.com/source/www/template/icon-ios.png"/>
+                        <img class="img-android" src="//img.t-fx.com/source/www/template/icon-android.png"/>
+                        <a class="img-windows" href="//img.t-fx.com/source/material/CFD_Setup.exe" onclick="ga('send', 'event', 'Download_CFD', 'ClickDownloadPCUI', 'PC_GW', '1');"><img src="//img.t-fx.com/source/www/template/icon-windows.png"/></a>
+                    </li>
+                </ul>
+                <div class="code ios"><span></span><img src="//img.t-fx.com/source/www/nav-right/icon-ios.png"/></div>
+                <div class="code android"><span></span><img src="//img.t-fx.com/source/www/nav-right/icon-apk.png"/></div>
+                <div class="code weixin"><span></span><img src="//img.t-fx.com/source/w/footer/weixin8-pic.png"/></div>
+            </div>
+            <div class="right-nav">
+                <div class="icon">
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <img src="//img.t-fx.com/source/www/template/icon-nfa.png"/>
+                                <span>NFA</span>
+                                <span>牌照号：0517440</span>
+                            </li>
+                            <li>
+                                <span>关于我们</span>
+                                <a href="/cn/aboutUS.html" target="_blank">关于拓盈</a>
+                                <a href="/cn/about/advantage.html" target="_blank">拓汇优势</a>
+                                <a href="/cn/about/team-service.html" target="_blank">团队服务</a>
+                            </li>
+                            <li>
+                                <span>外汇交易</span>
+                                <a href="/cn/platform/comparison.html" target="_blank">拓盈平台</a>
+                                <a href="/cn/product/forex.html" target="_blank">交易产品</a>
+                                <a href="/cn/zt/non-farm.html" target="_blank">非农专题</a>
+                            </li>
+                            <li>
+                                <span>开立帐号</span>
+                                <a href="//ac.t-fx.com/cn/pc/rcfd_account" onclick="ga('send', 'event', 'Reg_Real', 'ClickAccount', 'PC_GW', '1');" target="_blank">真实开户</a>
+                                <a href="/cn/exchangerate.html" target="_blank">汇率兑换</a>
+                                <a href="/cn/acc/terms.html" target="_blank">账户类型</a>
+                            </li>
+                            <!--<li>
+                                <span>热门答疑</span>
+                                <a href="" target="_blank">激活账户需要多少钱</a>
+                                <a href="" target="_blank">可以模拟交易吗</a>
+                                <a href="" target="_blank">取款是否有收手续费</a>
+                            </li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="icon-nav"><p>风险警告：保证金交易具高风险，投资者考虑投资金额时需视乎自身能力。投资有盈有亏，您可能因此损失全部本金。保证金交易不一定适合所有投资者，交易前请确认您已了解相关风险</p></div>
+        <div class="icon-nav">
+            <ul>
+                <li><a href="//img.t-fx.com/source/material/privacyPolicy.html" target="_blank">隐私条款</a></li>
+                <li><a href="//img.t-fx.com/source/material/disclaimer.pdf" target="_blank">免责声明</a></li>
+                <li><a href="//img.t-fx.com/source/material/client_agreement.pdf" target="_blank">客户协议</a></li>
+                <li><a href="/cn/sitemap.html" target="_blank">网站地图</a></li>
+            </ul>
+        </div>
+        <div class="icon-nav">
+            <p>Copyright © 2018 <a href="https://www.t-fx.com">拓盈国际有限公司</a> 版权所有 不得转载</p>
+        </div>
+    </div>
+</div>
+<script>
+    $('.left-nav ul li:eq(4)').hover(function () {$(".weixin").show();}, function () {$(".weixin").hide();});
+    $('.img-ios').hover(function () {$(".ios").show();}, function () {$(".ios").hide();});
+    $('.img-android').hover(function () {$(".android").show();}, function () {$(".android").hide();});
+    //处理域名
+    var domain = window.location.host;
+    if(domain.indexOf("www.cfd139.com.cn") != -1 || domain.indexOf("www.t-fx.com.cn") != -1){
+        $(".icon-nav").hide()
+    }else{
+        $(".icon-nav").show()
+    }
+</script>
+
+    <script async>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-71703518-1', 'auto');
+    ga('send', 'pageview');
+</script>
+<!--<script src='&lt;!&ndash;#echo var="IMG_URL" default=""&ndash;&gt;/cn/js/config.js'></script>-->
+<script src='/cn/js/gwanalysis.js?type=1234567qwqw'></script>
+<script src='/cn/js/cfanalysis.js?type=220q'></script>
+<script type="text/javascript">
+    function browserRedirect() {
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+            countBiUtil.gwanalysis('1', '1', '', '', '', '');
+        } else {
+            countBiUtil.gwanalysis('1', '0', '', '', '', '');
+        }
+    }
+
+    browserRedirect();
+</script>
+
+<!--  common method openQQCustomer and openLive800 -->
+<script src="/cn/js/live800.js"></script>
+
+
+<script src='/cn/js/analytics.min.js'></script>
+<script type="text/javascript">
+    $(function () {
+        $('.phone').hover(function () {
+            $('.code_phone').fadeToggle();
+        });
+        $('.commonBtn').hover(function () {
+            $('.CFIXcode').fadeToggle();
+        });
+        $('.BTN_cfix').hover(function () {
+            $('.CFIXcode').fadeToggle();
+        });
+    });
+</script>
+<!-- Live800默认跟踪代码: 开始-->
+<!--<script language="javascript" src="https://www.cf-service.com/k800/chatClient/monitor.js?companyID=475&configID=45&codeType=custom&ss=1-->
+
+<!--"></script>-->
+<!-- Live800默认跟踪代码: 结束-->
+    <link rel="stylesheet" href="/popup/css/newyear-popup.css">
+<div id="overlay-region" class="popup-mobile"></div>
+<div id="popout" class="win-wrapper-yearend popup-mobile show">
+    <div class="win">
+        <a href="javascript:;" class="win-close"></a>
+        <a href="javascript:;" class="active" onclick="ga('send', 'event', 'Reg_Real', 'ClickAccount', 'PC_LP', '1');">激活领赠金</a>
+        <a class="button-click" href="javascript:;" onclick="cf.common.openLive800();ga('send', 'event', 'Chat_Live800', 'Click800', 'PC_GW', '1');countBiUtil.gwanalysis('2', '0', '2', '', '', '');">抢先了解</a>
+    </div>
+</div>
+<script src="/popup/js/common-popup.js"></script>
+<script>
+    //弹框广告图片
+    var url = www_url + "/news/action/111?_r="+Math.random();
+    $.get(url,null,function (data) {
+        var popout = JSON.parse(data);
+        console.log(popout);
+        console.log(popout[0].attr.image_url);
+        $("#popout").attr("style","background: url("+ popout[0].attr.image_url +") no-repeat;");
+    })
+
+    $(".win a.active").attr("href","//ac.t-fx.com/cn/pc/rcfd_account?");
+    popup.closePopup('#overlay-region', ".win-wrapper-yearend");
+</script>
+
+</div>
+</body>
+<script src="/cn/js/live800.js"></script>
+<script src="/cn/js/H5/vide.js"></script>
+<script src="/cn/js/H5/legacy-vendor.min.js"></script>
+<script src="/cn/js/H5/legacy.min.js"></script>
+<script src="/cn/js/kcharts/kcharts.js"></script>
+<script src="/cn/js/kcharts/highstock.js"></script>
+<script src="/cn/js/homepage.js"></script>
+<script src="/cn/js/swiper.min-4.0.7.js"></script>
+<script>
+    $(function(){
+        //初始化banner
+        $.initBanner();
+        //添加k线图标题文本
+        $.addtext();
+        //定时刷新k线图标题文本
+        setInterval($.flushText,5000);
+        tabs($(".news-nav li"), $('.news-con'));
+        $.worldIndex();
+        $.cjrlIndex($.getNowDate());
+        $.get7DaysHtml();
+        $.calenderClick();
+    });
+    //数据卡片选择
+    function tabs(tab, con){
+        tab.click(function(){
+            var indx = tab.index(this);
+            tab.removeClass('check');
+            $(this).addClass('check');
+            con.hide();
+            con.eq(indx).show();
+        })
+    };
+    $(".index-page .layout .item").click(function () {
+        $(".index-page .hide-con").slideToggle();
+    });
+    $(".download ul li").hover(function () {
+        $(this).children(".code").show()
+    },function () {
+        $(".download ul li").children(".code").hide()
+    });
+    $(".index-page .layout .item").hover(function () {
+        $(this).removeClass("big")
+    },function () {
+        $(".index-page .layout .item").addClass("big")
+    })
+</script>
+</html>

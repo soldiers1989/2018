@@ -177,7 +177,7 @@ js 字符串转换成数字，小技巧。
 	
 	
 
-添加删除切换类
+添加删除切换类(显示隐藏)
 	$(this).addClass('svi_type_ac').siblings().removeClass('svi_type_ac');
 
 	

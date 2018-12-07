@@ -268,10 +268,11 @@ http://www.jygold.net/lp/lp-fn201811-v1/
 http://www.jygold.net/m/huodong/m-lp-fn201811-v1/
 
 
+https://www.t-fx.com/   下载网站，内容http://www.hkuntc.com/
 
-
-
-
+http://www.intetc.com/
+ftp服务器：FeVip
+/home/vsh3ol3cjmfq/public_html/intetc.com/phpcms/templates/default/content
 
 
 

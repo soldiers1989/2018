@@ -64,11 +64,17 @@ parentid中的29是模块菜单的Id号，菜单的id可以在扩展中的菜单
 {$title}{$content}				//内容标签，后台填写的才会显示
 
 
+//新闻列表之类的，catid="2"  2是新闻列表的catid数字，例如行情分析是8
+http://v9.help.phpcms.cn/html/2010/modules_0916/33.html         
 
-
-
-
-
+	内容列表（lists）：
+		{pc:content  action="lists" catid="2" order="id DESC" num="4"}
+		 <ul>
+		 {loop $data $key $val}
+		 <li> <a href="{$val['url']}">{$val['title']}</a></li>
+		 {/loop}
+		 </ul>
+		 {/pc}
 
 
 
